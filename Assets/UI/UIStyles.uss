@@ -1,3 +1,39 @@
+.ButtonStyle {
+    width: 500px;
+    height: 120px;
+    background-color: rgb(229, 219, 193);
+    font-size: 70px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    right: 100px;
+    top: 400px;
+    align-self: flex-end;
+}
+
+.ButtonStyle:hover {
+    width: 500px;
+    height: 120px;
+    background-color: rgb(146, 183, 189);
+    font-size: 70px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    right: 100px;
+    top: 400px;
+    align-self: flex-end;
+}
+
 .overlay {
     position: absolute;
     flex-grow: 0;
