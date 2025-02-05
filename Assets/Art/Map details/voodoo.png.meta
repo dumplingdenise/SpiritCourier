@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      voodoo_0: -8017023976699129835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
