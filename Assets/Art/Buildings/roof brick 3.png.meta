@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      roof brick 3_0: 2422636819746157217
+      roof brick 3_1: -2867112486191375215
+      roof brick 3_2: -2025224621946959691
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
