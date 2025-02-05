@@ -15,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Interaction
   - 
-  - 
+  - Solid Object
+  - Interactable
   - 
   - 
   - 
@@ -45,11 +45,32 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 1942470371
+    locked: 0
+  - name: WalkInfront
+    uniqueID: 3130653095
+    locked: 0
+  - name: Collision
+    uniqueID: 1561755595
+    locked: 0
+  - name: Player
+    uniqueID: 843320421
+    locked: 0
+  - name: WalkBehind
+    uniqueID: 2838696683
+    locked: 0
+  - name: Decor
+    uniqueID: 4090341783
+    locked: 0
   - name: InteractionSprite
     uniqueID: 3785167691
     locked: 0
   - name: DebugOverlay
     uniqueID: 575361943
+    locked: 0
+  - name: FG
+    uniqueID: 2912994919
     locked: 0
   m_RenderingLayers:
   - Default
