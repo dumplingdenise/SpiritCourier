@@ -261,7 +261,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1358250544}
-  - component: {fileID: 1358250543}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -269,18 +268,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1358250543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358250542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be687d323652de14a9e114c706b54ff0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1358250544
 Transform:
   m_ObjectHideFlags: 0
@@ -498,10 +485,15 @@ MonoBehaviour:
   - {fileID: 2733908912404210762, guid: 1122010ad09bb114096a36fa6a4bda7e, type: 3}
   - {fileID: 2733908912404210762, guid: 3d63d9be4368c584cba82d4ec486e945, type: 3}
   - {fileID: 2733908912404210762, guid: 213a5375d276e9d4db480c460427621f, type: 3}
-  areaSize: {x: 10, y: 5}
+  areaSize: {x: 29, y: 28.41}
   minSpawnInterval: 5
   maxSpawnInterval: 10
   minDistBetweenParcels: 1
+  noParcelsAreas:
+  - rectBottomLeft: {x: -8.1, y: -3.92}
+    rectTopRight: {x: -1.4, y: -1.47}
+  - rectBottomLeft: {x: 1.93, y: -3.49}
+    rectTopRight: {x: 8.69, y: -0.03}
 --- !u!61 &1506860408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -996,7 +988,7 @@ Transform:
   m_GameObject: {fileID: 1907649855}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
