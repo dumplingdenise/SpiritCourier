@@ -15,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Interaction
   - 
-  - 
+  - Solid Object
+  - Interactable
   - 
   - 
   - 
@@ -50,6 +50,9 @@ TagManager:
     locked: 0
   - name: DebugOverlay
     uniqueID: 575361943
+    locked: 0
+  - name: FG
+    uniqueID: 2912994919
     locked: 0
   m_RenderingLayers:
   - Default
