@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animation.meta
 guid: 266e66ec3ae0dc646922a579d1efa9af
+========
+guid: 9f332c73b367f1f4fa3ddefe95d534c0
+>>>>>>>> shumin:Assets/Art.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
