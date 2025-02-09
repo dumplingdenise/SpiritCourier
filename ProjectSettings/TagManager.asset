@@ -21,8 +21,8 @@ TagManager:
   - Solid Object
   - Interactable
   - Ladder
-  - 
-  - 
+  - GroundLayer
+  - OverpassLayer
   - 
   - 
   - 
@@ -50,20 +50,11 @@ TagManager:
   - name: Bg
     uniqueID: 3738312829
     locked: 0
-  - name: BelowFloor
-    uniqueID: 4034262773
-    locked: 0
   - name: Floor
     uniqueID: 1942470371
     locked: 0
-  - name: BelowHseDecro
-    uniqueID: 420587335
-    locked: 0
   - name: HouseLvl 1
     uniqueID: 2471899191
-    locked: 0
-  - name: Player
-    uniqueID: 843320421
     locked: 0
   - name: RoofWalkable
     uniqueID: 1813614631
@@ -71,11 +62,11 @@ TagManager:
   - name: Ladder
     uniqueID: 3770132071
     locked: 0
+  - name: Player
+    uniqueID: 843320421
+    locked: 0
   - name: Bridges
     uniqueID: 1509419889
-    locked: 0
-  - name: StairsToLvl2
-    uniqueID: 825456175
     locked: 0
   - name: BridgeRailing
     uniqueID: 1369862555

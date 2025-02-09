@@ -4,11 +4,14 @@ public class OverpassTrigger : MonoBehaviour
 {
     private bool isWalkingOverpass = false;
     private SpriteRenderer[] defaultLayerSpriteRenderers; // Declare sprite renderers
+    private Collider2D playerCollider;
 
     void Start()
     {
         // Initialize sprite renderers (get all renderers in the player object)
         defaultLayerSpriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+        playerCollider = GetComponent<Collider2D>(); //Get player collider
     }
 
     void Update()
@@ -21,10 +24,12 @@ public class OverpassTrigger : MonoBehaviour
         if (isWalkingOverpass)
         {
             SetSortingLayer("WalkingRoof");
+            gameObject.layer = LayerMask.NameToLayer("OverpassLayer"); // Change physics layer
         }
         else
         {
             SetSortingLayer("Player");
+            gameObject.layer = LayerMask.NameToLayer("GroundLayer"); // Change physics layer
         }
     }
         void SetSortingLayer(string layername)
