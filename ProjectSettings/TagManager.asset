@@ -21,10 +21,10 @@ TagManager:
   - 
   - Solid Object
   - Interactable
-  - Ladder
+  - NPCs
   - GroundLayer
   - OverpassLayer
-  - 
+  - Ladder
   - 
   - 
   - 
@@ -63,9 +63,6 @@ TagManager:
   - name: Ladder
     uniqueID: 3770132071
     locked: 0
-  - name: Player
-    uniqueID: 843320421
-    locked: 0
   - name: GroundNPC
     uniqueID: 2254861727
     locked: 0
@@ -74,6 +71,9 @@ TagManager:
     locked: 0
   - name: BridgeRailing
     uniqueID: 1369862555
+    locked: 0
+  - name: Player
+    uniqueID: 843320421
     locked: 0
   - name: Houselev2
     uniqueID: 3804021479
