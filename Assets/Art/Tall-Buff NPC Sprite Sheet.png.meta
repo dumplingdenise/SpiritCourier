@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: c0135cb892110994992ea46132976186
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5484195468980509506
+    second: Tall-Buff NPC Sprite Sheet_0
+  - first:
+      213: -1845345034455075803
+    second: Tall-Buff NPC Sprite Sheet_1
+  - first:
+      213: 1262291359563344788
+    second: Tall-Buff NPC Sprite Sheet_2
+  - first:
+      213: 428020064899796720
+    second: Tall-Buff NPC Sprite Sheet_3
+  - first:
+      213: 6779520627874004661
+    second: Tall-Buff NPC Sprite Sheet_4
+  - first:
+      213: -5264609356069318169
+    second: Tall-Buff NPC Sprite Sheet_5
+  - first:
+      213: 7571314266696651898
+    second: Tall-Buff NPC Sprite Sheet_6
+  - first:
+      213: -8954009849547130694
+    second: Tall-Buff NPC Sprite Sheet_7
+  - first:
+      213: 7931916594317380936
+    second: Tall-Buff NPC Sprite Sheet_8
+  - first:
+      213: 1885218568198500087
+    second: Tall-Buff NPC Sprite Sheet_9
+  - first:
+      213: 3819691087860448865
+    second: Tall-Buff NPC Sprite Sheet_10
+  - first:
+      213: 5142247596967537135
+    second: Tall-Buff NPC Sprite Sheet_11
+  - first:
+      213: -6085221111705900832
+    second: Tall-Buff NPC Sprite Sheet_12
+  - first:
+      213: 3821721401583912683
+    second: Tall-Buff NPC Sprite Sheet_13
+  - first:
+      213: 6557766235985866860
+    second: Tall-Buff NPC Sprite Sheet_14
+  - first:
+      213: -7569088361996879169
+    second: Tall-Buff NPC Sprite Sheet_15
+  - first:
+      213: 4388431290967664097
+    second: Tall-Buff NPC Sprite Sheet_16
+  - first:
+      213: -8461101313670968099
+    second: Tall-Buff NPC Sprite Sheet_17
+  - first:
+      213: -2891762288964335337
+    second: Tall-Buff NPC Sprite Sheet_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 113
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24bd367f8b6cb1c40800000000000000
+      internalID: 5484195468980509506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 232
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524364dd7740466e0800000000000000
+      internalID: -1845345034455075803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 14
+        width: 96
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b61d9bd4f848110800000000000000
+      internalID: 1262291359563344788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 252
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe87153bf1a0f500800000000000000
+      internalID: 428020064899796720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 13
+        width: 115
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5befcd37712b51e50800000000000000
+      internalID: 6779520627874004661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 14
+        width: 140
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e15a4a0fa950f6b0800000000000000
+      internalID: -5264609356069318169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 12
+        width: 166
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a741d450636b21960800000000000000
+      internalID: 7571314266696651898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 242
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8f4627b77fcb380800000000000000
+      internalID: -8954009849547130694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 0
+        width: 140
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d40501e14d31e60800000000000000
+      internalID: 7931916594317380936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 14
+        width: 140
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe2179ac44a92a10800000000000000
+      internalID: 1885218568198500087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 12
+        width: 166
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16eb5ab8ec4420530800000000000000
+      internalID: 3819691087860448865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 242
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe92b54d1feec5740800000000000000
+      internalID: 5142247596967537135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 14
+        width: 139
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8ef09c3a3fc8ba0800000000000000
+      internalID: -6085221111705900832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 226
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6caebcd5b790530800000000000000
+      internalID: 3821721401583912683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 227
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60fcf7a5add10b50800000000000000
+      internalID: 6557766235985866860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 11
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbaf1adcc3235f690800000000000000
+      internalID: -7569088361996879169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 30
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5265b1207d6ec30800000000000000
+      internalID: 4388431290967664097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 30
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc0d0e1f21249a80800000000000000
+      internalID: -8461101313670968099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Buff NPC Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 11
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7190967f4856ed7d0800000000000000
+      internalID: -2891762288964335337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

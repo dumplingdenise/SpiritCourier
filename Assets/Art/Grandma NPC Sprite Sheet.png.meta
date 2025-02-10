@@ -1,49 +1,25 @@
 fileFormatVersion: 2
-guid: cd0c78cc7c2bee64aa09d444fe64ccc0
+guid: e5779518673a05645a59193f325e0cbd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6370320078604799907
-    second: MC Test_0
+      213: -5512533548853951023
+    second: Grandma NPC Sprite Sheet_0
   - first:
-      213: 5069674886108399929
-    second: MC Test_1
+      213: -2898832248822965996
+    second: Grandma NPC Sprite Sheet_1
   - first:
-      213: -2350146739952182640
-    second: MC Test_2
+      213: -5711240150968313847
+    second: Grandma NPC Sprite Sheet_2
   - first:
-      213: -1392145061224685267
-    second: MC Test_3
+      213: -2238403521620041514
+    second: Grandma NPC Sprite Sheet_3
   - first:
-      213: -7165393891049964407
-    second: MC Test_4
+      213: -4189364046950550632
+    second: Grandma NPC Sprite Sheet_4
   - first:
-      213: -3988942621259726251
-    second: MC Test_5
-  - first:
-      213: 5986237242796492761
-    second: MC Test_6
-  - first:
-      213: -6914856079863910547
-    second: MC Test_7
-  - first:
-      213: -8269399846500826701
-    second: MC Test_8
-  - first:
-      213: -7265256575760258157
-    second: MC Test_9
-  - first:
-      213: 5926956041215474443
-    second: MC Test_10
-  - first:
-      213: 3916420596132397685
-    second: MC Test_11
-  - first:
-      213: 516950042440443313
-    second: MC Test_12
-  - first:
-      213: -2377224948035388492
-    second: MC Test_13
+      213: 545466106663611534
+    second: Grandma NPC Sprite Sheet_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -114,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -139,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC Test_0
+      name: Grandma NPC Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 219
-        width: 185
-        height: 319
+        x: 0
+        y: 0
+        width: 469
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,64 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d50f831d3a31897a0800000000000000
-      internalID: -6370320078604799907
+      spriteID: 1d50328a1fb8f73b0800000000000000
+      internalID: -5512533548853951023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC Test_2
+      name: Grandma NPC Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 247
-        y: 218
-        width: 127
-        height: 315
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 09a9b1bddf9926fd0800000000000000
-      internalID: -2350146739952182640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC Test_3
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 219
-        width: 179
-        height: 316
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d2163e5517b1eace0800000000000000
-      internalID: -1392145061224685267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC Test_4
-      rect:
-        serializedVersion: 2
-        x: 628
-        y: 218
+        x: 466
+        y: 12
         width: 125
-        height: 315
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,8 +152,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98c763058386f8c90800000000000000
-      internalID: -7165393891049964407
+      spriteID: 419d579ad6745c7d0800000000000000
+      internalID: -2898832248822965996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 12
+        width: 118
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 908d59697599db0b0800000000000000
+      internalID: -5711240150968313847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 52
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0aadd4bd79fe0e0800000000000000
+      internalID: -2238403521620041514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 57
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89338b278936cd5c0800000000000000
+      internalID: -4189364046950550632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 9
+        width: 118
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8c23b4b882e19700800000000000000
+      internalID: 545466106663611534
       vertices: []
       indices: 
       edges: []
@@ -230,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fe3d8fc972937994eabb671df5fae198
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -239,21 +259,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      MC Test_0: -6370320078604799907
-      MC Test_1: 5069674886108399929
-      MC Test_10: 5926956041215474443
-      MC Test_11: 3916420596132397685
-      MC Test_12: 516950042440443313
-      MC Test_13: -2377224948035388492
-      MC Test_2: -2350146739952182640
-      MC Test_3: -1392145061224685267
-      MC Test_4: -7165393891049964407
-      MC Test_5: -3988942621259726251
-      MC Test_6: 5986237242796492761
-      MC Test_7: -6914856079863910547
-      MC Test_8: -8269399846500826701
-      MC Test_9: -7265256575760258157
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
