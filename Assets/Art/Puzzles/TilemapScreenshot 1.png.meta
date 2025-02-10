@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: e5779518673a05645a59193f325e0cbd
+guid: 4a67aebda0ddb9148b588391f9dedb43
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5512533548853951023
-    second: Grandma NPC Sprite Sheet_0
-  - first:
-      213: -2898832248822965996
-    second: Grandma NPC Sprite Sheet_1
-  - first:
-      213: -5711240150968313847
-    second: Grandma NPC Sprite Sheet_2
-  - first:
-      213: -2238403521620041514
-    second: Grandma NPC Sprite Sheet_3
-  - first:
-      213: -4189364046950550632
-    second: Grandma NPC Sprite Sheet_4
-  - first:
-      213: 545466106663611534
-    second: Grandma NPC Sprite Sheet_5
+      213: -1896130484776291495
+    second: TilemapScreenshot 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,145 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_0
+      name: TilemapScreenshot 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d50328a1fb8f73b0800000000000000
-      internalID: -5512533548853951023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 419d579ad6745c7d0800000000000000
-      internalID: -2898832248822965996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 908d59697599db0b0800000000000000
-      internalID: -5711240150968313847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d0aadd4bd79fe0e0800000000000000
-      internalID: -2238403521620041514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89338b278936cd5c0800000000000000
-      internalID: -4189364046950550632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e8c23b4b882e19700800000000000000
-      internalID: 545466106663611534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 120
-        height: 160
+        y: 720
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,8 +115,184 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da81356aa3f426c40b74fdda00bccbca
-      internalID: 1485635387
+      spriteID: 24c0e8ce61ce4444790e9004ffe2d128
+      internalID: 864046512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilemapScreenshot 1_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 720
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33254ac058cd8ab49a5836d60ae01f34
+      internalID: -1855409465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilemapScreenshot 1_2
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 720
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d2abf18d057794aa49411ffd21df48
+      internalID: 1658196208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilemapScreenshot 1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e248c3540f3e9a743ac93c5ed603e281
+      internalID: -837865852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilemapScreenshot 1_4
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 360
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0bba453599f314c804faa79749c802
+      internalID: 926121703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilemapScreenshot 1_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 360
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ae81aa50313274197ae16b7fbd5a81
+      internalID: -766251174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilemapScreenshot 1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0289faa1676bb4440ae33098a5ab54e5
+      internalID: 655579452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilemapScreenshot 1_7
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067aad200ddd62d4d88d93a5ddfd235d
+      internalID: 341678980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilemapScreenshot 1_8
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c96d3d6d584714eb85c827d1ef44fc
+      internalID: -204105338
       vertices: []
       indices: 
       edges: []
@@ -272,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 32ec9a86628cd344fa7bbb5895c78831
+    spriteID: 38e4329b68c014241902f4e0c5bc5e4b
     internalID: 0
     vertices: []
     indices: 
@@ -282,13 +311,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grandma NPC Sprite Sheet_0: -5512533548853951023
-      Grandma NPC Sprite Sheet_1: -2898832248822965996
-      Grandma NPC Sprite Sheet_2: -5711240150968313847
-      Grandma NPC Sprite Sheet_3: -2238403521620041514
-      Grandma NPC Sprite Sheet_4: -4189364046950550632
-      Grandma NPC Sprite Sheet_5: 545466106663611534
-      Grandma NPC Sprite Sheet_6: 1485635387
+      TilemapScreenshot 1_0: 864046512
+      TilemapScreenshot 1_1: -1855409465
+      TilemapScreenshot 1_2: 1658196208
+      TilemapScreenshot 1_3: -837865852
+      TilemapScreenshot 1_4: 926121703
+      TilemapScreenshot 1_5: -766251174
+      TilemapScreenshot 1_6: 655579452
+      TilemapScreenshot 1_7: 341678980
+      TilemapScreenshot 1_8: -204105338
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

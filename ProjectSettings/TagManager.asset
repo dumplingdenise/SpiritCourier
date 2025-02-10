@@ -10,6 +10,7 @@ TagManager:
   - AudioManager
   - Overpass
   - Underpass
+  - NPCs
   layers:
   - Default
   - TransparentFX
@@ -65,6 +66,9 @@ TagManager:
   - name: Player
     uniqueID: 843320421
     locked: 0
+  - name: GroundNPC
+    uniqueID: 2254861727
+    locked: 0
   - name: Bridges
     uniqueID: 1509419889
     locked: 0
@@ -79,6 +83,9 @@ TagManager:
     locked: 0
   - name: WalkingRoof
     uniqueID: 397565779
+    locked: 0
+  - name: OverpassNPC
+    uniqueID: 2753616177
     locked: 0
   - name: Collision
     uniqueID: 1209304905
