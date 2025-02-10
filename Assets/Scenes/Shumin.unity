@@ -69873,6 +69873,9 @@ MonoBehaviour:
   solidObjectsLayer:
     serializedVersion: 2
     m_Bits: 128
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &2127466682
 Animator:
   serializedVersion: 7
@@ -70162,7 +70165,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.87, y: 3.21}
+    oldSize: {x: 1.85, y: 3.19}
     newSize: {x: 1.87, y: 3.21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
