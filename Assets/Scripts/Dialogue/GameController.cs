@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Dialog, Battle }
+public enum GameState { FreeRoam, Dialog, Battle, Puzzle }
 
 public class GameController : MonoBehaviour
 {
@@ -11,24 +11,26 @@ public class GameController : MonoBehaviour
 
     GameState state;
 
+    
+
     private void Start()
     {
         DialogManager.Instance.OnShowDialog += () =>
         {
             state = GameState.Dialog;
-            playerController.SetCanMove(false);
+            playerController.SetMoveWhenTalking(false);
         };
         DialogManager.Instance.OnHideDialog += () =>
         {
             if (state == GameState.Dialog)
             {
                 state = GameState.FreeRoam;
-                playerController.SetCanMove(true);
+                playerController.SetMoveWhenTalking(true);
             }
         };
     }
 
-    private void Update()
+    public void Update()
     {
         if (state == GameState.FreeRoam)
         {
@@ -40,8 +42,10 @@ public class GameController : MonoBehaviour
         }
         else if (state == GameState.Battle)
         {
-
+            
         }
+    
     }
+
 
 }

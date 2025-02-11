@@ -8,6 +8,89 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Vector2 moveInput;
+    public bool MoveWhenTalking = true;
+
+    public LayerMask solidObjectsLayer;
+    public LayerMask interactableLayer;
+    // animator = GetComponent<Animator>();
+    // private Animator animator;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        if (MoveWhenTalking)
+            rb.linearVelocity = moveInput * moveSpeed;
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+       
+    }
+
+    public void SetMoveWhenTalking(bool value)
+    {
+        MoveWhenTalking = value;
+        if (!MoveWhenTalking)
+        {
+            rb.linearVelocity = moveInput;
+        }
+    }
+
+    private void OnMove()
+    {
+        if (!MoveWhenTalking) return;
+        if (rb.linearVelocity != moveInput)
+        {
+            Vector2 targetPos = rb.position + moveInput * moveSpeed * Time.fixedDeltaTime;
+            rb.MovePosition(targetPos);
+
+        }
+    }
+
+
+    public void HandleUpdate()
+    {
+        if (MoveWhenTalking && Keyboard.current.fKey.wasPressedThisFrame)
+        {
+            Interact();
+        }
+        
+
+    }
+
+    void Interact()
+    {
+        // if (animator.runtimeAnimatorController == null)
+        // {
+        //     Debug.LogWarning("AnimatorController is missing or not assigned!");
+        //     return;
+        // }
+
+        // Vector3 facingDir = new Vector3(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
+        Vector3 facingDir = Vector3.up;  // Default direction for interaction if no animator
+        Vector3 interactPos = transform.position + facingDir;
+
+        // Debug.DrawLine(transform.position, interactPos, Color.red, 1f);
+
+        Collider2D collider = Physics2D.OverlapCircle(interactPos, 0.5f, interactableLayer);
+        if (collider != null)
+        {
+            collider.GetComponent<Interactable>()?.Interact();
+        }
+    }
+
+
+}
+
+/* 
+   public float moveSpeed = 5f;
 
     // private bool isMoving;
 
@@ -64,39 +147,11 @@ public class PlayerController : MonoBehaviour
             // animator.SetBool("isMoving", false);
        // }
     }
-    public void HandleUpdate()
-    {
-        if (CanMove && Keyboard.current.fKey.wasPressedThisFrame)
-        {
-            Interact();
-        }
-    }
-
-    void Interact()
-    {
-        // if (animator.runtimeAnimatorController == null)
-        // {
-        //     Debug.LogWarning("AnimatorController is missing or not assigned!");
-        //     return;
-        // }
-
-        // Vector3 facingDir = new Vector3(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
-        Vector3 facingDir = Vector3.up;  // Default direction for interaction if no animator
-        Vector3 interactPos = transform.position + facingDir;
-
-        // Debug.DrawLine(transform.position, interactPos, Color.red, 1f);
-
-        Collider2D collider = Physics2D.OverlapCircle(interactPos, 0.2f, interactableLayer);
-        if (collider != null)
-        {
-            collider.GetComponent<Interactable>()?.Interact();
-        }
-    }
 
 
-}
 
-/* 
+
+
   if (!isMoving)
      {
          input.x = Input.GetAxisRaw("Horizontal");

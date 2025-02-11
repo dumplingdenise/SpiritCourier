@@ -64,8 +64,8 @@ public class DialogManager : MonoBehaviour
                 dialogBox.SetActive(false);
                 currentLine = 0;
                 OnHideDialog?.Invoke();
-            }                       
-        }      
+            }
+        }
     }
 
     public IEnumerator TypeDialog(string line)
@@ -83,3 +83,4 @@ public class DialogManager : MonoBehaviour
     }
     
 }
+
