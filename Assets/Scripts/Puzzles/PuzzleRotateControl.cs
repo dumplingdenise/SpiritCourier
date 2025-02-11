@@ -5,7 +5,9 @@ public class PuzzleRotateControl : MonoBehaviour
 {
     [SerializeField] private Transform[] pictures; // Puzzle pieces
     [SerializeField] private GameObject clueImageUI; // The UI Image for the clue
-    [SerializeField] private Sprite clueSprite; // The full, unsliced clue image
+    [SerializeField] private GameObject OverlayUI; // The UI Image for the clue
+    //[SerializeField] private Sprite clueSprite; // The full, unsliced clue image
+    [SerializeField] private GameObject CrossUI;
 
     public static bool youWin;
 
@@ -13,6 +15,8 @@ public class PuzzleRotateControl : MonoBehaviour
     {
         youWin = false;
         clueImageUI.SetActive(false); // Hide the clue UI at start
+        OverlayUI.SetActive(false);
+        CrossUI.SetActive(false);
     }
 
     void Update()
@@ -38,14 +42,22 @@ public class PuzzleRotateControl : MonoBehaviour
     private void ShowClue()
     {
         clueImageUI.SetActive(true);
-        clueImageUI.GetComponent<Image>().sprite = clueSprite;
-        Invoke("HideClue", 3f); // Hide clue after 5 seconds
+        OverlayUI.SetActive(true);
+        CrossUI.SetActive(true);
+        //clueImageUI.GetComponent<Image>().sprite = clueSprite;
+        //OverlayUI.GetComponent<Image>().sprite = clueSprite;
+        //Invoke("HideClue", 3f); // Hide clue after 5 seconds
     }
 
-    private void HideClue()
+    
+    
+    
+    /* private void HideClue()
     {
         
         clueImageUI.SetActive(false);
+        OverlayUI.SetActive(false);
     }
+    */
 
 }
