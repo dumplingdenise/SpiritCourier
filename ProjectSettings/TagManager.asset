@@ -10,6 +10,7 @@ TagManager:
   - AudioManager
   - Overpass
   - Underpass
+  - NPCs
   layers:
   - Default
   - TransparentFX
@@ -20,10 +21,10 @@ TagManager:
   - 
   - Solid Object
   - Interactable
-  - Ladder
+  - NPCs
   - GroundLayer
   - OverpassLayer
-  - 
+  - Ladder
   - 
   - 
   - 
@@ -62,6 +63,9 @@ TagManager:
   - name: Ladder
     uniqueID: 3770132071
     locked: 0
+  - name: GroundNPC
+    uniqueID: 2254861727
+    locked: 0
   - name: Player
     uniqueID: 843320421
     locked: 0
@@ -71,14 +75,17 @@ TagManager:
   - name: BridgeRailing
     uniqueID: 1369862555
     locked: 0
+  - name: WalkingRoof
+    uniqueID: 397565779
+    locked: 0
   - name: Houselev2
     uniqueID: 3804021479
     locked: 0
   - name: Decor
     uniqueID: 3335673361
     locked: 0
-  - name: WalkingRoof
-    uniqueID: 397565779
+  - name: OverpassNPC
+    uniqueID: 2753616177
     locked: 0
   - name: Collision
     uniqueID: 1209304905

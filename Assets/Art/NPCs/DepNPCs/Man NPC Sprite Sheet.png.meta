@@ -1,25 +1,64 @@
 fileFormatVersion: 2
-guid: e5779518673a05645a59193f325e0cbd
+guid: cd445d02758ad8944bb173aae9f7a6b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5512533548853951023
-    second: Grandma NPC Sprite Sheet_0
+      213: -5234871455317670122
+    second: Man NPC Sprite Sheet_0
   - first:
-      213: -2898832248822965996
-    second: Grandma NPC Sprite Sheet_1
+      213: -6556406411417276043
+    second: Man NPC Sprite Sheet_1
   - first:
-      213: -5711240150968313847
-    second: Grandma NPC Sprite Sheet_2
+      213: -7438148705644404171
+    second: Man NPC Sprite Sheet_2
   - first:
-      213: -2238403521620041514
-    second: Grandma NPC Sprite Sheet_3
+      213: -6091132020556365421
+    second: Man NPC Sprite Sheet_3
   - first:
-      213: -4189364046950550632
-    second: Grandma NPC Sprite Sheet_4
+      213: -6006740312608075763
+    second: Man NPC Sprite Sheet_4
   - first:
-      213: 545466106663611534
-    second: Grandma NPC Sprite Sheet_5
+      213: 2626894067059058580
+    second: Man NPC Sprite Sheet_5
+  - first:
+      213: -2945962568623877634
+    second: Man NPC Sprite Sheet_6
+  - first:
+      213: 3262284641815480802
+    second: Man NPC Sprite Sheet_7
+  - first:
+      213: -2624731689021139946
+    second: Man NPC Sprite Sheet_8
+  - first:
+      213: 7142898234994138081
+    second: Man NPC Sprite Sheet_9
+  - first:
+      213: 7891557340513406544
+    second: Man NPC Sprite Sheet_10
+  - first:
+      213: 6906761597809985286
+    second: Man NPC Sprite Sheet_11
+  - first:
+      213: -1092782826219036573
+    second: Man NPC Sprite Sheet_12
+  - first:
+      213: 7600862143238648096
+    second: Man NPC Sprite Sheet_13
+  - first:
+      213: -7874602814338743409
+    second: Man NPC Sprite Sheet_14
+  - first:
+      213: 7305300973409556416
+    second: Man NPC Sprite Sheet_15
+  - first:
+      213: 1455550395197235178
+    second: Man NPC Sprite Sheet_16
+  - first:
+      213: -4023951311611851943
+    second: Man NPC Sprite Sheet_17
+  - first:
+      213: 9011887836754475586
+    second: Man NPC Sprite Sheet_18
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,145 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_0
+      name: Man NPC Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d50328a1fb8f73b0800000000000000
-      internalID: -5512533548853951023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 419d579ad6745c7d0800000000000000
-      internalID: -2898832248822965996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 908d59697599db0b0800000000000000
-      internalID: -5711240150968313847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d0aadd4bd79fe0e0800000000000000
-      internalID: -2238403521620041514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89338b278936cd5c0800000000000000
-      internalID: -4189364046950550632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e8c23b4b882e19700800000000000000
-      internalID: 545466106663611534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 120
-        height: 160
+        x: 172
+        y: 509
+        width: 160
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,8 +169,184 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da81356aa3f426c40b74fdda00bccbca
-      internalID: 1485635387
+      spriteID: 4421ae5a0622b674aab8cb549ea98253
+      internalID: -88939969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 509
+        width: 147
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e9511dea20be444905cbf0e898ab76
+      internalID: 663507212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 253
+        width: 113
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c279457d2df5ab4ea0be88735a0bd9c
+      internalID: 704051021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 257
+        width: 102
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed55fba86b99fb41919a02c34330c1e
+      internalID: 1681187027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 0
+        width: 156
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04ac4ef088f63147acbdf421c595b7a
+      internalID: -1526464808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 0
+        width: 145
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa724aba5c2d6646af865e864e2522a
+      internalID: -1875064890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 142
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff6a54482dc83e4792828d444433794
+      internalID: 2115214669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 253
+        width: 116
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36d37e00e854004197047d2d2596cb6
+      internalID: 2071391625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 507
+        width: 142
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc139c677e1c25540819d8ad0d421ed8
+      internalID: 1367928942
       vertices: []
       indices: 
       edges: []
@@ -272,7 +355,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 32ec9a86628cd344fa7bbb5895c78831
+    spriteID: 22db102f97ca341418fe1d3ee0c4b5e2
     internalID: 0
     vertices: []
     indices: 
@@ -282,13 +365,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grandma NPC Sprite Sheet_0: -5512533548853951023
-      Grandma NPC Sprite Sheet_1: -2898832248822965996
-      Grandma NPC Sprite Sheet_2: -5711240150968313847
-      Grandma NPC Sprite Sheet_3: -2238403521620041514
-      Grandma NPC Sprite Sheet_4: -4189364046950550632
-      Grandma NPC Sprite Sheet_5: 545466106663611534
-      Grandma NPC Sprite Sheet_6: 1485635387
+      Man NPC Sprite Sheet_0: -88939969
+      Man NPC Sprite Sheet_1: 663507212
+      Man NPC Sprite Sheet_2: 704051021
+      Man NPC Sprite Sheet_3: 1681187027
+      Man NPC Sprite Sheet_4: -1526464808
+      Man NPC Sprite Sheet_5: -1875064890
+      Man NPC Sprite Sheet_6: 2115214669
+      Man NPC Sprite Sheet_7: 2071391625
+      Man NPC Sprite Sheet_8: 1367928942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

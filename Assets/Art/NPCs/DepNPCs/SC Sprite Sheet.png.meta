@@ -1,25 +1,61 @@
 fileFormatVersion: 2
-guid: e5779518673a05645a59193f325e0cbd
+guid: 66c437a0269e20b46859f4759824ad38
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5512533548853951023
-    second: Grandma NPC Sprite Sheet_0
+      213: 565550050973256261
+    second: SC Sprite Sheet_0
   - first:
-      213: -2898832248822965996
-    second: Grandma NPC Sprite Sheet_1
+      213: -7436072042096793481
+    second: SC Sprite Sheet_1
   - first:
-      213: -5711240150968313847
-    second: Grandma NPC Sprite Sheet_2
+      213: 3453668536824959497
+    second: SC Sprite Sheet_2
   - first:
-      213: -2238403521620041514
-    second: Grandma NPC Sprite Sheet_3
+      213: -2827606259469871988
+    second: SC Sprite Sheet_3
   - first:
-      213: -4189364046950550632
-    second: Grandma NPC Sprite Sheet_4
+      213: -6316530647259150039
+    second: SC Sprite Sheet_4
   - first:
-      213: 545466106663611534
-    second: Grandma NPC Sprite Sheet_5
+      213: 8390707036058022734
+    second: SC Sprite Sheet_5
+  - first:
+      213: -1052421990026978612
+    second: SC Sprite Sheet_6
+  - first:
+      213: 6292035284675765564
+    second: SC Sprite Sheet_7
+  - first:
+      213: 1463198020184260408
+    second: SC Sprite Sheet_8
+  - first:
+      213: 8708095282017688022
+    second: SC Sprite Sheet_9
+  - first:
+      213: 6178639328965197172
+    second: SC Sprite Sheet_10
+  - first:
+      213: -9007552256958277050
+    second: SC Sprite Sheet_11
+  - first:
+      213: 7645571446049973804
+    second: SC Sprite Sheet_12
+  - first:
+      213: -8919496938963191686
+    second: SC Sprite Sheet_13
+  - first:
+      213: 5941782907836973804
+    second: SC Sprite Sheet_14
+  - first:
+      213: -2180471980706509675
+    second: SC Sprite Sheet_15
+  - first:
+      213: -698225505795052976
+    second: SC Sprite Sheet_16
+  - first:
+      213: -2621507324038982603
+    second: SC Sprite Sheet_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,145 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_0
+      name: SC Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d50328a1fb8f73b0800000000000000
-      internalID: -5512533548853951023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 419d579ad6745c7d0800000000000000
-      internalID: -2898832248822965996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 908d59697599db0b0800000000000000
-      internalID: -5711240150968313847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d0aadd4bd79fe0e0800000000000000
-      internalID: -2238403521620041514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89338b278936cd5c0800000000000000
-      internalID: -4189364046950550632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 0
-        width: 120
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e8c23b4b882e19700800000000000000
-      internalID: 545466106663611534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grandma NPC Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 120
-        height: 160
+        x: 9
+        y: 225
+        width: 50
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,8 +166,162 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da81356aa3f426c40b74fdda00bccbca
-      internalID: 1485635387
+      spriteID: 466569a77ed770643a9aacba7bcf0045
+      internalID: -535426989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 118
+        width: 61
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24b2a6497019e842aa042b5a8deefc4
+      internalID: 1156474003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 6
+        width: 59
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ca7607561da1744a3ef7d1b17ab852
+      internalID: -11887130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 227
+        width: 50
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d534a440ab05ff545a6348ec77ccb1a0
+      internalID: -1741965843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 4
+        width: 58
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af9ad8d634b18f49acc11d6933c4b43
+      internalID: -567598094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 5
+        width: 60
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13111d5e9e568cc4bb55edcbf26ae0c0
+      internalID: 700106524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 117
+        width: 59
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09671503a12d7aa4787edcf7810e69aa
+      internalID: 1733326105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 114
+        width: 61
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4583cdb2f4dfc274bb99e8db240bd06d
+      internalID: -54683546
       vertices: []
       indices: 
       edges: []
@@ -272,7 +330,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 32ec9a86628cd344fa7bbb5895c78831
+    spriteID: b235c97074debfa43a1d9d894c4d7ba7
     internalID: 0
     vertices: []
     indices: 
@@ -282,13 +340,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grandma NPC Sprite Sheet_0: -5512533548853951023
-      Grandma NPC Sprite Sheet_1: -2898832248822965996
-      Grandma NPC Sprite Sheet_2: -5711240150968313847
-      Grandma NPC Sprite Sheet_3: -2238403521620041514
-      Grandma NPC Sprite Sheet_4: -4189364046950550632
-      Grandma NPC Sprite Sheet_5: 545466106663611534
-      Grandma NPC Sprite Sheet_6: 1485635387
+      SC Sprite Sheet_0: -535426989
+      SC Sprite Sheet_1: 1156474003
+      SC Sprite Sheet_2: -11887130
+      SC Sprite Sheet_3: -1741965843
+      SC Sprite Sheet_4: -567598094
+      SC Sprite Sheet_5: 700106524
+      SC Sprite Sheet_6: 1733326105
+      SC Sprite Sheet_7: -54683546
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

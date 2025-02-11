@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
-    [SerializeField] GameObject dialogBox;
+
+
+   [SerializeField] GameObject dialogBox;
     [SerializeField] Text dialogText;
 
     [SerializeField] int lettersPerSecond;
@@ -50,6 +52,8 @@ public class DialogManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.F) && !isTyping)
         {
+            if (currentDialog == null) return; // Prevents the error if currentDialog is not set
+
             ++currentLine;
             if (currentLine < currentDialog.Lines.Count)
             {
@@ -60,8 +64,8 @@ public class DialogManager : MonoBehaviour
                 dialogBox.SetActive(false);
                 currentLine = 0;
                 OnHideDialog?.Invoke();
-            }                       
-        }      
+            }
+        }
     }
 
     public IEnumerator TypeDialog(string line)
@@ -77,4 +81,6 @@ public class DialogManager : MonoBehaviour
         }
         isTyping = false;
     }
+    
 }
+
