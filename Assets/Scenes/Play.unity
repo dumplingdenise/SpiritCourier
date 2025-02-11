@@ -73300,14 +73300,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3546e04ab13d504428b2aa41bf4122e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3.5
   MoveWhenTalking: 1
   solidObjectsLayer:
     serializedVersion: 2
     m_Bits: 0
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
 --- !u!114 &2127466693
 MonoBehaviour:
   m_ObjectHideFlags: 0
