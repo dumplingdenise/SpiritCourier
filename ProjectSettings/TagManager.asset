@@ -8,6 +8,9 @@ TagManager:
   - SwipeObstacle
   - FlapObstacle
   - AudioManager
+  - Overpass
+  - Underpass
+  - NPCs
   layers:
   - Default
   - TransparentFX
@@ -18,10 +21,10 @@ TagManager:
   - 
   - Solid Object
   - Interactable
-  - 
-  - 
-  - 
-  - 
+  - NPCs
+  - GroundLayer
+  - OverpassLayer
+  - Ladder
   - 
   - 
   - 
@@ -45,23 +48,47 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
+  - name: Bg
+    uniqueID: 3738312829
+    locked: 0
+  - name: Floor
     uniqueID: 1942470371
     locked: 0
-  - name: WalkInfront
-    uniqueID: 3130653095
+  - name: HouseLvl 1
+    uniqueID: 2471899191
     locked: 0
-  - name: Collision
-    uniqueID: 1561755595
+  - name: RoofWalkable
+    uniqueID: 1813614631
+    locked: 0
+  - name: Ladder
+    uniqueID: 3770132071
+    locked: 0
+  - name: GroundNPC
+    uniqueID: 2254861727
     locked: 0
   - name: Player
     uniqueID: 843320421
     locked: 0
-  - name: WalkBehind
-    uniqueID: 2838696683
+  - name: Bridges
+    uniqueID: 1509419889
+    locked: 0
+  - name: BridgeRailing
+    uniqueID: 1369862555
+    locked: 0
+  - name: WalkingRoof
+    uniqueID: 397565779
+    locked: 0
+  - name: Houselev2
+    uniqueID: 3804021479
     locked: 0
   - name: Decor
-    uniqueID: 4090341783
+    uniqueID: 3335673361
+    locked: 0
+  - name: OverpassNPC
+    uniqueID: 2753616177
+    locked: 0
+  - name: Collision
+    uniqueID: 1209304905
     locked: 0
   - name: InteractionSprite
     uniqueID: 3785167691

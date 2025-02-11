@@ -142,12 +142,12 @@ TextureImporter:
       name: MC Test_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 218
-        width: 187
-        height: 321
+        x: 27
+        y: 219
+        width: 185
+        height: 319
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -164,12 +164,12 @@ TextureImporter:
       name: MC Test_2
       rect:
         serializedVersion: 2
-        x: 246
-        y: 217
-        width: 129
-        height: 317
+        x: 247
+        y: 218
+        width: 127
+        height: 315
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -186,12 +186,12 @@ TextureImporter:
       name: MC Test_3
       rect:
         serializedVersion: 2
-        x: 414
-        y: 218
-        width: 181
-        height: 318
+        x: 415
+        y: 219
+        width: 179
+        height: 316
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -208,12 +208,12 @@ TextureImporter:
       name: MC Test_4
       rect:
         serializedVersion: 2
-        x: 626
-        y: 217
-        width: 127
-        height: 317
+        x: 628
+        y: 218
+        width: 125
+        height: 315
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

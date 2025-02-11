@@ -1,0 +1,477 @@
+fileFormatVersion: 2
+guid: bddb3eb5f2d2eb5448f85116501fea01
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -433086138573603570
+    second: Depression NPC Sprite Sheet_0
+  - first:
+      213: -7421824361998447634
+    second: Depression NPC Sprite Sheet_1
+  - first:
+      213: -8818361619429159651
+    second: Depression NPC Sprite Sheet_2
+  - first:
+      213: -1338607387657895777
+    second: Depression NPC Sprite Sheet_3
+  - first:
+      213: -5820472267714597815
+    second: Depression NPC Sprite Sheet_4
+  - first:
+      213: -9154113326768035135
+    second: Depression NPC Sprite Sheet_5
+  - first:
+      213: -153255461825741164
+    second: Depression NPC Sprite Sheet_6
+  - first:
+      213: 4050306325190505347
+    second: Depression NPC Sprite Sheet_7
+  - first:
+      213: -3349382510768589795
+    second: Depression NPC Sprite Sheet_8
+  - first:
+      213: 526242448091582869
+    second: Depression NPC Sprite Sheet_9
+  - first:
+      213: -1435165709158726876
+    second: Depression NPC Sprite Sheet_10
+  - first:
+      213: -3768138778163067087
+    second: Depression NPC Sprite Sheet_11
+  - first:
+      213: -5211282818573214672
+    second: Depression NPC Sprite Sheet_12
+  - first:
+      213: 6505213020557201413
+    second: Depression NPC Sprite Sheet_13
+  - first:
+      213: -6552088902137953679
+    second: Depression NPC Sprite Sheet_14
+  - first:
+      213: 8208254106897316681
+    second: Depression NPC Sprite Sheet_15
+  - first:
+      213: 5355927934690371794
+    second: Depression NPC Sprite Sheet_16
+  - first:
+      213: -613342556833308934
+    second: Depression NPC Sprite Sheet_17
+  - first:
+      213: 268793682369741738
+    second: Depression NPC Sprite Sheet_18
+  - first:
+      213: -8044143150927135138
+    second: Depression NPC Sprite Sheet_19
+  - first:
+      213: 403374623769553438
+    second: Depression NPC Sprite Sheet_20
+  - first:
+      213: -510893222636428131
+    second: Depression NPC Sprite Sheet_21
+  - first:
+      213: 8029213419715421838
+    second: Depression NPC Sprite Sheet_22
+  - first:
+      213: -2971046802288739203
+    second: Depression NPC Sprite Sheet_23
+  - first:
+      213: 7003660751174220633
+    second: Depression NPC Sprite Sheet_24
+  - first:
+      213: -4387629514064523837
+    second: Depression NPC Sprite Sheet_25
+  - first:
+      213: 6245863234853480894
+    second: Depression NPC Sprite Sheet_26
+  - first:
+      213: -1961130047498059682
+    second: Depression NPC Sprite Sheet_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 85
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0dbc29937e5df9f0800000000000000
+      internalID: -433086138573603570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 88
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb0eb5b012600990800000000000000
+      internalID: -7421824361998447634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 0
+        width: 88
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d8cfc24d2ee9580800000000000000
+      internalID: -8818361619429159651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 0
+        width: 105
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9000f45caf4c6de0800000000000000
+      internalID: -1338607387657895777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 0
+        width: 105
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94cebd98f47893fa0800000000000000
+      internalID: -5820472267714597815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 0
+        width: 105
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca625c0e6e06f080800000000000000
+      internalID: -9154113326768035135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 0
+        width: 96
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49efcfd28f68fddf0800000000000000
+      internalID: -153255461825741164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 0
+        width: 91
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3837f70b424953830800000000000000
+      internalID: 4050306325190505347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 0
+        width: 82
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d147bbc2a5a9481d0800000000000000
+      internalID: -3349382510768589795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 0
+        width: 105
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5911b38e7b69d4700800000000000000
+      internalID: 526242448091582869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 105
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423c5cf2464451ce0800000000000000
+      internalID: -1435165709158726876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Depression NPC Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 0
+        width: 105
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1374737eeb1e4bbc0800000000000000
+      internalID: -3768138778163067087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 408f72ba2d4ff1a44a83360a4dd62565
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Depression NPC Sprite Sheet_0: -433086138573603570
+      Depression NPC Sprite Sheet_1: -7421824361998447634
+      Depression NPC Sprite Sheet_10: -1435165709158726876
+      Depression NPC Sprite Sheet_11: -3768138778163067087
+      Depression NPC Sprite Sheet_2: -8818361619429159651
+      Depression NPC Sprite Sheet_3: -1338607387657895777
+      Depression NPC Sprite Sheet_4: -5820472267714597815
+      Depression NPC Sprite Sheet_5: -9154113326768035135
+      Depression NPC Sprite Sheet_6: -153255461825741164
+      Depression NPC Sprite Sheet_7: 4050306325190505347
+      Depression NPC Sprite Sheet_8: -3349382510768589795
+      Depression NPC Sprite Sheet_9: 526242448091582869
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

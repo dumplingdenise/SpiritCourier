@@ -12,8 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 7eceaa1d5957f454f801175241b2165e
   - enabled: 1
-    path: Assets/Scenes/Play.unity
+    path: Assets/Scenes/Play test.unity
     guid: 24be536b42b127042a4314b69700a3f6
+  - enabled: 1
+    path: Assets/Scenes/Shumin.unity
+    guid: 21fbe6f727bcb694a92ca2b6f68a147e
+  - enabled: 1
+    path: Assets/Scenes/puzzle.unity
+    guid: e4f3ec0f20ae477489c3a261b2f9a9fa
+  - enabled: 1
+    path: Assets/Scenes/Play.unity
+    guid: b5f1029ef1bf5c948a966c48311daaef
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

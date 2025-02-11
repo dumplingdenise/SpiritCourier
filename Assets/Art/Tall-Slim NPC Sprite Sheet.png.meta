@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 30c8bf2f2fa09f343a4518c199ed5648
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2364004466393450941
+    second: Tall-Slim NPC Sprite Sheet_0
+  - first:
+      213: 5122110591026878428
+    second: Tall-Slim NPC Sprite Sheet_1
+  - first:
+      213: 276995023109736845
+    second: Tall-Slim NPC Sprite Sheet_2
+  - first:
+      213: -4153003695568793200
+    second: Tall-Slim NPC Sprite Sheet_3
+  - first:
+      213: 5786831875926706205
+    second: Tall-Slim NPC Sprite Sheet_4
+  - first:
+      213: 9151260547367465216
+    second: Tall-Slim NPC Sprite Sheet_5
+  - first:
+      213: -3259822650519499058
+    second: Tall-Slim NPC Sprite Sheet_6
+  - first:
+      213: 2329449406382639426
+    second: Tall-Slim NPC Sprite Sheet_7
+  - first:
+      213: 8256936303157913130
+    second: Tall-Slim NPC Sprite Sheet_8
+  - first:
+      213: 5934876885524475202
+    second: Tall-Slim NPC Sprite Sheet_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tall-Slim NPC Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 73
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db981d28981aec020800000000000000
+      internalID: 2364004466393450941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Slim NPC Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 10
+        width: 75
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd75c66c174651740800000000000000
+      internalID: 5122110591026878428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Slim NPC Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 10
+        width: 75
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d89c105818518d300800000000000000
+      internalID: 276995023109736845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Slim NPC Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 67
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091dcb674219d56c0800000000000000
+      internalID: -4153003695568793200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Slim NPC Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 9
+        width: 89
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d18c4836ee4fe4050800000000000000
+      internalID: 5786831875926706205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Slim NPC Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 0
+        width: 91
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00172ec7bfecffe70800000000000000
+      internalID: 9151260547367465216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Slim NPC Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 9
+        width: 89
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece43051298c2c2d0800000000000000
+      internalID: -3259822650519499058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Slim NPC Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 10
+        width: 89
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2498ea5a4edd35020800000000000000
+      internalID: 2329449406382639426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Slim NPC Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 10
+        width: 91
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2621c212d7869270800000000000000
+      internalID: 8256936303157913130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tall-Slim NPC Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 9
+        width: 88
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24dec53451bec5250800000000000000
+      internalID: 5934876885524475202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tall-Slim NPC Sprite Sheet_0: 2364004466393450941
+      Tall-Slim NPC Sprite Sheet_1: 5122110591026878428
+      Tall-Slim NPC Sprite Sheet_2: 276995023109736845
+      Tall-Slim NPC Sprite Sheet_3: -4153003695568793200
+      Tall-Slim NPC Sprite Sheet_4: 5786831875926706205
+      Tall-Slim NPC Sprite Sheet_5: 9151260547367465216
+      Tall-Slim NPC Sprite Sheet_6: -3259822650519499058
+      Tall-Slim NPC Sprite Sheet_7: 2329449406382639426
+      Tall-Slim NPC Sprite Sheet_8: 8256936303157913130
+      Tall-Slim NPC Sprite Sheet_9: 5934876885524475202
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
