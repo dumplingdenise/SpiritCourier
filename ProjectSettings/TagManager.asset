@@ -66,23 +66,23 @@ TagManager:
   - name: GroundNPC
     uniqueID: 2254861727
     locked: 0
+  - name: Player
+    uniqueID: 843320421
+    locked: 0
   - name: Bridges
     uniqueID: 1509419889
     locked: 0
   - name: BridgeRailing
     uniqueID: 1369862555
     locked: 0
-  - name: Player
-    uniqueID: 843320421
+  - name: WalkingRoof
+    uniqueID: 397565779
     locked: 0
   - name: Houselev2
     uniqueID: 3804021479
     locked: 0
   - name: Decor
     uniqueID: 3335673361
-    locked: 0
-  - name: WalkingRoof
-    uniqueID: 397565779
     locked: 0
   - name: OverpassNPC
     uniqueID: 2753616177

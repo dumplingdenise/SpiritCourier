@@ -16,11 +16,15 @@ public class GameController : MonoBehaviour
         DialogManager.Instance.OnShowDialog += () =>
         {
             state = GameState.Dialog;
+            playerController.SetCanMove(false);
         };
         DialogManager.Instance.OnHideDialog += () =>
         {
             if (state == GameState.Dialog)
+            {
                 state = GameState.FreeRoam;
+                playerController.SetCanMove(true);
+            }
         };
     }
 
