@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 input;
 
+    public LayerMask solidObjectsLayer;
+
+    public LayerMask interactablesLayer;
+
     private void Update()
     {
         if (!isMoving)
@@ -23,7 +27,10 @@ public class PlayerController : MonoBehaviour
                 targetPos.x += input.x;
                 targetPos.y += input.y;
 
-                StartCoroutine(Move(targetPos));
+                if (isWalkable(targetPos)) 
+                {
+                    StartCoroutine(Move(targetPos));
+                }
             }
         }
     }
@@ -40,4 +47,27 @@ public class PlayerController : MonoBehaviour
 
         isMoving = false;
     }
+
+    private bool isWalkable(Vector3 targetPos) 
+    {
+        if (Physics2D.OverlapCircle(targetPos, 0.05f, solidObjectsLayer | interactablesLayer) != null) 
+        {
+            return false;
+        }
+        return true;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.black; // Change color for visibility
+
+        // Draw a circle at the current player's position
+        Gizmos.DrawWireSphere(transform.position, 1f);
+
+        // Predict the next position based on input
+        Vector2 nextPos = (Vector2)transform.position + input;
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(nextPos, 0.05f); // Shows where collision is being checked
+    }
+
 }
