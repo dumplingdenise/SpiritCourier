@@ -1,0 +1,527 @@
+fileFormatVersion: 2
+guid: 8350ab3faf2666440a26ecbf54e48bbb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5952671906000026836
+    second: NPC Test_0
+  - first:
+      213: -251083361868847241
+    second: NPC Test_1
+  - first:
+      213: -7557775629444977100
+    second: NPC Test_2
+  - first:
+      213: 5355699538827078962
+    second: NPC Test_3
+  - first:
+      213: -6934164597971487659
+    second: NPC Test_4
+  - first:
+      213: 5956973093952443301
+    second: NPC Test_5
+  - first:
+      213: 7192496626453284233
+    second: NPC Test_6
+  - first:
+      213: 1548504511994798376
+    second: NPC Test_7
+  - first:
+      213: -3326212569539724520
+    second: NPC Test_8
+  - first:
+      213: -2619892291812845395
+    second: NPC Test_9
+  - first:
+      213: -3086875523097035656
+    second: NPC Test_10
+  - first:
+      213: -8427699324636945239
+    second: NPC Test_11
+  - first:
+      213: 2532450144189221940
+    second: NPC Test_12
+  - first:
+      213: 3856062858501635499
+    second: NPC Test_13
+  - first:
+      213: 8519095495792897389
+    second: NPC Test_14
+  - first:
+      213: 5003922420614008528
+    second: NPC Test_15
+  - first:
+      213: 6498149281141161315
+    second: NPC Test_16
+  - first:
+      213: -5830120698314640861
+    second: NPC Test_17
+  - first:
+      213: -2462380629443814180
+    second: NPC Test_18
+  - first:
+      213: 837339716466813583
+    second: NPC Test_19
+  - first:
+      213: -3362452053897819245
+    second: NPC Test_20
+  - first:
+      213: -7852600821785834489
+    second: NPC Test_21
+  - first:
+      213: -1935050706806729010
+    second: NPC Test_22
+  - first:
+      213: 9037824745366954103
+    second: NPC Test_23
+  - first:
+      213: -8863236077465601983
+    second: NPC Test_24
+  - first:
+      213: -3324705831333385190
+    second: NPC Test_25
+  - first:
+      213: 1892410027686918237
+    second: NPC Test_26
+  - first:
+      213: 4800304986520169754
+    second: NPC Test_27
+  - first:
+      213: 425369492761486156
+    second: NPC Test_28
+  - first:
+      213: 2153593407218451031
+    second: NPC Test_29
+  - first:
+      213: -800363826803296155
+    second: NPC Test_30
+  - first:
+      213: 6439968543305640865
+    second: NPC Test_31
+  - first:
+      213: 3093624736538889893
+    second: NPC Test_32
+  - first:
+      213: -9040653320655645552
+    second: NPC Test_33
+  - first:
+      213: -8067480502108901127
+    second: NPC Test_34
+  - first:
+      213: 4618485336165540286
+    second: NPC Test_35
+  - first:
+      213: -9155480387425416061
+    second: NPC Test_36
+  - first:
+      213: 4572647325675521525
+    second: NPC Test_37
+  - first:
+      213: -8099482828413678147
+    second: NPC Test_38
+  - first:
+      213: 5572452973824182288
+    second: NPC Test_39
+  - first:
+      213: -1582713175103772024
+    second: NPC Test_40
+  - first:
+      213: -7894792473724443603
+    second: NPC Test_41
+  - first:
+      213: -4881694196041154431
+    second: NPC Test_42
+  - first:
+      213: 2666945609915056142
+    second: NPC Test_43
+  - first:
+      213: -7884991122073397792
+    second: NPC Test_44
+  - first:
+      213: -8265499577109240032
+    second: NPC Test_45
+  - first:
+      213: 5314262372749001817
+    second: NPC Test_46
+  - first:
+      213: -3299119451156109578
+    second: NPC Test_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NPC Test_1
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 350
+        width: 166
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777ebce3309f38cf0800000000000000
+      internalID: -251083361868847241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC Test_4
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 349
+        width: 96
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554f1d37906e4cf90800000000000000
+      internalID: -6934164597971487659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC Test_6
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 351
+        width: 79
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98581f30391e0d360800000000000000
+      internalID: 7192496626453284233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC Test_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 354
+        width: 106
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da816b467d544abd0800000000000000
+      internalID: -2619892291812845395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC Test_10
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 353
+        width: 74
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87cf3f311173925d0800000000000000
+      internalID: -3086875523097035656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC Test_11
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 350
+        width: 54
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a42739bd1cca0b80800000000000000
+      internalID: -8427699324636945239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC Test_23
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 211
+        width: 113
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77025d1b8bdcc6d70800000000000000
+      internalID: 9037824745366954103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC Test_27
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 198
+        width: 115
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d221fb3fb1e9240800000000000000
+      internalID: 4800304986520169754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC Test_33
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 16
+        width: 106
+        height: 277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0945ddc44b5298280800000000000000
+      internalID: -9040653320655645552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC Test_36
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 48
+        width: 93
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38cc37f681331f080800000000000000
+      internalID: -9155480387425416061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC Test_0
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 51
+        width: 140
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9acde3525fb7ed4abc6456b6f1a6b57
+      internalID: -1051232752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC Test_2
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 39
+        width: 140
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd876f881cbb8774a909626f14bafc0b
+      internalID: 1336769846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: facf4e5388ea8a84bb39e543082e758b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      NPC Test_0: -1051232752
+      NPC Test_2: 1336769846
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -14,6 +14,10 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+<<<<<<< HEAD
         SceneManager.LoadScene("Play");
+=======
+        SceneManager.LoadScene("Denise");
+>>>>>>> Denise's
     }
 }
