@@ -384,7 +384,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hotbar tileset_0: -7912019982163542597
+      hotbar tileset_1: -1203850490115774798
+      hotbar tileset_10: 4790738295238316733
+      hotbar tileset_2: 8023894816691584191
+      hotbar tileset_3: 5621139213026780642
+      hotbar tileset_4: -3312977747500008136
+      hotbar tileset_5: 4700927013332254165
+      hotbar tileset_6: -5504692927576502516
+      hotbar tileset_7: 1616380555616268793
+      hotbar tileset_8: 8145773865736836614
+      hotbar tileset_9: -5511121800158988726
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
