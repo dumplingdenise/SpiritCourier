@@ -58,6 +58,7 @@ public class DialogManager : MonoBehaviour
             if (currentLine < currentDialog.Lines.Count)
             {
                 StartCoroutine(TypeDialog(currentDialog.Lines[currentLine]));
+                Debug.Log("Interacting with NPCS");
             }
             else
             {
