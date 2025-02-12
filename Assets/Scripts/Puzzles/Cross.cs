@@ -7,7 +7,7 @@ public class Cross : MonoBehaviour
 {
     public void StartButton()
     {
-        SceneManager.LoadScene("Play");
+        SceneManager.LoadScene("Denise");
 
     }
 }

@@ -73481,6 +73481,7 @@ MonoBehaviour:
   dialog:
     lines:
     - Hi
+    - Testing dialogue !!!
 --- !u!50 &4256679570987158031
 Rigidbody2D:
   serializedVersion: 5
