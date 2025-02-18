@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-using System;
-=======
 /*using System;
->>>>>>> Denise's
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,13 +6,10 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
-
-
-<<<<<<< HEAD
    [SerializeField] GameObject dialogBox;
-=======
+
     [SerializeField] GameObject dialogBox;
->>>>>>> Denise's
+
     [SerializeField] Text dialogText;
 
     [SerializeField] int lettersPerSecond;
@@ -34,11 +27,6 @@ public class DialogManager : MonoBehaviour
     Dialog currentDialog;
     int currentLine = 0;
     bool isTyping;
-<<<<<<< HEAD
-   
-=======
-
->>>>>>> Denise's
     public IEnumerator ShowDialog(Dialog dialog)
     {
         if (dialog == null || dialog.Lines == null || dialog.Lines.Count == 0)
@@ -70,10 +58,9 @@ public class DialogManager : MonoBehaviour
             if (currentLine < currentDialog.Lines.Count)
             {
                 StartCoroutine(TypeDialog(currentDialog.Lines[currentLine]));
-<<<<<<< HEAD
-=======
+
                 Debug.Log("Interacting with NPCS");
->>>>>>> Denise's
+
             }
             else
             {
@@ -97,11 +84,9 @@ public class DialogManager : MonoBehaviour
         }
         isTyping = false;
     }
-<<<<<<< HEAD
     
 }
 
-=======
 
 }*/
 
@@ -221,4 +206,3 @@ public class DialogManager : MonoBehaviour
     }
 
 }
->>>>>>> Denise's

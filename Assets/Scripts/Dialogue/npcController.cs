@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-using System.Collections;
-=======
 /*using System.Collections;
->>>>>>> Denise's
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,12 +11,8 @@ public class npcController : MonoBehaviour, Interactable
     {
         StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
     }
-
-<<<<<<< HEAD
 } 
-=======
-} */
-
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,4 +27,3 @@ public class npcController : MonoBehaviour, Interactable
         StartCoroutine(DialogManager.Instance.ShowDialog(dialog, showButtonAfterDialog));
     }
 }
->>>>>>> Denise's

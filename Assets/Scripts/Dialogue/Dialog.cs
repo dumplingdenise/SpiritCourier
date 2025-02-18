@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /*using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +14,6 @@ public class Dialog
     }
 }*/
 
->>>>>>> Denise's
 using System;
 using System.Collections;
 using System.Collections.Generic;
