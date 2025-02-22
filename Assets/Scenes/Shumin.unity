@@ -34066,6 +34066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grandma NPC 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3057688917450417838, guid: cded85279ab004a41931aa08496ab887, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7889151285068695253, guid: cded85279ab004a41931aa08496ab887, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.28
@@ -34140,6 +34144,7 @@ MonoBehaviour:
     lines:
     - Helloooo
   showButtonAfterDialog: 0
+  RotatePuzzle: 
 --- !u!1 &623103484
 GameObject:
   m_ObjectHideFlags: 0
@@ -72633,6 +72638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grandma NPC 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3057688917450417838, guid: cded85279ab004a41931aa08496ab887, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7889151285068695253, guid: cded85279ab004a41931aa08496ab887, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.22
@@ -73646,6 +73655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Depress NPC 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8752988378549378947, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -73680,6 +73693,7 @@ MonoBehaviour:
     lines:
     - Hello, Can you find my parcel?
   showButtonAfterDialog: 0
+  RotatePuzzle: 
 --- !u!1 &1796103467
 GameObject:
   m_ObjectHideFlags: 0
@@ -75543,6 +75557,7 @@ MonoBehaviour:
     lines:
     - Hiiiiii
   showButtonAfterDialog: 0
+  RotatePuzzle: 
 --- !u!1 &2127466680
 GameObject:
   m_ObjectHideFlags: 0
@@ -75559,6 +75574,8 @@ GameObject:
   - component: {fileID: 2127466692}
   - component: {fileID: 2127466691}
   - component: {fileID: 2127466693}
+  - component: {fileID: 2127466695}
+  - component: {fileID: 2127466694}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -75853,7 +75870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3546e04ab13d504428b2aa41bf4122e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3.5
+  moveSpeed: 5
   MoveWhenTalking: 1
   solidObjectsLayer:
     serializedVersion: 2
@@ -75871,6 +75888,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba00c9d6d8daa3c4ead89cb0d0797d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2127466694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127466680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8179f79a45d3864990de78fe0174ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2127466695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127466680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4be9c241d4d704eaab3fdd20b2ba36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1969696354264599327
@@ -75979,6 +76020,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1283417066}
     m_Modifications:
+    - target: {fileID: 1729319760097359532, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729319760097359532, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2040105569
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695530224867102480, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2673645
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695530224867102480, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
+      propertyPath: m_Size.y
+      value: 2.9557474
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695530224867102480, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.029546738
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695530224867102480, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.17787373
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695530224867102480, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6294382644697623487, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.178
@@ -76027,34 +76096,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 1729319760097359532, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
-      propertyPath: m_SortingLayer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1729319760097359532, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -2040105569
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695530224867102480, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
-      propertyPath: m_Size.x
-      value: 1.2673645
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695530224867102480, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
-      propertyPath: m_Size.y
-      value: 2.9557474
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695530224867102480, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.029546738
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695530224867102480, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.17787373
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695530224867102480, guid: e5f32403addfa03448269434b6bcec2e, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -76094,6 +76135,7 @@ MonoBehaviour:
     - Hello there, I am bored..
     - Do you want to play a game with me?
   showButtonAfterDialog: 1
+  RotatePuzzle: NextScene
 --- !u!50 &4256679570987158031
 Rigidbody2D:
   serializedVersion: 5

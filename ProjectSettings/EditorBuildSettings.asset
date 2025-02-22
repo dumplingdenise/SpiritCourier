@@ -11,18 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 7eceaa1d5957f454f801175241b2165e
-  - enabled: 0
-    path: Assets/Scenes/Play test.unity
-    guid: 24be536b42b127042a4314b69700a3f6
   - enabled: 1
     path: Assets/Scenes/Shumin.unity
-    guid: 21fbe6f727bcb694a92ca2b6f68a147e
+    guid: 319ed6313c413fc45ab7e2891e7dabff
   - enabled: 1
-    path: Assets/Scenes/puzzle/puzzle.unity
+    path: Assets/Scenes/puzzle/Puzzle.unity
     guid: e4f3ec0f20ae477489c3a261b2f9a9fa
   - enabled: 1
+    path: Assets/Scenes/puzzle/FindingPuzzle.unity
+    guid: c9ba9cd401092514683c268a1125c769
+  - enabled: 1
     path: Assets/Scenes/Play.unity
-    guid: b5f1029ef1bf5c948a966c48311daaef
+    guid: dd555933151f2bb4597b26913abdacbe
   - enabled: 1
     path: Assets/Scenes/Denise.unity
     guid: 3ad86b81049b39d4f99990efdc31eb65

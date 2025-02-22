@@ -194,7 +194,7 @@ public class DialogManager : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(nextSceneName))
         {
-            SceneManager.LoadScene(nextSceneName);
+           SceneManager.LoadScene(nextSceneName);
         }
     }
 
