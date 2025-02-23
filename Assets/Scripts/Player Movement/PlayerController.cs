@@ -14,12 +14,15 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask solidObjectsLayer;
     public LayerMask interactableLayer;
-    // animator = GetComponent<Animator>();
-    // private Animator animator;
+ 
+    private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        animator = GetComponent<Animator>();
+        
     }
 
     void Update()
@@ -30,8 +33,22 @@ public class PlayerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
+        animator.SetBool("isWalking", true);
+
+        if (context.canceled)
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetFloat("LastInputX", moveInput.x);
+            animator.SetFloat("LastInputY", moveInput.y);
+        }
+
         moveInput = context.ReadValue<Vector2>();
-       
+        animator.SetFloat("InputX", moveInput.x);
+        animator.SetFloat("InputY", moveInput.y);
+
+        Debug.Log("Current Animation State: " + animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"));
+
+
     }
 
     public void SetMoveWhenTalking(bool value)
