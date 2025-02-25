@@ -862,7 +862,6 @@ GameObject:
   - component: {fileID: 449729510}
   - component: {fileID: 449729509}
   - component: {fileID: 449729508}
-  - component: {fileID: 449729507}
   m_Layer: 5
   m_Name: Parcel2
   m_TagString: Untagged
@@ -891,19 +890,6 @@ RectTransform:
   m_AnchoredPosition: {x: -490, y: -346.27}
   m_SizeDelta: {x: 73.4367, y: 46.795}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &449729507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449729505}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectFoundUI: {fileID: 0}
 --- !u!114 &449729508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,11 +937,11 @@ MonoBehaviour:
       - m_Target: {fileID: 476501419}
         m_TargetAssemblyTypeName: Find2Counter, Assembly-CSharp
         m_MethodName: FindParcel
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1627,7 +1613,6 @@ GameObject:
   - component: {fileID: 835014995}
   - component: {fileID: 835014994}
   - component: {fileID: 835014993}
-  - component: {fileID: 835014992}
   m_Layer: 5
   m_Name: Parcel3
   m_TagString: Untagged
@@ -1656,19 +1641,6 @@ RectTransform:
   m_AnchoredPosition: {x: 261, y: -209}
   m_SizeDelta: {x: 47.5812, y: 46.795}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &835014992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835014990}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectFoundUI: {fileID: 0}
 --- !u!114 &835014993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1716,11 +1688,11 @@ MonoBehaviour:
       - m_Target: {fileID: 476501419}
         m_TargetAssemblyTypeName: Find2Counter, Assembly-CSharp
         m_MethodName: FindParcel
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3323,7 +3295,6 @@ GameObject:
   - component: {fileID: 2022665780}
   - component: {fileID: 2022665779}
   - component: {fileID: 2022665778}
-  - component: {fileID: 2022665777}
   m_Layer: 5
   m_Name: Parcel1
   m_TagString: Untagged
@@ -3352,19 +3323,6 @@ RectTransform:
   m_AnchoredPosition: {x: -689.2793, y: 144}
   m_SizeDelta: {x: 47.5812, y: 46.795}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2022665777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022665775}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectFoundUI: {fileID: 0}
 --- !u!114 &2022665778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3412,7 +3370,7 @@ MonoBehaviour:
       - m_Target: {fileID: 476501419}
         m_TargetAssemblyTypeName: Find2Counter, Assembly-CSharp
         m_MethodName: FindParcel
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
