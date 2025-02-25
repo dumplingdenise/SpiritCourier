@@ -18,14 +18,23 @@ EditorBuildSettings:
     path: Assets/Scenes/puzzle/Puzzle.unity
     guid: e4f3ec0f20ae477489c3a261b2f9a9fa
   - enabled: 1
-    path: Assets/Scenes/puzzle/FindingPuzzle.unity
-    guid: c9ba9cd401092514683c268a1125c769
-  - enabled: 1
     path: Assets/Scenes/Play.unity
     guid: dd555933151f2bb4597b26913abdacbe
   - enabled: 1
     path: Assets/Scenes/Denise.unity
     guid: 3ad86b81049b39d4f99990efdc31eb65
+  - enabled: 1
+    path: Assets/Scenes/puzzle/RotatePuzzle2.unity
+    guid: b2c9a93e662cac94cbe139c5794ded6e
+  - enabled: 1
+    path: Assets/Scenes/puzzle/Find2.unity
+    guid: 1a034ec892bed5045ad2cbf7432ecb86
+  - enabled: 1
+    path: Assets/Scenes/puzzle/MemoryPuzzle.unity
+    guid: 834944ca3080fae41b8ff155f92e5de5
+  - enabled: 1
+    path: Assets/Scenes/puzzle/Find1.unity
+    guid: 282eba4e3e737714bb4a1365286ea685
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
