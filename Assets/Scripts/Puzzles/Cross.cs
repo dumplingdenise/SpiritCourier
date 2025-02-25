@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Cross : MonoBehaviour
 {
-    public void StartButton()
+    public void ExitButton()
     {
         // Find and disable the AudioListener in the current scene
         AudioListener audioListener = Object.FindFirstObjectByType<AudioListener>();

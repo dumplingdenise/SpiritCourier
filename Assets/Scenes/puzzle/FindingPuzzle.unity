@@ -1544,7 +1544,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1697182230}
         m_TargetAssemblyTypeName: Cross, Assembly-CSharp
-        m_MethodName: StartButton
+        m_MethodName: ExitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

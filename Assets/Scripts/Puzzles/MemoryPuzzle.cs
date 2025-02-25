@@ -14,44 +14,32 @@ public class MemoryPuzzle : MonoBehaviour
 
     public Card[] cards; // Array of all cards
     private Dictionary<Button, Image> cardPairs = new Dictionary<Button, Image>(); // Store button-image pairs
+    public GameObject puzzleCompletePanel; // UI pop-up when puzzle is done
 
     private Button firstCard, secondCard; //store two clicked cards
     private int matchedPairs = 0; //tracks how many pairs are found
     private bool isFlipping = false;  //prevent clicking multiple cards too quickly
 
-    public Sprite[] possibleImages; // Drag your possible images here in the Inspector
+    // public Sprite[] possibleImages; // Drag your possible images here in the Inspector
 
     void Start()
     {
         InitializeCards();
+        puzzleCompletePanel.SetActive(false); // Show pop-up when puzzle is done
     }
 
     void InitializeCards()
     {
-        List<Sprite> shuffledSprites = new List<Sprite>();
+         List<Card> shuffledCards = new List<Card>(cards); //convert array to list
+          shuffledCards = ShuffleList(shuffledCards); //shuffle cards
 
-        // Collect all front images
-        foreach (Card card in cards)
-        {
-            shuffledSprites.Add(card.frontImage.sprite);
-        }
+           foreach (Card card in shuffledCards)
+           {
+               cardPairs[card.cardButton] = card.frontImage; // Store the button-image pair
+               card.frontImage.gameObject.SetActive(false); // Hide front initially
+               card.cardButton.onClick.AddListener(() => FlipCard(card.cardButton)); // Click event
+           } 
 
-        // Shuffle the front images
-        shuffledSprites = ShuffleList(shuffledSprites);
-
-        // Assign shuffled sprites back to frontImages (while keeping buttons in place)
-        for (int i = 0; i < cards.Length; i++)
-        {
-            cards[i].frontImage.sprite = shuffledSprites[i];
-            cards[i].frontImage.gameObject.SetActive(false); // Hide front initially
-            cards[i].cardButton.onClick.RemoveAllListeners(); // Clear old listeners
-            cards[i].cardButton.onClick.AddListener(() => FlipCard(cards[i].cardButton)); // Re-add click event
-        }
-
-        matchedPairs = 0; // Reset matched pairs
-        firstCard = null;
-        secondCard = null;
-        isFlipping = false;
         /* List<Card> shuffledCards = new List<Card>(cards);
          shuffledCards = ShuffleList(shuffledCards);
 
@@ -84,17 +72,6 @@ public class MemoryPuzzle : MonoBehaviour
          }
 
          return ShuffleList(selected); */
-
-
-        /*  List<Card> shuffledCards = new List<Card>(cards); //convert array to list
-         shuffledCards = ShuffleList(shuffledCards); //shuffle cards
-
-          foreach (Card card in shuffledCards)
-          {
-              cardPairs[card.cardButton] = card.frontImage; // Store the button-image pair
-              card.frontImage.gameObject.SetActive(false); // Hide front initially
-              card.cardButton.onClick.AddListener(() => FlipCard(card.cardButton)); // Click event
-          } */
     }
 
 
@@ -132,6 +109,7 @@ public class MemoryPuzzle : MonoBehaviour
             if (matchedPairs == cards.Length / 2)
             {
                 Debug.Log("Puzzle Completed!");
+                puzzleCompletePanel.SetActive(true); // Show pop-up when puzzle is done
             }
         }
         else
