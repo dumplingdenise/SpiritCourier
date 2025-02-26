@@ -143,7 +143,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 using System.Collections.Generic;
-using static Parcels;
+using static Parcels_Test;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
 
@@ -155,14 +155,31 @@ public class DeliverParcel : MonoBehaviour
 
     private List<Inventory.inventoryParcelData> inventoryList;
 
+    /*[SerializeField] */private int NpcID;
+    private string npcName;
     /*public Button selectedParcel;*/
+
+    private Quest quest;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        /* selectedParcel = Button.*/
+        MainNpcs mainNpcs = FindFirstObjectByType<MainNpcs>();
+        if (mainNpcs != null)
+        {
+            foreach (var npcData in mainNpcs.GetNPCList())
+            {
+                if (npcData.npcInstance == gameObject)
+                {
+                    NpcID = npcData.npcID;
+                    npcName = npcData.npcInstance.name;
+                    break;
+                }
+            }
+        }
 
         inventoryList = FindAnyObjectByType<Inventory>().GetInventoryList();
+        quest = FindAnyObjectByType<Quest>();
         var uiDocument = GetComponentInParent<UIDocument>();
         if (uiDocument != null)
         {
@@ -223,59 +240,69 @@ public class DeliverParcel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*var inventory = FindFirstObjectByType<Inventory>();
-        if (playerNearby && Input.GetKeyDown(KeyCode.E) && inventoryList.Count > 0 )
-        {
-            *//*parcelDeliver();*//*
-            Debug.Log("Parcel delivered!");
-            if (promptText != null)
-            {
-                promptText.style.display = DisplayStyle.Flex;
-                promptText.text = "Parcel delivered!";
-            }
-
-            // Call the RemoveParcelFromInventory method from the Inventory script
-            inventory.RemoveParcelFromInventory();
-        }*/
-
         var inventory = FindFirstObjectByType<Inventory>();
 
-        // Check if the player is nearby, and if they press "E" without selecting a parcel
-        if (playerNearby && Input.GetKeyDown(KeyCode.E))
+        // Only allow delivery if the player is near an NPC
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (inventory.selectedSlot < 0 || inventory.selectedSlot >= inventory.GetInventoryList().Count)
+            if (!playerNearby)
             {
-                // If no parcel is selected
+                /*// Player not near NPC — show warning and prevent removal
+                Debug.Log("You need to be near a spirit to deliver a parcel!");
                 if (promptText != null)
                 {
                     promptText.style.display = DisplayStyle.Flex;
-                    promptText.text = "Please select something!";
-                }
+                    promptText.text = "You need to be near a spirit to deliver a parcel!";
+                }*/
+                return; // Exit to prevent parcel removal
             }
             else
             {
-                // Parcel delivery logic
-                Debug.Log("Parcel delivered!");
-                if (promptText != null)
+                // Check if a parcel is selected
+                if (inventory.selectedSlot < 0 || inventory.selectedSlot >= inventory.GetInventoryList().Count)
                 {
-                    promptText.text = ""; // resets previous message
-
-                    promptText.style.display = DisplayStyle.Flex;
-                    promptText.text = "Parcel successfully delivered to the spirit!";
-
+                    if (promptText != null)
+                    {
+                        promptText.style.display = DisplayStyle.Flex;
+                        promptText.text = "Please select a parcel first!";
+                    }
                 }
+                else
+                {
+                    var selectedParcel = inventory.GetInventoryList()[inventory.selectedSlot];
 
-                // Call the RemoveParcelFromInventory method from the Inventory script
-                inventory.RemoveParcelFromInventory();
+                    // Check if parcel matches the current NPC
+                    if (selectedParcel.npcData.npcID == NpcID)
+                    {
+                        Debug.Log($"Parcel {selectedParcel.parcelName} delivered successfully to NPC {npcName}");
+                        if (promptText != null)
+                        {
+                            promptText.text = $"{selectedParcel.parcelName} successfully delivered to {npcName}";
+                            promptText.style.display = DisplayStyle.Flex;
+                        }
+
+                        // Remove parcel from inventory after successful delivery
+                        inventory.RemoveParcelFromInventory();
+
+                        if (quest != null)
+                        {
+                            quest.completeQuest(selectedParcel.parcelID);
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("This parcel is for a different spirit!");
+                        if (promptText != null)
+                        {
+                            promptText.text = "This parcel is for a different spirit!";
+                            promptText.style.display = DisplayStyle.Flex;
+                            Debug.Log($"parcel {selectedParcel.parcelName} is meant for {selectedParcel.npcData.npcID} but you are giving to {npcName}, {NpcID}");
+                        }
+
+                        inventory.selectedSlot = -1;
+                    }
+                }
             }
         }
     }
-
-    /* private void parcelDeliver()
-     {
-         if (inventoryList.Count > 0)
-         {
-
-         }
-     }*/
 }

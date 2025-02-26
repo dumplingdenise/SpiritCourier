@@ -2,17 +2,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
-   [SerializeField] GameObject dialogBox;
+
 
     [SerializeField] GameObject dialogBox;
-
     [SerializeField] Text dialogText;
 
     [SerializeField] int lettersPerSecond;
+
+    [SerializeField] Button nextSceneButton; // Add a UI button in the Inspector
+    [SerializeField] string nextSceneName; // Scene name to load
 
     public event Action OnShowDialog;
     public event Action OnHideDialog;
@@ -22,18 +25,26 @@ public class DialogManager : MonoBehaviour
     public void Awake()
     {
         Instance = this;
+        if (nextSceneButton != null)
+        {
+            nextSceneButton.gameObject.SetActive(false); // Hide button by default
+            nextSceneButton.onClick.AddListener(GoToNextScene);
+        }
     }
 
     Dialog currentDialog;
     int currentLine = 0;
     bool isTyping;
-    public IEnumerator ShowDialog(Dialog dialog)
+    bool showButtonAtEnd = false; // Flag to check if button should appear
+
+    public IEnumerator ShowDialog(Dialog dialog, bool showButton = false)
     {
         if (dialog == null || dialog.Lines == null || dialog.Lines.Count == 0)
         {
-            yield break; // Prevent errors if dialog is null or empty
+            yield break;
         }
 
+        showButtonAtEnd = showButton;
         yield return new WaitForEndOfFrame();
 
         OnShowDialog?.Invoke();
@@ -52,21 +63,23 @@ public class DialogManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.F) && !isTyping)
         {
-            if (currentDialog == null) return; // Prevents the error if currentDialog is not set
+            if (currentDialog == null) return;
 
             ++currentLine;
             if (currentLine < currentDialog.Lines.Count)
             {
                 StartCoroutine(TypeDialog(currentDialog.Lines[currentLine]));
-
-                Debug.Log("Interacting with NPCS");
-
             }
             else
             {
-                dialogBox.SetActive(false);
-                currentLine = 0;
-                OnHideDialog?.Invoke();
+                if (showButtonAtEnd)
+                {
+                    nextSceneButton.gameObject.SetActive(true); // Show button
+                }
+                else
+                {
+                    CloseDialog();
+                }
             }
         }
     }
@@ -84,11 +97,24 @@ public class DialogManager : MonoBehaviour
         }
         isTyping = false;
     }
-    
+
+    public void GoToNextScene()
+    {
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+    }
+
+    private void CloseDialog()
+    {
+        dialogBox.SetActive(false);
+        currentLine = 0;
+        OnHideDialog?.Invoke();
+    }
+
 }
-
-
-}*/
+*/
 
 using System;
 using System.Collections;
