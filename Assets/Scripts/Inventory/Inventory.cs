@@ -19,17 +19,16 @@ public class Inventory : MonoBehaviour
 
     public class inventoryParcelData
     {
-
-        /*public Parcels.ParcelData parcelData;*/
-
-        public int ParcelID;
+        public int parcelID;
+        public string parcelName;
         public Sprite parcelSprite;
         public Vector2 parcelPosition;
         public MainNpcs.NPCData npcData;
 
-        public inventoryParcelData(int parcelID, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData)
+        public inventoryParcelData(int parcelID, string parcelName, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData)
         {
-            this.ParcelID = parcelID;
+            this.parcelID = parcelID;
+            this.parcelName = parcelName;
             this.parcelSprite = parcelSprite;
             this.parcelPosition = parcelPosition;
             this.npcData = npcData;
@@ -54,7 +53,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public bool AddParcelToInventory(int parcelID, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData)
+    public bool AddParcelToInventory(int parcelID, string parcelName, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData)
     {
         if (collectedParcels.Count >= maxInventorySize)
         {
@@ -62,10 +61,10 @@ public class Inventory : MonoBehaviour
             return false;
         }
 
-        inventoryParcelData newParcel = new inventoryParcelData(parcelID, parcelSprite, parcelPosition, npcData);
+        inventoryParcelData newParcel = new inventoryParcelData(parcelID, parcelName, parcelSprite, parcelPosition, npcData);
         collectedParcels.Add(newParcel);
 
-        Debug.Log($"Parcel {parcelID} added to inventory at position {parcelPosition}. Assigned to NPC ID: {npcData.npcID}");
+        Debug.Log($"Parcel Name: {parcelName}, Parcel ID {parcelID} added to inventory at position {parcelPosition}. Assigned to NPC ID: {npcData.npcID}");
 
         UpdateInventoryUI();
         return true;
@@ -140,10 +139,5 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // If the player has selected a parcel, and presses 'E', remove it from inventory
-        if (selectedSlot >= 0 && Input.GetKeyDown(KeyCode.E))
-        {
-            RemoveParcelFromInventory();
-        }
     }
 }

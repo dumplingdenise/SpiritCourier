@@ -8,9 +8,10 @@ public class MainNpcs : MonoBehaviour
     [SerializeField] private List<GameObject> npcObjects; // Reference to the NPC Objects in the scene
     private List<NPCData> npcList = new List<NPCData>(); // storing their info into our own List. 
 
+    [System.Serializable]
     public class NPCData
     {
-        public int npcID;
+        [SerializeField] public int npcID;
         public Vector2 npcPos;
         public GameObject npcInstance; // We store the instance here instead of the prefab
 
@@ -28,7 +29,7 @@ public class MainNpcs : MonoBehaviour
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
         InitializeNpcs();
         /*SpawnNpcs();*/
