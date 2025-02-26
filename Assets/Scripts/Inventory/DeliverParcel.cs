@@ -294,7 +294,7 @@ public class DeliverParcel : MonoBehaviour
                         Debug.Log("This parcel is for a different spirit!");
                         if (promptText != null)
                         {
-                            promptText.text = "This parcel is for a different spirit!";
+                            promptText.text = "This parcel is not for me!";
                             promptText.style.display = DisplayStyle.Flex;
                             Debug.Log($"parcel {selectedParcel.parcelName} is meant for {selectedParcel.npcData.npcID} but you are giving to {npcName}, {NpcID}");
                         }
