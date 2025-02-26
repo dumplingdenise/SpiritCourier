@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Shumin.unity
     guid: 319ed6313c413fc45ab7e2891e7dabff
   - enabled: 1
-    path: Assets/Scenes/puzzle/Puzzle.unity
+    path: Assets/Scenes/puzzle/puzzle.unity
     guid: e4f3ec0f20ae477489c3a261b2f9a9fa
   - enabled: 1
     path: Assets/Scenes/Play.unity
