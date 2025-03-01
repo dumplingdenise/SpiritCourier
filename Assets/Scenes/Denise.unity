@@ -42149,7 +42149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3546e04ab13d504428b2aa41bf4122e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 8
   MoveWhenTalking: 1
   solidObjectsLayer:
     serializedVersion: 2

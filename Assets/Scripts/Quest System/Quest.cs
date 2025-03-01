@@ -55,6 +55,7 @@ public class Quest : MonoBehaviour
     public void addParcelDatatoQuest(questData questData)
     {
         allQuest.Add(questData);
+        Debug.LogError($"Queue list count: {allQuest.Count}");
         Debug.Log($"Quest ID: {questData.questID}, quest status: {questData.questStatus}, quest type: {questData.questType}, questData: {questData.ParcelData} added to quest list");
     }
 
@@ -75,11 +76,15 @@ public class Quest : MonoBehaviour
                 {
                     quest.parcelObject.SetActive(true);
                 }
-
-                UpdateQuestUI();
                 Debug.Log($"Quest ID {quest.questID} activated.");
+                Debug.LogError($"Active list count: {activeQuest.Count}");
+                foreach (var quests in activeQuest)
+                {
+                    Debug.LogError($"Quest ID: {quests.questID}, quest status: {quests.questStatus}, quest type: {quests.questType}, questData: {quests.ParcelData.parcelName}, {quests.ParcelData.parcelID}");
+                }
             }
         }
+        UpdateQuestUI();
     }
 
     public questData GetQuestByParcelID(int parcelID)
@@ -103,10 +108,18 @@ public class Quest : MonoBehaviour
             {
                 quest.parcelObject.SetActive(false);
             }*/
+
             activeQuest.Remove(quest);
             FillActiveQuests();
+            UpdateQuestUI();
 
-            Debug.Log($"Parcel {quest.ParcelData.parcelName}, ID: {quest.ParcelData.parcelID} successfully delivered. Removing from quest");
+            Debug.Log($"Quest ID: {quest.questID}, Parcel {quest.ParcelData.parcelName}, ID: {quest.ParcelData.parcelID} successfully delivered. Removing from quest");
+
+            Debug.Log($"Number of active quest: {activeQuest.Count}");
+            foreach (questData quests in activeQuest)
+            {
+                Debug.LogError($"Quest ID: {quests.questID}, quest status: {quests.questStatus}, quest type: {quests.questType}, questData: {quests.ParcelData.parcelName}, {quests.ParcelData.parcelID}");
+            }
         }
     }
 

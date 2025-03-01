@@ -154,7 +154,7 @@ public class PickUpParcel : MonoBehaviour
                         }
                     }
 
-                    Invoke(nameof(destroyParcel), 1f);
+                    Invoke(nameof(destroyParcel), 0.1f);
                 }
                 else
                 {
@@ -173,6 +173,6 @@ public class PickUpParcel : MonoBehaviour
     private void destroyParcel()
     {
         gameObject.SetActive(false); // Hide the parcel
-        Destroy(gameObject, 0.1f); // Destroy it after a short delay
+        Destroy(gameObject); // Destroy it after a short delay
     }
 }
