@@ -105,6 +105,8 @@ public class Quest : MonoBehaviour
             }*/
             activeQuest.Remove(quest);
             FillActiveQuests();
+
+            Debug.Log($"Parcel {quest.ParcelData.parcelName}, ID: {quest.ParcelData.parcelID} successfully delivered. Removing from quest");
         }
     }
 

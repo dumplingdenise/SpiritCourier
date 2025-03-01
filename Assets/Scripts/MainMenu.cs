@@ -17,4 +17,13 @@ public class MainMenu : MonoBehaviour
 /*        SceneManager.LoadScene("Play");*/
         SceneManager.LoadScene("Denise");
     }
+
+    public void Awake()
+    {
+        int screenW = 1920;
+        int screenH = 1080;
+        bool isFullScreen = true;
+
+        Screen.SetResolution(screenW, screenH, isFullScreen);
+    }
 }
