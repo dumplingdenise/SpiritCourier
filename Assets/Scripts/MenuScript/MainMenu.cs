@@ -15,6 +15,6 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
 /*        SceneManager.LoadScene("Play");*/
-        SceneManager.LoadScene("Denise");
+        SceneManager.LoadScene("Load");
     }
 }
