@@ -10,12 +10,13 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 3.5f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    public bool MoveWhenTalking = true;
+    public bool MoveWhenTalking = true; // flag to control movement while talking
 
     public LayerMask solidObjectsLayer;
     public LayerMask interactableLayer;
  
     private Animator animator;
+    public Animator playerAnimator; //player animation
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //only allow movement if MoveWhenTalking is true
         if (MoveWhenTalking)
             rb.linearVelocity = moveInput * moveSpeed;
     }
@@ -51,18 +53,41 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    // Toggle movement state while talking (when interacting with NPCs or doing other actions)
     public void SetMoveWhenTalking(bool value)
     {
         MoveWhenTalking = value;
+
         if (!MoveWhenTalking)
         {
-            rb.linearVelocity = moveInput;
+            // if not moving, stop all movement (set velocity to zero)
+            rb.linearVelocity = Vector2.zero;
+            //rb.linearVelocity = moveInput;
+
+            animator.SetBool("isWalking", false);
+
+            if (playerAnimator != null)
+            {
+                playerAnimator.enabled = false;
+            }
+        }
+        else
+        {
+            if (playerAnimator != null)
+            {
+                playerAnimator.enabled = true;
+            }
+
+            // Enable walking animation again if movement is allowed
+            animator.SetFloat("InputX", moveInput.x);
+            animator.SetFloat("InputY", moveInput.y);
         }
     }
 
     private void OnMove()
     {
         if (!MoveWhenTalking) return;
+
         if (rb.linearVelocity != moveInput)
         {
             Vector2 targetPos = rb.position + moveInput * moveSpeed * Time.fixedDeltaTime;
@@ -91,6 +116,8 @@ public class PlayerController : MonoBehaviour
         // }
 
         // Vector3 facingDir = new Vector3(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
+
+        // this handles the interaction when the "F" key is pressed
         Vector3 facingDir = Vector3.up;  // Default direction for interaction if no animator
         Vector3 interactPos = transform.position + facingDir;
 
