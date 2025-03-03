@@ -152,6 +152,7 @@ public class PickUpParcel : MonoBehaviour
                         {
                             Debug.LogError("No quest found for this parcel.");
                         }
+                        quest.OnQuestUpdated();
                     }
 
                     Invoke(nameof(destroyParcel), 0.1f);
@@ -173,6 +174,6 @@ public class PickUpParcel : MonoBehaviour
     private void destroyParcel()
     {
         gameObject.SetActive(false); // Hide the parcel
-        Destroy(gameObject); // Destroy it after a short delay
+        Destroy(gameObject);
     }
 }
