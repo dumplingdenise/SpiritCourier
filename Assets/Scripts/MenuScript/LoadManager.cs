@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -12,13 +11,14 @@ public class LoadManager : MonoBehaviour
     public float loadingTime = 3f; // Time to complete loading
     public float parcelOffset = 50f; // Distance between player & parcel
     public float parcelYOffset = -30f; // Y offset for parcel (adjustable)
-    public string nextSceneName = "NextScene"; //  Set the target scene name
+    public string nextSceneName = "NextScene"; // Target scene name
 
     private Vector2 startPos;
     private Vector2 endPos;
 
-    void Start()
+    void OnEnable() // Use OnEnable to ensure it runs every time the scene is loaded
     {
+        Time.timeScale = 1f; // Ensure time is not paused
         StartCoroutine(AnimateLoadingBar());
     }
 
@@ -35,7 +35,7 @@ public class LoadManager : MonoBehaviour
         // **Initialize Player & Parcel Positions**
         playerImage.position = startPos;
         parcelImage.position = new Vector2(startPos.x - parcelOffset, startPos.y + parcelYOffset);
-        loadingSlider.value = 0f;
+        loadingSlider.value = 0f; // Ensure loading starts from 0
 
         while (elapsedTime < loadingTime)
         {
@@ -57,6 +57,6 @@ public class LoadManager : MonoBehaviour
         parcelImage.position = new Vector2(endPos.x - parcelOffset, endPos.y + parcelYOffset);
 
         // **Load the next scene**
-        SceneManager.LoadScene(nextSceneName); // Change scene when finished
+        SceneManager.LoadScene("Shumin"); // Uses variable instead of hardcoded name
     }
 }
