@@ -24,15 +24,17 @@ public class Inventory : MonoBehaviour
         public Sprite parcelSprite;
         public Vector2 parcelPosition;
         public MainNpcs.NPCData npcData;
+        public Dialog parcelStoryDialog;
 
 
-        public inventoryParcelData(int parcelID, string parcelName, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData)
+        public inventoryParcelData(int parcelID, string parcelName, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData, Dialog parcelStoryDialog)
         {
             this.parcelID = parcelID;
             this.parcelName = parcelName;
             this.parcelSprite = parcelSprite;
             this.parcelPosition = parcelPosition;
             this.npcData = npcData;
+            this.parcelStoryDialog = parcelStoryDialog;
         }
     }
 
@@ -54,7 +56,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public bool AddParcelToInventory(int parcelID, string parcelName, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData)
+    public bool AddParcelToInventory(int parcelID, string parcelName, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData, Dialog parcelStoryDialog)
     {
         if (collectedParcels.Count >= maxInventorySize)
         {
@@ -62,10 +64,18 @@ public class Inventory : MonoBehaviour
             return false;
         }
 
-        inventoryParcelData newParcel = new inventoryParcelData(parcelID, parcelName, parcelSprite, parcelPosition, npcData);
+        inventoryParcelData newParcel = new inventoryParcelData(parcelID, parcelName, parcelSprite, parcelPosition, npcData, parcelStoryDialog);
         collectedParcels.Add(newParcel);
 
-        Debug.Log($"Parcel Name: {parcelName}, Parcel ID {parcelID} added to inventory at position {parcelPosition}. Assigned to NPC ID: {npcData.npcID}");
+
+        if (parcelStoryDialog != null && parcelStoryDialog.Lines != null)
+        {
+            foreach (var line in parcelStoryDialog.Lines)
+            {
+                Debug.Log($"Parcel Name: {parcelName}, Parcel ID: {parcelID} added to inventory at position {parcelPosition}. Assigned to NPC ID: {npcData.npcID} with following storyline: {line}");
+            }
+        }
+        // Debug.Log($"Parcel Name: {parcelName}, Parcel ID {parcelID} added to inventory at position {parcelPosition}. Assigned to NPC ID: {npcData.npcID} with following storyline: {parcelStoryDialog}");
 
         UpdateInventoryUI();
         return true;

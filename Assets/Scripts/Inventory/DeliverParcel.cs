@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using static Parcels_Test;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
+using System.Collections;
 
 public class DeliverParcel : MonoBehaviour
 {
@@ -19,10 +20,19 @@ public class DeliverParcel : MonoBehaviour
     private string targetedNpcName;
 
     private Quest quest;
+    private DialogManager dialogManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Check for DialogManager
+        dialogManager = FindFirstObjectByType<DialogManager>();
+        if (dialogManager == null)
+        {
+            Debug.LogError("DialogManager not found in the scene!");
+            return;
+        }
+
         MainNpcs mainNpcs = FindFirstObjectByType<MainNpcs>();
         if (mainNpcs != null)
         {
@@ -100,6 +110,11 @@ public class DeliverParcel : MonoBehaviour
     void Update()
     {
         var inventory = FindFirstObjectByType<Inventory>();
+        if (inventory == null)
+        {
+            Debug.LogError("Inventory not found!");
+            return; // Exit the Update method to avoid further issues.
+        }
 
         // Only allow delivery if the player is near an NPC
         if (Input.GetKeyDown(KeyCode.E))
@@ -133,7 +148,10 @@ public class DeliverParcel : MonoBehaviour
                             promptText.style.display = DisplayStyle.Flex;
                         }
 
-                        StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateSuccessDialog(selectedParcel.parcelName)));
+                        StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateSuccessDialog()));
+                        // test code
+                        /*dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog);*/
+                        StartCoroutine(dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog));
 
                         // Remove parcel from inventory after successful delivery
                         inventory.RemoveParcelFromInventory();

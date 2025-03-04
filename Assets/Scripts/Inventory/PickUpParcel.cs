@@ -38,6 +38,7 @@ public class PickUpParcel : MonoBehaviour
     public Parcels.ParcelData parcelData; // get the parcel info from Parcels script
     public string parcelHints;
     public string npcHints;
+    public Dialog parcelStoryDialog;
 
     private bool pickedUp = false;
 
@@ -125,7 +126,7 @@ public class PickUpParcel : MonoBehaviour
 
                 //Debug.Log($"Attempting to add parcel: ID={parcelData.parcelID}, Position={parcelData.position}, Sprite={parcelData.parcelSprite}, Assigned NPC: {parcelData.assignedNpcData}");
 
-                bool added = inventory.AddParcelToInventory(parcelData.parcelID, parcelData.parcelName, parcelData.parcelSprite, parcelData.position, parcelData.assignedNpcData); // add to inventory
+                bool added = inventory.AddParcelToInventory(parcelData.parcelID, parcelData.parcelName, parcelData.parcelSprite, parcelData.position, parcelData.assignedNpcData, parcelData.parcelStoryDialog); // add to inventory
                 inventory.parcelPickedUp++;
 
                 if (added)

@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public Animator playerAnimator; //player animation
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,9 +32,10 @@ public class PlayerController : MonoBehaviour
         //only allow movement if MoveWhenTalking is true
         if (MoveWhenTalking)
             rb.linearVelocity = moveInput * moveSpeed;
+
     }
 
-    public void Move(InputAction.CallbackContext context)
+    /*public void Move(InputAction.CallbackContext context)
     {
         animator.SetBool("isWalking", true);
 
@@ -51,10 +53,30 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Current Animation State: " + animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"));
 
 
+    }*/
+
+    // test code
+    public void Move(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+
+        if (context.canceled)
+        {
+            animator.SetBool("isWalking", false);
+            rb.linearVelocity = Vector2.zero;  // Stop movement
+        }
+        else
+        {
+            animator.SetBool("isWalking", true);
+            rb.linearVelocity = moveInput * moveSpeed; // Apply movement
+        }
+
+        animator.SetFloat("InputX", moveInput.x);
+        animator.SetFloat("InputY", moveInput.y);
     }
 
     // Toggle movement state while talking (when interacting with NPCs or doing other actions)
-    public void SetMoveWhenTalking(bool value)
+    /*public void SetMoveWhenTalking(bool value)
     {
         MoveWhenTalking = value;
 
@@ -82,6 +104,18 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("InputX", moveInput.x);
             animator.SetFloat("InputY", moveInput.y);
         }
+    }*/
+
+    // test code
+    public void SetMoveWhenTalking(bool value)
+    {
+        MoveWhenTalking = value;
+
+        if (!MoveWhenTalking)
+        {
+            rb.linearVelocity = Vector2.zero;  // Ensure player stops
+            animator.SetBool("isWalking", false);
+        }
     }
 
     private void OnMove()
@@ -101,6 +135,7 @@ public class PlayerController : MonoBehaviour
     {
         if (MoveWhenTalking && Keyboard.current.fKey.wasPressedThisFrame)
         {
+            Debug.Log("F key pressed for interaction.");
             Interact();
         }
         
@@ -118,6 +153,7 @@ public class PlayerController : MonoBehaviour
         // Vector3 facingDir = new Vector3(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
 
         // this handles the interaction when the "F" key is pressed
+
         Vector3 facingDir = Vector3.up;  // Default direction for interaction if no animator
         Vector3 interactPos = transform.position + facingDir;
 
@@ -128,8 +164,8 @@ public class PlayerController : MonoBehaviour
         {
             collider.GetComponent<Interactable>()?.Interact();
         }
-    }
 
+    }
 
 }
 
