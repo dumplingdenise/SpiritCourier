@@ -25,7 +25,7 @@ TagManager:
   - GroundLayer
   - OverpassLayer
   - Ladder
-  - 
+  - MiniIcon
   - 
   - 
   - 
@@ -51,16 +51,16 @@ TagManager:
   - name: Bg
     uniqueID: 3738312829
     locked: 0
+  - name: Shadow
+    uniqueID: 836117723
+    locked: 0
   - name: Floor
     uniqueID: 1942470371
     locked: 0
-  - name: HouseLvl 1
+  - name: House
     uniqueID: 2471899191
     locked: 0
-  - name: RoofWalkable
-    uniqueID: 1813614631
-    locked: 0
-  - name: Houselev2
+  - name: BehindPlayer
     uniqueID: 3804021479
     locked: 0
   - name: Ladder
@@ -84,7 +84,7 @@ TagManager:
   - name: WalkingRoof
     uniqueID: 397565779
     locked: 0
-  - name: Decor
+  - name: AbovePlayer
     uniqueID: 3335673361
     locked: 0
   - name: OverpassNPC
@@ -101,6 +101,9 @@ TagManager:
     locked: 0
   - name: FG
     uniqueID: 2912994919
+    locked: 0
+  - name: dot
+    uniqueID: 779276203
     locked: 0
   m_RenderingLayers:
   - Default

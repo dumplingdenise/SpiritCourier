@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 65b824d3ea2f1714b9a0c3b2b66fe969
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5305991838510784129
+    second: tile_sheet_props w shadow_0
+  - first:
+      213: 4765581043037588476
+    second: tile_sheet_props w shadow_1
+  - first:
+      213: -6719221529212670386
+    second: tile_sheet_props w shadow_2
+  - first:
+      213: -5840369151571809808
+    second: tile_sheet_props w shadow_3
+  - first:
+      213: 482275630027373257
+    second: tile_sheet_props w shadow_4
+  - first:
+      213: -451743567453565542
+    second: tile_sheet_props w shadow_5
+  - first:
+      213: -5979220460060148532
+    second: tile_sheet_props w shadow_6
+  - first:
+      213: -7978984200722110236
+    second: tile_sheet_props w shadow_7
+  - first:
+      213: -8047151897179010437
+    second: tile_sheet_props w shadow_8
+  - first:
+      213: -9072889031167921994
+    second: tile_sheet_props w shadow_9
+  - first:
+      213: 8110979831409642415
+    second: tile_sheet_props w shadow_10
+  - first:
+      213: -7568418684815106472
+    second: tile_sheet_props w shadow_11
+  - first:
+      213: -5889949574979481121
+    second: tile_sheet_props w shadow_12
+  - first:
+      213: 1442140203693427926
+    second: tile_sheet_props w shadow_13
+  - first:
+      213: -6971349850683074943
+    second: tile_sheet_props w shadow_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 435
+        width: 53
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e9e8bf67ba2a940800000000000000
+      internalID: 5305991838510784129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 464
+        width: 85
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb4792a5beb22240800000000000000
+      internalID: 4765581043037588476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 398
+        width: 108
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e2f108e9780c2a0800000000000000
+      internalID: -6719221529212670386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_3
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 441
+        width: 87
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9a9634337d2fea0800000000000000
+      internalID: -5840369151571809808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_4
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 462
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cafb9b512361b600800000000000000
+      internalID: 482275630027373257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 65
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9dcc5c6e951bb9f0800000000000000
+      internalID: -451743567453565542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_6
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 268
+        width: 52
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cccfd5cbbaa850da0800000000000000
+      internalID: -5979220460060148532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_7
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 204
+        width: 181
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e82187d424f44190800000000000000
+      internalID: -7978984200722110236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_8
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 256
+        width: 103
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ac8033cf5c25090800000000000000
+      internalID: -8047151897179010437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 28
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0b2b21f7f961280800000000000000
+      internalID: -9072889031167921994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_10
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 10
+        width: 49
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab878fce2dff8070800000000000000
+      internalID: 8110979831409642415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_11
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 172
+        width: 22
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e9a2c2e4397f690800000000000000
+      internalID: -7568418684815106472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_12
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 10
+        width: 41
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd1926e5112b24ea0800000000000000
+      internalID: -5889949574979481121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_13
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 88
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dcc47ddfd2830410800000000000000
+      internalID: 1442140203693427926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_props w shadow_14
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 0
+        width: 120
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18610112f3ac04f90800000000000000
+      internalID: -6971349850683074943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tile_sheet_props w shadow_0: 5305991838510784129
+      tile_sheet_props w shadow_1: 4765581043037588476
+      tile_sheet_props w shadow_10: 8110979831409642415
+      tile_sheet_props w shadow_11: -7568418684815106472
+      tile_sheet_props w shadow_12: -5889949574979481121
+      tile_sheet_props w shadow_13: 1442140203693427926
+      tile_sheet_props w shadow_14: -6971349850683074943
+      tile_sheet_props w shadow_2: -6719221529212670386
+      tile_sheet_props w shadow_3: -5840369151571809808
+      tile_sheet_props w shadow_4: 482275630027373257
+      tile_sheet_props w shadow_5: -451743567453565542
+      tile_sheet_props w shadow_6: -5979220460060148532
+      tile_sheet_props w shadow_7: -7978984200722110236
+      tile_sheet_props w shadow_8: -8047151897179010437
+      tile_sheet_props w shadow_9: -9072889031167921994
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
