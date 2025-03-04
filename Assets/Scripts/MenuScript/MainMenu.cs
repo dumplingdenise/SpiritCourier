@@ -14,11 +14,8 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-<<<<<<< HEAD:Assets/Scripts/MainMenu.cs
-        /*        SceneManager.LoadScene("Play");*/
-        SceneManager.LoadScene("Opening Scene");
-=======
-/*        SceneManager.LoadScene("Play");*/
+       /* SceneManager.LoadScene("Opening Scene");
+        SceneManager.LoadScene("Play");*/
         SceneManager.LoadScene("Load");
     }
 
@@ -29,6 +26,5 @@ public class MainMenu : MonoBehaviour
         bool isFullScreen = true;
 
         Screen.SetResolution(screenW, screenH, isFullScreen);
->>>>>>> main:Assets/Scripts/MenuScript/MainMenu.cs
     }
 }
