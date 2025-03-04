@@ -66,6 +66,6 @@ public class OpeningScene : MonoBehaviour
 
     public void LoadMainGame()
     {
-        SceneManager.LoadScene("Denise1"); // Change to game scene
+        SceneManager.LoadScene("Denise"); // Change to game scene
     }
 }
