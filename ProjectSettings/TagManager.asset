@@ -25,7 +25,7 @@ TagManager:
   - GroundLayer
   - OverpassLayer
   - Ladder
-  - 
+  - MiniIcon
   - 
   - 
   - 
@@ -101,6 +101,9 @@ TagManager:
     locked: 0
   - name: FG
     uniqueID: 2912994919
+    locked: 0
+  - name: dot
+    uniqueID: 779276203
     locked: 0
   m_RenderingLayers:
   - Default
