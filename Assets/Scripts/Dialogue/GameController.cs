@@ -10,7 +10,28 @@ public class GameController : MonoBehaviour
 
     GameState state;
 
+    // test code
+    private void OnEnable()
+    {
+        if (playerController == null)
+        {
+            playerController = Object.FindFirstObjectByType<PlayerController>();
+        }
+    }
 
+    private void SetGameState(GameState newState)
+    {
+        state = newState;
+
+        if (state == GameState.FreeRoam)
+        {
+            if (playerController == null)
+            {
+                playerController = Object.FindFirstObjectByType<PlayerController>(); // Ensure it's found
+            }
+            playerController?.SetMoveWhenTalking(true); // Re-enable movement
+        }
+    }
 
     private void Start()
     {
@@ -21,10 +42,16 @@ public class GameController : MonoBehaviour
         };
         DialogManager.Instance.OnHideDialog += () =>
         {
-            if (state == GameState.Dialog)
+            /*if (state == GameState.Dialog)
             {
                 state = GameState.FreeRoam;
                 playerController.SetMoveWhenTalking(true);
+            }*/
+
+            // test code
+            if (state == GameState.Dialog)
+            {
+                SetGameState(GameState.FreeRoam);
             }
         };
     }
@@ -33,7 +60,14 @@ public class GameController : MonoBehaviour
     {
         if (state == GameState.FreeRoam)
         {
-            playerController.HandleUpdate();
+            /*playerController.HandleUpdate();*/
+
+            // test code
+            if (playerController == null)
+            {
+                playerController = Object.FindFirstObjectByType<PlayerController>(); // Reassign if lost
+            }
+            playerController?.HandleUpdate();
         }
         else if (state == GameState.Dialog)
         {
@@ -43,6 +77,5 @@ public class GameController : MonoBehaviour
         {
 
         }*/
-
     }
 }

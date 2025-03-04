@@ -879,6 +879,18 @@ PrefabInstance:
       propertyPath: parcelData.assignedNpcData.npcID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1846516464394370537, guid: c41b6e81e0e865b4b82656feb077f48f, type: 3}
+      propertyPath: parcelStoryDialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846516464394370537, guid: c41b6e81e0e865b4b82656feb077f48f, type: 3}
+      propertyPath: 'parcelStoryDialog.lines.Array.data[0]'
+      value: here is red parcel 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846516464394370537, guid: c41b6e81e0e865b4b82656feb077f48f, type: 3}
+      propertyPath: 'parcelStoryDialog.lines.Array.data[1]'
+      value: testing red parcel 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3941844534419110062, guid: c41b6e81e0e865b4b82656feb077f48f, type: 3}
       propertyPath: m_Name
       value: Red Parcel 2
@@ -32855,7 +32867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -259, y: 125.45}
+  m_AnchoredPosition: {x: -256, y: 173}
   m_SizeDelta: {x: 305.5042, y: 199.1085}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &451767827
@@ -37741,6 +37753,18 @@ PrefabInstance:
       propertyPath: parcelData.assignedNpcData.npcID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1560445522828022593, guid: 179d73d57a207814b8e89d3fa7e3c27b, type: 3}
+      propertyPath: parcelStoryDialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560445522828022593, guid: 179d73d57a207814b8e89d3fa7e3c27b, type: 3}
+      propertyPath: 'parcelStoryDialog.lines.Array.data[0]'
+      value: Test story line
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560445522828022593, guid: 179d73d57a207814b8e89d3fa7e3c27b, type: 3}
+      propertyPath: 'parcelStoryDialog.lines.Array.data[1]'
+      value: next lineee
+      objectReference: {fileID: 0}
     - target: {fileID: 5912821393406874080, guid: 179d73d57a207814b8e89d3fa7e3c27b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.03
@@ -37941,6 +37965,18 @@ PrefabInstance:
     - target: {fileID: 5238400096769123467, guid: efbc747c1012def4dbab17ca1e7d076e, type: 3}
       propertyPath: parcelHints
       value: Look on top a single level purple house!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238400096769123467, guid: efbc747c1012def4dbab17ca1e7d076e, type: 3}
+      propertyPath: parcelStoryDialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238400096769123467, guid: efbc747c1012def4dbab17ca1e7d076e, type: 3}
+      propertyPath: 'parcelStoryDialog.lines.Array.data[0]'
+      value: This is a test
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238400096769123467, guid: efbc747c1012def4dbab17ca1e7d076e, type: 3}
+      propertyPath: 'parcelStoryDialog.lines.Array.data[1]'
+      value: Im yellow parcel
       objectReference: {fileID: 0}
     - target: {fileID: 8809253125524991456, guid: efbc747c1012def4dbab17ca1e7d076e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39464,14 +39500,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1959651589}
   - {fileID: 2021508144}
   m_Father: {fileID: 918158504}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 180, y: 450}
+  m_AnchoredPosition: {x: -25.309, y: 41.535}
+  m_SizeDelta: {x: 238.7076, y: 536.7273}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1027849814
 MonoBehaviour:
@@ -39493,7 +39528,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -587138427685006015, guid: 6c78505d3d232fc4a81712bc3bf54339, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -42112,6 +42147,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 256
+  playerAnimator: {fileID: 0}
 --- !u!70 &1224058029
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -42555,7 +42591,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257418793}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.024631847, w: 0.99969655}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -42564,11 +42600,11 @@ RectTransform:
   - {fileID: 1047426668}
   - {fileID: 223785482}
   m_Father: {fileID: 2021508144}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.823}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80.9, y: -260.2}
+  m_SizeDelta: {x: 146, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257418795
 MonoBehaviour:
@@ -42627,7 +42663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -42678,7 +42714,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270646292}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.021706041, w: 0.9997644}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -42687,11 +42723,11 @@ RectTransform:
   - {fileID: 1859423888}
   - {fileID: 237425038}
   m_Father: {fileID: 2021508144}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.488}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80.9, y: -371}
+  m_SizeDelta: {x: 146, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270646294
 MonoBehaviour:
@@ -42750,7 +42786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -43374,6 +43410,18 @@ PrefabInstance:
     - target: {fileID: 4686052644234966813, guid: 80d09d69716b3bf40b2591f95e866f11, type: 3}
       propertyPath: parcelData.assignedNpcData.npcID
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686052644234966813, guid: 80d09d69716b3bf40b2591f95e866f11, type: 3}
+      propertyPath: parcelStoryDialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686052644234966813, guid: 80d09d69716b3bf40b2591f95e866f11, type: 3}
+      propertyPath: 'parcelStoryDialog.lines.Array.data[0]'
+      value: testing for red letter
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686052644234966813, guid: 80d09d69716b3bf40b2591f95e866f11, type: 3}
+      propertyPath: 'parcelStoryDialog.lines.Array.data[1]'
+      value: hello red letter
       objectReference: {fileID: 0}
     - target: {fileID: 6108233789466172189, guid: 80d09d69716b3bf40b2591f95e866f11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45958,7 +46006,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539392595}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0176395, w: 0.9998445}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45967,11 +46015,11 @@ RectTransform:
   - {fileID: 750550705}
   - {fileID: 1915624113}
   m_Father: {fileID: 2021508144}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.021}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 73.999916, y: -156.00003}
+  m_SizeDelta: {x: 146, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539392597
 MonoBehaviour:
@@ -46030,7 +46078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -77537,6 +77585,18 @@ PrefabInstance:
       propertyPath: assignedNPC.npcID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1846516464394370537, guid: c41b6e81e0e865b4b82656feb077f48f, type: 3}
+      propertyPath: parcelStoryDialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846516464394370537, guid: c41b6e81e0e865b4b82656feb077f48f, type: 3}
+      propertyPath: 'parcelStoryDialog.lines.Array.data[0]'
+      value: this is red parcel storyline
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846516464394370537, guid: c41b6e81e0e865b4b82656feb077f48f, type: 3}
+      propertyPath: 'parcelStoryDialog.lines.Array.data[1]'
+      value: test storyline
+      objectReference: {fileID: 0}
     - target: {fileID: 3941844534419110062, guid: c41b6e81e0e865b4b82656feb077f48f, type: 3}
       propertyPath: m_Name
       value: Red Parcel
@@ -77997,85 +78057,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49806b3e63ff1044b54de33f89243e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1959651588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1959651589}
-  - component: {fileID: 1959651591}
-  - component: {fileID: 1959651590}
-  m_Layer: 5
-  m_Name: Tasks Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1959651589
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959651588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1027849813}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0013428, y: 173}
-  m_SizeDelta: {x: 160, y: 77.0285}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1959651590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959651588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 4b14ae0f310c9a14eb3d3262de7f8303, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 50
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Tasks:'
---- !u!222 &1959651591
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959651588}
-  m_CullTransparentMesh: 1
 --- !u!1 &2012214490
 GameObject:
   m_ObjectHideFlags: 0
@@ -78187,7 +78168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0013198, y: -21.64}
+  m_AnchoredPosition: {x: 26, y: -19}
   m_SizeDelta: {x: 150, y: 557.2792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021508145
@@ -78197,7 +78178,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021508143}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
@@ -78554,7 +78535,12 @@ MonoBehaviour:
   dialogText: {fileID: 1714220267}
   lettersPerSecond: 40
   nextSceneButton: {fileID: 1547785448}
-  nextSceneName: puzzle
+  nextSceneNames:
+  - RotatePuzzle2
+  - Find1
+  - Find2
+  - MemoryPuzzle
+  - Puzzle
   noButton: {fileID: 395457874}
 --- !u!114 &2093632203
 MonoBehaviour:

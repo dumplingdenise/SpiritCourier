@@ -11,7 +11,6 @@ public class PuzzleRotateControl : MonoBehaviour
 
 
 
-
     public static bool youWin;
 
     void Start()
@@ -29,7 +28,7 @@ public class PuzzleRotateControl : MonoBehaviour
         {
             youWin = true;
             ShowClue();
-
+            
         }
     }
 
@@ -50,7 +49,8 @@ public class PuzzleRotateControl : MonoBehaviour
         OverlayUI.SetActive(true);
         CrossUI.SetActive(true);
 
-       // Switch back to FreeRoam
+
+        // Switch back to FreeRoam
         //clueImageUI.GetComponent<Image>().sprite = clueSprite;
         //OverlayUI.GetComponent<Image>().sprite = clueSprite;
         //Invoke("HideClue", 3f); // Hide clue after 5 seconds

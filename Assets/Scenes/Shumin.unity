@@ -82543,7 +82543,8 @@ MonoBehaviour:
   dialogText: {fileID: 1714220267}
   lettersPerSecond: 40
   nextSceneButton: {fileID: 1547785448}
-  nextSceneName: puzzle
+  nextSceneNames: []
+  noButton: {fileID: 0}
 --- !u!114 &2093632203
 MonoBehaviour:
   m_ObjectHideFlags: 0

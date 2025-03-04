@@ -20,8 +20,10 @@ public class Parcels : MonoBehaviour
         public MainNpcs.NPCData assignedNpcData;
         public string parcelHints;
         public string npcHints;
+        // test code
+        public Dialog parcelStoryDialog;
 
-        public ParcelData(/*GameObject parcelObject,*/ Vector2 position, int parcelID, string parcelName, Sprite parcelSprite, MainNpcs.NPCData assignedNpcData, string parcelHints, string npcHints) 
+        public ParcelData(/*GameObject parcelObject,*/ Vector2 position, int parcelID, string parcelName, Sprite parcelSprite, MainNpcs.NPCData assignedNpcData, string parcelHints, string npcHints, Dialog parcelStoryDialog) 
         {
             /*this.parcelObject = parcelObject;*/
             this.position = position;
@@ -31,6 +33,7 @@ public class Parcels : MonoBehaviour
             this.assignedNpcData = assignedNpcData;
             this.parcelHints = parcelHints;
             this.npcHints = npcHints;
+            this.parcelStoryDialog = parcelStoryDialog; // test code
         }
     }
 
@@ -62,6 +65,7 @@ public class Parcels : MonoBehaviour
 
             string parcelHints = pickUpParcel.parcelHints;
             string npcHints = pickUpParcel.npcHints;
+            Dialog parcelStorydialog = pickUpParcel.parcelStoryDialog; // test code
             
             if (pickUpParcel != null)
             {
@@ -76,7 +80,9 @@ public class Parcels : MonoBehaviour
                         parcelSprite,
                         pickUpParcel.assignedNPC,
                         parcelHints,
-                        npcHints);
+                        npcHints,
+                        parcelStorydialog // test code
+                        );
 
                     assignedParcels.Add(parcelData);
 

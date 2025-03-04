@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 76555c359d611644dafa20fcbbe6ef70
+guid: f8646a6186a859d46bc431801747f885
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 590133581860562501
-    second: The bar_0
+      213: -2398779985797151607
+    second: Denial NPC_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: The bar_0
+      name: Denial NPC_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1869
-        height: 30
+        width: 147
+        height: 171
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 546e3d4bd53903800800000000000000
-      internalID: 590133581860562501
+      spriteID: 9848e3cef42d5bed0800000000000000
+      internalID: -2398779985797151607
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      The bar_0: 590133581860562501
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

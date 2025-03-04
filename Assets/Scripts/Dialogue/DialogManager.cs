@@ -4,18 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class DialogManager : MonoBehaviour
 {
-
-
     [SerializeField] GameObject dialogBox;
     [SerializeField] Text dialogText;
 
     [SerializeField] int lettersPerSecond;
 
     [SerializeField] Button nextSceneButton; // Add a UI button in the Inspector
-    [SerializeField] string nextSceneName; // Scene name to load
+    [SerializeField] string[] nextSceneNames;
     [SerializeField] Button noButton;
 
     public event Action OnShowDialog;
@@ -26,6 +25,9 @@ public class DialogManager : MonoBehaviour
     Dialog currentDialog;
     int currentLine = 0;
     bool isTyping;
+
+    private bool isDialogActive = false; // test
+
     bool showButtonAtEnd = false; // Flag to check if button should appear
     bool autoDialogCompleted = false; // Flag to check if auto-dialogu is complete
 
@@ -49,6 +51,13 @@ public class DialogManager : MonoBehaviour
         {
             yield break;
         }
+
+        if (isDialogActive)
+        {
+            yield break;
+        }
+
+        isDialogActive = true;
 
         showButtonAtEnd = showButton;
         yield return new WaitForEndOfFrame();
@@ -109,13 +118,35 @@ public class DialogManager : MonoBehaviour
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
         isTyping = false;
+
+        // test
+        // Now, wait for the player to press 'F' before continuing
+        while (!Input.GetKeyDown(KeyCode.F))
+        {
+            yield return null; // Wait for the 'F' key press
+        }
+
+        // After 'F' is pressed, move to the next line
+        if (currentLine + 1 < currentDialog.Lines.Count)
+        {
+            currentLine++;
+            StartCoroutine(TypeDialog(currentDialog.Lines[currentLine]));
+        }
+        else
+        {
+            isDialogActive = false; // End of dialog
+        }
     }
 
     public void GoToNextScene()
     {
-        if (!string.IsNullOrEmpty(nextSceneName))
+        if (nextSceneNames != null && nextSceneNames.Length > 0)
         {
-           SceneManager.LoadScene(nextSceneName);
+            string randomScene = nextSceneNames[Random.Range(0, nextSceneNames.Length)];
+            if (!string.IsNullOrEmpty(randomScene))
+            {
+                SceneManager.LoadScene(randomScene);
+            }
         }
     }
 
@@ -130,11 +161,12 @@ public class DialogManager : MonoBehaviour
     }
 
     // New methods for success and failure dialog creation
-    public Dialog CreateSuccessDialog(string parcelName)
+    public Dialog CreateSuccessDialog()
     {
         return new Dialog
         {
-            Lines = new List<string> { $"Thank you for delivering this parcel to me! It really means a lot to me!" }
+            /*Lines = new List<string> { $"Thank you for delivering this parcel to me! It really means a lot to me!" }*/
+            Lines = new List<string> { $"Thank you" }
         };
     }
 
@@ -146,4 +178,21 @@ public class DialogManager : MonoBehaviour
         };
     }
 
+    /*public void BackstoryRevealed(Dialog parcelStoryDialog)
+    {
+        StartCoroutine(ShowDialog(parcelStoryDialog));
+    }*/
+
+    // test
+    public IEnumerator BackstoryRevealed(Dialog dialog)
+    {
+        // Make sure no other dialog is active before starting a new one
+        if (isDialogActive)
+        {
+            yield return new WaitUntil(() => !isDialogActive); // Wait until the current dialog finishes
+        }
+
+        // Now that the previous dialog is finished, we can start the new one
+        StartCoroutine(ShowDialog(dialog)); // This will handle showing the dialog
+    }
 }
