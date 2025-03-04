@@ -190,7 +190,7 @@ TextureImporter:
         x: 0
         y: 1187
         width: 98
-        height: 70
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -737,10 +737,10 @@ TextureImporter:
       name: beta depression tilesheet_25
       rect:
         serializedVersion: 2
-        x: 368
-        y: 303
-        width: 441
-        height: 216
+        x: 366
+        y: 301
+        width: 442
+        height: 223
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -778,35 +778,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: beta depression tilesheet_27
-      rect:
-        serializedVersion: 2
-        x: 353
-        y: 119
-        width: 467
-        height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aaf71c94197a426a0800000000000000
-      internalID: -6474866121802416214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: beta depression tilesheet_28
       rect:
         serializedVersion: 2
         x: 351
         y: 0
         width: 468
-        height: 168
+        height: 292
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1050,7 +1028,7 @@ TextureImporter:
         width: 193
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1072,7 +1050,7 @@ TextureImporter:
         width: 193
         height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1094,7 +1072,7 @@ TextureImporter:
         width: 193
         height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1103,6 +1081,94 @@ TextureImporter:
       bones: []
       spriteID: f82d0d6be29eb4840abaedb260a3986e
       internalID: -960221293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beta depression tilesheet_42
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 964
+        width: 133
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7dda06e4e4423448aff5526798781e6
+      internalID: 1094383408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beta depression tilesheet_43
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 1105
+        width: 133
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8890e92810c079146979e7964e40c9e7
+      internalID: -1550477949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beta depression tilesheet_27
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 494
+        width: 442
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444ffa795deba304eb5221bacba7ac6c
+      internalID: 2068575435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beta depression tilesheet_44
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 464
+        width: 442
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a7fee050abbbb43ac0a302c83f39a4
+      internalID: 176385386
       vertices: []
       indices: 
       edges: []
@@ -1121,6 +1187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      beta depression tilesheet_27: 2068575435
       beta depression tilesheet_29: 389245914
       beta depression tilesheet_30: 1939983387
       beta depression tilesheet_31: -1554741976
@@ -1134,6 +1201,9 @@ TextureImporter:
       beta depression tilesheet_39: -1948698966
       beta depression tilesheet_40: 974784548
       beta depression tilesheet_41: -960221293
+      beta depression tilesheet_42: 1094383408
+      beta depression tilesheet_43: -1550477949
+      beta depression tilesheet_44: 176385386
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
