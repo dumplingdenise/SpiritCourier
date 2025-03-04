@@ -1504,6 +1504,72 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows_58
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 3113
+        width: 97
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5332e9fa40eedd48b14e700f6e68334
+      internalID: 909416561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows_59
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 3110
+        width: 402
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd604398b9521d468f545baa664a421
+      internalID: -101147895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows_60
+      rect:
+        serializedVersion: 2
+        x: 2822
+        y: 3111
+        width: 87
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679326c40ae907644a807fc145b04e8c
+      internalID: -802643282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1572,7 +1638,10 @@ TextureImporter:
       tile_sheet_depression environment w shadows_55: 2028082974
       tile_sheet_depression environment w shadows_56: -158834174
       tile_sheet_depression environment w shadows_57: 1181756261
+      tile_sheet_depression environment w shadows_58: 909416561
+      tile_sheet_depression environment w shadows_59: -101147895
       tile_sheet_depression environment w shadows_6: 5343780925620043512
+      tile_sheet_depression environment w shadows_60: -802643282
       tile_sheet_depression environment w shadows_7: -2145848825447007755
       tile_sheet_depression environment w shadows_8: -9070065445145862797
       tile_sheet_depression environment w shadows_9: -5001342431144450143

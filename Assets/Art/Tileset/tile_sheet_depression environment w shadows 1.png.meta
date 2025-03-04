@@ -1,0 +1,1284 @@
+fileFormatVersion: 2
+guid: 3b34a036cfd677149a0c93ab29562db5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1538363227004912576
+    second: tile_sheet_depression environment w shadows 1_0
+  - first:
+      213: -4142132266064101008
+    second: tile_sheet_depression environment w shadows 1_1
+  - first:
+      213: 4249345625916817979
+    second: tile_sheet_depression environment w shadows 1_2
+  - first:
+      213: 2117665774298038788
+    second: tile_sheet_depression environment w shadows 1_3
+  - first:
+      213: 7395931421102953654
+    second: tile_sheet_depression environment w shadows 1_4
+  - first:
+      213: 3277192799976964068
+    second: tile_sheet_depression environment w shadows 1_5
+  - first:
+      213: 730746289589269279
+    second: tile_sheet_depression environment w shadows 1_6
+  - first:
+      213: 8868190508213143231
+    second: tile_sheet_depression environment w shadows 1_7
+  - first:
+      213: -1833266677297440810
+    second: tile_sheet_depression environment w shadows 1_8
+  - first:
+      213: -1204582190819402902
+    second: tile_sheet_depression environment w shadows 1_9
+  - first:
+      213: 6107999196604923340
+    second: tile_sheet_depression environment w shadows 1_10
+  - first:
+      213: 5874641121796681966
+    second: tile_sheet_depression environment w shadows 1_11
+  - first:
+      213: -3824256481132116973
+    second: tile_sheet_depression environment w shadows 1_12
+  - first:
+      213: 8657172812885028937
+    second: tile_sheet_depression environment w shadows 1_13
+  - first:
+      213: 1217805417254217918
+    second: tile_sheet_depression environment w shadows 1_14
+  - first:
+      213: 7950217623032255308
+    second: tile_sheet_depression environment w shadows 1_15
+  - first:
+      213: 8772723209194570276
+    second: tile_sheet_depression environment w shadows 1_16
+  - first:
+      213: -2103069876777915936
+    second: tile_sheet_depression environment w shadows 1_17
+  - first:
+      213: -6124851387436475053
+    second: tile_sheet_depression environment w shadows 1_18
+  - first:
+      213: 9077729934119370662
+    second: tile_sheet_depression environment w shadows 1_19
+  - first:
+      213: 6957791168722344797
+    second: tile_sheet_depression environment w shadows 1_20
+  - first:
+      213: 8805198035271883422
+    second: tile_sheet_depression environment w shadows 1_21
+  - first:
+      213: 3668796266332031329
+    second: tile_sheet_depression environment w shadows 1_22
+  - first:
+      213: 9120753641640320693
+    second: tile_sheet_depression environment w shadows 1_23
+  - first:
+      213: 5932199585678008518
+    second: tile_sheet_depression environment w shadows 1_24
+  - first:
+      213: 7492694302182604393
+    second: tile_sheet_depression environment w shadows 1_25
+  - first:
+      213: 5667619361565084692
+    second: tile_sheet_depression environment w shadows 1_26
+  - first:
+      213: -8147129716182414858
+    second: tile_sheet_depression environment w shadows 1_27
+  - first:
+      213: 2235350331852533912
+    second: tile_sheet_depression environment w shadows 1_28
+  - first:
+      213: -1957434220808332313
+    second: tile_sheet_depression environment w shadows 1_29
+  - first:
+      213: 8099676843334278052
+    second: tile_sheet_depression environment w shadows 1_30
+  - first:
+      213: 3372207305031140710
+    second: tile_sheet_depression environment w shadows 1_31
+  - first:
+      213: -1271209340682382931
+    second: tile_sheet_depression environment w shadows 1_32
+  - first:
+      213: 1063794486211989462
+    second: tile_sheet_depression environment w shadows 1_33
+  - first:
+      213: 7582492149726587567
+    second: tile_sheet_depression environment w shadows 1_34
+  - first:
+      213: -5415858069177224623
+    second: tile_sheet_depression environment w shadows 1_35
+  - first:
+      213: -5934724987407195407
+    second: tile_sheet_depression environment w shadows 1_36
+  - first:
+      213: -5945167816937681068
+    second: tile_sheet_depression environment w shadows 1_37
+  - first:
+      213: 3173709312519130892
+    second: tile_sheet_depression environment w shadows 1_38
+  - first:
+      213: -7091409977301608672
+    second: tile_sheet_depression environment w shadows 1_39
+  - first:
+      213: 7122939419150974742
+    second: tile_sheet_depression environment w shadows 1_40
+  - first:
+      213: -7873290560881721617
+    second: tile_sheet_depression environment w shadows 1_41
+  - first:
+      213: -5634037534320038949
+    second: tile_sheet_depression environment w shadows 1_42
+  - first:
+      213: 8226135309818713595
+    second: tile_sheet_depression environment w shadows 1_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 3536
+        width: 248
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c3c621543d595510800000000000000
+      internalID: 1538363227004912576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_1
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 3321
+        width: 1857
+        height: 528
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 071c09466a03486c0800000000000000
+      internalID: -4142132266064101008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_2
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 3098
+        width: 800
+        height: 748
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32c1a03555b8fa30800000000000000
+      internalID: 4249345625916817979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_3
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 3844
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40289064dc5736d10800000000000000
+      internalID: 2117665774298038788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_4
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3818
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b4ddf13170a3a660800000000000000
+      internalID: 7395931421102953654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3434
+        width: 78
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef381ffc7dea7d20800000000000000
+      internalID: 3277192799976964068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_6
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 3434
+        width: 79
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1337e3f0e1242a00800000000000000
+      internalID: 730746289589269279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_7
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 3434
+        width: 79
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb609821844221b70800000000000000
+      internalID: 8868190508213143231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3343
+        width: 66
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d710298badee86e0800000000000000
+      internalID: -1833266677297440810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_9
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 3343
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b927d21e6784fe0800000000000000
+      internalID: -1204582190819402902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_10
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 3343
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccdf10268e8f3c450800000000000000
+      internalID: 6107999196604923340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2713
+        width: 699
+        height: 609
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0f79f99fae68150800000000000000
+      internalID: 5874641121796681966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_12
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 2713
+        width: 700
+        height: 609
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31482200ef28deac0800000000000000
+      internalID: -3824256481132116973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_13
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 2713
+        width: 700
+        height: 609
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9407e2f3ec4742870800000000000000
+      internalID: 8657172812885028937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_14
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 2201
+        width: 809
+        height: 857
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8ebf4239386e010800000000000000
+      internalID: 1217805417254217918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1858
+        width: 682
+        height: 848
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4353eb5ec8d45e60800000000000000
+      internalID: 7950217623032255308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_16
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1858
+        width: 683
+        height: 848
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4220ed46749feb970800000000000000
+      internalID: 8772723209194570276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_17
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 1858
+        width: 683
+        height: 848
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9e3d0f61560d2e0800000000000000
+      internalID: -2103069876777915936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_18
+      rect:
+        serializedVersion: 2
+        x: 2229
+        y: 1883
+        width: 103
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d5acd2d18200ba0800000000000000
+      internalID: -6124851387436475053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_19
+      rect:
+        serializedVersion: 2
+        x: 2375
+        y: 1871
+        width: 33
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6af7d1a77439afd70800000000000000
+      internalID: 9077729934119370662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_20
+      rect:
+        serializedVersion: 2
+        x: 2505
+        y: 1868
+        width: 34
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5b9b09343a0f8060800000000000000
+      internalID: 6957791168722344797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_21
+      rect:
+        serializedVersion: 2
+        x: 2551
+        y: 1868
+        width: 164
+        height: 310
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9a195d06f8523a70800000000000000
+      internalID: 8805198035271883422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1214
+        width: 809
+        height: 612
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 169000024ce2ae230800000000000000
+      internalID: 3668796266332031329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_23
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1235
+        width: 800
+        height: 587
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5be52ddfc1d639e70800000000000000
+      internalID: 9120753641640320693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_24
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 1820
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0ae01d718635250800000000000000
+      internalID: 5932199585678008518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_25
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 1502
+        width: 139
+        height: 324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96eff2415c56bf760800000000000000
+      internalID: 7492694302182604393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_26
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1794
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c8630f7cd67ae40800000000000000
+      internalID: 5667619361565084692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_27
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 1501
+        width: 92
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f90bef30b49fee80800000000000000
+      internalID: -8147129716182414858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_28
+      rect:
+        serializedVersion: 2
+        x: 2216
+        y: 1604
+        width: 441
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8903f9e884f850f10800000000000000
+      internalID: 2235350331852533912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_29
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 1344
+        width: 130
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb968572fbc5d4e0800000000000000
+      internalID: -1957434220808332313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_31
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 1149
+        width: 139
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 665cb5d5dac7cce20800000000000000
+      internalID: 3372207305031140710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_32
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 1300
+        width: 468
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da1d77df6d1cb5ee0800000000000000
+      internalID: -1271209340682382931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_33
+      rect:
+        serializedVersion: 2
+        x: 2201
+        y: 1390
+        width: 467
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df4fa0f27b53ce00800000000000000
+      internalID: 1063794486211989462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 598
+        width: 809
+        height: 612
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa24a8bf6c6a3960800000000000000
+      internalID: 7582492149726587567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_35
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 619
+        width: 800
+        height: 587
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15232c0d7c107d4b0800000000000000
+      internalID: -5415858069177224623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_36
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 1204
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f2a5f5411f93ada0800000000000000
+      internalID: -5934724987407195407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_37
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 1036
+        width: 469
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f485d8e558e7da0800000000000000
+      internalID: -5945167816937681068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_38
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1178
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f4d010ec74b0c20800000000000000
+      internalID: 3173709312519130892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_39
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 893
+        width: 203
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027d6429230469d90800000000000000
+      internalID: -7091409977301608672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 809
+        height: 594
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ffe1ba9a3c9d260800000000000000
+      internalID: 7122939419150974742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_41
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 3
+        width: 800
+        height: 587
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee753903f37cb290800000000000000
+      internalID: -7873290560881721617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_42
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 588
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdbe2a386b0efc1b0800000000000000
+      internalID: -5634037534320038949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_43
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 562
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5da08fa7a192270800000000000000
+      internalID: 8226135309818713595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_44
+      rect:
+        serializedVersion: 2
+        x: 2318
+        y: 893
+        width: 140
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867d1307dd79a794e93f53f70c0da2da
+      internalID: 982670851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_sheet_depression environment w shadows 1_30
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 893
+        width: 29
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3127a8ca943d7dc428243c32561788dc
+      internalID: 8099676843334278052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d1b43a4a6f764a14e8abbf03803d213e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tile_sheet_depression environment w shadows 1_0: 1538363227004912576
+      tile_sheet_depression environment w shadows 1_1: -4142132266064101008
+      tile_sheet_depression environment w shadows 1_10: 6107999196604923340
+      tile_sheet_depression environment w shadows 1_11: 5874641121796681966
+      tile_sheet_depression environment w shadows 1_12: -3824256481132116973
+      tile_sheet_depression environment w shadows 1_13: 8657172812885028937
+      tile_sheet_depression environment w shadows 1_14: 1217805417254217918
+      tile_sheet_depression environment w shadows 1_15: 7950217623032255308
+      tile_sheet_depression environment w shadows 1_16: 8772723209194570276
+      tile_sheet_depression environment w shadows 1_17: -2103069876777915936
+      tile_sheet_depression environment w shadows 1_18: -6124851387436475053
+      tile_sheet_depression environment w shadows 1_19: 9077729934119370662
+      tile_sheet_depression environment w shadows 1_2: 4249345625916817979
+      tile_sheet_depression environment w shadows 1_20: 6957791168722344797
+      tile_sheet_depression environment w shadows 1_21: 8805198035271883422
+      tile_sheet_depression environment w shadows 1_22: 3668796266332031329
+      tile_sheet_depression environment w shadows 1_23: 9120753641640320693
+      tile_sheet_depression environment w shadows 1_24: 5932199585678008518
+      tile_sheet_depression environment w shadows 1_25: 7492694302182604393
+      tile_sheet_depression environment w shadows 1_26: 5667619361565084692
+      tile_sheet_depression environment w shadows 1_27: -8147129716182414858
+      tile_sheet_depression environment w shadows 1_28: 2235350331852533912
+      tile_sheet_depression environment w shadows 1_29: -1957434220808332313
+      tile_sheet_depression environment w shadows 1_3: 2117665774298038788
+      tile_sheet_depression environment w shadows 1_30: 8099676843334278052
+      tile_sheet_depression environment w shadows 1_31: 3372207305031140710
+      tile_sheet_depression environment w shadows 1_32: -1271209340682382931
+      tile_sheet_depression environment w shadows 1_33: 1063794486211989462
+      tile_sheet_depression environment w shadows 1_34: 7582492149726587567
+      tile_sheet_depression environment w shadows 1_35: -5415858069177224623
+      tile_sheet_depression environment w shadows 1_36: -5934724987407195407
+      tile_sheet_depression environment w shadows 1_37: -5945167816937681068
+      tile_sheet_depression environment w shadows 1_38: 3173709312519130892
+      tile_sheet_depression environment w shadows 1_39: -7091409977301608672
+      tile_sheet_depression environment w shadows 1_4: 7395931421102953654
+      tile_sheet_depression environment w shadows 1_40: 7122939419150974742
+      tile_sheet_depression environment w shadows 1_41: -7873290560881721617
+      tile_sheet_depression environment w shadows 1_42: -5634037534320038949
+      tile_sheet_depression environment w shadows 1_43: 8226135309818713595
+      tile_sheet_depression environment w shadows 1_44: 982670851
+      tile_sheet_depression environment w shadows 1_5: 3277192799976964068
+      tile_sheet_depression environment w shadows 1_6: 730746289589269279
+      tile_sheet_depression environment w shadows 1_7: 8868190508213143231
+      tile_sheet_depression environment w shadows 1_8: -1833266677297440810
+      tile_sheet_depression environment w shadows 1_9: -1204582190819402902
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
