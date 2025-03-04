@@ -40,12 +40,27 @@ public class MainNpcs : MonoBehaviour
     {
         // Instead of instantiating new NPCs, retrieve existing NPCs from the scene.
         // Store their positions, and assign them an ID based on their index in the list.
+        /*        for (int i = 0; i < npcObjects.Count; i++)
+                {
+                    GameObject npc = npcObjects[i];
+                    Vector2 npcPosition = npc.transform.position; // Get position from scene
+
+                    npcList.Add(new NPCData(i, npcPosition, npc));
+                }*/
+
         for (int i = 0; i < npcObjects.Count; i++)
         {
             GameObject npc = npcObjects[i];
-            Vector2 npcPosition = npc.transform.position; // Get position from scene
 
+            if (npc == null)
+            {
+                Debug.LogError("NPC Object is null at index: " + i);
+                continue;
+            }
+
+            Vector2 npcPosition = npc.transform.position;
             npcList.Add(new NPCData(i, npcPosition, npc));
+            Debug.Log($"Added NPC ID: {i}, Name: {npc.name}");
         }
     }
 

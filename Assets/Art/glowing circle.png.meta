@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      glowing circle_0: -7063464552906846743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

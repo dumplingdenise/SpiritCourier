@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static Quest;
 
 public class Quest : MonoBehaviour
 {
@@ -10,9 +9,11 @@ public class Quest : MonoBehaviour
 
     private List<questData> allQuest = new List<questData>();
     private List<questData> activeQuest = new List<questData>();
+    private questData currentDisplayedQuest; // test code
 
     public Button[] taskSlots;
     public Image[] taskIcons;
+    
 
     [Header("Pop-up UI")]
     public GameObject hintPopup;
@@ -55,6 +56,7 @@ public class Quest : MonoBehaviour
     public void addParcelDatatoQuest(questData questData)
     {
         allQuest.Add(questData);
+        Debug.LogError($"Queue list count: {allQuest.Count}");
         Debug.Log($"Quest ID: {questData.questID}, quest status: {questData.questStatus}, quest type: {questData.questType}, questData: {questData.ParcelData} added to quest list");
     }
 
@@ -75,11 +77,17 @@ public class Quest : MonoBehaviour
                 {
                     quest.parcelObject.SetActive(true);
                 }
-
-                UpdateQuestUI();
                 Debug.Log($"Quest ID {quest.questID} activated.");
+                Debug.LogError($"Active list count: {activeQuest.Count}");
+                foreach (var quests in activeQuest)
+                {
+                    Debug.LogError($"Quest ID: {quests.questID}, quest status: {quests.questStatus}, quest type: {quests.questType}, questData: {quests.ParcelData.parcelName}, {quests.ParcelData.parcelID}");
+                }
+
+                OnQuestUpdated(); // test code
             }
         }
+        UpdateQuestUI();
     }
 
     public questData GetQuestByParcelID(int parcelID)
@@ -99,12 +107,26 @@ public class Quest : MonoBehaviour
         var quest = activeQuest.Find(q => q.questID == questID);
         if (quest != null)
         {
-            /*if (quest.parcelObject != null)
-            {
-                quest.parcelObject.SetActive(false);
-            }*/
+
             activeQuest.Remove(quest);
             FillActiveQuests();
+            UpdateQuestUI();
+
+            Debug.Log($"Quest ID: {quest.questID}, Parcel {quest.ParcelData.parcelName}, ID: {quest.ParcelData.parcelID} successfully delivered. Removing from quest");
+
+            // test code
+            // Check if the completed quest is the one displayed, and close or update the popup
+            if (currentDisplayedQuest == quest)
+            {
+                hintPopup.SetActive(false);
+                currentDisplayedQuest = null;
+            }
+
+            /*Debug.Log($"Number of active quest: {activeQuest.Count}");
+            foreach (questData quests in activeQuest)
+            {
+                Debug.LogError($"Quest ID: {quests.questID}, quest status: {quests.questStatus}, quest type: {quests.questType}, questData: {quests.ParcelData.parcelName}, {quests.ParcelData.parcelID}");
+            }*/
         }
     }
 
@@ -118,6 +140,10 @@ public class Quest : MonoBehaviour
             taskIcons[i].gameObject.SetActive(false);
             taskSlots[i].gameObject.SetActive(true);
             taskSlots[i].onClick.RemoveAllListeners();
+
+            // test code
+            Image selectedImage = taskSlots[i].transform.Find("Selected").GetComponent<Image>();
+            selectedImage.gameObject.SetActive(false);
         }
 
         // Populate quest icons
@@ -132,15 +158,101 @@ public class Quest : MonoBehaviour
 
             // Add a click listener to show quest details
             int index = i; // Capture the index for the lambda
-            taskSlots[i].onClick.AddListener(() => ShowQuestDetails(activeQuest[index]));
+            taskSlots[i].onClick.AddListener(() => ShowQuestDetails(activeQuest[index], /*taskIcons[index]*/index));
         }
     }
 
-    // Show quest details (e.g., in a popup or log)
-    private void ShowQuestDetails(questData quest)
+    // Show quest details (with auto-update logic)
+    private void ShowQuestDetails(questData quest, /*Image slotImage*/ int index)
     {
         Debug.Log($"Quest ID: {quest.questID}, Type: {quest.questType}, Hint: {quest.ParcelData.parcelHints}");
-        
+
+        hintPopup.SetActive(true);
+        currentDisplayedQuest = quest; // Track the displayed quest
+
+        UpdateHintPopup();
+
+        for (int i = 0; i < taskSlots.Length; i++)
+        {
+            Image selectedImage = taskSlots[i].transform.Find("Selected").GetComponent<Image>(); // Get the Image component of Selected
+            selectedImage.gameObject.SetActive(i == index);  // Only activate the selected one
+        }
+
+        closeBtn.onClick.RemoveAllListeners();
+        closeBtn.onClick.AddListener(() =>
+        {
+            hintPopup.SetActive(false);
+            currentDisplayedQuest = null; // Clear when closed
+
+            foreach (var taskSlot in taskSlots)
+            {
+                Image selectedImage = taskSlot.transform.Find("Selected").GetComponent<Image>();
+                selectedImage.gameObject.SetActive(false);
+            }
+
+        });
+    }
+
+    // Method to update the hint UI dynamically when the quest changes
+    private void UpdateHintPopup()
+    {
+        if (currentDisplayedQuest == null) return; // Skip if no quest is being displayed
+
+        string hintTitleText = "";
+        string hintMessage = "";
+
+        if (currentDisplayedQuest.questType == questType.findParcel)
+        {
+            hintTitleText = $"Find {currentDisplayedQuest.ParcelData.parcelName}";
+            hintMessage = $"{currentDisplayedQuest.ParcelData.parcelHints}";
+        }
+        else if (currentDisplayedQuest.questType == questType.deliverParcel)
+        {
+            hintTitleText = $"Deliver {currentDisplayedQuest.ParcelData.parcelName} to the right spirit";
+            hintMessage = $"{currentDisplayedQuest.ParcelData.npcHints}";
+        }
+
+        hintTitle.text = hintTitleText;
+        hintText.text = hintMessage;
+        hintImage.sprite = currentDisplayedQuest.ParcelData.parcelSprite;
+        hintImage.gameObject.SetActive(true);
+    }
+
+    // Call this whenever a quest status changes
+    public void OnQuestUpdated()
+    {
+        if (hintPopup.activeSelf) // Only update if the popup is open
+        {
+            UpdateHintPopup();
+        }
+    }
+
+    //test code
+    /* public void OnQuestClicked()
+     {
+         Vector3 questPosition = transform.position;
+         indicatorManager.showIndicator(questPosition);
+     }*/
+
+    /*    public void OnQuestClicked(Vector3 questPosition)
+        {
+            // Assuming indicatorManager has a method to show the indicator
+            Vector3 parcelPosition = parcelObject.transform.position;
+            indicatorManager.showIndicator(questPosition);
+        }*/
+
+    public void Start()
+    {
+        hintPopup.SetActive(false);
+        UpdateQuestUI();
+    }
+}
+
+// Show quest details (e.g., in a popup or log)
+/*    private void ShowQuestDetails(questData quest)
+    {
+        Debug.Log($"Quest ID: {quest.questID}, Type: {quest.questType}, Hint: {quest.ParcelData.parcelHints}");
+
         hintPopup.SetActive(true);
 
         string hintMessage = "";
@@ -164,13 +276,8 @@ public class Quest : MonoBehaviour
 
         closeBtn.onClick.RemoveAllListeners();
         closeBtn.onClick.AddListener(() => hintPopup.SetActive(false));
-    }
-    public void Start()
-    {
-        hintPopup.SetActive(false);
-        UpdateQuestUI();
-    }
-}
+    }*/
+
 
 /* public int maxQuestSize = 3; // Max number of active quests
      private List<questData> activeQuests = new List<questData>();

@@ -1,4 +1,4 @@
-using Microsoft.Unity.VisualStudio.Editor;
+//using Microsoft.Unity.VisualStudio.Editor;
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +24,7 @@ public class Inventory : MonoBehaviour
         public Sprite parcelSprite;
         public Vector2 parcelPosition;
         public MainNpcs.NPCData npcData;
+
 
         public inventoryParcelData(int parcelID, string parcelName, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData)
         {
@@ -76,6 +77,26 @@ public class Inventory : MonoBehaviour
         {
             selectedSlot = index;
             Debug.Log($"Selected slot: {selectedSlot}");
+
+            // test code for selected item in inventory -> but if the player deliver a wrong parcel, the blue bg is still there
+            for (int i = 0; i < slotButtons.Length; i++)
+            {
+                Image selectedImage = slotButtons[i].transform.Find("Selected").GetComponent<Image>();
+                selectedImage.gameObject.SetActive(i == selectedSlot);
+            }
+        }
+        // test code
+        else
+        {
+            // Reset selected slot if it's out of bounds
+            selectedSlot = -1;
+
+            // Ensure all blue backgrounds are deactivated
+            for (int i = 0; i < slotButtons.Length; i++)
+            {
+                Image selectedImage = slotButtons[i].transform.Find("Selected").GetComponent<Image>();
+                selectedImage.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -98,6 +119,14 @@ public class Inventory : MonoBehaviour
             collectedParcels.RemoveAt(selectedSlot);
             Debug.Log($"Parcel at slot {selectedSlot} removed from inventory.");
             selectedSlot = -1; // Reset selection
+
+            //test code
+            for (int i = 0; i < slotButtons.Length; i++)
+            {
+                Image selectedImage = slotButtons[i].transform.Find("Selected").GetComponent<Image>();
+                selectedImage.gameObject.SetActive(false);
+            }
+
             UpdateInventoryUI();
         }
         else
@@ -131,8 +160,12 @@ public class Inventory : MonoBehaviour
                 slotIcons[i].enabled = false;
             }
 
-            Debug.Log($"Inventory updated. Total parcels: {collectedParcels.Count}");
+            // Reset the selection background for all slots
+            Image selectedImage = slotButtons[i].transform.Find("Selected").GetComponent<Image>();
+            selectedImage.gameObject.SetActive(i == selectedSlot);
         }
+
+        Debug.Log($"Inventory updated. Total parcels: {collectedParcels.Count}");
     }
 
 
