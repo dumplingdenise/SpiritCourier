@@ -963,7 +963,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1942470371
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.40499997, y: 0.44, z: 0}
@@ -6399,7 +6399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &642829713
 Transform:
   m_ObjectHideFlags: 0
@@ -6620,7 +6620,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1942470371
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.7403754, y: 0.90999997, z: 0}
@@ -8718,11 +8718,11 @@ Transform:
   m_GameObject: {fileID: 674782108}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -963, y: -537, z: -5}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 14.139999, y: 12.9, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1922522819}
+  m_Father: {fileID: 1224058032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &674782110
 MonoBehaviour:
@@ -10096,7 +10096,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1823068105
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 3.5462246, y: 2.315, z: 0}
@@ -12746,6 +12746,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 256
+  playerAnimator: {fileID: 0}
 --- !u!70 &1224058029
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -12878,6 +12879,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 674782109}
   - {fileID: 833978033}
   - {fileID: 642829713}
   m_Father: {fileID: 0}
@@ -14535,7 +14537,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1813614631
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 3.5462246, y: 2.47, z: 0}
@@ -16149,7 +16151,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1823068105
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.40499997, y: 0.44, z: 0}
@@ -74066,7 +74068,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 674782109}
   - {fileID: 2090652336}
   - {fileID: 385073841}
   m_Father: {fileID: 0}
@@ -76041,7 +76042,8 @@ MonoBehaviour:
   dialogText: {fileID: 1714220267}
   lettersPerSecond: 40
   nextSceneButton: {fileID: 1547785448}
-  nextSceneName: puzzle
+  nextSceneNames: []
+  noButton: {fileID: 0}
 --- !u!114 &2093632203
 MonoBehaviour:
   m_ObjectHideFlags: 0
