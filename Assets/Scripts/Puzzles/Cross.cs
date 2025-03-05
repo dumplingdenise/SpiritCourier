@@ -16,7 +16,7 @@ public class Cross : MonoBehaviour
 
         /*SceneManager.LoadScene("Play");*/
 
-        SceneManager.LoadScene("Shumin");
+        SceneManager.LoadScene("Denise");
         
     }
 }
