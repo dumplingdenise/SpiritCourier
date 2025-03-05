@@ -1,61 +1,37 @@
 fileFormatVersion: 2
-guid: 66c437a0269e20b46859f4759824ad38
+guid: 932d5b84464211549ba570cf22a19ab1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 565550050973256261
-    second: SC Sprite Sheet_0
+      213: -2432072504742938525
+    second: Woman NPC Sprite Sheet_1_0
   - first:
-      213: -7436072042096793481
-    second: SC Sprite Sheet_1
+      213: 3803406979076794722
+    second: Woman NPC Sprite Sheet_1_1
   - first:
-      213: 3453668536824959497
-    second: SC Sprite Sheet_2
+      213: -6268280573457766789
+    second: Woman NPC Sprite Sheet_1_2
   - first:
-      213: -2827606259469871988
-    second: SC Sprite Sheet_3
+      213: -7259885932599031425
+    second: Woman NPC Sprite Sheet_1_3
   - first:
-      213: -6316530647259150039
-    second: SC Sprite Sheet_4
+      213: -1844026160127936192
+    second: Woman NPC Sprite Sheet_1_4
   - first:
-      213: 8390707036058022734
-    second: SC Sprite Sheet_5
+      213: 5911897870224133949
+    second: Woman NPC Sprite Sheet_1_5
   - first:
-      213: -1052421990026978612
-    second: SC Sprite Sheet_6
+      213: 8535553236874712123
+    second: Woman NPC Sprite Sheet_1_6
   - first:
-      213: 6292035284675765564
-    second: SC Sprite Sheet_7
+      213: 1623946906278078734
+    second: Woman NPC Sprite Sheet_1_7
   - first:
-      213: 1463198020184260408
-    second: SC Sprite Sheet_8
+      213: -19559093877462913
+    second: Woman NPC Sprite Sheet_1_8
   - first:
-      213: 8708095282017688022
-    second: SC Sprite Sheet_9
-  - first:
-      213: 6178639328965197172
-    second: SC Sprite Sheet_10
-  - first:
-      213: -9007552256958277050
-    second: SC Sprite Sheet_11
-  - first:
-      213: 7645571446049973804
-    second: SC Sprite Sheet_12
-  - first:
-      213: -8919496938963191686
-    second: SC Sprite Sheet_13
-  - first:
-      213: 5941782907836973804
-    second: SC Sprite Sheet_14
-  - first:
-      213: -2180471980706509675
-    second: SC Sprite Sheet_15
-  - first:
-      213: -698225505795052976
-    second: SC Sprite Sheet_16
-  - first:
-      213: -2621507324038982603
-    second: SC Sprite Sheet_17
+      213: 6663396243749337193
+    second: Woman NPC Sprite Sheet_1_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -88,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -151,199 +127,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SC Sprite Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 225
-        width: 50
-        height: 101
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 466569a77ed770643a9aacba7bcf0045
-      internalID: -535426989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SC Sprite Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 118
-        width: 61
-        height: 102
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a24b2a6497019e842aa042b5a8deefc4
-      internalID: 1156474003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SC Sprite Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 6
-        width: 59
-        height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7ca7607561da1744a3ef7d1b17ab852
-      internalID: -11887130
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SC Sprite Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 227
-        width: 50
-        height: 102
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d534a440ab05ff545a6348ec77ccb1a0
-      internalID: -1741965843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SC Sprite Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 4
-        width: 58
-        height: 104
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0af9ad8d634b18f49acc11d6933c4b43
-      internalID: -567598094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SC Sprite Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 5
-        width: 60
-        height: 104
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13111d5e9e568cc4bb55edcbf26ae0c0
-      internalID: 700106524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SC Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 117
-        width: 59
-        height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09671503a12d7aa4787edcf7810e69aa
-      internalID: 1733326105
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SC Sprite Sheet_7
+      name: Woman NPC Sprite Sheet_1_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 114
-        width: 61
-        height: 105
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4583cdb2f4dfc274bb99e8db240bd06d
-      internalID: -54683546
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SC Sprite Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 226
-        width: 55
-        height: 101
+        y: 449
+        width: 89
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a16328ec0db5e0d43adabc89f1ddfc21
-      internalID: -277215622
+      spriteID: 3687dce41fa8f3ed0800000000000000
+      internalID: -2432072504742938525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_1
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 452
+        width: 91
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2692d140f7a68c430800000000000000
+      internalID: 3803406979076794722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_2
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 449
+        width: 89
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76619a77089209a0800000000000000
+      internalID: -6268280573457766789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_3
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 507
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7944957534bf3b90800000000000000
+      internalID: -7259885932599031425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 232
+        width: 75
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049fb093af3b866e0800000000000000
+      internalID: -1844026160127936192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 231
+        width: 75
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f09175ac74b0250800000000000000
+      internalID: 5911897870224133949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_6
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 231
+        width: 74
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b345a551270647670800000000000000
+      internalID: 8535553236874712123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 89
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e09acc27b1b698610800000000000000
+      internalID: 1623946906278078734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_8
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2
+        width: 91
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f782e459b138abff0800000000000000
+      internalID: -19559093877462913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_9
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 89
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 968f95a5493297c50800000000000000
+      internalID: 6663396243749337193
       vertices: []
       indices: 
       edges: []
@@ -352,7 +350,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b235c97074debfa43a1d9d894c4d7ba7
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -361,16 +359,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      SC Sprite Sheet_0: -535426989
-      SC Sprite Sheet_1: 1156474003
-      SC Sprite Sheet_2: -11887130
-      SC Sprite Sheet_3: -1741965843
-      SC Sprite Sheet_4: -567598094
-      SC Sprite Sheet_5: 700106524
-      SC Sprite Sheet_6: 1733326105
-      SC Sprite Sheet_7: -54683546
-      SC Sprite Sheet_8: -277215622
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
