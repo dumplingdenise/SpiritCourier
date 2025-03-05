@@ -1564,6 +1564,7 @@ GameObject:
   - component: {fileID: 764475240}
   - component: {fileID: 764475244}
   - component: {fileID: 764475245}
+  - component: {fileID: 764475246}
   m_Layer: 5
   m_Name: MemoryPuzzleControl
   m_TagString: Untagged
@@ -1717,6 +1718,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5fb510518406247a3c4a94dfda4a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &764475246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764475238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71959121f6dd9246817ef0eca86e8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
 --- !u!1 &776039756
 GameObject:
   m_ObjectHideFlags: 0

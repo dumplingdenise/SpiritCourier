@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private void SetGameState(GameState newState)
+    public void SetGameState(GameState newState)
     {
         state = newState;
 
@@ -31,10 +31,21 @@ public class GameController : MonoBehaviour
             }
             playerController?.SetMoveWhenTalking(true); // Re-enable movement
         }
+        else if (state == GameState.Puzzle)  // Disable movement when entering a puzzle
+        {
+            playerController?.SetMoveWhenTalking(false);
+        }
     }
 
     private void Start()
     {
+        // test code
+        if (state == GameState.Puzzle)
+        {
+            Debug.LogError($"{state}");
+            SetGameState(GameState.FreeRoam);
+        }
+
         DialogManager.Instance.OnShowDialog += () =>
         {
             state = GameState.Dialog;
@@ -42,13 +53,6 @@ public class GameController : MonoBehaviour
         };
         DialogManager.Instance.OnHideDialog += () =>
         {
-            /*if (state == GameState.Dialog)
-            {
-                state = GameState.FreeRoam;
-                playerController.SetMoveWhenTalking(true);
-            }*/
-
-            // test code
             if (state == GameState.Dialog)
             {
                 SetGameState(GameState.FreeRoam);
@@ -70,9 +74,5 @@ public class GameController : MonoBehaviour
         {
             DialogManager.Instance.HandleUpdate();
         }
-        /*else if (state == GameState.Battle)
-        {
-
-        }*/
     }
 }

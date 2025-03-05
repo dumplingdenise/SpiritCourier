@@ -64,12 +64,11 @@ public class DialogManager : MonoBehaviour
         showButtonAtEnd = showButton;
         yield return new WaitForEndOfFrame();
 
-        // test code
-        if (playerController != null)
+        // maybe dont need the below code at all
+       /* if (playerController != null)
         {
             playerController.SetMoveWhenTalking(false);
-        }
-        // end test code
+        }*/
 
         OnShowDialog?.Invoke();
 
@@ -128,7 +127,6 @@ public class DialogManager : MonoBehaviour
         }
         isTyping = false;
 
-        // test
         // Now, wait for the player to press 'F' before continuing
         while (!Input.GetKeyDown(KeyCode.F))
         {
@@ -167,14 +165,13 @@ public class DialogManager : MonoBehaviour
         noButton.gameObject.SetActive(false);
         nextSceneButton.gameObject.SetActive(false);
 
-        // test code
-/*        if (playerController != null)
+        OnHideDialog?.Invoke();
+
+        // maybe dont need the below code at all
+        /*if (playerController != null)
         {
             playerController.SetMoveWhenTalking(true);
-        }*/
-        // end test code
-
-        OnHideDialog?.Invoke();
+        }*/ 
     }
 
     // New methods for success and failure dialog creation
@@ -182,7 +179,6 @@ public class DialogManager : MonoBehaviour
     {
         return new Dialog
         {
-            /*Lines = new List<string> { $"Thank you for delivering this parcel to me! It really means a lot to me!" }*/
             Lines = new List<string> { $"Thank you so much for the delivery!" }
         };
     }

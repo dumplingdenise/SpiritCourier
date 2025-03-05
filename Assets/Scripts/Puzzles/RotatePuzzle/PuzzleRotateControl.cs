@@ -15,6 +15,11 @@ public class PuzzleRotateControl : MonoBehaviour
 
     void Start()
     {
+        GameController gameController = FindAnyObjectByType<GameController>(); // Find the GameController
+        if (gameController != null)
+        {
+            gameController.SetGameState(GameState.Puzzle); // Set the state to FreeRoam when exiting the puzzle
+        }
         youWin = false;
         clueImageUI.SetActive(false); // Hide the clue UI at start
         OverlayUI.SetActive(false); //hide overlay

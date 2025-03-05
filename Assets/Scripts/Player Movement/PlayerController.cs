@@ -35,10 +35,15 @@ public class PlayerController : MonoBehaviour
 
     }
 
-
     public void Move(InputAction.CallbackContext context)
     {
-        if (!MoveWhenTalking) return;  // Prevent movement when talking
+        if (!MoveWhenTalking)  // Prevent movement during dialogue
+        {
+            moveInput = Vector2.zero; // Reset input
+            rb.linearVelocity = Vector2.zero; // Stop movement
+            animator.SetBool("isWalking", false);
+            return;
+        }
 
         moveInput = context.ReadValue<Vector2>();
 
@@ -55,9 +60,8 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("InputX", moveInput.x);
         animator.SetFloat("InputY", moveInput.y);
-
-        // test code end
     }
+
 
     public void SetMoveWhenTalking(bool value)
     {
@@ -65,28 +69,24 @@ public class PlayerController : MonoBehaviour
 
         if (!MoveWhenTalking)
         {
-            // test code
-            moveInput = Vector2.zero; // reset input to prevent movement
-            // end test code
-
-            rb.linearVelocity = Vector2.zero;  // Ensure player stops
+            moveInput = Vector2.zero; // Clear movement input
+            rb.linearVelocity = Vector2.zero;  // Stop movement
             animator.SetBool("isWalking", false);
         }
     }
 
-
     // look like this is not used.
-/*    private void OnMove()
-    {
-        if (!MoveWhenTalking) return;
-
-        if (rb.linearVelocity != moveInput)
+    /*    private void OnMove()
         {
-            Vector2 targetPos = rb.position + moveInput * moveSpeed * Time.fixedDeltaTime;
-            rb.MovePosition(targetPos);
+            if (!MoveWhenTalking) return;
 
-        }
-    }*/
+            if (rb.linearVelocity != moveInput)
+            {
+                Vector2 targetPos = rb.position + moveInput * moveSpeed * Time.fixedDeltaTime;
+                rb.MovePosition(targetPos);
+
+            }
+        }*/
 
 
     public void HandleUpdate()
@@ -96,8 +96,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("F key pressed for interaction.");
             Interact();
         }
-        
-
     }
 
     void Interact()

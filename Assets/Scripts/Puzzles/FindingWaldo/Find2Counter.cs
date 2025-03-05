@@ -18,6 +18,11 @@ public class Find2Counter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameController gameController = FindAnyObjectByType<GameController>(); // Find the GameController
+        if (gameController != null)
+        {
+            gameController.SetGameState(GameState.Puzzle); // Set the state to FreeRoam when exiting the puzzle
+        }
         UpdateProgress();
 
         // Assign each button's click listener to the FindParcel method

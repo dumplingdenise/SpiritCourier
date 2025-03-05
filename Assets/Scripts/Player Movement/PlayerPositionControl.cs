@@ -29,8 +29,6 @@ public class PlayerPositionControl : MonoBehaviour
             savedPosition = new Vector3(x, y, z);
             transform.position = savedPosition;
         }
-
-        // test code
         gameObject.SetActive(true);
     }
 

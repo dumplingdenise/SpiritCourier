@@ -135790,6 +135790,9 @@ MonoBehaviour:
   nextSceneButton: {fileID: 1547785448}
   nextSceneNames:
   - Find1
+  - Find2
+  - MemoryPuzzle
+  - RotatePuzzle2
   noButton: {fileID: 395457874}
   playerController: {fileID: 1224058028}
 --- !u!114 &2093632203

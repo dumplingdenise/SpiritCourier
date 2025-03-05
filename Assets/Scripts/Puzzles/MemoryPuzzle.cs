@@ -24,6 +24,11 @@ public class MemoryPuzzle : MonoBehaviour
 
     void Start()
     {
+        GameController gameController = FindAnyObjectByType<GameController>(); // Find the GameController
+        if (gameController != null)
+        {
+            gameController.SetGameState(GameState.Puzzle); // Set the state to FreeRoam when exiting the puzzle
+        }
         InitializeCards();
         puzzleCompletePanel.SetActive(false); // Show pop-up when puzzle is done
     }
