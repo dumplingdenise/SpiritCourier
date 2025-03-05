@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 7cf48704c114a81479212d03898563db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5020915610292446701
+    second: Grandma NPC Sprite Sheet_1_0
+  - first:
+      213: -2733822194945471859
+    second: Grandma NPC Sprite Sheet_1_1
+  - first:
+      213: -7368628763563236483
+    second: Grandma NPC Sprite Sheet_1_2
+  - first:
+      213: 3213047200688885469
+    second: Grandma NPC Sprite Sheet_1_3
+  - first:
+      213: 855280242636385074
+    second: Grandma NPC Sprite Sheet_1_4
+  - first:
+      213: 2349500517637397447
+    second: Grandma NPC Sprite Sheet_1_5
+  - first:
+      213: -3471579449873253566
+    second: Grandma NPC Sprite Sheet_1_6
+  - first:
+      213: 1021662945097346556
+    second: Grandma NPC Sprite Sheet_1_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 296
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de5e1b64520eda540800000000000000
+      internalID: 5020915610292446701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_1_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 293
+        width: 119
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a4237b2338f0ad0800000000000000
+      internalID: -2733822194945471859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_1_2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 339
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7366122e2f5db990800000000000000
+      internalID: -7368628763563236483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_1_3
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 299
+        width: 119
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddecf93d769079c20800000000000000
+      internalID: 3213047200688885469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_1_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 152
+        width: 113
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b60c569d09edb00800000000000000
+      internalID: 855280242636385074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_1_5
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 154
+        width: 123
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb9f59c54a1b9020800000000000000
+      internalID: 2349500517637397447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_1_6
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 153
+        width: 119
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b32c032e872dfc0800000000000000
+      internalID: -3471579449873253566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grandma NPC Sprite Sheet_1_7
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 5
+        width: 113
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfde4ba190dad2e00800000000000000
+      internalID: 1021662945097346556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Grandma NPC Sprite Sheet_1_0: 5020915610292446701
+      Grandma NPC Sprite Sheet_1_1: -2733822194945471859
+      Grandma NPC Sprite Sheet_1_2: -7368628763563236483
+      Grandma NPC Sprite Sheet_1_3: 3213047200688885469
+      Grandma NPC Sprite Sheet_1_4: 855280242636385074
+      Grandma NPC Sprite Sheet_1_5: 2349500517637397447
+      Grandma NPC Sprite Sheet_1_6: -3471579449873253566
+      Grandma NPC Sprite Sheet_1_7: 1021662945097346556
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

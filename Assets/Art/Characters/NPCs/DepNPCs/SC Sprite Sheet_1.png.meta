@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 811431dae02652945a0bc296d37e01c1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8240995963892878092
+    second: SC Sprite Sheet_1_0
+  - first:
+      213: 5793500714259836702
+    second: SC Sprite Sheet_1_1
+  - first:
+      213: 2724438977838401630
+    second: SC Sprite Sheet_1_2
+  - first:
+      213: -1716607325662801796
+    second: SC Sprite Sheet_1_3
+  - first:
+      213: -7306744779375256844
+    second: SC Sprite Sheet_1_4
+  - first:
+      213: -8062242597886309342
+    second: SC Sprite Sheet_1_5
+  - first:
+      213: -3132066255750032949
+    second: SC Sprite Sheet_1_6
+  - first:
+      213: 2743079330522191341
+    second: SC Sprite Sheet_1_7
+  - first:
+      213: 19831220518341911
+    second: SC Sprite Sheet_1_8
+  - first:
+      213: -28161472767581897
+    second: SC Sprite Sheet_1_9
+  - first:
+      213: 7371384331236539547
+    second: SC Sprite Sheet_1_10
+  - first:
+      213: 3312333352494739722
+    second: SC Sprite Sheet_1_11
+  - first:
+      213: 7769367040580164912
+    second: SC Sprite Sheet_1_12
+  - first:
+      213: 5095829710274142062
+    second: SC Sprite Sheet_1_13
+  - first:
+      213: -9197723379845387852
+    second: SC Sprite Sheet_1_14
+  - first:
+      213: 346777513027127404
+    second: SC Sprite Sheet_1_15
+  - first:
+      213: 4382192265256732005
+    second: SC Sprite Sheet_1_16
+  - first:
+      213: -7522200123698342706
+    second: SC Sprite Sheet_1_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 223
+        width: 51
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b434f9a26ed5270800000000000000
+      internalID: 8240995963892878092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 283
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1fed6f4436a66050800000000000000
+      internalID: 5793500714259836702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 224
+        width: 54
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58494ec0d62fc520800000000000000
+      internalID: 2724438977838401630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 222
+        width: 55
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7019077bb26d28e0800000000000000
+      internalID: -1716607325662801796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 119
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fad5e0065a399a90800000000000000
+      internalID: -7306744779375256844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_5
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 110
+        width: 60
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22cc6f3a2192d1090800000000000000
+      internalID: -8062242597886309342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_6
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 116
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc11805b55aa884d0800000000000000
+      internalID: -3132066255750032949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_7
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 116
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de5dd7e1e10611620800000000000000
+      internalID: 2743079330522191341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_8
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 113
+        width: 60
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d4576d364764000800000000000000
+      internalID: 19831220518341911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_9
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 113
+        width: 60
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 731265b2a43fb9ff0800000000000000
+      internalID: -28161472767581897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 60
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9cfb367efa6c4660800000000000000
+      internalID: 7371384331236539547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_11
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 7
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a01b02572a5c7fd20800000000000000
+      internalID: 3312333352494739722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_12
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 7
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d9867d82652db60800000000000000
+      internalID: 7769367040580164912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_13
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1
+        width: 61
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f95c46f1608b640800000000000000
+      internalID: 5095829710274142062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_14
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 9
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b9a202515f1b5080800000000000000
+      internalID: -9197723379845387852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_15
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 2
+        width: 60
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6843109f4000d400800000000000000
+      internalID: 346777513027127404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_16
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565871cb5aca0dc30800000000000000
+      internalID: 4382192265256732005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SC Sprite Sheet_1_17
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 8
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec49f8187d6cb9790800000000000000
+      internalID: -7522200123698342706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SC Sprite Sheet_1_0: 8240995963892878092
+      SC Sprite Sheet_1_1: 5793500714259836702
+      SC Sprite Sheet_1_10: 7371384331236539547
+      SC Sprite Sheet_1_11: 3312333352494739722
+      SC Sprite Sheet_1_12: 7769367040580164912
+      SC Sprite Sheet_1_13: 5095829710274142062
+      SC Sprite Sheet_1_14: -9197723379845387852
+      SC Sprite Sheet_1_15: 346777513027127404
+      SC Sprite Sheet_1_16: 4382192265256732005
+      SC Sprite Sheet_1_17: -7522200123698342706
+      SC Sprite Sheet_1_2: 2724438977838401630
+      SC Sprite Sheet_1_3: -1716607325662801796
+      SC Sprite Sheet_1_4: -7306744779375256844
+      SC Sprite Sheet_1_5: -8062242597886309342
+      SC Sprite Sheet_1_6: -3132066255750032949
+      SC Sprite Sheet_1_7: 2743079330522191341
+      SC Sprite Sheet_1_8: 19831220518341911
+      SC Sprite Sheet_1_9: -28161472767581897
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

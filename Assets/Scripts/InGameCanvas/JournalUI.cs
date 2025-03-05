@@ -7,7 +7,7 @@ public class JournalUI : MonoBehaviour
     public Button openJournalButton; // Button to open the journal
     public Button closeJournalButton; // Button to close the journal
     public Animator playerAnimator; //player animation
-
+    public Text JournalText;
 
     void Start()
     {
@@ -22,6 +22,7 @@ public class JournalUI : MonoBehaviour
     void OpenJournal()
     {
         journalPanel.SetActive(true);
+        /*JournalText.SetActive(false);*/
         Time.timeScale = 0f; // **PAUSE GAME**
 
         if (playerAnimator != null )

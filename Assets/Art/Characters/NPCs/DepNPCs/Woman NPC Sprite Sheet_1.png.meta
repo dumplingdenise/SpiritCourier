@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 932d5b84464211549ba570cf22a19ab1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2432072504742938525
+    second: Woman NPC Sprite Sheet_1_0
+  - first:
+      213: 3803406979076794722
+    second: Woman NPC Sprite Sheet_1_1
+  - first:
+      213: -6268280573457766789
+    second: Woman NPC Sprite Sheet_1_2
+  - first:
+      213: -7259885932599031425
+    second: Woman NPC Sprite Sheet_1_3
+  - first:
+      213: -1844026160127936192
+    second: Woman NPC Sprite Sheet_1_4
+  - first:
+      213: 5911897870224133949
+    second: Woman NPC Sprite Sheet_1_5
+  - first:
+      213: 8535553236874712123
+    second: Woman NPC Sprite Sheet_1_6
+  - first:
+      213: 1623946906278078734
+    second: Woman NPC Sprite Sheet_1_7
+  - first:
+      213: -19559093877462913
+    second: Woman NPC Sprite Sheet_1_8
+  - first:
+      213: 6663396243749337193
+    second: Woman NPC Sprite Sheet_1_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 449
+        width: 89
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3687dce41fa8f3ed0800000000000000
+      internalID: -2432072504742938525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_1
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 452
+        width: 91
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2692d140f7a68c430800000000000000
+      internalID: 3803406979076794722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_2
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 449
+        width: 89
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76619a77089209a0800000000000000
+      internalID: -6268280573457766789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_3
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 507
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7944957534bf3b90800000000000000
+      internalID: -7259885932599031425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 232
+        width: 75
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049fb093af3b866e0800000000000000
+      internalID: -1844026160127936192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 231
+        width: 75
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f09175ac74b0250800000000000000
+      internalID: 5911897870224133949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_6
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 231
+        width: 74
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b345a551270647670800000000000000
+      internalID: 8535553236874712123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 89
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e09acc27b1b698610800000000000000
+      internalID: 1623946906278078734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_8
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2
+        width: 91
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f782e459b138abff0800000000000000
+      internalID: -19559093877462913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Woman NPC Sprite Sheet_1_9
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 89
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 968f95a5493297c50800000000000000
+      internalID: 6663396243749337193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Woman NPC Sprite Sheet_1_0: -2432072504742938525
+      Woman NPC Sprite Sheet_1_1: 3803406979076794722
+      Woman NPC Sprite Sheet_1_2: -6268280573457766789
+      Woman NPC Sprite Sheet_1_3: -7259885932599031425
+      Woman NPC Sprite Sheet_1_4: -1844026160127936192
+      Woman NPC Sprite Sheet_1_5: 5911897870224133949
+      Woman NPC Sprite Sheet_1_6: 8535553236874712123
+      Woman NPC Sprite Sheet_1_7: 1623946906278078734
+      Woman NPC Sprite Sheet_1_8: -19559093877462913
+      Woman NPC Sprite Sheet_1_9: 6663396243749337193
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

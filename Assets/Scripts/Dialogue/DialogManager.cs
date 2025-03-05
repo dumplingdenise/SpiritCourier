@@ -166,7 +166,7 @@ public class DialogManager : MonoBehaviour
         return new Dialog
         {
             /*Lines = new List<string> { $"Thank you for delivering this parcel to me! It really means a lot to me!" }*/
-            Lines = new List<string> { $"Thank you" }
+            Lines = new List<string> { $"Thank you so much for the delivery!" }
         };
     }
 

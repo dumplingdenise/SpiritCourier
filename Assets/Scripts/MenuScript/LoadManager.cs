@@ -57,6 +57,6 @@ public class LoadManager : MonoBehaviour
         parcelImage.position = new Vector2(endPos.x - parcelOffset, endPos.y + parcelYOffset);
 
         // **Load the next scene**
-        SceneManager.LoadScene("Shumin"); // Uses variable instead of hardcoded name
+        SceneManager.LoadScene("Opening Scene"); // Uses variable instead of hardcoded name
     }
 }

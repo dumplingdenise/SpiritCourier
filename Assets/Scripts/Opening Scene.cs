@@ -61,11 +61,11 @@ public class OpeningScene : MonoBehaviour
 
     public void LoadTutorial()
     {
-        SceneManager.LoadScene("Movement");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void LoadMainGame()
     {
-        SceneManager.LoadScene("Denise1"); // Change to game scene
+        SceneManager.LoadScene("Denise"); // Change to game scene
     }
 }
