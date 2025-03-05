@@ -156,6 +156,7 @@ public class DeliverParcel : MonoBehaviour
                         // Remove parcel from inventory after successful delivery
                         inventory.RemoveParcelFromInventory();
 
+
                         if (quest != null)
                         {
                             quest.completeQuest(selectedParcel.parcelID);

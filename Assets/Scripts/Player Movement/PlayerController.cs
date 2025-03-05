@@ -35,29 +35,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    /*public void Move(InputAction.CallbackContext context)
-    {
-        animator.SetBool("isWalking", true);
 
-        if (context.canceled)
-        {
-            animator.SetBool("isWalking", false);
-            animator.SetFloat("LastInputX", moveInput.x);
-            animator.SetFloat("LastInputY", moveInput.y);
-        }
-
-        moveInput = context.ReadValue<Vector2>();
-        animator.SetFloat("InputX", moveInput.x);
-        animator.SetFloat("InputY", moveInput.y);
-
-        Debug.Log("Current Animation State: " + animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"));
-
-
-    }*/
-
-    // test code
     public void Move(InputAction.CallbackContext context)
     {
+        if (!MoveWhenTalking) return;  // Prevent movement when talking
+
         moveInput = context.ReadValue<Vector2>();
 
         if (context.canceled)
@@ -73,52 +55,27 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("InputX", moveInput.x);
         animator.SetFloat("InputY", moveInput.y);
+
+        // test code end
     }
 
-    // Toggle movement state while talking (when interacting with NPCs or doing other actions)
-    /*public void SetMoveWhenTalking(bool value)
-    {
-        MoveWhenTalking = value;
-
-        if (!MoveWhenTalking)
-        {
-            // if not moving, stop all movement (set velocity to zero)
-            rb.linearVelocity = Vector2.zero;
-            //rb.linearVelocity = moveInput;
-
-            animator.SetBool("isWalking", false);
-
-            if (playerAnimator != null)
-            {
-                playerAnimator.enabled = false;
-            }
-        }
-        else
-        {
-            if (playerAnimator != null)
-            {
-                playerAnimator.enabled = true;
-            }
-
-            // Enable walking animation again if movement is allowed
-            animator.SetFloat("InputX", moveInput.x);
-            animator.SetFloat("InputY", moveInput.y);
-        }
-    }*/
-
-    // test code
     public void SetMoveWhenTalking(bool value)
     {
         MoveWhenTalking = value;
 
         if (!MoveWhenTalking)
         {
+            // test code
+            moveInput = Vector2.zero; // reset input to prevent movement
+            // end test code
+
             rb.linearVelocity = Vector2.zero;  // Ensure player stops
             animator.SetBool("isWalking", false);
         }
     }
 
-    private void OnMove()
+    // look like this is not used.
+/*    private void OnMove()
     {
         if (!MoveWhenTalking) return;
 
@@ -128,7 +85,7 @@ public class PlayerController : MonoBehaviour
             rb.MovePosition(targetPos);
 
         }
-    }
+    }*/
 
 
     public void HandleUpdate()
@@ -144,20 +101,10 @@ public class PlayerController : MonoBehaviour
 
     void Interact()
     {
-        // if (animator.runtimeAnimatorController == null)
-        // {
-        //     Debug.LogWarning("AnimatorController is missing or not assigned!");
-        //     return;
-        // }
-
-        // Vector3 facingDir = new Vector3(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
-
-        // this handles the interaction when the "F" key is pressed
 
         Vector3 facingDir = Vector3.up;  // Default direction for interaction if no animator
         Vector3 interactPos = transform.position + facingDir;
 
-        // Debug.DrawLine(transform.position, interactPos, Color.red, 1f);
 
         Collider2D collider = Physics2D.OverlapCircle(interactPos, 0.5f, interactableLayer);
         if (collider != null)
@@ -166,109 +113,5 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
 }
 
-/* 
-   public float moveSpeed = 5f;
-
-    // private bool isMoving;
-
-    private Vector2 moveInput;
-    private Rigidbody2D rb;
-   // private Animator animator;
-    public bool CanMove = true; //movement control flag
-
-    public LayerMask solidObjectsLayer;
-    public LayerMask interactableLayer;
-
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-       // animator = GetComponent<Animator>();
-    }
-
-    private void FixedUpdate()
-    {
-        if (CanMove)
-        Move();
-    }
-
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        moveInput = context.ReadValue<Vector2>();
-    }
-
-    public void SetCanMove(bool value)
-    {
-        CanMove = value;
-        if (!CanMove)
-        {
-            moveInput = Vector2.zero;  // Stop movement immediately
-           // animator.SetBool("isMoving", false);
-        }
-    }
-
-    private void Move()
-    {
-        if (!CanMove) return;
-        if (moveInput != Vector2.zero)
-        {
-            Vector2 targetPos = rb.position + moveInput * moveSpeed * Time.fixedDeltaTime;
-            rb.MovePosition(targetPos);
-
-            // animation parameters
-            // animator.SetFloat("MoveX", moveInput.x);
-            //animator.SetFloat("MoveY", moveInput.y);
-            //animator.SetBool("isMoving", true);
-        }
-      //  else
-        //{
-            // animator.SetBool("isMoving", false);
-       // }
-    }
-
-
-
-
-
-  if (!isMoving)
-     {
-         input.x = Input.GetAxisRaw("Horizontal");
-         input.y = Input.GetAxisRaw("Vertical");
-
-         Debug.Log("This is input.x" + input.x);
-         Debug.Log("This is input.y" + input.y);
-
-         if (input != Vector2.zero)
-         {
-             animator.SetFloat("MoveX", input.x);
-             animator.SetFloat("MoveY", input.y);
-
-             var targetPos = transform.position;
-             targetPos.x += input.x;
-             targetPos.y += input.y;
-
-             StartCoroutine(Move(targetPos));
-         }
-     }
-
-     // animator.SetBool("isMoving", isMoving);
-
-     if (Input.GetKeyDown(KeyCode.F))
-         Interact();
- } 
-
- IEnumerator Move(Vector3 targetPos)
- {
-     isMoving = true;
-     while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
-     {
-         transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-         yield return null;
-     }
-     transform.position = targetPos;
-
-     isMoving = false;
- }
-*/

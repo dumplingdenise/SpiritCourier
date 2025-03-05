@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
-public class Movement : MonoBehaviour
+public class Tutorial : MonoBehaviour
 {
     public GameObject Panel;
     public Text TutorialText;

@@ -17,6 +17,8 @@ public class DialogManager : MonoBehaviour
     [SerializeField] string[] nextSceneNames;
     [SerializeField] Button noButton;
 
+    [SerializeField] private PlayerController playerController;
+
     public event Action OnShowDialog;
     public event Action OnHideDialog;
 
@@ -61,6 +63,13 @@ public class DialogManager : MonoBehaviour
 
         showButtonAtEnd = showButton;
         yield return new WaitForEndOfFrame();
+
+        // test code
+        if (playerController != null)
+        {
+            playerController.SetMoveWhenTalking(false);
+        }
+        // end test code
 
         OnShowDialog?.Invoke();
 
@@ -157,6 +166,14 @@ public class DialogManager : MonoBehaviour
         autoDialogCompleted = false; // Reset auto-dialog flag
         noButton.gameObject.SetActive(false);
         nextSceneButton.gameObject.SetActive(false);
+
+        // test code
+        if (playerController != null)
+        {
+            playerController.SetMoveWhenTalking(true);
+        }
+        // end test code
+
         OnHideDialog?.Invoke();
     }
 
