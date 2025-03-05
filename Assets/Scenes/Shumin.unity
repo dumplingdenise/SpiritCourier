@@ -10451,6 +10451,7 @@ MonoBehaviour:
   openJournalButton: {fileID: 1516286803}
   closeJournalButton: {fileID: 1436134658}
   playerAnimator: {fileID: 1224058023}
+  JournalText: {fileID: 0}
 --- !u!114 &752412880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128468,8 +128469,10 @@ MonoBehaviour:
   dialogText: {fileID: 1714220267}
   lettersPerSecond: 40
   nextSceneButton: {fileID: 1547785448}
-  nextSceneNames: []
+  nextSceneNames:
+  - RotatePuzzle2
   noButton: {fileID: 0}
+  playerController: {fileID: 1224058028}
 --- !u!114 &2093632203
 MonoBehaviour:
   m_ObjectHideFlags: 0

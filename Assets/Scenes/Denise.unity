@@ -231,7 +231,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1799197529801390035, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3330070731334641965, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_Sprite
@@ -7819,7 +7819,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1799197529801390035, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3330070731334641965, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_Sprite
@@ -9853,7 +9853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5279036025520876059, guid: 085ab47fc3ae121428a1ce8862669261, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19668,7 +19668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5279036025520876059, guid: 085ab47fc3ae121428a1ce8862669261, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51711,7 +51711,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472146541}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -52442,7 +52442,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561839161}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -52703,7 +52703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8461658817605078293, guid: 0127d05d12d2a4441b9e7e08bf15fa7b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -87064,7 +87064,7 @@ PrefabInstance:
       objectReference: {fileID: 6813846094819246631, guid: 6c78505d3d232fc4a81712bc3bf54339, type: 3}
     - target: {fileID: 8461658817605078293, guid: 0127d05d12d2a4441b9e7e08bf15fa7b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -130768,7 +130768,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1799197529801390035, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1799197529801390035, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: sourceAsset
@@ -133791,7 +133791,7 @@ PrefabInstance:
       objectReference: {fileID: 5541013498141950252, guid: 6c78505d3d232fc4a81712bc3bf54339, type: 3}
     - target: {fileID: 8461658817605078293, guid: 0127d05d12d2a4441b9e7e08bf15fa7b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -135253,7 +135253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5279036025520876059, guid: 085ab47fc3ae121428a1ce8862669261, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -135789,8 +135789,9 @@ MonoBehaviour:
   lettersPerSecond: 90
   nextSceneButton: {fileID: 1547785448}
   nextSceneNames:
-  - RotatePuzzle2
+  - Find1
   noButton: {fileID: 395457874}
+  playerController: {fileID: 1224058028}
 --- !u!114 &2093632203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136223,6 +136224,7 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1224058032}
   - {fileID: 58085319}
   - {fileID: 1283417066}
   - {fileID: 1243216431}
@@ -136230,7 +136232,6 @@ SceneRoots:
   - {fileID: 508801078}
   - {fileID: 322978947}
   - {fileID: 1581669104}
-  - {fileID: 1224058032}
   - {fileID: 1176850258}
   - {fileID: 437901388}
   - {fileID: 136240824}

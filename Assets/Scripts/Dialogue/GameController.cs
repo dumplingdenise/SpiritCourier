@@ -60,9 +60,6 @@ public class GameController : MonoBehaviour
     {
         if (state == GameState.FreeRoam)
         {
-            /*playerController.HandleUpdate();*/
-
-            // test code
             if (playerController == null)
             {
                 playerController = Object.FindFirstObjectByType<PlayerController>(); // Reassign if lost

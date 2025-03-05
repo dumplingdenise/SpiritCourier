@@ -168,10 +168,10 @@ public class DialogManager : MonoBehaviour
         nextSceneButton.gameObject.SetActive(false);
 
         // test code
-        if (playerController != null)
+/*        if (playerController != null)
         {
             playerController.SetMoveWhenTalking(true);
-        }
+        }*/
         // end test code
 
         OnHideDialog?.Invoke();
@@ -194,11 +194,6 @@ public class DialogManager : MonoBehaviour
             Lines = new List<string> { $"Oh no dear, I don't think this parcel is for me!" }
         };
     }
-
-    /*public void BackstoryRevealed(Dialog parcelStoryDialog)
-    {
-        StartCoroutine(ShowDialog(parcelStoryDialog));
-    }*/
 
     // test
     public IEnumerator BackstoryRevealed(Dialog dialog)
