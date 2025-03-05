@@ -78,7 +78,7 @@ public class Quest : MonoBehaviour
                     quest.parcelObject.SetActive(true);
                 }
                 Debug.Log($"Quest ID {quest.questID} activated.");
-                Debug.LogError($"Active list count: {activeQuest.Count}");
+                Debug.Log($"Active list count: {activeQuest.Count}");
                 foreach (var quests in activeQuest)
                 {
                     Debug.LogError($"Quest ID: {quests.questID}, quest status: {quests.questStatus}, quest type: {quests.questType}, questData: {quests.ParcelData.parcelName}, {quests.ParcelData.parcelID}");
@@ -165,6 +165,7 @@ public class Quest : MonoBehaviour
     // Show quest details (with auto-update logic)
     private void ShowQuestDetails(questData quest, /*Image slotImage*/ int index)
     {
+        Debug.Log("Showing quest hint");
         Debug.Log($"Quest ID: {quest.questID}, Type: {quest.questType}, Hint: {quest.ParcelData.parcelHints}");
 
         hintPopup.SetActive(true);

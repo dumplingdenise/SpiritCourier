@@ -31,7 +31,7 @@ public class DialogManager : MonoBehaviour
     private bool isDialogActive = false; // test
 
     bool showButtonAtEnd = false; // Flag to check if button should appear
-    bool autoDialogCompleted = false; // Flag to check if auto-dialogu is complete
+    bool autoDialogCompleted = false; // Flag to check if auto-dialogue is complete
 
     public void Awake()
     {
@@ -43,7 +43,6 @@ public class DialogManager : MonoBehaviour
 
             noButton.gameObject.SetActive(false);
             noButton.onClick.AddListener(CloseDialog);
-
         }
     }
 
@@ -125,6 +124,7 @@ public class DialogManager : MonoBehaviour
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
+
         isTyping = false;
 
         // Now, wait for the player to press 'F' before continuing
