@@ -359,7 +359,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Woman NPC Sprite Sheet_1_0: -2432072504742938525
+      Woman NPC Sprite Sheet_1_1: 3803406979076794722
+      Woman NPC Sprite Sheet_1_2: -6268280573457766789
+      Woman NPC Sprite Sheet_1_3: -7259885932599031425
+      Woman NPC Sprite Sheet_1_4: -1844026160127936192
+      Woman NPC Sprite Sheet_1_5: 5911897870224133949
+      Woman NPC Sprite Sheet_1_6: 8535553236874712123
+      Woman NPC Sprite Sheet_1_7: 1623946906278078734
+      Woman NPC Sprite Sheet_1_8: -19559093877462913
+      Woman NPC Sprite Sheet_1_9: 6663396243749337193
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Grandma NPC Sprite Sheet_1_0: 5020915610292446701
+      Grandma NPC Sprite Sheet_1_1: -2733822194945471859
+      Grandma NPC Sprite Sheet_1_2: -7368628763563236483
+      Grandma NPC Sprite Sheet_1_3: 3213047200688885469
+      Grandma NPC Sprite Sheet_1_4: 855280242636385074
+      Grandma NPC Sprite Sheet_1_5: 2349500517637397447
+      Grandma NPC Sprite Sheet_1_6: -3471579449873253566
+      Grandma NPC Sprite Sheet_1_7: 1021662945097346556
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
