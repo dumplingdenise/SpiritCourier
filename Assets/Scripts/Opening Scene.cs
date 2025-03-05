@@ -61,7 +61,7 @@ public class OpeningScene : MonoBehaviour
 
     public void LoadTutorial()
     {
-        SceneManager.LoadScene("Movement");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void LoadMainGame()

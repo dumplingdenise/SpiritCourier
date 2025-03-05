@@ -850,7 +850,7 @@ MonoBehaviour:
   loadingTime: 6
   parcelOffset: -50
   parcelYOffset: -30
-  nextSceneName: Denise
+  nextSceneName: Opening Scene
 --- !u!114 &1756037831
 MonoBehaviour:
   m_ObjectHideFlags: 0
