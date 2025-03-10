@@ -14,4 +14,6 @@ public class npcController : MonoBehaviour, Interactable
         StartCoroutine(DialogManager.Instance.ShowDialog(dialog, showButtonAfterDialog));
 
     }
+
+
 }

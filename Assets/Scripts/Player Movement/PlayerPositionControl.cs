@@ -28,6 +28,8 @@ public class PlayerPositionControl : MonoBehaviour
             float z = PlayerPrefs.GetFloat("PlayerZ");
             savedPosition = new Vector3(x, y, z);
             transform.position = savedPosition;
+
+            PauseGame();
         }
         gameObject.SetActive(true);
     }
@@ -38,5 +40,19 @@ public class PlayerPositionControl : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerY", position.y);
         PlayerPrefs.SetFloat("PlayerZ", position.z);
         PlayerPrefs.Save();
+
+        UnpauseGame();
+    }
+
+    // Call this function when the player is about to enter the puzzle scene
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;  // Pause the game
+    }
+
+    // Call this function when the player returns from the puzzle scene
+    public void UnpauseGame()
+    {
+        Time.timeScale = 1f;  // Resume the game
     }
 }
