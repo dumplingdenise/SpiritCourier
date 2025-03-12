@@ -88,7 +88,7 @@ public class Parcels : MonoBehaviour
 
                     // Pass the assigned NPC data to the PickUpParcel component
                     pickUpParcel.parcelData = parcelData;
-
+                    
                     Quest.questData newQuest = new Quest.questData(parcelID, Quest.questType.findParcel, Quest.questStatus.inActive, parcelData, parcelObj);
                     questManager.addParcelDatatoQuest(newQuest);
 
