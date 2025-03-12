@@ -13,8 +13,11 @@ public class DialogManager : MonoBehaviour
 
     [SerializeField] int lettersPerSecond;
 
-    [SerializeField] Button nextSceneButton; // Add a UI button in the Inspector
-    [SerializeField] string[] nextSceneNames;
+    [SerializeField] Button nextPuzzleSceneButton; // Add a UI button in the Inspector
+/*    [SerializeField] string[] nextPuzzleSceneNames;*/
+    [SerializeField] string[] easyPuzzleSceneNames;
+    [SerializeField] string[] hardPuzzleSceneNames;
+
     [SerializeField] Button noButton;
 
     [SerializeField] private PlayerController playerController;
@@ -23,6 +26,8 @@ public class DialogManager : MonoBehaviour
     public event Action OnHideDialog;
 
     public static DialogManager Instance { get; private set; }
+
+    private int npcInteractedCount = 0;
 
     Dialog currentDialog;
     int currentLine = 0;
@@ -36,10 +41,10 @@ public class DialogManager : MonoBehaviour
     public void Awake()
     {
         Instance = this;
-        if (nextSceneButton != null)
+        if (nextPuzzleSceneButton != null)
         {
-            nextSceneButton.gameObject.SetActive(false); // Hide button by default
-            nextSceneButton.onClick.AddListener(GoToNextScene);
+            nextPuzzleSceneButton.gameObject.SetActive(false); // Hide button by default
+            nextPuzzleSceneButton.onClick.AddListener(GoToNextScene);
 
             noButton.gameObject.SetActive(false);
             noButton.onClick.AddListener(CloseDialog);
@@ -96,7 +101,7 @@ public class DialogManager : MonoBehaviour
             {
                 if (showButtonAtEnd)
                 {
-                    nextSceneButton.gameObject.SetActive(true); // Show button
+                    nextPuzzleSceneButton.gameObject.SetActive(true); // Show button
                     noButton.gameObject.SetActive(true);
                 }
                 else
@@ -147,13 +152,38 @@ public class DialogManager : MonoBehaviour
 
     public void GoToNextScene()
     {
-        if (nextSceneNames != null && nextSceneNames.Length > 0)
+        /*if (nextPuzzleSceneNames != null && nextPuzzleSceneNames.Length > 0)
         {
-            string randomScene = nextSceneNames[Random.Range(0, nextSceneNames.Length)];
+            string randomScene = nextPuzzleSceneNames[Random.Range(0, nextPuzzleSceneNames.Length)];
             if (!string.IsNullOrEmpty(randomScene))
             {
                 SceneManager.LoadScene(randomScene);
             }
+        }*/
+
+        // test code - doesnt work cause the number of npcInteractedCount will always reset to 0 
+
+        Debug.Log(npcInteractedCount);
+        string randomSceneName = "";
+        if ( npcInteractedCount < 2)
+        {
+            if (easyPuzzleSceneNames != null && easyPuzzleSceneNames.Length > 0)
+            {
+                randomSceneName = easyPuzzleSceneNames[Random.Range(0, easyPuzzleSceneNames.Length)];
+            }
+        }
+        else
+        {
+            if (hardPuzzleSceneNames != null && hardPuzzleSceneNames.Length > 0)
+            {
+                randomSceneName = hardPuzzleSceneNames[Random.Range(0, hardPuzzleSceneNames.Length)];
+            }
+        }
+
+        if (!string.IsNullOrEmpty(randomSceneName))
+        {
+            npcInteractedCount++;
+            SceneManager.LoadScene(randomSceneName);
         }
     }
 
@@ -163,7 +193,7 @@ public class DialogManager : MonoBehaviour
         currentLine = 0;
         autoDialogCompleted = false; // Reset auto-dialog flag
         noButton.gameObject.SetActive(false);
-        nextSceneButton.gameObject.SetActive(false);
+        nextPuzzleSceneButton.gameObject.SetActive(false);
 
         OnHideDialog?.Invoke();
 
@@ -203,4 +233,10 @@ public class DialogManager : MonoBehaviour
         // Now that the previous dialog is finished, we can start the new one
         StartCoroutine(ShowDialog(dialog)); // This will handle showing the dialog
     }
+
+    // test code
+   /* public void DisplayQuestCount()
+    {
+        int questCount = Quest.Instance.GetQuest();
+    }*/
 }

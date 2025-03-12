@@ -7834,6 +7834,10 @@ PrefabInstance:
       value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
+      propertyPath: showButtonAfterDialog
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: dialog.lines.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -52387,6 +52391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa27de1ad4b0fe4d9366233050036cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NpcID: 0
 --- !u!114 &1051131955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52406,7 +52411,6 @@ MonoBehaviour:
       felt right..""'
     - '"Are you here to help me with that?""'
   showButtonAfterDialog: 1
-  RotatePuzzle: 
 --- !u!1 &1063244420
 GameObject:
   m_ObjectHideFlags: 0
@@ -86200,6 +86204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283417066}
   - component: {fileID: 1283417067}
+  - component: {fileID: 1283417068}
   m_Layer: 0
   m_Name: MainNPC
   m_TagString: Untagged
@@ -86245,6 +86250,19 @@ MonoBehaviour:
   - {fileID: 561839161}
   - {fileID: 834046168}
   - {fileID: 531987632}
+--- !u!114 &1283417068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283417065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71959121f6dd9246817ef0eca86e8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1224058028}
 --- !u!1 &1288202844
 GameObject:
   m_ObjectHideFlags: 0
@@ -130695,6 +130713,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9197481963319205126, guid: 1b00016b5545f784ea2db97ffe922e82, type: 3}
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
+      propertyPath: showButtonAfterDialog
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: dialog.lines.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -135707,11 +135729,10 @@ MonoBehaviour:
   dialogBox: {fileID: 2030507871}
   dialogText: {fileID: 1714220267}
   lettersPerSecond: 40
-  nextSceneButton: {fileID: 1547785448}
-  nextSceneNames:
+  nextPuzzleSceneButton: {fileID: 1547785448}
+  easyPuzzleSceneNames:
   - Find1
-  - Find2
-  - MemoryPuzzle
+  hardPuzzleSceneNames:
   - RotatePuzzle2
   noButton: {fileID: 395457874}
   playerController: {fileID: 1224058028}

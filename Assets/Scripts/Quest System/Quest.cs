@@ -6,6 +6,7 @@ public class Quest : MonoBehaviour
 {
 
     public int maxActiveSlot = 3;
+    public static Quest Instance  { get; private set; }
 
     private List<questData> allQuest = new List<questData>();
     private List<questData> activeQuest = new List<questData>();
@@ -13,7 +14,8 @@ public class Quest : MonoBehaviour
 
     public Button[] taskSlots;
     public Image[] taskIcons;
-    
+
+    /*public GameObject questUI;*/
 
     [Header("Pop-up UI")]
     public GameObject hintPopup;
@@ -33,6 +35,20 @@ public class Quest : MonoBehaviour
         inActive,
         inProgress,
         completed
+    }
+
+    // test code
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(transform.root.gameObject);
+        }
+        else
+        {
+            Destroy(transform.root.gameObject); // Prevent duplicate instances
+        }
     }
 
     public class questData
@@ -59,6 +75,12 @@ public class Quest : MonoBehaviour
         Debug.LogError($"Queue list count: {allQuest.Count}");
         Debug.Log($"Quest ID: {questData.questID}, quest status: {questData.questStatus}, quest type: {questData.questType}, questData: {questData.ParcelData} added to quest list");
     }
+
+    // test code
+    /*public int GetQuest()
+    {
+        return allQuest.Count;
+    }*/
 
     // Method to fill up active quest slots (up to maxActiveSlot)
     public void FillActiveQuests()
@@ -228,22 +250,9 @@ public class Quest : MonoBehaviour
         }
     }
 
-    //test code
-    /* public void OnQuestClicked()
-     {
-         Vector3 questPosition = transform.position;
-         indicatorManager.showIndicator(questPosition);
-     }*/
-
-    /*    public void OnQuestClicked(Vector3 questPosition)
-        {
-            // Assuming indicatorManager has a method to show the indicator
-            Vector3 parcelPosition = parcelObject.transform.position;
-            indicatorManager.showIndicator(questPosition);
-        }*/
-
     public void Start()
     {
+        Instance = this;
         hintPopup.SetActive(false);
         UpdateQuestUI();
     }

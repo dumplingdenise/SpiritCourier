@@ -15,12 +15,13 @@ public class DeliverParcel : MonoBehaviour
 
     private List<Inventory.inventoryParcelData> inventoryList;
 
-    private int NpcID;
+    [SerializeField] private int NpcID;
     private string npcName;
     private string targetedNpcName;
 
     private Quest quest;
     private DialogManager dialogManager;
+    private GameController gameController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,6 +31,13 @@ public class DeliverParcel : MonoBehaviour
         if (dialogManager == null)
         {
             Debug.LogError("DialogManager not found in the scene!");
+            return;
+        }
+
+        gameController = FindFirstObjectByType<GameController>();
+        if (gameController == null)
+        {
+            Debug.LogError("GameController not found in the scene!");
             return;
         }
 
@@ -123,7 +131,70 @@ public class DeliverParcel : MonoBehaviour
             {
                 return; // Exit to prevent parcel removal
             }
+
+            // test code
+            // **Check if game state allows delivery**
+     /*       if (gameController.GetCurrentState() != GameState.WaitingForDelivery)
+            {
+                if (promptText != null)
+                {
+                    promptText.style.display = DisplayStyle.Flex;
+                    promptText.text = "You can't deliver the parcel yet! Please play the puzzle with the spirits.";
+                }
+                return;
+            }*/
+
+            if (inventory.selectedSlot < 0 || inventory.selectedSlot >= inventory.GetInventoryList().Count)
+            {
+                if (promptText != null)
+                {
+                    promptText.style.display = DisplayStyle.Flex;
+                    promptText.text = "Please select a parcel first!";
+                }
+            }
             else
+            {
+                var selectedParcel = inventory.GetInventoryList()[inventory.selectedSlot];
+
+                if (selectedParcel.npcData.npcID == NpcID)
+                {
+                    Debug.Log($"Parcel {selectedParcel.parcelName} delivered successfully to NPC {npcName}");
+                    if (promptText != null)
+                    {
+                        promptText.text = $"{selectedParcel.parcelName} successfully delivered to {npcName}";
+                        promptText.style.display = DisplayStyle.Flex;
+                    }
+
+                    StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateSuccessDialog()));
+                    StartCoroutine(dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog));
+
+                    inventory.RemoveParcelFromInventory();
+
+                    if (quest != null)
+                    {
+                        quest.completeQuest(selectedParcel.parcelID);
+                    }
+
+                    // **Change game state back to FreeRoam after successful delivery**
+                    gameController.SetGameState(GameState.FreeRoam);
+                }
+                else
+                {
+                    Debug.Log("This parcel is for a different spirit!");
+                    if (promptText != null)
+                    {
+                        promptText.text = "This parcel is not for me!";
+                        promptText.style.display = DisplayStyle.Flex;
+                    }
+
+                    StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateFailureDialog()));
+
+                    inventory.selectedSlot = -1;
+                    inventory.UpdateInventoryUI();
+                }
+            }
+
+            /*else
             {
                 // Check if a parcel is selected
                 if (inventory.selectedSlot < 0 || inventory.selectedSlot >= inventory.GetInventoryList().Count)
@@ -150,7 +221,7 @@ public class DeliverParcel : MonoBehaviour
 
                         StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateSuccessDialog()));
                         // test code
-                        /*dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog);*/
+                        *//*dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog);*//*
                         StartCoroutine(dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog));
 
                         // Remove parcel from inventory after successful delivery
@@ -174,14 +245,14 @@ public class DeliverParcel : MonoBehaviour
                             Debug.Log($"parcel {selectedParcel.parcelName} is meant for {targetedNpcName} but you are giving to {npcName}, {NpcID}");
                         }
 
-                        StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateFailureDialog(/*targetedNpcName*/)));
+                        StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateFailureDialog(*//*targetedNpcName*//*)));
                         
                         inventory.selectedSlot = -1;
                         inventory.UpdateInventoryUI(); // test code
                         
                     }
                 }
-            }
+            }*/
         }
     }
 }

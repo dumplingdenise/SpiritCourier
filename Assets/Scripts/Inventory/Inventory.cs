@@ -7,6 +7,7 @@ using Image = UnityEngine.UI.Image;
 
 public class Inventory : MonoBehaviour
 {
+    public static Inventory Instance { get; private set; }
     public int maxInventorySize = 5;
     public int parcelPickedUp = 0;
     private List<inventoryParcelData> collectedParcels = new List<inventoryParcelData>();
@@ -16,6 +17,19 @@ public class Inventory : MonoBehaviour
     public Button[] slotButtons; // Array of buttons for each inventory slot
 
     public int selectedSlot = -1;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(transform.root.gameObject);
+        }
+        else
+        {
+            Destroy(transform.root.gameObject); // Prevent duplicate instances
+        }
+    }
 
     public class inventoryParcelData
     {
