@@ -2,15 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Dialog, Battle, Puzzle }
+public enum GameState { FreeRoam, Dialog, Puzzle, WaitingForDelivery }
 
 public class GameController : MonoBehaviour
 {
+    public static GameController instance { get; private set; }
     [SerializeField] PlayerController playerController;
 
     GameState state;
 
     // test code
+    private void Awake()
+    {
+        /*if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }*/
+    }
+
     private void OnEnable()
     {
         if (playerController == null)
@@ -19,11 +34,17 @@ public class GameController : MonoBehaviour
         }
     }
 
+    // test code
+    public GameState GetCurrentState()
+    {
+        return state;
+    }
+
     public void SetGameState(GameState newState)
     {
         state = newState;
 
-        if (state == GameState.FreeRoam)
+        if (state == GameState.FreeRoam || state == GameState.WaitingForDelivery)
         {
             if (playerController == null)
             {
@@ -39,11 +60,12 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        // test code
+        Debug.Log($"Current state: {GetCurrentState()}");
         if (state == GameState.Puzzle)
         {
             Debug.LogError($"{state}");
-            SetGameState(GameState.FreeRoam);
+            SetGameState(GameState.WaitingForDelivery);
+            Debug.LogError($"{state}");
         }
 
         DialogManager.Instance.OnShowDialog += () =>
@@ -55,14 +77,14 @@ public class GameController : MonoBehaviour
         {
             if (state == GameState.Dialog)
             {
-                SetGameState(GameState.FreeRoam);
+                SetGameState(GameState.WaitingForDelivery);
             }
         };
     }
 
     public void Update()
     {
-        if (state == GameState.FreeRoam)
+        if (state == GameState.FreeRoam || state == GameState.WaitingForDelivery)
         {
             if (playerController == null)
             {
