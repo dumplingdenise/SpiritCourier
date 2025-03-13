@@ -15,7 +15,7 @@ public class Quest : MonoBehaviour
     public Button[] taskSlots;
     public Image[] taskIcons;
 
-    /*public GameObject questUI;*/
+    private GameObject questUI;
 
     [Header("Pop-up UI")]
     public GameObject hintPopup;
@@ -129,7 +129,6 @@ public class Quest : MonoBehaviour
         var quest = activeQuest.Find(q => q.questID == questID);
         if (quest != null)
         {
-
             activeQuest.Remove(quest);
             FillActiveQuests();
             UpdateQuestUI();
@@ -143,12 +142,6 @@ public class Quest : MonoBehaviour
                 hintPopup.SetActive(false);
                 currentDisplayedQuest = null;
             }
-
-            /*Debug.Log($"Number of active quest: {activeQuest.Count}");
-            foreach (questData quests in activeQuest)
-            {
-                Debug.LogError($"Quest ID: {quests.questID}, quest status: {quests.questStatus}, quest type: {quests.questType}, questData: {quests.ParcelData.parcelName}, {quests.ParcelData.parcelID}");
-            }*/
         }
     }
 
@@ -250,221 +243,23 @@ public class Quest : MonoBehaviour
         }
     }
 
+    public void HideQuestUI()
+    {
+        questUI = this.gameObject;
+        questUI.gameObject.SetActive(false);
+    }
+
+    public void ShowQuestUI()
+    {
+        questUI = this.gameObject;
+        questUI.gameObject.SetActive(true);
+    }
+
     public void Start()
     {
-        Instance = this;
+        /*Instance = this;*/
         hintPopup.SetActive(false);
         UpdateQuestUI();
     }
 }
 
-// Show quest details (e.g., in a popup or log)
-/*    private void ShowQuestDetails(questData quest)
-    {
-        Debug.Log($"Quest ID: {quest.questID}, Type: {quest.questType}, Hint: {quest.ParcelData.parcelHints}");
-
-        hintPopup.SetActive(true);
-
-        string hintMessage = "";
-        string hintTitleText = "";
-
-        if (quest.questType == questType.findParcel)
-        {
-            hintTitleText = $"Find {quest.ParcelData.parcelName}";
-            hintMessage = $"{quest.ParcelData.parcelHints}";
-        }
-        else if (quest.questType == questType.deliverParcel)
-        {
-            hintTitleText = $"Deliver {quest.ParcelData.parcelName} to the right spirit";
-            hintMessage = $"{quest.ParcelData.npcHints}";
-        }
-        hintTitle.text = hintTitleText;
-        hintText.text = hintMessage;
-
-        hintImage.sprite = quest.ParcelData.parcelSprite;
-        hintImage.gameObject.SetActive(true);
-
-        closeBtn.onClick.RemoveAllListeners();
-        closeBtn.onClick.AddListener(() => hintPopup.SetActive(false));
-    }*/
-
-
-/* public int maxQuestSize = 3; // Max number of active quests
-     private List<questData> activeQuests = new List<questData>();
-     private Queue<questData> pendingQuests = new Queue<questData>();
-
-     public Button[] taskSlots;
-     public Image[] taskImages;
-
-     public Parcels parcelScript;
-     public enum questType
-     {
-         findParcel,
-         deliverParcel
-     }
-
-     public class questData
-     {
-         public int questID;
-         public questType questType;
-         public Parcels.ParcelData parcelData;
-         public GameObject parcelObject;
-         public bool isCompleted;
-
-         public questData(int id, questType type, Parcels.ParcelData data, GameObject parcelObj)
-         {
-             this.questID = id;
-             this.questType = type;
-             this.parcelData = data;
-             this.parcelObject = parcelObj;
-             this.isCompleted = false;
-         }
-
-         public string getHint()
-         {
-             return questType == questType.findParcel ? parcelData.parcelHints : parcelData.npcHints;
-         }
-     }
-
-     public void AddQuest(questData newQuest)
-     {
-         if (activeQuests.Count < maxQuestSize)
-         {
-             activeQuests.Add(newQuest);
-             ActivateParcel(newQuest); // Only activate if it's in active quests
-             Debug.Log("Active Quest Added: " + newQuest.parcelData.parcelName);
-         }
-         else
-         {
-             pendingQuests.Enqueue(newQuest); // Add extra quests to the queue
-             Debug.Log("Quest added to pending queue: " + newQuest.parcelData.parcelName);
-         }
-
-         UpdateQuestUI();
-     }
-
-     // Complete a quest
-     *//*    public void CompleteQuest(int questID)
-         {
-             questData quest = activeQuests.Find(q => q.questID == questID);
-             if (quest != null)
-             {
-                 quest.isCompleted = true;
-                 activeQuests.Remove(quest);
-                 DeactivateParcel(quest);
-
-                 // Add the next pending quest to active quests
-                 if (pendingQuests.Count > 0)
-                 {
-                     questData nextQuest = pendingQuests.Dequeue();
-                     activeQuests.Add(nextQuest);
-                     ActivateParcel(nextQuest);
-                 }
-
-                 UpdateQuestUI();
-             }
-             else
-             {
-                 Debug.LogWarning($"Quest with ID {questID} not found.");
-             }
-         }*//*
-
-     public void CompleteQuest(int questID)
-     {
-         questData quest = activeQuests.Find(q => q.questID == questID);
-         if (quest != null)
-         {
-             quest.isCompleted = true;
-             activeQuests.Remove(quest);
-             DeactivateParcel(quest);
-
-             // Activate next pending quest
-             if (pendingQuests.Count > 0)
-             {
-                 questData nextQuest = pendingQuests.Dequeue();
-                 activeQuests.Add(nextQuest);
-                 ActivateParcel(nextQuest);
-                 Debug.Log("Pending Quest Activated: " + nextQuest.parcelData.parcelName);
-             }
-
-             UpdateQuestUI();
-         }
-         else
-         {
-             Debug.LogWarning($"Quest with ID {questID} not found.");
-         }
-     }
-
-     // Activate the parcel GameObject
-     private void ActivateParcel(questData quest)
-     {
-         *//*if (quest.parcelData != null && quest.parcelData.parcelObject != null)
-         {
-             quest.parcelData.parcelObject.SetActive(true);
-             Debug.Log($"Parcel {quest.parcelData.parcelName} activated!");
-         }*//*
-
-         Debug.Log($"Activating parcel: {quest.parcelData.parcelName}");
-         parcelScript.ActivateParcelByName(quest.parcelData.parcelName); // Call the method from Parcels script
-     }
-
-     // Deactivate the parcel GameObject
-     private void DeactivateParcel(questData quest)
-     {
-         if (quest.parcelObject != null)
-         {
-             quest.parcelObject.SetActive(false);
-         }
-     }
-
-     // Update the quest UI
-     private void UpdateQuestUI()
-     {
-         Debug.Log("Active Quests Count: " + activeQuests.Count);
-         // Clear existing quest icons
-         for (int i = 0; i < taskImages.Length; i++)
-         {
-             taskImages[i].sprite = null;
-             taskImages[i].gameObject.SetActive(false);
-             taskSlots[i].gameObject.SetActive(true);
-             taskSlots[i].onClick.RemoveAllListeners();
-         }
-
-         // Populate quest icons
-         for (int i = 0; i < activeQuests.Count; i++)
-         {
-             Debug.Log("Updating Quest Slot: " + activeQuests[i].parcelData.parcelName);
-
-             // Use the parcel sprite for all quests
-             taskSlots[i].gameObject.SetActive(true);
-             taskImages[i].sprite = activeQuests[i].parcelData.parcelSprite;
-             taskImages[i].gameObject.SetActive(true);
-
-             // Add a click listener to show quest details
-             int index = i; // Capture the index for the lambda
-             taskSlots[i].onClick.AddListener(() => ShowQuestDetails(activeQuests[index]));
-         }
-     }
-
-     // Show quest details (e.g., in a popup or log)
-     private void ShowQuestDetails(questData quest)
-     {
-         Debug.Log($"Quest ID: {quest.questID}, Type: {quest.questType}, Hint: {quest.getHint()}");
-         // You can expand this to display details in a UI panel
-     }
-     // Start is called once before the first execution of Update after the MonoBehaviour is created
-     void Start()
-     {
-         foreach (var taskSlot in taskSlots)
-         {
-             taskSlot.gameObject.SetActive(true);
-         }
-
-         UpdateQuestUI();
-     }
-
-     // Update is called once per frame
-     void Update()
-     {
-
-     }*/

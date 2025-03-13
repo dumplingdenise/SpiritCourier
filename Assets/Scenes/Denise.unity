@@ -52466,6 +52466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa27de1ad4b0fe4d9366233050036cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NpcID: 0
 --- !u!114 &1051131955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52485,7 +52486,6 @@ MonoBehaviour:
       felt right..""'
     - '"Are you here to help me with that?""'
   showButtonAfterDialog: 1
-  RotatePuzzle: 
 --- !u!1 &1063244420
 GameObject:
   m_ObjectHideFlags: 0
@@ -52821,7 +52821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1092209453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135787,11 +135787,10 @@ MonoBehaviour:
   dialogBox: {fileID: 2030507871}
   dialogText: {fileID: 1714220267}
   lettersPerSecond: 90
-  nextSceneButton: {fileID: 1547785448}
-  nextSceneNames:
+  nextPuzzleSceneButton: {fileID: 1547785448}
+  easyPuzzleSceneNames:
   - Find1
-  - Find2
-  - MemoryPuzzle
+  hardPuzzleSceneNames:
   - RotatePuzzle2
   noButton: {fileID: 395457874}
   playerController: {fileID: 1224058028}
