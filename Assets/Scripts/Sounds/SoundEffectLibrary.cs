@@ -3,7 +3,7 @@ using UnityEngine;
 public class SoundEffectLibrary : MonoBehaviour
 {
     [SerializeField] private SoundEffectGroup[] soundEffectGroups;
-    private Dictonary<string, List<AudioClip>> soundDictonary;
+    // private Dictonary<string, List<AudioClip>> soundDictonary;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,5 +22,5 @@ public class SoundEffectLibrary : MonoBehaviour
 public struct SoundEffectGroup
 {
     public string name;
-    public List<AudioClip> audioClips;
+    //public List<AudioClip> audioClips;
 }
