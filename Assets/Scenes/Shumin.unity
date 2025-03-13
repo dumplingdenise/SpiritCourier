@@ -13869,6 +13869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa27de1ad4b0fe4d9366233050036cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NpcID: 0
 --- !u!114 &998414703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13905,7 +13906,6 @@ MonoBehaviour:
     - Hellooo !
     - Have you seen my parcel?
   showButtonAfterDialog: 0
-  RotatePuzzle: 
 --- !u!1 &1016369967
 GameObject:
   m_ObjectHideFlags: 0
@@ -14497,6 +14497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa27de1ad4b0fe4d9366233050036cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NpcID: 0
 --- !u!114 &1051131955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14514,7 +14515,6 @@ MonoBehaviour:
     - I don't think this parcel is for me, my dear..
     - Why not we play a game?
   showButtonAfterDialog: 1
-  RotatePuzzle: 
 --- !u!1 &1052930861
 GameObject:
   m_ObjectHideFlags: 0
@@ -47446,6 +47446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa27de1ad4b0fe4d9366233050036cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NpcID: 0
 --- !u!114 &1293980995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47462,7 +47463,6 @@ MonoBehaviour:
     lines:
     - Hello my dear, how can I help you?
   showButtonAfterDialog: 0
-  RotatePuzzle: 
 --- !u!1 &1299297946
 GameObject:
   m_ObjectHideFlags: 0
@@ -110371,6 +110371,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405932005}
   m_CullTransparentMesh: 1
+--- !u!1 &1422181095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1422181097}
+  - component: {fileID: 1422181096}
+  m_Layer: 0
+  m_Name: SoundEffectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1422181096
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422181095}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1422181097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422181095}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.268194, y: -2.2635946, z: 0.31315142}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1423216045
 GameObject:
   m_ObjectHideFlags: 0
@@ -128468,9 +128597,9 @@ MonoBehaviour:
   dialogBox: {fileID: 2030507871}
   dialogText: {fileID: 1714220267}
   lettersPerSecond: 40
-  nextSceneButton: {fileID: 1547785448}
-  nextSceneNames:
-  - RotatePuzzle2
+  nextPuzzleSceneButton: {fileID: 0}
+  easyPuzzleSceneNames: []
+  hardPuzzleSceneNames: []
   noButton: {fileID: 0}
   playerController: {fileID: 1224058028}
 --- !u!114 &2093632203
@@ -128887,3 +129016,4 @@ SceneRoots:
   - {fileID: 408981693}
   - {fileID: 1202372735}
   - {fileID: 708882627}
+  - {fileID: 1422181097}
