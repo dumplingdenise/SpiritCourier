@@ -15,7 +15,7 @@ public class Quest : MonoBehaviour
     public Button[] taskSlots;
     public Image[] taskIcons;
 
-    /*public GameObject questUI;*/
+    private GameObject questUI;
 
     [Header("Pop-up UI")]
     public GameObject hintPopup;
@@ -250,9 +250,21 @@ public class Quest : MonoBehaviour
         }
     }
 
+    public void HideQuestUI()
+    {
+        questUI = this.gameObject;
+        questUI.gameObject.SetActive(false);
+    }
+
+    public void ShowQuestUI()
+    {
+        questUI = this.gameObject;
+        questUI.gameObject.SetActive(true);
+    }
+
     public void Start()
     {
-        Instance = this;
+        /*Instance = this;*/
         hintPopup.SetActive(false);
         UpdateQuestUI();
     }
