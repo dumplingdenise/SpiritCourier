@@ -669,6 +669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectFoundUI: {fileID: 0}
+  CrossUI: {fileID: 0}
 --- !u!114 &403033601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1251,6 +1252,7 @@ MonoBehaviour:
   - {fileID: 835782368}
   - {fileID: 516273057}
   parcelButtons: []
+  CrossUI: {fileID: 1357929716}
 --- !u!114 &476501420
 MonoBehaviour:
   m_ObjectHideFlags: 0

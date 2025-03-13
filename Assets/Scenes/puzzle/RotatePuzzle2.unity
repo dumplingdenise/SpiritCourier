@@ -1775,7 +1775,7 @@ MonoBehaviour:
   - {fileID: 1027316676}
   clueImageUI: {fileID: 541383209}
   OverlayUI: {fileID: 1809691708}
-  CrossUI: {fileID: 0}
+  CrossUI: {fileID: 1175932750}
 --- !u!4 &1266436300
 Transform:
   m_ObjectHideFlags: 0

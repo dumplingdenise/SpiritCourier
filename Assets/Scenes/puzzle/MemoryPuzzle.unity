@@ -1680,6 +1680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc7e4477da035a43ab6cc6cac959883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CrossUI: {fileID: 71427854}
   cards:
   - cardButton: {fileID: 893714763}
     frontImage: {fileID: 732526082}

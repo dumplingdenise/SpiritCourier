@@ -15,9 +15,13 @@ public class Find2Counter : MonoBehaviour
     public GameObject[] parcelIndicators; // Circle outlines for parcels
     public Button[] parcelButtons; // Buttons for each parcel, these should correspond to the ones on the image
 
+    public GameObject CrossUI;
+
     // Start is called before the first frame update
     void Start()
     {
+        CrossUI.SetActive(false);
+
         GameController gameController = FindAnyObjectByType<GameController>(); // Find the GameController
         if (gameController != null)
         {
@@ -72,5 +76,6 @@ public class Find2Counter : MonoBehaviour
     void PuzzleCompleted()
     {
         puzzleCompletePanel.SetActive(true); // Show pop-up when puzzle is done
+        CrossUI.SetActive(true);
     }
 }
