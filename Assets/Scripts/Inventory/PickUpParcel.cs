@@ -78,6 +78,14 @@ public class PickUpParcel : MonoBehaviour
         {
             Debug.LogError("No NPC assigned to the parcel.");
         }
+
+        // test
+        // Check if the parcel has already been picked up in a previous session
+        /*if (PlayerPrefs.GetInt($"Parcel_{parcelData.parcelID}_PickedUp", 0) == 1)
+        {
+            pickedUp = true;
+            gameObject.SetActive(false); // Hide the parcel if already picked up
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -157,7 +165,8 @@ public class PickUpParcel : MonoBehaviour
                         }
                         quest.OnQuestUpdated();
                     }
-
+                    
+                   /* PlayerPrefs.SetInt($"Parcel_{parcelData.parcelID}_PickedUp", 1);*/ // test code
                     Invoke(nameof(destroyParcel), 0.1f);
                 }
                 else
@@ -177,6 +186,6 @@ public class PickUpParcel : MonoBehaviour
     private void destroyParcel()
     {
         gameObject.SetActive(false); // Hide the parcel
-        Destroy(gameObject);
+        Destroy(gameObject); 
     }
 }
