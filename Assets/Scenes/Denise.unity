@@ -10622,7 +10622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &451767826
 RectTransform:
   m_ObjectHideFlags: 0
@@ -135790,7 +135790,8 @@ MonoBehaviour:
   nextPuzzleSceneButton: {fileID: 1547785448}
   easyPuzzleSceneNames:
   - Find1
-  hardPuzzleSceneNames: []
+  hardPuzzleSceneNames:
+  - RotatePuzzle2
   noButton: {fileID: 395457874}
   playerController: {fileID: 1224058028}
 --- !u!114 &2093632203

@@ -24,7 +24,10 @@ public class Cross : MonoBehaviour
             gameController.SetGameState(GameState.FreeRoam);
         }*/
 
-        Time.timeScale = 1; // Resume game
+        if (Quest.Instance != null)
+        {
+            Quest.Instance.ShowQuestUI();
+        }
         SceneManager.LoadScene("Denise");
         
     }

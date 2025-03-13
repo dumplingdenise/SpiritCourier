@@ -193,66 +193,6 @@ public class DeliverParcel : MonoBehaviour
                     inventory.UpdateInventoryUI();
                 }
             }
-
-            /*else
-            {
-                // Check if a parcel is selected
-                if (inventory.selectedSlot < 0 || inventory.selectedSlot >= inventory.GetInventoryList().Count)
-                {
-                    if (promptText != null)
-                    {
-                        promptText.style.display = DisplayStyle.Flex;
-                        promptText.text = "Please select a parcel first!";
-                    }
-                }
-                else
-                {
-                    var selectedParcel = inventory.GetInventoryList()[inventory.selectedSlot];
-
-                    // Check if parcel matches the current NPC
-                    if (selectedParcel.npcData.npcID == NpcID)
-                    {
-                        Debug.Log($"Parcel {selectedParcel.parcelName} delivered successfully to NPC {npcName}");
-                        if (promptText != null)
-                        {
-                            promptText.text = $"{selectedParcel.parcelName} successfully delivered to {npcName}";
-                            promptText.style.display = DisplayStyle.Flex;
-                        }
-
-                        StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateSuccessDialog()));
-                        // test code
-                        *//*dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog);*//*
-                        StartCoroutine(dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog));
-
-                        // Remove parcel from inventory after successful delivery
-                        inventory.RemoveParcelFromInventory();
-
-
-                        if (quest != null)
-                        {
-                            quest.completeQuest(selectedParcel.parcelID);
-                        }
-                    }
-                    else
-                    {
-                        Debug.Log("This parcel is for a different spirit!");
-                        if (promptText != null)
-                        {
-                            promptText.text = "This parcel is not for me!";
-                            promptText.style.display = DisplayStyle.Flex;
-
-                            
-                            Debug.Log($"parcel {selectedParcel.parcelName} is meant for {targetedNpcName} but you are giving to {npcName}, {NpcID}");
-                        }
-
-                        StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateFailureDialog(*//*targetedNpcName*//*)));
-                        
-                        inventory.selectedSlot = -1;
-                        inventory.UpdateInventoryUI(); // test code
-                        
-                    }
-                }
-            }*/
         }
     }
 }
