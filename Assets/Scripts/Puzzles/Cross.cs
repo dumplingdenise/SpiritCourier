@@ -29,6 +29,8 @@ public class Cross : MonoBehaviour
             Quest.Instance.ShowQuestUI();
         }
         SceneManager.LoadScene("Denise");
-        
+
+        // test
+        /* SceneManager.LoadScene("Trial");*/
     }
 }

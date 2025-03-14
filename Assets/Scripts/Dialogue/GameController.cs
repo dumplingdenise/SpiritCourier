@@ -12,9 +12,9 @@ public class GameController : MonoBehaviour
     GameState state;
 
     // test code
-    private void Awake()
+   /* private void Awake()
     {
-        /*if (instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -23,8 +23,10 @@ public class GameController : MonoBehaviour
         {
             Destroy(gameObject);
             return;
-        }*/
-    }
+        }
+    }*/
+
+    // end of test code
 
     private void OnEnable()
     {
@@ -60,11 +62,11 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log($"Current state: {GetCurrentState()}");
+        Debug.LogError($"Current state: {GetCurrentState()}");
         if (state == GameState.Puzzle)
         {
             Debug.LogError($"{state}");
-            SetGameState(GameState.WaitingForDelivery);
+            SetGameState(GameState.FreeRoam);
             Debug.LogError($"{state}");
         }
 
@@ -77,7 +79,7 @@ public class GameController : MonoBehaviour
         {
             if (state == GameState.Dialog)
             {
-                SetGameState(GameState.WaitingForDelivery);
+                SetGameState(GameState.FreeRoam);
             }
         };
     }

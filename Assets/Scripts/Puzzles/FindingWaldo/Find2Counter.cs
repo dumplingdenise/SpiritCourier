@@ -22,6 +22,7 @@ public class Find2Counter : MonoBehaviour
         if (gameController != null)
         {
             gameController.SetGameState(GameState.Puzzle); // Set the state to FreeRoam when exiting the puzzle
+            Debug.LogError($"Current state: {gameController.GetCurrentState()}");
         }
         UpdateProgress();
 

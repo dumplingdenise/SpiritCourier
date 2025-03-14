@@ -176,7 +176,7 @@ public class DeliverParcel : MonoBehaviour
                     }
 
                     // **Change game state back to FreeRoam after successful delivery**
-                    gameController.SetGameState(GameState.FreeRoam);
+                    /*gameController.SetGameState(GameState.FreeRoam);*/
                 }
                 else
                 {
