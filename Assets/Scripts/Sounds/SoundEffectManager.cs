@@ -44,10 +44,23 @@ public class SoundEffectManager : MonoBehaviour
         return audioSource.isPlaying;  // Check if sound is still playing
     }
 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        sfxSlider.onValueChanged.AddListener(delegate { OnValueChanged(); });
+    }
+
     public void SetVolume(float volume)
     {
         audioSource.volume = volume;
     }
+
+    public void OnValueChanged()
+    {
+        SetVolume(sfxSlider.value);
+    }
+
+
 }
 
 /*public class SoundEffectManager : MonoBehaviour
