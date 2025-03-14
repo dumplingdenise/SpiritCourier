@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 public class PlayerController : MonoBehaviour
@@ -18,22 +19,53 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public Animator playerAnimator; //player animation
 
+    private bool playingFootsteps = false;
+    public float footsepSpeed = 0.5f;
+    private AudioSource audioSource; // Add this line
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
         animator = GetComponent<Animator>();
-        
+
+        // Get the AudioSource attached to the player
+        audioSource = GetComponent<AudioSource>(); // Add this line
+
     }
 
     void Update()
     {
-        //only allow movement if MoveWhenTalking is true
         if (MoveWhenTalking)
             rb.linearVelocity = moveInput * moveSpeed;
 
+        if (rb.linearVelocity.magnitude > 0 && !playingFootsteps)
+        {
+            StartFootsteps();
+        }
+        else if (rb.linearVelocity.magnitude == 0 && playingFootsteps)
+        {
+            StopFootsteps();
+        }
     }
+
+    /* void Update()
+     {
+         //only allow movement if MoveWhenTalking is true
+         if (MoveWhenTalking)
+             rb.linearVelocity = moveInput * moveSpeed;
+
+         if (rb.linearVelocity.magnitude  > 0 && !playingFootsteps)
+         {
+             StartFootsteps();
+         }
+         else if(rb.linearVelocity.magnitude == 0)
+         {
+             StopFootsteps();
+         }
+
+     }*/
 
     public void Move(InputAction.CallbackContext context)
     {
@@ -42,6 +74,7 @@ public class PlayerController : MonoBehaviour
             moveInput = Vector2.zero; // Reset input
             rb.linearVelocity = Vector2.zero; // Stop movement
             animator.SetBool("isWalking", false);
+            StopFootsteps(); 
             return;
         }
 
@@ -51,11 +84,13 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
             rb.linearVelocity = Vector2.zero;  // Stop movement
+            StopFootsteps();
         }
         else
         {
             animator.SetBool("isWalking", true);
             rb.linearVelocity = moveInput * moveSpeed; // Apply movement
+            StartFootsteps();
         }
 
         animator.SetFloat("InputX", moveInput.x);
@@ -72,6 +107,7 @@ public class PlayerController : MonoBehaviour
             moveInput = Vector2.zero; // Clear movement input
             rb.linearVelocity = Vector2.zero;  // Stop movement
             animator.SetBool("isWalking", false);
+            StopFootsteps();
         }
     }
 
@@ -112,5 +148,35 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    void StartFootsteps()
+    {
+        if (!playingFootsteps)
+        {
+            playingFootsteps = true;
+            SoundEffectManager.Play("Footstep");
+        }
+    }
+
+    void StopFootsteps()
+    {
+        if (playingFootsteps)
+        {
+            playingFootsteps = false;
+            SoundEffectManager.Stop();  // Stop the sound completely
+        }
+    }
+
+    void PlayFootstep()
+    {
+        if (playingFootsteps && !audioSource.isPlaying) // Prevent overlapping sounds
+        {
+            Debug.Log("Footstep sound playing");
+            SoundEffectManager.Play("Footstep");
+        }
+    }
+
+
+
 }
 
