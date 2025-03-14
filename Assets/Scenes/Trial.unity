@@ -135833,7 +135833,7 @@ MonoBehaviour:
   lettersPerSecond: 90
   nextPuzzleSceneButton: {fileID: 1547785448}
   easyPuzzleSceneNames:
-  - Find1
+  - Find1 Trial
   hardPuzzleSceneNames:
   - RotatePuzzle2
   noButton: {fileID: 395457874}

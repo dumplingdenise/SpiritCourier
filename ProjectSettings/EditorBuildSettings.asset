@@ -44,5 +44,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Shumin.unity
     guid: c7f3cd720f7d8c44581010922947cbe6
+  - enabled: 1
+    path: Assets/Scenes/puzzle/Find1 trial.unity
+    guid: d066ac86ea3e75844947c34d218b5d60
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Dialog, Puzzle, WaitingForDelivery }
+public enum GameState { FreeRoam, Dialog, Puzzle, WaitingForDelivery}
 
 public class GameController : MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     GameState state;
 
     // test code
-   /* private void Awake()
+    private void Awake()
     {
         if (instance == null)
         {
@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-    }*/
+    }
 
     // end of test code
 
@@ -63,12 +63,12 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         Debug.LogError($"Current state: {GetCurrentState()}");
-        if (state == GameState.Puzzle)
+        /*if (state == GameState.Puzzle)
         {
             Debug.LogError($"{state}");
-            SetGameState(GameState.FreeRoam);
+            SetGameState(GameState.WaitingForDelivery);
             Debug.LogError($"{state}");
-        }
+        }*/
 
         DialogManager.Instance.OnShowDialog += () =>
         {
@@ -82,6 +82,7 @@ public class GameController : MonoBehaviour
                 SetGameState(GameState.FreeRoam);
             }
         };
+        Debug.LogError($"Current state: {GetCurrentState()}");
     }
 
     public void Update()

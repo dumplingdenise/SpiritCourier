@@ -17,13 +17,13 @@ public class Cross : MonoBehaviour
         /*SceneManager.LoadScene("Play");*/
 
         // test code does not work
-        /*// Get the GameController in the current scene
-        GameController gameController = *//*FindObjectOfType<GameController>();*//* FindAnyObjectByType<GameController>();
+        // Get the GameController in the current scene
+        GameController gameController = FindAnyObjectByType<GameController>();
         if (gameController != null)
         {
-            gameController.SetGameState(GameState.FreeRoam);
-        }*/
-
+            gameController.SetGameState(GameState.WaitingForDelivery);
+            Debug.LogError(gameController.GetCurrentState());
+        }
         if (Quest.Instance != null)
         {
             Quest.Instance.ShowQuestUI();
@@ -31,6 +31,6 @@ public class Cross : MonoBehaviour
         SceneManager.LoadScene("Denise");
 
         // test
-        /* SceneManager.LoadScene("Trial");*/
+        /*SceneManager.LoadScene("Trial");*/
     }
 }
