@@ -58,6 +58,6 @@ public class Tutorial : MonoBehaviour
 
     public void LoadMainGame()
     {
-        SceneManager.LoadScene("Denise"); // Change to game scene
+        SceneManager.LoadScene("Shumin"); // Change to game scene
     }
 }
