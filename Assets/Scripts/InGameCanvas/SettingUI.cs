@@ -10,6 +10,7 @@ public class SettingUI : MonoBehaviour
     public Button SettingButton; // button to open setting
     public Button CloseButton; // button to close setting
     public Animator playerAnimator; //player animation
+
     public GameObject ControlPanel; // control panel
     public Button ControlButton; // button for control
     public GameObject AudioPanel; //  audio panel
@@ -17,6 +18,7 @@ public class SettingUI : MonoBehaviour
     public GameObject PausePanel;
     public Button PauseButton;
 
+    private Button activeButton; // keep track of the currently 'pressed' button
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -65,6 +67,7 @@ public class SettingUI : MonoBehaviour
     {
         SettingPanel.SetActive(true);
         PausePanel.SetActive(true);
+        SetButtonActive(PauseButton);
         Time.timeScale = 0f; // Pause Game
 
         if (playerAnimator != null)
@@ -86,6 +89,7 @@ public class SettingUI : MonoBehaviour
 
     void OpenControl()
     {
+        SetButtonActive(ControlButton);
         AudioPanel.SetActive(false);
         PausePanel.SetActive(false);
         ControlPanel.SetActive(true);
@@ -93,6 +97,7 @@ public class SettingUI : MonoBehaviour
 
     void OpenAudio()
     {
+        SetButtonActive(AudioButton);
         ControlPanel.SetActive(false);
         PausePanel.SetActive(false);
         AudioPanel.SetActive(true);
@@ -100,9 +105,23 @@ public class SettingUI : MonoBehaviour
 
     void OpenPause()
     {
+        SetButtonActive(PauseButton);
         ControlPanel.SetActive(false);
         PausePanel.SetActive(true);
         AudioPanel.SetActive(false);
+    }
+
+    private void SetButtonActive(Button button)
+    {
+        // Reset previous button color (if any)
+        if (activeButton != null)
+        {
+            activeButton.interactable = true;
+        }
+
+        // Disable interactability to show "pressed" effect
+        button.interactable = false;
+        activeButton = button;
     }
 
     public void ExitGame()

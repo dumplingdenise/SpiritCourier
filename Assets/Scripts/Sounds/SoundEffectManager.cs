@@ -10,6 +10,7 @@ public class SoundEffectManager : MonoBehaviour
     private static SoundEffectLibrary soundEffectLibrary;
     [SerializeField] private Slider sfxSlider;
 
+
     private void Awake()
     {
         if (instance == null)
