@@ -183,9 +183,14 @@ public class DialogManager : MonoBehaviour
         if (!string.IsNullOrEmpty(randomSceneName))
         {
             npcInteractedCount++;
-            if (Quest.Instance != null)
+            if (Quest.Instance != null )
             {
                 Quest.Instance.HideQuestUI();
+            }
+            
+            if (Inventory.Instance != null)
+            {
+                Inventory.Instance.HideQuestUI();
             }
             SceneManager.LoadScene(randomSceneName);
         }

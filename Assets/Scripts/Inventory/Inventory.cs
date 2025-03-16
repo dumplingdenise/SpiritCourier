@@ -15,8 +15,10 @@ public class Inventory : MonoBehaviour
 
     public Image[] slotIcons;
     public Button[] slotButtons; // Array of buttons for each inventory slot
-
+    
     public int selectedSlot = -1;
+
+    private GameObject inventoryUI;
 
     private void Awake()
     {
@@ -190,6 +192,18 @@ public class Inventory : MonoBehaviour
         }
 
         Debug.Log($"Inventory updated. Total parcels: {collectedParcels.Count}");
+    }
+
+    public void HideQuestUI()
+    {
+        inventoryUI = this.gameObject;
+        inventoryUI.gameObject.SetActive(false);
+    }
+
+    public void ShowQuestUI()
+    {
+        inventoryUI = this.gameObject;
+        inventoryUI.gameObject.SetActive(true);
     }
 
 

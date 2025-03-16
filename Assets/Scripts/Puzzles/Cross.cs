@@ -28,6 +28,10 @@ public class Cross : MonoBehaviour
         {
             Quest.Instance.ShowQuestUI();
         }
+        if (Inventory.Instance != null)
+        {
+            Inventory.Instance.ShowQuestUI();
+        }
         SceneManager.LoadScene("Denise");
 
         // test
