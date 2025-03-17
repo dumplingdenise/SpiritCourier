@@ -56,15 +56,36 @@ public class PlayerController : MonoBehaviour
         // Toggle pushing mode when Q is pressed
         if (Keyboard.current.qKey.wasPressedThisFrame)
         {
-            Debug.Log("Pushing mode toggled: " + isPushing);  // Debug log to check if pushing mode is activated
-            isPushing = !isPushing;
+            Debug.Log("Toggling pushing mode: " + isPushing);
 
-            // Stop pushing immediately when Q is pressed
-            if (!isPushing && pushableRb != null)
+            if (isPushing)
             {
-                pushableRb.linearVelocity = Vector2.zero; // Stop movement immediately when push mode is off
-                pushableRb = null;
+                // Stop the pushing and set to Kinematic when Q is pressed to stop
+                if (pushableRb != null)
+                {
+                    pushableRb.linearVelocity = Vector2.zero; // Stop the movement
+                    pushableRb.bodyType = RigidbodyType2D.Kinematic; // Make it Kinematic to stop movement
+                    pushableRb = null; // Reset the reference
+                }
             }
+            else
+            {
+                // Start pushing mode only if we are close to a pushable object
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, moveInput, 0.6f, interactableLayer);
+
+                if (hit.collider != null && hit.collider.CompareTag("Pushable"))
+                {
+                    pushableRb = hit.collider.GetComponent<Rigidbody2D>();
+                    if (pushableRb != null)
+                    {
+                        pushableRb.bodyType = RigidbodyType2D.Dynamic; // Make it dynamic to allow pushing
+                        Debug.Log("Pushable object found and ready to push!");
+                    }
+                }
+            }
+
+            // Toggle the pushing flag
+            isPushing = !isPushing;
         }
     }
 
@@ -170,33 +191,17 @@ public class PlayerController : MonoBehaviour
 
       void FixedUpdate()
     {
-        // Only push the object when Q is pressed and a pushable object is in front
-        if (isPushing)
+        if (isPushing && pushableRb != null)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, moveInput, 0.6f, interactableLayer);
-
-            if (hit.collider != null && hit.collider.CompareTag("Pushable"))
-            {
-                pushableRb = hit.collider.GetComponent<Rigidbody2D>();
-                if (pushableRb != null)
-                {
-                    pushableRb.linearVelocity = moveInput * pushForce; // Apply force only while moving
-                    Debug.Log("Pushing object: " + hit.collider.name);  // Debug log to check if the object is detected
-                }
-            }
-            else
-            {
-                pushableRb = null; // No object in front, stop pushing
-            }
+            // Apply the pushing force in the direction of moveInput
+            pushableRb.linearVelocity = moveInput * pushForce; // Apply force in the direction the player is moving
         }
-        else
+        else if (!isPushing && pushableRb != null)
         {
-            // Stop the object movement when not pushing
-            if (pushableRb != null)
-            {
-                pushableRb.linearVelocity = Vector2.zero; // Stop the object
-                pushableRb = null;
-            }
+            // When pushing mode is off, stop movement immediately and reset Rigidbody2D
+            pushableRb.linearVelocity = Vector2.zero;
+            pushableRb.bodyType = RigidbodyType2D.Kinematic;
+            pushableRb = null; // Optionally clear the reference if you want
         }
     }
 
