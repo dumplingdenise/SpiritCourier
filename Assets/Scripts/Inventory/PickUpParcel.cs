@@ -9,23 +9,6 @@ using static Quest;
 
 public class PickUpParcel : MonoBehaviour
 {
-
-    // Code below is to when player walked into the parcel it will automatically pickup
-
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        PlayerMovement player = collision.GetComponent<PlayerMovement>();
-        Debug.Log($"Collision detected with: {collision.name}");
-        if (player != null)
-        {
-            Debug.Log("Parcel collected by player!");
-            Destroy(gameObject);
-            player.parcelCollected++;
-        }
-    }*/
-
-
-
     // code below here is when player walk into the parcel,  they have to press E to pick up
 
     private bool playerNearby = false;
@@ -34,6 +17,7 @@ public class PickUpParcel : MonoBehaviour
 
     private Inventory inventory;
     private Quest quest;
+    private Parcels parcel;
     public MainNpcs.NPCData assignedNPC;
     public Parcels.ParcelData parcelData; // get the parcel info from Parcels script
     public string parcelHints;
@@ -44,9 +28,9 @@ public class PickUpParcel : MonoBehaviour
 
     private void Start()
     {
-
         inventory = GameObject.FindFirstObjectByType<Inventory>();
         quest = GameObject.FindFirstObjectByType<Quest>();
+        parcel = GameController.FindFirstObjectByType<Parcels>();
 
         var uiDocument = GetComponentInParent<UIDocument>();
         if (uiDocument != null)
@@ -78,14 +62,6 @@ public class PickUpParcel : MonoBehaviour
         {
             Debug.LogError("No NPC assigned to the parcel.");
         }
-
-        // test
-        // Check if the parcel has already been picked up in a previous session
-        /*if (PlayerPrefs.GetInt($"Parcel_{parcelData.parcelID}_PickedUp", 0) == 1)
-        {
-            pickedUp = true;
-            gameObject.SetActive(false); // Hide the parcel if already picked up
-        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -134,8 +110,6 @@ public class PickUpParcel : MonoBehaviour
                     return;
                 }
 
-                //Debug.Log($"Attempting to add parcel: ID={parcelData.parcelID}, Position={parcelData.position}, Sprite={parcelData.parcelSprite}, Assigned NPC: {parcelData.assignedNpcData}");
-
                 bool added = inventory.AddParcelToInventory(parcelData.parcelID, parcelData.parcelName, parcelData.parcelSprite, parcelData.position, parcelData.assignedNpcData, parcelData.parcelStoryDialog); // add to inventory
                 inventory.parcelPickedUp++;
 
@@ -165,8 +139,7 @@ public class PickUpParcel : MonoBehaviour
                         }
                         quest.OnQuestUpdated();
                     }
-                    
-                   /* PlayerPrefs.SetInt($"Parcel_{parcelData.parcelID}_PickedUp", 1);*/ // test code
+
                     Invoke(nameof(destroyParcel), 0.1f);
                 }
                 else
@@ -186,6 +159,9 @@ public class PickUpParcel : MonoBehaviour
     private void destroyParcel()
     {
         gameObject.SetActive(false); // Hide the parcel
+        // test code
+        PlayerPrefs.SetInt($"ParcelPicked_{parcelData.parcelID}", 1); // Save the state
+
         Destroy(gameObject); 
     }
 }
