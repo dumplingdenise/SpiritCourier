@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 
 public class PlayerController : MonoBehaviour
@@ -15,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask solidObjectsLayer;
     public LayerMask interactableLayer;
- 
+
     private Animator animator;
     public Animator playerAnimator; //player animation
 
@@ -23,6 +24,9 @@ public class PlayerController : MonoBehaviour
     public float footsepSpeed = 0.5f;
     private AudioSource audioSource; // Add this line
 
+    private bool isPushing = false;
+    private Rigidbody2D pushableRb;
+    public float pushForce = 5f; // Adjust for push strength
 
     void Start()
     {
@@ -47,6 +51,20 @@ public class PlayerController : MonoBehaviour
         else if (rb.linearVelocity.magnitude == 0 && playingFootsteps)
         {
             StopFootsteps();
+        }
+
+        // Toggle pushing mode when Q is pressed
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            Debug.Log("Pushing mode toggled: " + isPushing);  // Debug log to check if pushing mode is activated
+            isPushing = !isPushing;
+
+            // Stop pushing immediately when Q is pressed
+            if (!isPushing && pushableRb != null)
+            {
+                pushableRb.linearVelocity = Vector2.zero; // Stop movement immediately when push mode is off
+                pushableRb = null;
+            }
         }
     }
 
@@ -74,7 +92,7 @@ public class PlayerController : MonoBehaviour
             moveInput = Vector2.zero; // Reset input
             rb.linearVelocity = Vector2.zero; // Stop movement
             animator.SetBool("isWalking", false);
-            StopFootsteps(); 
+            StopFootsteps();
             return;
         }
 
@@ -95,6 +113,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("InputX", moveInput.x);
         animator.SetFloat("InputY", moveInput.y);
+
     }
 
 
@@ -149,34 +168,63 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void StartFootsteps()
+      void FixedUpdate()
     {
-        if (!playingFootsteps)
+        // Only push the object when Q is pressed and a pushable object is in front
+        if (isPushing)
         {
-            playingFootsteps = true;
-            SoundEffectManager.Play("Footstep");
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, moveInput, 0.6f, interactableLayer);
+
+            if (hit.collider != null && hit.collider.CompareTag("Pushable"))
+            {
+                pushableRb = hit.collider.GetComponent<Rigidbody2D>();
+                if (pushableRb != null)
+                {
+                    pushableRb.linearVelocity = moveInput * pushForce; // Apply force only while moving
+                    Debug.Log("Pushing object: " + hit.collider.name);  // Debug log to check if the object is detected
+                }
+            }
+            else
+            {
+                pushableRb = null; // No object in front, stop pushing
+            }
+        }
+        else
+        {
+            // Stop the object movement when not pushing
+            if (pushableRb != null)
+            {
+                pushableRb.linearVelocity = Vector2.zero; // Stop the object
+                pushableRb = null;
+            }
         }
     }
 
-    void StopFootsteps()
-    {
-        if (playingFootsteps)
+        void StartFootsteps()
         {
-            playingFootsteps = false;
-            SoundEffectManager.Stop();  // Stop the sound completely
+            if (!playingFootsteps)
+            {
+                playingFootsteps = true;
+                SoundEffectManager.Play("Footstep");
+            }
         }
-    }
 
-    void PlayFootstep()
-    {
-        if (playingFootsteps && !audioSource.isPlaying) // Prevent overlapping sounds
+        void StopFootsteps()
         {
-            Debug.Log("Footstep sound playing");
-            SoundEffectManager.Play("Footstep");
+            if (playingFootsteps)
+            {
+                playingFootsteps = false;
+                SoundEffectManager.Stop();  // Stop the sound completely
+            }
         }
-    }
 
-
-
+        void PlayFootstep()
+        {
+            if (playingFootsteps && !audioSource.isPlaying) // Prevent overlapping sounds
+            {
+                Debug.Log("Footstep sound playing");
+                SoundEffectManager.Play("Footstep");
+            }
+        }
 }
 

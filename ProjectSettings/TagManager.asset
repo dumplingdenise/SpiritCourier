@@ -11,6 +11,7 @@ TagManager:
   - Overpass
   - Underpass
   - NPCs
+  - Pushable
   layers:
   - Default
   - TransparentFX
