@@ -69,7 +69,6 @@ public class Quest : MonoBehaviour
             this.questStatus = questStatus;
             this.ParcelData = parcelData;
             this.parcelObject = parcelObject;
-            // test
             this.isQuestActive = isQuestActive;
         }
     }
@@ -97,10 +96,6 @@ public class Quest : MonoBehaviour
 
                 activeQuest.Add(quest);
 
-                /*if (quest.parcelObject != null)
-                {
-                    quest.parcelObject.SetActive(true);
-                }*/
                 Debug.LogError($"Quest ID {quest.questID} activated.");
                 Debug.LogError($"Active list count: {activeQuest.Count}");
                 foreach (var quests in activeQuest)
@@ -160,11 +155,15 @@ public class Quest : MonoBehaviour
         if (quest != null)
         {
             questInAll.questStatus = questStatus.completed;
+            /*quest.isQuestActive = false;*/
+            questInAll.isQuestActive = false;
             activeQuest.Remove(quest);
             FillActiveQuests();
             UpdateQuestUI();
+            
+            Debug.LogError($"Quest ID: {quest.questID}, Parcel {quest.ParcelData.parcelName}, ID: {quest.ParcelData.parcelID} successfully delivered. Removing from quest");
+            Debug.LogError($"Quest ID: {questInAll.questID}, Parcel {questInAll.ParcelData.parcelName}, ID: {questInAll.ParcelData.parcelID} successfully delivered. Status updated to {questInAll.questStatus}, {questInAll.isQuestActive}");
 
-            Debug.Log($"Quest ID: {quest.questID}, Parcel {quest.ParcelData.parcelName}, ID: {quest.ParcelData.parcelID} successfully delivered. Removing from quest");
 
             // test code
             // Check if the completed quest is the one displayed, and close or update the popup
@@ -173,6 +172,8 @@ public class Quest : MonoBehaviour
                 hintPopup.SetActive(false);
                 currentDisplayedQuest = null;
             }
+
+            /*FindFirstObjectByType<Parcels>().UpdateParcelVisibility();*/
         }
     }
 
@@ -304,7 +305,6 @@ public class Quest : MonoBehaviour
 
     public void Start()
     {
-        /*Instance = this;*/
         hintPopup.SetActive(false);
         UpdateQuestUI();
     }

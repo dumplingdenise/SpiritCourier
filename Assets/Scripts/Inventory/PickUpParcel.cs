@@ -40,7 +40,6 @@ public class PickUpParcel : MonoBehaviour
             if (pickUpPromptText != null)
             {
                 pickUpPromptText.style.display = DisplayStyle.None;
-                Debug.Log("Prompt text is not here!");
             }
         }
 
@@ -75,7 +74,7 @@ public class PickUpParcel : MonoBehaviour
             {
                 pickUpPromptText.style.display = DisplayStyle.Flex; // display the prompt when player come in contact with the parcel
                 pickUpPromptText.text = "Press 'E' to pick up parcel.";
-                Debug.Log("Prompt should appear!");
+                StartCoroutine(HidePrompt(2f));  // Hides the prompt after 2 seconds
             }
             else
             {
@@ -115,12 +114,15 @@ public class PickUpParcel : MonoBehaviour
 
                 if (added)
                 {
+                    pickedUp = true;
+                    
                     Debug.Log("Parcel picked up!");
 
                     if (pickUpPromptText != null)
                     {
                         pickUpPromptText.style.display = DisplayStyle.Flex;  // if added to inventory, text is gone
                         pickUpPromptText.text = $"{parcelData.parcelName} picked up and added to inventory!";
+                        StartCoroutine(HidePrompt(2f));  // Hides the prompt after 2 seconds
                         Debug.Log($"Parcel {parcelData.parcelName}, ID: {parcelData.parcelID} picked up and added to inventory!");
                     }
                     inventory.UpdateInventoryUI();
@@ -148,20 +150,23 @@ public class PickUpParcel : MonoBehaviour
                     if (pickUpPromptText != null)
                     {
                         pickUpPromptText.style.display = DisplayStyle.Flex;  // if added to inventory, text is gone
-
                         pickUpPromptText.text = "Inventory full, can't pick up the parcel!";
+                        StartCoroutine(HidePrompt(2f));  // Hides the prompt after 2 seconds
                     }
                 }
             }
         }
     }
 
+    IEnumerator HidePrompt(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        pickUpPromptText.style.display = DisplayStyle.None;
+    }
+
     private void destroyParcel()
     {
-        gameObject.SetActive(false); // Hide the parcel
-        // test code
-        PlayerPrefs.SetInt($"ParcelPicked_{parcelData.parcelID}", 1); // Save the state
-
+        /*gameObject.SetActive(false); // Hide the parcel*/
         Destroy(gameObject); 
     }
 }

@@ -152,17 +152,6 @@ public class DialogManager : MonoBehaviour
 
     public void GoToNextScene()
     {
-        /*if (nextPuzzleSceneNames != null && nextPuzzleSceneNames.Length > 0)
-        {
-            string randomScene = nextPuzzleSceneNames[Random.Range(0, nextPuzzleSceneNames.Length)];
-            if (!string.IsNullOrEmpty(randomScene))
-            {
-                SceneManager.LoadScene(randomScene);
-            }
-        }*/
-
-        // test code - doesnt work cause the number of npcInteractedCount will always reset to 0 
-
         Debug.Log(npcInteractedCount);
         string randomSceneName = "";
         if ( npcInteractedCount < 2)

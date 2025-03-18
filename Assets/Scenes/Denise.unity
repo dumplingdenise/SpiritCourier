@@ -251,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: dialog.lines.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: 'dialog.lines.Array.data[0]'
@@ -260,6 +260,10 @@ PrefabInstance:
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: 'dialog.lines.Array.data[1]'
       value: '"Grandma said you are Santa and you are going to bring me giftsss !!"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
+      propertyPath: 'dialog.lines.Array.data[2]'
+      value: '"I wanna play a puzzle, will you play with me?"'
       objectReference: {fileID: 0}
     - target: {fileID: 6294382644697623487, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7834,8 +7838,12 @@ PrefabInstance:
       value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
+      propertyPath: showButtonAfterDialog
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: dialog.lines.Array.size
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: 'dialog.lines.Array.data[0]'
@@ -7847,8 +7855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: 'dialog.lines.Array.data[2]'
-      value: '"I can''t remember anything but the headlights, so bright shining into
-        my eyes. The sound of metal crumpling.. the weightlessness before the fall"'
+      value: '"Do you want to play a puzzle?"'
       objectReference: {fileID: 0}
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: 'dialog.lines.Array.data[3]'
@@ -51694,11 +51701,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6294382644697623487, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.75
+      value: 33.15
       objectReference: {fileID: 0}
     - target: {fileID: 6294382644697623487, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.88
+      value: 30.81
       objectReference: {fileID: 0}
     - target: {fileID: 6294382644697623487, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -128844,7 +128851,6 @@ MonoBehaviour:
   - {fileID: 381127181}
   - {fileID: 1180831908}
   - {fileID: 1596337170}
-  collectedParcelIDs: 
 --- !u!1 &1585131704
 GameObject:
   m_ObjectHideFlags: 0
@@ -130825,8 +130831,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9197481963319205126, guid: 1b00016b5545f784ea2db97ffe922e82, type: 3}
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
+      propertyPath: showButtonAfterDialog
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: dialog.lines.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: 'dialog.lines.Array.data[0]'
@@ -130839,6 +130849,10 @@ PrefabInstance:
     - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: 'dialog.lines.Array.data[2]'
       value: '"I''m sure no one has anything for me.."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683550773758392088, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
+      propertyPath: 'dialog.lines.Array.data[3]'
+      value: '"Play a game with me?"'
       objectReference: {fileID: 0}
     - target: {fileID: 6294382644697623487, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_LocalPosition.x

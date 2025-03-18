@@ -27,7 +27,7 @@ public class Parcels : MonoBehaviour
         // test
         public bool isActiveQuest;
 
-        public ParcelData(/*GameObject parcelObject,*/ Vector2 position, int parcelID, string parcelName, Sprite parcelSprite,
+        public ParcelData(Vector2 position, int parcelID, string parcelName, Sprite parcelSprite,
             MainNpcs.NPCData assignedNpcData, string parcelHints, string npcHints, Dialog parcelStoryDialog, bool isActiveQuest)
         {
             this.position = position;
@@ -104,9 +104,8 @@ public class Parcels : MonoBehaviour
                     }
                     else
                     {
-                        Debug.LogError($"Parcel ID {parcelID} already exists in the quest list. Skipping...");
+                        Debug.LogError($"Parcel ID {parcelID} already exists in the quest list. Skipping...");                    
                     }
-
 
                     Debug.Log($"Parcel Name: {parcelName}, Parcel ID: {parcelID}, Sprite: {parcelSprite} at {parcelObj.transform.position} assigned to NPC ID: {pickUpParcel.assignedNPC.npcID}");
                 }
@@ -127,21 +126,36 @@ public class Parcels : MonoBehaviour
 
     public void UpdateParcelVisibility()
     {
-        Quest questManager = FindAnyObjectByType<Quest>();
+        Inventory inventoryManager = FindAnyObjectByType<Inventory>();
+        List<int> pickedUpParcelIDs = new List<int>();
+
+        foreach (var parcelData in inventoryManager.GetInventoryList())
+        {
+            pickedUpParcelIDs.Add(parcelData.parcelID);
+        }
+            
+            
         foreach (var parcel in assignedParcels)
         {
             if (parcel.parcelID < ParcelsObjects.Length)
             {
                 GameObject parcelObj = ParcelsObjects[parcel.parcelID];
                 Debug.LogError($"Parcel {parcel.parcelID} visibility set to: {parcel.isActiveQuest}");
-                if (parcel.isActiveQuest)
+                // If parcel has been picked up already, don't show it again
+                if (pickedUpParcelIDs.Contains(parcel.parcelID))
                 {
-
-                    parcelObj.SetActive(true); // Show if quest is active
+                    parcelObj.SetActive(false); // Hide it if already in the inventory
                 }
                 else
                 {
-                    parcelObj.SetActive(false); // Hide if quest is not active
+                    if (parcel.isActiveQuest)
+                    {
+                        parcelObj.SetActive(true); // Show if quest is active and not already picked up
+                    }
+                    else
+                    {
+                        parcelObj.SetActive(false); // Hide if quest is not active
+                    }
                 }
             }
             else
@@ -150,7 +164,6 @@ public class Parcels : MonoBehaviour
             }
         }
     }
-
 
     // Update is called once per frame
     void Update()

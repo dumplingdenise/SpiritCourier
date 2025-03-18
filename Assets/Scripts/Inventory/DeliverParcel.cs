@@ -22,10 +22,12 @@ public class DeliverParcel : MonoBehaviour
     private Quest quest;
     private DialogManager dialogManager;
     private GameController gameController;
+    /*private Parcels parcelManager;*/
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
         // Check for DialogManager
         dialogManager = FindFirstObjectByType<DialogManager>();
         if (dialogManager == null)
@@ -41,7 +43,13 @@ public class DeliverParcel : MonoBehaviour
             return;
         }
 
-        MainNpcs mainNpcs = FindFirstObjectByType<MainNpcs>();
+        /*parcelManager = FindFirstObjectByType<Parcels>();
+        if (parcelManager == null)
+        {
+            Debug.LogError("parcelManager not found in the scene!");
+        }*/
+        
+            MainNpcs mainNpcs = FindFirstObjectByType<MainNpcs>();
         if (mainNpcs != null)
         {
             foreach (var npcData in mainNpcs.GetNPCList())
@@ -196,7 +204,7 @@ public class DeliverParcel : MonoBehaviour
                             if (quest != null)
                             {
                                 quest.completeQuest(selectedParcel.parcelID);
-                            }
+                            }  
                             gameController.SetGameState(GameState.FreeRoam);
                         }
                         else
