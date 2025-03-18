@@ -6593,7 +6593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
 --- !u!61 &160513207
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7328,7 +7328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5fb510518406247a3c4a94dfda4a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlePanel: {fileID: 764819790}
+  puzzlePanel: {fileID: 0}
 --- !u!114 &208096556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10351,7 +10351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
 --- !u!61 &393142847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14633,8 +14633,8 @@ MonoBehaviour:
   - {fileID: 947131526}
   - {fileID: 1494047935}
   parcelButtons: []
-  CrossUI: {fileID: 1033789083}
-  CloseButton: {fileID: 1033789086}
+  CrossUI: {fileID: 0}
+  CloseButton: {fileID: 0}
   playerAnimator: {fileID: 0}
 --- !u!114 &595920037
 MonoBehaviour:
@@ -14661,7 +14661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5fb510518406247a3c4a94dfda4a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlePanel: {fileID: 466005966}
+  puzzlePanel: {fileID: 0}
 --- !u!114 &595920039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22343,8 +22343,8 @@ MonoBehaviour:
   - {fileID: 265733337}
   - {fileID: 909481892}
   parcelButtons: []
-  CrossUI: {fileID: 208096553}
-  CloseButton: {fileID: 208096556}
+  CrossUI: {fileID: 0}
+  CloseButton: {fileID: 0}
   playerAnimator: {fileID: 0}
 --- !u!114 &841318255
 MonoBehaviour:
@@ -22371,7 +22371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5fb510518406247a3c4a94dfda4a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlePanel: {fileID: 764819790}
+  puzzlePanel: {fileID: 0}
 --- !u!114 &841318257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55331,85 +55331,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1248766251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1016369967
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1016369968}
-  - component: {fileID: 1016369970}
-  - component: {fileID: 1016369969}
-  m_Layer: 5
-  m_Name: Text (Legacy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1016369968
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016369967}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515091328}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000016212463}
-  m_SizeDelta: {x: 0, y: 5.3579}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1016369969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016369967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 4b14ae0f310c9a14eb3d3262de7f8303, type: 3}
-    m_FontSize: 18
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: X
---- !u!222 &1016369970
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016369967}
-  m_CullTransparentMesh: 1
 --- !u!1 &1023786991
 GameObject:
   m_ObjectHideFlags: 0
@@ -55837,7 +55758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5fb510518406247a3c4a94dfda4a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlePanel: {fileID: 466005966}
+  puzzlePanel: {fileID: 0}
 --- !u!114 &1033789086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56908,7 +56829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
 --- !u!61 &1110883834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58308,7 +58229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
 --- !u!61 &1214380792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -92343,7 +92264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
 --- !u!61 &1352604811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -92746,7 +92667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
 --- !u!61 &1372000250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -92924,7 +92845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
 --- !u!61 &1372712685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -97944,8 +97865,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1016369968}
+  m_Children: []
   m_Father: {fileID: 451767826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -97974,9 +97894,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.7735849, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 0.78867924, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -98017,8 +97937,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -5265230630771344991, guid: 6c78505d3d232fc4a81712bc3bf54339, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -141711,15 +141631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1a75ac8b49bd614599140d70d627f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffectGroups:
-  - name: Footstep
-    audioClips:
-    - {fileID: 8300000, guid: 228e0b205ff459347a101860e59cf236, type: 3}
-  - name: Collision
-    audioClips: []
-  - name: PickUpParcels
-    audioClips:
-    - {fileID: 8300000, guid: c5b452134b0c6a347bdbbb3840785136, type: 3}
+  soundEffectGroups: []
 --- !u!82 &1930401571
 AudioSource:
   m_ObjectHideFlags: 0
@@ -144418,7 +144330,6 @@ MonoBehaviour:
   nextPuzzleSceneButton: {fileID: 1547785448}
   PuzzleObject:
   - {fileID: 764819790}
-  - {fileID: 466005966}
   noButton: {fileID: 395457874}
   playerController: {fileID: 1224058028}
 --- !u!4 &2093632204
@@ -144806,7 +144717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
 --- !u!61 &2126512020
 BoxCollider2D:
   m_ObjectHideFlags: 0
