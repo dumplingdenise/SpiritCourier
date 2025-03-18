@@ -28,6 +28,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D pushableRb;
     public float pushForce = 5f; // Adjust for push strength
 
+    private Vector2 lastMoveDirection = Vector2.down; // Default facing down
+    private float pushCheckDistance = 0.6f; //distance to check if still near the box
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -53,42 +57,27 @@ public class PlayerController : MonoBehaviour
             StopFootsteps();
         }
 
-        // Toggle pushing mode when Q is pressed
+        // Update last move direction only when moving
+        if (moveInput != Vector2.zero)
+        {
+            lastMoveDirection = moveInput.normalized;
+        }
+
+        // Handle pushing toggle
         if (Keyboard.current.qKey.wasPressedThisFrame)
         {
-            Debug.Log("Toggling pushing mode: " + isPushing);
-
             if (isPushing)
             {
-                // Stop the pushing and set to Kinematic when Q is pressed to stop
-                if (pushableRb != null)
-                {
-                    pushableRb.linearVelocity = Vector2.zero; // Stop the movement
-                    pushableRb.bodyType = RigidbodyType2D.Kinematic; // Make it Kinematic to stop movement
-                    pushableRb = null; // Reset the reference
-                }
+                StopPushing();
             }
             else
             {
-                // Start pushing mode only if we are close to a pushable object
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, moveInput, 0.6f, interactableLayer);
-
-                if (hit.collider != null && hit.collider.CompareTag("Pushable"))
-                {
-                    pushableRb = hit.collider.GetComponent<Rigidbody2D>();
-                    if (pushableRb != null)
-                    {
-                        pushableRb.bodyType = RigidbodyType2D.Dynamic; // Make it dynamic to allow pushing
-                        Debug.Log("Pushable object found and ready to push!");
-                    }
-                }
+                TryStartPushing();
             }
-
-            // Toggle the pushing flag
-            isPushing = !isPushing;
         }
     }
 
+   
     /* void Update()
      {
          //only allow movement if MoveWhenTalking is true
@@ -188,24 +177,65 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-      void FixedUpdate()
+    void TryStartPushing()
     {
-        if (isPushing && pushableRb != null)
+        if (lastMoveDirection == Vector2.zero) return;  // Player must be facing a direction
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, lastMoveDirection, pushCheckDistance, interactableLayer);
+
+        if (hit.collider != null && hit.collider.CompareTag("Pushable"))
         {
-            // Apply the pushing force in the direction of moveInput
-            pushableRb.linearVelocity = moveInput * pushForce; // Apply force in the direction the player is moving
+            pushableRb = hit.collider.GetComponent<Rigidbody2D>();
+            if (pushableRb != null)
+            {
+                pushableRb.bodyType = RigidbodyType2D.Dynamic;
+                isPushing = true;
+                Debug.Log("Pushing started.");
+            }
         }
-        else if (!isPushing && pushableRb != null)
+        else
         {
-            // When pushing mode is off, stop movement immediately and reset Rigidbody2D
-            pushableRb.linearVelocity = Vector2.zero;
-            pushableRb.bodyType = RigidbodyType2D.Kinematic;
-            pushableRb = null; // Optionally clear the reference if you want
+            Debug.Log("No pushable object in front.");
         }
     }
 
-        void StartFootsteps()
+    void StopPushing()
+    {
+        if (pushableRb != null)
+        {
+            pushableRb.linearVelocity = Vector2.zero;
+            pushableRb.bodyType = RigidbodyType2D.Kinematic;
+            pushableRb = null;
+        }
+        isPushing = false;
+        Debug.Log("Stopped pushing.");
+    }
+
+    void FixedUpdate()
+    {
+        if (isPushing && pushableRb != null)
+        {
+            // Check if the player is still in front of the box
+            RaycastHit2D checkHit = Physics2D.Raycast(transform.position, lastMoveDirection, pushCheckDistance, interactableLayer);
+
+            if (checkHit.collider == null || checkHit.collider.gameObject != pushableRb.gameObject)
+            {
+                StopPushing(); // Stop pushing if the player is no longer near the box
+                return;
+            }
+
+           // Apply push only in the last move direction
+            if (moveInput == lastMoveDirection)
+            {
+                pushableRb.linearVelocity = lastMoveDirection * pushForce;
+            }
+            else
+            {
+                pushableRb.linearVelocity = Vector2.zero; // Stop box movement if player moves in another direction
+            }
+        }
+    }
+    void StartFootsteps()
         {
             if (!playingFootsteps)
             {
