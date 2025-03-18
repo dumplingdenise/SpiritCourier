@@ -172,6 +172,7 @@ public class DeliverParcel : MonoBehaviour
                         {
                             promptText.style.display = DisplayStyle.Flex;
                             promptText.text = "Collect parcel first!";
+                            Debug.LogError("No parcel in inventory");
                         }
                         return;
                     }

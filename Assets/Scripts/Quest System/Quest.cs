@@ -96,6 +96,15 @@ public class Quest : MonoBehaviour
 
                 activeQuest.Add(quest);
 
+                /*if (quest != null)
+                {
+                    gameObject.SetActive(true);
+                }
+                else
+                {
+                    gameObject.SetActive (false);
+                }*/
+
                 Debug.LogError($"Quest ID {quest.questID} activated.");
                 Debug.LogError($"Active list count: {activeQuest.Count}");
                 foreach (var quests in activeQuest)
@@ -171,9 +180,8 @@ public class Quest : MonoBehaviour
             {
                 hintPopup.SetActive(false);
                 currentDisplayedQuest = null;
+                
             }
-
-            /*FindFirstObjectByType<Parcels>().UpdateParcelVisibility();*/
         }
     }
 

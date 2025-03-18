@@ -127,6 +127,16 @@ public class PickUpParcel : MonoBehaviour
                     }
                     inventory.UpdateInventoryUI();
 
+                    // test
+                    if (parcel != null)  // Call MarkParcelPicked here
+                    {
+                        parcel.MarkParcelPicked(parcelData.parcelID);
+                    }
+                    else
+                    {
+                        Debug.LogError("Parcels Instance not found!");
+                    }
+
                     if (quest != null)
                     {
                         questData currentQuest = quest.GetQuestByParcelID(parcelData.parcelID);

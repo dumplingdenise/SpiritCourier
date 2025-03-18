@@ -10,6 +10,10 @@ public class Parcels : MonoBehaviour
     public GameObject[] ParcelsObjects;
     private List<ParcelData> assignedParcels = new List<ParcelData>();
     private List<MainNpcs.NPCData> npcList; // declares a private list to store NPC data
+    private List<int> pickedUpParcelIDs = new List<int>();
+
+    // test code
+    public static Parcels Instance { get; private set; }
 
 
     [System.Serializable]
@@ -42,12 +46,33 @@ public class Parcels : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);  // Keeps the parent object with all parcels
+        }
+        else
+        {
+            Destroy(gameObject);  // Prevent duplicate instances
+        }
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         npcList = FindAnyObjectByType<MainNpcs>().GetNPCList();
         AssignParcels();
         UpdateParcelVisibility();
+
+        // test code
+        /*npcList = FindAnyObjectByType<MainNpcs>().GetNPCList();
+        LoadPickedUpParcels(); // Load picked-up parcels when scene loads
+        AssignParcels();
+        Quest.Instance.FillActiveQuests(); // Force refresh active quests
+        UpdateParcelVisibility();*/
+
     }
 
     void AssignParcels()
@@ -124,7 +149,43 @@ public class Parcels : MonoBehaviour
         questManager.FillActiveQuests();
     }
 
-    public void UpdateParcelVisibility()
+    // test code
+    public void MarkParcelPicked(int parcelID)
+    {
+        if (!pickedUpParcelIDs.Contains(parcelID))
+        {
+            pickedUpParcelIDs.Add(parcelID);
+            Debug.Log($"Parcel {parcelID} picked up.");
+        }
+    }
+
+
+    /*    public void MarkParcelPicked(int parcelID)
+        {
+            if (!pickedUpParcelIDs.Contains(parcelID))
+            {
+                pickedUpParcelIDs.Add(parcelID);
+                SavePickedUpParcels();  // Save to persistence
+                Debug.Log($"Parcel {parcelID} picked up.");
+            }
+        }
+
+        private void SavePickedUpParcels()
+        {
+            PlayerPrefs.SetString("PickedUpParcels", string.Join(",", pickedUpParcelIDs));
+            PlayerPrefs.Save();
+        }
+
+        private void LoadPickedUpParcels()
+        {
+            if (PlayerPrefs.HasKey("PickedUpParcels"))
+            {
+                string savedIDs = PlayerPrefs.GetString("PickedUpParcels");
+                pickedUpParcelIDs = savedIDs.Split(',').Where(s => int.TryParse(s, out _)).Select(int.Parse).ToList();
+            }
+        }*/
+
+    /*public void UpdateParcelVisibility()
     {
         Inventory inventoryManager = FindAnyObjectByType<Inventory>();
         List<int> pickedUpParcelIDs = new List<int>();
@@ -133,8 +194,40 @@ public class Parcels : MonoBehaviour
         {
             pickedUpParcelIDs.Add(parcelData.parcelID);
         }
-            
-            
+
+
+        foreach (var parcel in assignedParcels)
+        {
+            if (parcel.parcelID < ParcelsObjects.Length)
+            {
+                GameObject parcelObj = ParcelsObjects[parcel.parcelID];
+                Debug.LogError($"Parcel {parcel.parcelID} visibility set to: {parcel.isActiveQuest}");
+                // If parcel has been picked up already, don't show it again
+                if (pickedUpParcelIDs.Contains(parcel.parcelID))
+                {
+                    parcelObj.SetActive(false); // Hide it if already in the inventory
+                }
+                else
+                {
+                    if (parcel.isActiveQuest)
+                    {
+                        parcelObj.SetActive(true); // Show if quest is active and not already picked up
+                    }
+                    else
+                    {
+                        parcelObj.SetActive(false); // Hide if quest is not active
+                    }
+                }
+            }
+            else
+            {
+                Debug.LogError($"Parcel ID {parcel.parcelID} is out of bounds for ParcelsObjects array.");
+            }
+        }
+    }*/
+
+    public void UpdateParcelVisibility()
+    {
         foreach (var parcel in assignedParcels)
         {
             if (parcel.parcelID < ParcelsObjects.Length)
@@ -165,9 +258,29 @@ public class Parcels : MonoBehaviour
         }
     }
 
+    /*public void UpdateParcelVisibility()
+    {
+        foreach (var parcel in assignedParcels)
+        {
+            if (parcel.parcelID < ParcelsObjects.Length)
+            {
+                GameObject parcelObj = ParcelsObjects[parcel.parcelID];
+                if (pickedUpParcelIDs.Contains(parcel.parcelID))
+                {
+                    parcelObj.SetActive(false);
+                }
+                else
+                {
+                    parcelObj.SetActive(parcel.isActiveQuest);
+                }
+            }
+        }
+    }*/
+
     // Update is called once per frame
     void Update()
     {
-
+        // test code
+        /*UpdateParcelVisibility();*/
     }
 }
