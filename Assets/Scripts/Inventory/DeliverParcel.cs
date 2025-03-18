@@ -134,15 +134,15 @@ public class DeliverParcel : MonoBehaviour
 
             // test code
             // **Check if game state allows delivery**
-     /*       if (gameController.GetCurrentState() != GameState.WaitingForDelivery)
+            if (gameController.GetCurrentState() != GameState.WaitingForDelivery)
             {
                 if (promptText != null)
                 {
                     promptText.style.display = DisplayStyle.Flex;
-                    promptText.text = "You can't deliver the parcel yet! Please play the puzzle with the spirits.";
+                    promptText.text = "Please play the puzzle with the spirits first.";
                 }
                 return;
-            }*/
+            }
 
             if (inventory.selectedSlot < 0 || inventory.selectedSlot >= inventory.GetInventoryList().Count)
             {

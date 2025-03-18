@@ -127,9 +127,11 @@ public class Quest : MonoBehaviour
     public void completeQuest(int questID)
     {
         var quest = activeQuest.Find(q => q.questID == questID);
+        var questInAll = allQuest.Find(q => q.questID == questID);
         if (quest != null)
         {
             activeQuest.Remove(quest);
+            questInAll.questStatus = questStatus.completed;
             FillActiveQuests();
             UpdateQuestUI();
 
@@ -243,7 +245,7 @@ public class Quest : MonoBehaviour
         }
     }
 
-    public void HideQuestUI()
+  /*  public void HideQuestUI()
     {
         questUI = this.gameObject;
         questUI.gameObject.SetActive(false);
@@ -253,7 +255,7 @@ public class Quest : MonoBehaviour
     {
         questUI = this.gameObject;
         questUI.gameObject.SetActive(true);
-    }
+    }*/
 
     public void Start()
     {

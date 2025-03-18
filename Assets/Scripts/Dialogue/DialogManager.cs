@@ -14,9 +14,10 @@ public class DialogManager : MonoBehaviour
     [SerializeField] int lettersPerSecond;
 
     [SerializeField] Button nextPuzzleSceneButton; // Add a UI button in the Inspector
-/*    [SerializeField] string[] nextPuzzleSceneNames;*/
-    [SerializeField] string[] easyPuzzleSceneNames;
-    [SerializeField] string[] hardPuzzleSceneNames;
+    /* [SerializeField] string[] easyPuzzleSceneNames;
+     [SerializeField] string[] hardPuzzleSceneNames;*/
+
+    [SerializeField] GameObject[] PuzzleObject;
 
     [SerializeField] Button noButton;
 
@@ -163,9 +164,9 @@ public class DialogManager : MonoBehaviour
 
         // test code - doesnt work cause the number of npcInteractedCount will always reset to 0 
 
-        Debug.Log(npcInteractedCount);
+        /*Debug.Log(npcInteractedCount);
         string randomSceneName = "";
-        if ( npcInteractedCount < 2)
+        if (npcInteractedCount < 2)
         {
             if (easyPuzzleSceneNames != null && easyPuzzleSceneNames.Length > 0)
             {
@@ -188,10 +189,17 @@ public class DialogManager : MonoBehaviour
                 Quest.Instance.HideQuestUI();
             }
             SceneManager.LoadScene(randomSceneName);
+        }*/
+
+        if (PuzzleObject != null)
+        {
+            int puzzleIndex = Random.Range(0, PuzzleObject.Length);
+            PuzzleObject[puzzleIndex].SetActive(true);
         }
+
     }
 
-    private void CloseDialog()
+    public void CloseDialog()
     {
         dialogBox.SetActive(false);
         currentLine = 0;

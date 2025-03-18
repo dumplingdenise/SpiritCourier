@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance { get; private set; }
     [SerializeField] PlayerController playerController;
+    private DialogManager dialogManager;
 
     GameState state;
 
@@ -60,6 +61,8 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        dialogManager = FindFirstObjectByType<DialogManager>();
+
         Debug.Log($"Current state: {GetCurrentState()}");
         if (state == GameState.Puzzle)
         {
