@@ -44,5 +44,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Shumin.unity
     guid: c7f3cd720f7d8c44581010922947cbe6
+  - enabled: 1
+    path: Assets/Scenes/Denise 2.unity
+    guid: 6fa568fb994ee904981893ebbd37eca1
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

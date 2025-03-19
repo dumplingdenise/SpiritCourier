@@ -21,6 +21,15 @@ public class DeliverParcel : MonoBehaviour
 
     private Quest quest;
     private DialogManager dialogManager;
+    //private static JournalUI journal;
+
+    //public void SetJournal(JournalUI input)
+    //{
+    //    if (journal == null)
+    //    {
+    //        journal = input;
+    //    }
+    //}
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -147,7 +156,7 @@ public class DeliverParcel : MonoBehaviour
                             promptText.text = $"{selectedParcel.parcelName} successfully delivered to {npcName}";
                             promptText.style.display = DisplayStyle.Flex;
                         }
-
+                      
                         StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateSuccessDialog()));
                         // test code
                         /*dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog);*/
@@ -156,11 +165,19 @@ public class DeliverParcel : MonoBehaviour
                         // Remove parcel from inventory after successful delivery
                         inventory.RemoveParcelFromInventory();
 
+                        // [kr]                        
+                        if (JournalUI.Instance != null)
+                        {
+                            JournalUI.Instance.AddJournalEntry(NpcID);
+                        }
+                        // [kr]
 
                         if (quest != null)
                         {
                             quest.completeQuest(selectedParcel.parcelID);
                         }
+
+                        
                     }
                     else
                     {
