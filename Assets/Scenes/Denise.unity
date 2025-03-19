@@ -10126,7 +10126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &339336288
 Transform:
   m_ObjectHideFlags: 0
@@ -21881,7 +21881,6 @@ GameObject:
   m_Component:
   - component: {fileID: 754948127}
   - component: {fileID: 754948130}
-  - component: {fileID: 754948129}
   - component: {fileID: 754948128}
   m_Layer: 0
   m_Name: Mini Camera
@@ -21949,14 +21948,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &754948129
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754948126}
-  m_Enabled: 0
 --- !u!20 &754948130
 Camera:
   m_ObjectHideFlags: 0
@@ -23807,7 +23798,6 @@ GameObject:
   m_Component:
   - component: {fileID: 833978033}
   - component: {fileID: 833978036}
-  - component: {fileID: 833978035}
   - component: {fileID: 833978034}
   m_Layer: 0
   m_Name: Main Camera
@@ -23875,14 +23865,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &833978035
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833978032}
-  m_Enabled: 1
 --- !u!20 &833978036
 Camera:
   m_ObjectHideFlags: 0
