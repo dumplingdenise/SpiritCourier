@@ -60,7 +60,7 @@ public class DeliverParcel : MonoBehaviour
         var uiDocument = GetComponentInParent<UIDocument>();
         if (uiDocument != null)
         {
-            var rootVisualElement = uiDocument.rootVisualElement; // Get the UIDocument in the spawned parcel gameobject.
+            var rootVisualElement = uiDocument.rootVisualElement; // Get the UIDocument in the spawned parcel gameObject.
 
             /*promptText = rootVisualElement.Q("DeliverLabel"); // get the Label*/
 
@@ -70,6 +70,15 @@ public class DeliverParcel : MonoBehaviour
             {
                 promptText.style.display = DisplayStyle.None; // do not display it on start
             }
+            else
+            {
+                
+                Debug.LogError("Cant find label");
+            }
+        }
+        else
+        {
+            Debug.LogError("Cant find UI DOC");
         }
     }
 
@@ -207,12 +216,14 @@ public class DeliverParcel : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Debug.LogError("Pressing E");
             if (!playerNearby)
             {
                 return; // Exit to prevent parcel removal
             }
             else
             {
+                Debug.LogError("Player near NPC");
                 if (gameController.GetCurrentState() == GameState.FreeRoam)
                 {
                     if (inventoryList.Count == 0 || inventory.selectedSlot < 0)
