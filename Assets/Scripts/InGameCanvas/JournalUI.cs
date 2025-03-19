@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -204,136 +204,180 @@ public class JournalUI : MonoBehaviour
 }
 
 
+*/
 
 
+using UnityEngine;
+using UnityEngine.UI;
 
-//using UnityEngine;
-//using UnityEngine.UI;
+public class JournalUI : MonoBehaviour
+{
+   public static JournalUI Instance;
+  public GameObject journalPanel; // Reference to the journal UI 
+ public Button openJournalButton; // Button to open the journal
+  public Button closeJournalButton; // Button to close the journal
+  public Animator playerAnimator; //player animation
 
-//public class JournalUI : MonoBehaviour
-//{
-//    public static JournalUI Instance;
-//    public GameObject journalPanel; // Reference to the journal UI 
-//    public Button openJournalButton; // Button to open the journal
-//    public Button closeJournalButton; // Button to close the journal
-//    public Animator playerAnimator; //player animation
+  // [kr]
+   public GameObject[] journalPages; //Array of UI Panel (each panel is one page)
+   public Button nextPageButton; // Button to go to the next page
+  public Button prevPageButton; // Button to go to the previous page
+   private int currentPage = 0; // Tracks the currently visible page
+   private int totalPagesUnlocked = 0; // Number of unlocked pages
+  public GameObject notificationCircle; // UI element for the notification badge 
+    // [kr]
 
-//    // [kr]
-//    public GameObject[] journalPages; //Array of UI Panel (each panel is one page)
-//    public Button nextPageButton; // Button to go to the next page
-//    public Button prevPageButton; // Button to go to the previous page
-//    private int currentPage = 0; // Tracks the currently visible page
-//    private int totalPagesUnlocked = 0; // Number of unlocked pages
-//    public GameObject notificationCircle; // UI element for the notification badge 
-//    // [kr]
+   void Start()
+    {
 
-//    void Start()
-//    {
+       if (Instance == null)
+      {
+          Instance = this;
+       }
+      else
+       {
+          Debug.Log("Journal UI not found");
+      }
 
-//        if (Instance == null)
-//        {
-//            Instance = this;
-//        }
-//        else
-//        {
-//            Debug.Log("Journal UI not found");
-//        }
+       // Hide journal at the start
+      journalPanel.SetActive(false);
 
-//        // Hide journal at the start
-//        journalPanel.SetActive(false);
+       // Add listeners to buttons
+      openJournalButton.onClick.AddListener(OpenJournal);
+      closeJournalButton.onClick.AddListener(CloseJournal);
 
-//        // Add listeners to buttons
-//        openJournalButton.onClick.AddListener(OpenJournal);
-//        closeJournalButton.onClick.AddListener(CloseJournal);
-
-//        // [kr]
-//        // Hide all pages at the start
-//        foreach (GameObject page in journalPages)
-//        {
-//            page.SetActive(false);
-//            Debug.Log("Turn Off: " + page);
-//        }
-
-
-//        //  Add listeners to next/prev page buttons
-//        nextPageButton.onClick.AddListener(NextPage);
-//        prevPageButton.onClick.AddListener(PreviousPage);
-
-//        notificationCircle.SetActive(false); // Hide notification initially
-//        UpdatePageVisibility();
+      // [kr]
+       // Hide all pages at the start
+      foreach (GameObject page in journalPages)
+      {
+          page.SetActive(false);
+          Debug.Log("Turn Off: " + page);
+       }
 
 
-//        // [kr]
-//    }
+     //  Add listeners to next/prev page buttons
+      nextPageButton.onClick.AddListener(NextPage);
+      prevPageButton.onClick.AddListener(PreviousPage);
 
-//    void OpenJournal()
-//    {
-//        journalPanel.SetActive(true);
-//        /*JournalText.SetActive(false);*/
-//        Time.timeScale = 0f; // **PAUSE GAME**
+    notificationCircle.SetActive(false); // Hide notification initially
+      UpdatePageVisibility();
 
-//        if (playerAnimator != null )
-//        {
-//            playerAnimator.enabled = false;
-//        }
 
-//        if(notificationCircle.active)
-//        {
-//            notificationCircle.SetActive(false);
-//        }
-//    }
+      // [kr]
+   }
 
-//    public void CloseJournal()
-//    {
-//        journalPanel.SetActive(false);
-//        Time.timeScale = 1f; // **RESUME GAME**
+  void OpenJournal()
+  {
+       journalPanel.SetActive(true);
+       /*JournalText.SetActive(false);*/
+      Time.timeScale = 0f; // **PAUSE GAME**
 
-//        if (playerAnimator != null)
-//        {
-//            playerAnimator.enabled = true;
-//        }
-//    }
+        if (playerAnimator != null )        {
+           playerAnimator.enabled = false;
+      }
 
-//    // [kr]
+      if(notificationCircle.activeSelf)
+      {
+          notificationCircle.SetActive(false);
+       }
+ }
+    public void CloseJournal()
+  {
+      journalPanel.SetActive(false);
+      Time.timeScale = 1f; // **RESUME GAME**
 
-//    public void AddJournalEntry()
-//    {
-//        if (totalPagesUnlocked < journalPages.Length)
-//        {
-//            totalPagesUnlocked++;
-//            journalPages[totalPagesUnlocked - 1].SetActive(true); // Unhide the next page            
-//            currentPage = totalPagesUnlocked - 1;
-//            UpdatePageVisibility();
-//            notificationCircle.SetActive(true); // Show notification circle
-//        }
-//    }
+     if (playerAnimator != null)
+     {
+          playerAnimator.enabled = true;
+     }
+}
 
-//    public void NextPage()
-//    {
-//        if (currentPage < totalPagesUnlocked - 1)
-//        {
-//            currentPage++;
-//            UpdatePageVisibility();
-//        }
-//    }
+// [kr]
+    public void AddJournalEntry()
+  {
+        if (totalPagesUnlocked < journalPages.Length)
+       {
+           totalPagesUnlocked++;
+            journalPages[totalPagesUnlocked - 1].SetActive(true); // Unhide the next page            
+           currentPage = totalPagesUnlocked - 1;
+        UpdatePageVisibility();
+          notificationCircle.SetActive(true); // Show notification circle
+      }
+  }
 
-//    public void PreviousPage()
-//    {
-//        if (currentPage > 0)
-//        {
-//            currentPage--;
-//            UpdatePageVisibility();
-//        }
-//    }
+    public void NextPage()
+   {
+       if (currentPage < totalPagesUnlocked - 1)
+       {
+          currentPage++;
+          UpdatePageVisibility();
+      }
+  }
 
-//    public void UpdatePageVisibility()
-//    {
-//        for (int i = 0; i < totalPagesUnlocked; i++)
-//        {
-//            //if i is the same as current page, "Add it to the journal"
-//            journalPages[i].SetActive(i == currentPage); // Only show the active page
-//        }
-//    }
+  public void PreviousPage()
+   {
+       if (currentPage > 0)
+      {
+          currentPage--;
+          UpdatePageVisibility();
+      }
+  }
 
-//    // [kr] 
-//}
+   public void UpdatePageVisibility()
+ {
+      for (int i = 0; i < totalPagesUnlocked; i++)
+       {
+          //if i is the same as current page, "Add it to the journal"
+          journalPages[i].SetActive(i == currentPage); // Only show the active page
+      }
+  }
+
+   //[kr] 
+}
+
+
+//fk john
+/*using UnityEngine;
+using UnityEngine.UI;
+
+public class JournalUI : MonoBehaviour
+{
+    public GameObject journalPanel; // Reference to the journal UI panel
+    public Button openJournalButton; // Button to open the journal
+    public Button closeJournalButton; // Button to close the journal
+    public Animator playerAnimator; //player animation
+    public Text JournalText;
+
+    void Start()
+    {
+        // Hide journal at the start
+        journalPanel.SetActive(false);
+
+        // Add listeners to buttons
+        openJournalButton.onClick.AddListener(OpenJournal);
+        closeJournalButton.onClick.AddListener(CloseJournal);
+    }
+
+    void OpenJournal()
+    {
+        journalPanel.SetActive(true);
+        *//*JournalText.SetActive(false);*//*
+        Time.timeScale = 0f; // **PAUSE GAME**
+
+        if (playerAnimator != null)
+        {
+            playerAnimator.enabled = false;
+        }
+    }
+
+    void CloseJournal()
+    {
+        journalPanel.SetActive(false);
+        Time.timeScale = 1f; // **RESUME GAME**
+
+        if (playerAnimator != null)
+        {
+            playerAnimator.enabled = true;
+        }
+    }
+}*/
