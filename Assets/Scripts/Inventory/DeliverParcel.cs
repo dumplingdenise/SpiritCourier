@@ -23,6 +23,18 @@ public class DeliverParcel : MonoBehaviour
     private DialogManager dialogManager;
     private GameController gameController;
 
+    //private static JournalUI journal;
+
+    //public void SetJournal(JournalUI input)
+    //{
+    //    if (journal == null)
+    //    {
+    //        journal = input;
+    //    }
+    //}
+
+    private GameController gameController;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -114,8 +126,13 @@ public class DeliverParcel : MonoBehaviour
         }
     }
 
+
     // Update is called once per frame
     /*void Update()
+
+                        
+    void Update()
+
     {
         var inventory = FindFirstObjectByType<Inventory>();
         if (inventory == null)
@@ -124,7 +141,6 @@ public class DeliverParcel : MonoBehaviour
             return; // Exit the Update method to avoid further issues.
         }
 
-        // Only allow delivery if the player is near an NPC
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!playerNearby)
@@ -154,6 +170,7 @@ public class DeliverParcel : MonoBehaviour
             }
             else
             {
+
                 var selectedParcel = inventory.GetInventoryList()[inventory.selectedSlot];
 
                 if (selectedParcel.npcData.npcID == NpcID)
@@ -217,6 +234,11 @@ public class DeliverParcel : MonoBehaviour
                 {
                     if (inventoryList.Count == 0 || inventory.selectedSlot < 0)
                     {
+
+                if (gameController.GetCurrentState() == GameState.FreeRoam)
+                {
+                    if (inventoryList.Count == 0 || inventory.selectedSlot < 0)
+                    {
                         return;
                     }
                     else
@@ -268,6 +290,12 @@ public class DeliverParcel : MonoBehaviour
                             StartCoroutine(dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog));
 
                             inventory.RemoveParcelFromInventory();
+
+                            // [kr]                        
+                            if (JournalUI.Instance != null)
+                            {
+                                JournalUI.Instance.AddJournalEntry(NpcID);
+                            }
 
                             if (quest != null)
                             {
