@@ -580,6 +580,12 @@ public class DeliverParcel : MonoBehaviour
 
                             inventory.RemoveParcelFromInventory();
 
+                            //[kr]                        
+                            if (JournalUI.Instance != null)
+                            {
+                                JournalUI.Instance.AddJournalEntry(NpcID);
+                            }
+
                             if (quest != null)
                             {
                                 quest.completeQuest(selectedParcel.parcelID);

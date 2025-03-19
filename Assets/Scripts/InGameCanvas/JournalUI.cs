@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -174,7 +174,8 @@ public class JournalUI : MonoBehaviour
         
 
     }
-    //*
+    
+    /*
     void Update()
     {   
         if(Input.GetKeyDown(KeyCode.Keypad0) )
@@ -198,15 +199,15 @@ public class JournalUI : MonoBehaviour
             AddJournalEntry(4);
         }        
      }
-     
+    */
 
 
 }
 
 
-*/
 
 
+/*
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -270,6 +271,7 @@ public class JournalUI : MonoBehaviour
   {
        journalPanel.SetActive(true);
        /*JournalText.SetActive(false);*/
+/*
       Time.timeScale = 0f; // **PAUSE GAME**
 
         if (playerAnimator != null )        {
@@ -332,8 +334,9 @@ public class JournalUI : MonoBehaviour
       }
   }
 
-   //[kr] 
+   
 }
+
 
 
 //fk john
