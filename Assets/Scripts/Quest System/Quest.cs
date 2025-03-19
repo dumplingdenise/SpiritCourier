@@ -270,7 +270,6 @@ public class Quest : MonoBehaviour
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Linq;
 
 public class Quest : MonoBehaviour
 {
@@ -279,7 +278,7 @@ public class Quest : MonoBehaviour
     public static Quest Instance { get; private set; }
 
     private List<questData> allQuest = new List<questData>();
-    public List<questData> activeQuest = new List<questData>();
+    private List<questData> activeQuest = new List<questData>();
     private questData currentDisplayedQuest; // test code
 
     public Button[] taskSlots;
@@ -328,17 +327,14 @@ public class Quest : MonoBehaviour
         public questStatus questStatus;
         public Parcels.ParcelData ParcelData;
         public GameObject parcelObject;
-        // test
-        public bool isQuestActive;
 
-        public questData(int questID, questType questType, questStatus questStatus, Parcels.ParcelData parcelData, GameObject parcelObject, bool isQuestActive)
+        public questData(int questID, questType questType, questStatus questStatus, Parcels.ParcelData parcelData, GameObject parcelObject)
         {
             this.questID = questID;
             this.questType = questType;
             this.questStatus = questStatus;
             this.ParcelData = parcelData;
             this.parcelObject = parcelObject;
-            this.isQuestActive = isQuestActive;
         }
     }
 
@@ -348,6 +344,12 @@ public class Quest : MonoBehaviour
         Debug.LogError($"Queue list count: {allQuest.Count}");
         Debug.Log($"Quest ID: {questData.questID}, quest status: {questData.questStatus}, quest type: {questData.questType}, questData: {questData.ParcelData} added to quest list");
     }
+
+    // test code
+    /*public int GetQuest()
+    {
+        return allQuest.Count;
+    }*/
 
     // Method to fill up active quest slots (up to maxActiveSlot)
     public void FillActiveQuests()
@@ -360,25 +362,17 @@ public class Quest : MonoBehaviour
             if (quest.questStatus == questStatus.inActive)
             {
                 quest.questStatus = questStatus.inProgress;
-                quest.isQuestActive = true;
-                quest.ParcelData.isActiveQuest = true;
-
                 activeQuest.Add(quest);
 
-                /*if (quest != null)
+                if (quest.parcelObject != null)
                 {
-                    gameObject.SetActive(true);
+                    quest.parcelObject.SetActive(true);
                 }
-                else
-                {
-                    gameObject.SetActive (false);
-                }*/
-
-                Debug.LogError($"Quest ID {quest.questID} activated.");
-                Debug.LogError($"Active list count: {activeQuest.Count}");
+                Debug.Log($"Quest ID {quest.questID} activated.");
+                Debug.Log($"Active list count: {activeQuest.Count}");
                 foreach (var quests in activeQuest)
                 {
-                    Debug.LogError($"Quest ID: {quests.questID}, questActive: {quests.isQuestActive}, quest status: {quests.questStatus}, quest type: {quests.questType}, questData: {quests.ParcelData.parcelName}, parcelid: {quests.ParcelData.parcelID}");
+                    Debug.LogError($"Quest ID: {quests.questID}, quest status: {quests.questStatus}, quest type: {quests.questType}, questData: {quests.ParcelData.parcelName}, {quests.ParcelData.parcelID}");
                 }
 
                 OnQuestUpdated(); // test code
@@ -396,34 +390,7 @@ public class Quest : MonoBehaviour
                 return quest;
             }
         }
-        foreach (var quest in allQuest) // Assuming questList holds all active quests
-        {
-            if (quest.ParcelData != null && quest.ParcelData.parcelID == parcelID)
-            {
-                return quest;
-            }
-        }
         return null;
-    }
-
-    public List<questData> getActiveQuest()
-    {
-        return activeQuest;
-    }
-
-    // test
-    // Add a method to check if the quest is active
-    public bool IsQuestActive(int parcelID)
-    {
-        foreach (var quest in activeQuest)  // Assuming activeQuests is a list of quests
-        {
-            if (quest.ParcelData.parcelID == parcelID && quest.questStatus == Quest.questStatus.inProgress)
-            {
-                Debug.LogError($"Quest with parcelID {parcelID} is active.");
-                return true; // The quest is active
-            }
-        }
-        return false; // The quest is not active
     }
 
     public void completeQuest(int questID)
@@ -432,16 +399,12 @@ public class Quest : MonoBehaviour
         var questInAll = allQuest.Find(q => q.questID == questID);
         if (quest != null)
         {
-            questInAll.questStatus = questStatus.completed;
-            /*quest.isQuestActive = false;*/
-            questInAll.isQuestActive = false;
             activeQuest.Remove(quest);
+            questInAll.questStatus = questStatus.completed;
             FillActiveQuests();
             UpdateQuestUI();
 
-            Debug.LogError($"Quest ID: {quest.questID}, Parcel {quest.ParcelData.parcelName}, ID: {quest.ParcelData.parcelID} successfully delivered. Removing from quest");
-            Debug.LogError($"Quest ID: {questInAll.questID}, Parcel {questInAll.ParcelData.parcelName}, ID: {questInAll.ParcelData.parcelID} successfully delivered. Status updated to {questInAll.questStatus}, {questInAll.isQuestActive}");
-
+            Debug.Log($"Quest ID: {quest.questID}, Parcel {quest.ParcelData.parcelName}, ID: {quest.ParcelData.parcelID} successfully delivered. Removing from quest");
 
             // test code
             // Check if the completed quest is the one displayed, and close or update the popup
@@ -449,7 +412,6 @@ public class Quest : MonoBehaviour
             {
                 hintPopup.SetActive(false);
                 currentDisplayedQuest = null;
-
             }
         }
     }
@@ -465,6 +427,7 @@ public class Quest : MonoBehaviour
             taskSlots[i].gameObject.SetActive(true);
             taskSlots[i].onClick.RemoveAllListeners();
 
+            // test code
             Image selectedImage = taskSlots[i].transform.Find("Selected").GetComponent<Image>();
             selectedImage.gameObject.SetActive(false);
         }
@@ -481,7 +444,7 @@ public class Quest : MonoBehaviour
 
             // Add a click listener to show quest details
             int index = i; // Capture the index for the lambda
-            taskSlots[i].onClick.AddListener(() => ShowQuestDetails(activeQuest[index], index));
+            taskSlots[i].onClick.AddListener(() => ShowQuestDetails(activeQuest[index], /*taskIcons[index]*/index));
         }
     }
 
@@ -508,8 +471,7 @@ public class Quest : MonoBehaviour
             hintPopup.SetActive(false);
             currentDisplayedQuest = null; // Clear when closed
 
-            foreach (var taskSlot
-in taskSlots)
+            foreach (var taskSlot in taskSlots)
             {
                 Image selectedImage = taskSlot.transform.Find("Selected").GetComponent<Image>();
                 selectedImage.gameObject.SetActive(false);
@@ -543,23 +505,6 @@ in taskSlots)
         hintImage.gameObject.SetActive(true);
     }
 
-    public bool IsParcelInQuest(int parcelID)
-    {
-        /*return allQuest.Any(q => q.ParcelData.parcelID == parcelID);*/
-        foreach (var quest in allQuest)
-        {
-            Debug.Log($"Checking Parcel ID {parcelID} against Quest ID {quest.questID}");
-            if (quest.ParcelData.parcelID == parcelID)
-            {
-                Debug.Log($"Found Parcel ID {parcelID} in Quest");
-                return true;
-            }
-        }
-        return false;
-
-
-    }
-
     // Call this whenever a quest status changes
     public void OnQuestUpdated()
     {
@@ -569,20 +514,21 @@ in taskSlots)
         }
     }
 
-    public void HideQuestUI()
-    {
-        questUI = this.gameObject;
-        questUI.gameObject.SetActive(false);
-    }
+    /*  public void HideQuestUI()
+      {
+          questUI = this.gameObject;
+          questUI.gameObject.SetActive(false);
+      }
 
-    public void ShowQuestUI()
-    {
-        questUI = this.gameObject;
-        questUI.gameObject.SetActive(true);
-    }
+      public void ShowQuestUI()
+      {
+          questUI = this.gameObject;
+          questUI.gameObject.SetActive(true);
+      }*/
 
     public void Start()
     {
+        /*Instance = this;*/
         hintPopup.SetActive(false);
         UpdateQuestUI();
     }

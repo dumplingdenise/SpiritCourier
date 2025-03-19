@@ -52,17 +52,19 @@ public class Cross : MonoBehaviour
         }
 
         GameController gameController = FindAnyObjectByType<GameController>();
-        DialogManager dialogMang = FindAnyObjectByType<DialogManager>();
+        DialogManager dialogManager = FindAnyObjectByType<DialogManager>();
+        Inventory inventoryManager = FindAnyObjectByType<Inventory>();
         if (gameController != null)
         {
-            // test 
-            /*if (inventoryManager.GetInventoryList() != null)
+            /*// test 
+            if (inventoryManager.GetInventoryList() != null)
             {
                 gameController.SetGameState(GameState.WaitingForDelivery); // Resume gameplay
-            }
-            gameController.SetGameState(GameState.FreeRoam);*/
+            }*/
+            /*gameController.SetGameState(GameState.FreeRoam);*/
+
             gameController.SetGameState(GameState.WaitingForDelivery); // Resume gameplay
-            dialogMang.CloseDialog();
+            dialogManager.CloseDialog();
         }
 
 
