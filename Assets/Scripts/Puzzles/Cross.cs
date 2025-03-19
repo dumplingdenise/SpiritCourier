@@ -61,11 +61,8 @@ public class Cross : MonoBehaviour
                 gameController.SetGameState(GameState.WaitingForDelivery); // Resume gameplay
             }
             gameController.SetGameState(GameState.FreeRoam);*/
-
-
             gameController.SetGameState(GameState.WaitingForDelivery); // Resume gameplay
             dialogMang.CloseDialog();
-
         }
 
 
