@@ -1741,6 +1741,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1799197529801390035, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
+      propertyPath: sourceAsset
+      value: 
+      objectReference: {fileID: 9197481963319205126, guid: 1b00016b5545f784ea2db97ffe922e82, type: 3}
     - target: {fileID: 3330070731334641965, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -14432,7 +14436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &752412879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14449,7 +14453,10 @@ MonoBehaviour:
   openJournalButton: {fileID: 1516286803}
   closeJournalButton: {fileID: 1436134658}
   playerAnimator: {fileID: 0}
-  JournalText: {fileID: 0}
+  journalPages: []
+  nextPageButton: {fileID: 0}
+  prevPageButton: {fileID: 0}
+  notificationCircle: {fileID: 0}
 --- !u!114 &752412880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17174,6 +17181,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &900825028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 900825029}
+  - component: {fileID: 900825030}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &900825029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900825028}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.676213, y: -8.164558, z: -0.123999946}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &900825030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900825028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71959121f6dd9246817ef0eca86e8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1224058028}
 --- !u!1 &901814614
 GameObject:
   m_ObjectHideFlags: 0
@@ -134361,10 +134413,7 @@ MonoBehaviour:
   dialogText: {fileID: 1160898716}
   lettersPerSecond: 90
   nextPuzzleSceneButton: {fileID: 1046751577}
-  easyPuzzleSceneNames:
-  - Find1
-  hardPuzzleSceneNames:
-  - RotatePuzzle2
+  PuzzleObject: []
   noButton: {fileID: 905249350}
   playerController: {fileID: 0}
 --- !u!1 &1752256479
@@ -137070,6 +137119,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1799197529801390035, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
+      propertyPath: sourceAsset
+      value: 
+      objectReference: {fileID: 9197481963319205126, guid: 1b00016b5545f784ea2db97ffe922e82, type: 3}
     - target: {fileID: 3330070731334641965, guid: cda753b2628ca4242bc2c8e1de23ef1f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -142415,6 +142468,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 900825029}
   - {fileID: 1224058032}
   - {fileID: 58085319}
   - {fileID: 1243216431}
