@@ -1,5 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 
 public class Find2Counter : MonoBehaviour
 {
@@ -15,9 +19,17 @@ public class Find2Counter : MonoBehaviour
     public GameObject[] parcelIndicators; // Circle outlines for parcels
     public Button[] parcelButtons; // Buttons for each parcel, these should correspond to the ones on the image
 
+    public GameObject CrossUI;
+    public Button CloseButton; // button to close setting
+
+    public Animator playerAnimator; //player animation
+
     // Start is called before the first frame update
     void Start()
     {
+        CrossUI.SetActive(false);
+        Time.timeScale = 0f; // Pause Game
+
         GameController gameController = FindAnyObjectByType<GameController>(); // Find the GameController
         if (gameController != null)
         {
@@ -72,5 +84,11 @@ public class Find2Counter : MonoBehaviour
     void PuzzleCompleted()
     {
         puzzleCompletePanel.SetActive(true); // Show pop-up when puzzle is done
+        CrossUI.SetActive(true);
+        Time.timeScale = 1f; //resume game
+        if (playerAnimator != null)
+        {
+            playerAnimator.enabled = true;
+        }
     }
 }

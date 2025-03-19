@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class MemoryPuzzle : MonoBehaviour
 {
+    public GameObject CrossUI;
+
     [System.Serializable]
     public class Card // Store the card and the front image
     {
@@ -24,6 +26,8 @@ public class MemoryPuzzle : MonoBehaviour
 
     void Start()
     {
+        CrossUI.SetActive(false);
+
         GameController gameController = FindAnyObjectByType<GameController>(); // Find the GameController
         if (gameController != null)
         {
@@ -115,6 +119,7 @@ public class MemoryPuzzle : MonoBehaviour
             {
                 Debug.Log("Puzzle Completed!");
                 puzzleCompletePanel.SetActive(true); // Show pop-up when puzzle is done
+                CrossUI.SetActive(true);
             }
         }
         else

@@ -15,12 +15,13 @@ public class DeliverParcel : MonoBehaviour
 
     private List<Inventory.inventoryParcelData> inventoryList;
 
-    private int NpcID;
+    [SerializeField] private int NpcID;
     private string npcName;
     private string targetedNpcName;
 
     private Quest quest;
     private DialogManager dialogManager;
+
     //private static JournalUI journal;
 
     //public void SetJournal(JournalUI input)
@@ -31,6 +32,8 @@ public class DeliverParcel : MonoBehaviour
     //    }
     //}
 
+    private GameController gameController;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,6 +42,13 @@ public class DeliverParcel : MonoBehaviour
         if (dialogManager == null)
         {
             Debug.LogError("DialogManager not found in the scene!");
+            return;
+        }
+
+        gameController = FindFirstObjectByType<GameController>();
+        if (gameController == null)
+        {
+            Debug.LogError("GameController not found in the scene!");
             return;
         }
 
@@ -114,8 +124,7 @@ public class DeliverParcel : MonoBehaviour
             }
         }
     }
-
-    // Update is called once per frame
+                        
     void Update()
     {
         var inventory = FindFirstObjectByType<Inventory>();
@@ -125,7 +134,6 @@ public class DeliverParcel : MonoBehaviour
             return; // Exit the Update method to avoid further issues.
         }
 
-        // Only allow delivery if the player is near an NPC
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!playerNearby)
@@ -134,69 +142,91 @@ public class DeliverParcel : MonoBehaviour
             }
             else
             {
-                // Check if a parcel is selected
-                if (inventory.selectedSlot < 0 || inventory.selectedSlot >= inventory.GetInventoryList().Count)
+                if (gameController.GetCurrentState() == GameState.FreeRoam)
                 {
-                    if (promptText != null)
+                    if (inventoryList.Count == 0 || inventory.selectedSlot < 0)
                     {
-                        promptText.style.display = DisplayStyle.Flex;
-                        promptText.text = "Please select a parcel first!";
-                    }
-                }
-                else
-                {
-                    var selectedParcel = inventory.GetInventoryList()[inventory.selectedSlot];
-
-                    // Check if parcel matches the current NPC
-                    if (selectedParcel.npcData.npcID == NpcID)
-                    {
-                        Debug.Log($"Parcel {selectedParcel.parcelName} delivered successfully to NPC {npcName}");
-                        if (promptText != null)
-                        {
-                            promptText.text = $"{selectedParcel.parcelName} successfully delivered to {npcName}";
-                            promptText.style.display = DisplayStyle.Flex;
-                        }
-                      
-                        StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateSuccessDialog()));
-                        // test code
-                        /*dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog);*/
-                        StartCoroutine(dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog));
-
-                        // Remove parcel from inventory after successful delivery
-                        inventory.RemoveParcelFromInventory();
-
-                        // [kr]                        
-                        if (JournalUI.Instance != null)
-                        {
-                            JournalUI.Instance.AddJournalEntry(NpcID);
-                        }
-                        // [kr]
-
-                        if (quest != null)
-                        {
-                            quest.completeQuest(selectedParcel.parcelID);
-                        }
-
-                        
+                        return;
                     }
                     else
                     {
-                        Debug.Log("This parcel is for a different spirit!");
+                        var selectedParcel = inventory.GetInventoryList()[inventory.selectedSlot];
                         if (promptText != null)
                         {
-                            promptText.text = "This parcel is not for me!";
                             promptText.style.display = DisplayStyle.Flex;
-
-                            
-                            Debug.Log($"parcel {selectedParcel.parcelName} is meant for {targetedNpcName} but you are giving to {npcName}, {NpcID}");
+                            promptText.text = "Play the puzzle with the spirit first!";
                         }
-
-                        StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateFailureDialog(/*targetedNpcName*/)));
-                        
-                        inventory.selectedSlot = -1;
-                        inventory.UpdateInventoryUI(); // test code
-                        
+                        return;
                     }
+                }
+
+                if (gameController.GetCurrentState() == GameState.WaitingForDelivery)
+                {
+                    if (inventoryList.Count == 0)
+                    {
+                        if (promptText != null)
+                        {
+                            promptText.style.display = DisplayStyle.Flex;
+                            promptText.text = "Collect parcel first!";
+                            Debug.LogError("No parcel in inventory");
+                        }
+                        return;
+                    }
+                    if (inventory.selectedSlot < 0)
+                    {
+                        if (promptText != null)
+                        {
+                            promptText.style.display = DisplayStyle.Flex;
+                            promptText.text = "Select a parcel to deliver";
+                        }
+                        return;
+                    }
+                    else
+                    {
+                        var selectedParcel = inventory.GetInventoryList()[inventory.selectedSlot];
+                        if (selectedParcel.npcData.npcID == NpcID)
+                        {
+                            Debug.Log($"Parcel {selectedParcel.parcelName} delivered successfully to NPC {npcName}");
+                            if (promptText != null)
+                            {
+                                promptText.text = $"{selectedParcel.parcelName} successfully delivered to {npcName}";
+                                promptText.style.display = DisplayStyle.Flex;
+                            }
+
+                            StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateSuccessDialog()));
+                            StartCoroutine(dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog));
+
+                            inventory.RemoveParcelFromInventory();
+
+                            // [kr]                        
+                            if (JournalUI.Instance != null)
+                            {
+                                JournalUI.Instance.AddJournalEntry(NpcID);
+                            }
+
+                            if (quest != null)
+                            {
+                                quest.completeQuest(selectedParcel.parcelID);
+                            }
+                            gameController.SetGameState(GameState.FreeRoam);
+                        }
+                        else
+                        {
+                            gameController.SetGameState(GameState.FreeRoam);
+                            Debug.Log("This parcel is for a different spirit!");
+                            if (promptText != null)
+                            {
+                                promptText.text = "This parcel is not for me!";
+                                promptText.style.display = DisplayStyle.Flex;
+                            }
+
+                            StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateFailureDialog()));
+
+                            inventory.selectedSlot = -1;
+                            inventory.UpdateInventoryUI();
+                        }
+                    }
+
                 }
             }
         }

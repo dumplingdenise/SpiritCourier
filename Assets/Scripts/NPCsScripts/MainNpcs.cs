@@ -14,12 +14,14 @@ public class MainNpcs : MonoBehaviour
         [SerializeField] public int npcID;
         public Vector2 npcPos;
         public GameObject npcInstance; // We store the instance here instead of the prefab
+        /*public string difficulty;*/
 
-        public NPCData(int npcID, Vector2 npcPos, GameObject npcInstance)
+        public NPCData(int npcID, Vector2 npcPos, GameObject npcInstance/*, string difficulty*/)
         {
             this.npcID = npcID;
             this.npcPos = npcPos;
             this.npcInstance = npcInstance;
+            /*this.difficulty = difficulty;*/
         }
     }
 
