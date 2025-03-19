@@ -197,25 +197,6 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("No pushable object in front.");
         }
-
-         /*if (lastMoveDirection == Vector2.zero) return;  // Player must be facing a direction
-
-          RaycastHit2D hit = Physics2D.Raycast(transform.position, lastMoveDirection, pushCheckDistance, interactableLayer);
-
-          if (hit.collider != null && hit.collider.CompareTag("Pushable"))
-          {
-              pushableRb = hit.collider.GetComponent<Rigidbody2D>();
-              if (pushableRb != null)
-              {
-                  pushableRb.bodyType = RigidbodyType2D.Dynamic;
-                  isPushing = true;
-                  Debug.Log("Pushing started.");
-              }
-          }
-          else
-          {
-              Debug.Log("No pushable object in front.");
-          } */
     }
 
     void StopPushing()
@@ -232,7 +213,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-
         if (isPushing && pushableRb != null)
         {
             // Check if the player is still in front of the box
@@ -244,7 +224,7 @@ public class PlayerController : MonoBehaviour
                 return;
             }
 
-            // Apply push only in the last move direction
+           // Apply push only in the last move direction
             if (moveInput == lastMoveDirection)
             {
                 pushableRb.linearVelocity = lastMoveDirection * pushForce;
@@ -254,30 +234,6 @@ public class PlayerController : MonoBehaviour
                 pushableRb.linearVelocity = Vector2.zero; // Stop box movement if player moves in another direction
             }
         }
-
-
-
-        /*  if (isPushing && pushableRb != null)
-          {
-              // Check if the player is still in front of the box
-              RaycastHit2D checkHit = Physics2D.Raycast(transform.position, lastMoveDirection, pushCheckDistance, interactableLayer);
-
-              if (checkHit.collider == null || checkHit.collider.gameObject != pushableRb.gameObject)
-              {
-                  StopPushing(); // Stop pushing if the player is no longer near the box
-                  return;
-              }
-
-             // Apply push only in the last move direction
-              if (moveInput == lastMoveDirection)
-              {
-                  pushableRb.linearVelocity = lastMoveDirection * pushForce;
-              }
-              else
-              {
-                  pushableRb.linearVelocity = Vector2.zero; // Stop box movement if player moves in another direction
-              }
-          }*/
     }
     void StartFootsteps()
         {
