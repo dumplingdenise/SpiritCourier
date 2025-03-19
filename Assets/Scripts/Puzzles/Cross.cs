@@ -57,13 +57,13 @@ public class Cross : MonoBehaviour
         if (gameController != null)
         {
             // test 
-            /*if (inventoryManager.GetInventoryList() != null)
+            if (inventoryManager.GetInventoryList() != null)
             {
                 gameController.SetGameState(GameState.WaitingForDelivery); // Resume gameplay
             }
-            gameController.SetGameState(GameState.FreeRoam);*/
+            gameController.SetGameState(GameState.FreeRoam);
 
-            gameController.SetGameState(GameState.WaitingForDelivery); // Resume gameplay
+            /*gameController.SetGameState(GameState.WaitingForDelivery); // Resume gameplay*/
             dialogManager.CloseDialog();
         }
 
