@@ -33,7 +33,7 @@ public class DeliverParcel : MonoBehaviour
     //    }
     //}
 
-    private GameController gameController;
+    /*private GameController gameController;*/
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -230,11 +230,6 @@ public class DeliverParcel : MonoBehaviour
             }
             else
             {
-                if (gameController.GetCurrentState() == GameState.FreeRoam)
-                {
-                    if (inventoryList.Count == 0 || inventory.selectedSlot < 0)
-                    {
-
                 if (gameController.GetCurrentState() == GameState.FreeRoam)
                 {
                     if (inventoryList.Count == 0 || inventory.selectedSlot < 0)
