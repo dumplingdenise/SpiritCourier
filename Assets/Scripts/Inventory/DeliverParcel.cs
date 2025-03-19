@@ -128,11 +128,15 @@ public class DeliverParcel : MonoBehaviour
 
 
     // Update is called once per frame
+<<<<<<< HEAD
     /*void Update()
 
                         
     void Update()
 
+=======
+    void Update()
+>>>>>>> parent of 2c75c97 (parcel logic)
     {
         var inventory = FindFirstObjectByType<Inventory>();
         if (inventory == null)
@@ -211,6 +215,7 @@ public class DeliverParcel : MonoBehaviour
                 }
             }
         }
+<<<<<<< HEAD
     }*/
 
     void Update()
@@ -323,5 +328,7 @@ public class DeliverParcel : MonoBehaviour
                 }
             }
         }
+=======
+>>>>>>> parent of 2c75c97 (parcel logic)
     }
 }
