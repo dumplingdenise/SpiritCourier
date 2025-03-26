@@ -34,6 +34,7 @@ public class DeliverParcel : MonoBehaviour
 
     private GameController gameController;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -124,7 +125,118 @@ public class DeliverParcel : MonoBehaviour
             }
         }
     }
-                        
+
+    // Update is called once per frame
+    /*void Update()
+    {
+        var inventory = FindFirstObjectByType<Inventory>();
+        if (inventory == null)
+        {
+            Debug.LogError("Inventory not found!");
+            return; // Exit the Update method to avoid further issues.
+        }
+
+        // Only allow delivery if the player is near an NPC
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (!playerNearby)
+            {
+                return; // Exit to prevent parcel removal
+            }
+
+            // test code
+            // **Check if game state allows delivery**
+            if (gameController.GetCurrentState() != GameState.WaitingForDelivery)
+            {
+                if (promptText != null)
+                {
+                    promptText.style.display = DisplayStyle.Flex;
+                    promptText.text = "Please play the puzzle with the spirits first.";
+                }
+                return;
+            }
+
+            if (inventory.selectedSlot < 0 || inventory.selectedSlot >= inventory.GetInventoryList().Count)
+            {
+                if (promptText != null)
+                {
+                    promptText.style.display = DisplayStyle.Flex;
+                    promptText.text = "Please select a parcel first!";
+                }
+            }
+            else
+            {
+                var selectedParcel = inventory.GetInventoryList()[inventory.selectedSlot];
+
+                if (selectedParcel.npcData.npcID == NpcID)
+                {
+                    Debug.Log($"Parcel {selectedParcel.parcelName} delivered successfully to NPC {npcName}");
+                    if (promptText != null)
+                    {
+                        promptText.text = $"{selectedParcel.parcelName} successfully delivered to {npcName}";
+                        promptText.style.display = DisplayStyle.Flex;
+                    }
+
+                    StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateSuccessDialog()));
+                    StartCoroutine(dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog));
+
+                    inventory.RemoveParcelFromInventory();
+
+                    if (quest != null)
+                    {
+                        quest.completeQuest(selectedParcel.parcelID);
+                    }
+
+                    // **Change game state back to FreeRoam after successful delivery**
+                    gameController.SetGameState(GameState.FreeRoam);
+                }
+                else
+                {
+                    Debug.Log("This parcel is for a different spirit!");
+                    if (promptText != null)
+                    {
+
+                        Debug.Log($"Parcel {selectedParcel.parcelName} delivered successfully to NPC {npcName}");
+                        if (promptText != null)
+                        {
+                            promptText.text = $"{selectedParcel.parcelName} successfully delivered to {npcName}";
+                            promptText.style.display = DisplayStyle.Flex;
+                        }
+                      
+                        StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateSuccessDialog()));
+                        // test code
+                        /*dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog);*/
+    /*        StartCoroutine(dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog));
+
+            promptText.text = "This parcel is not for me!";
+            promptText.style.display = DisplayStyle.Flex;
+        }
+
+        StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateFailureDialog()));
+
+
+        inventory.selectedSlot = -1;
+        inventory.UpdateInventoryUI();
+    }
+}
+}
+}
+
+
+            // [kr]                        
+            if (JournalUI.Instance != null)
+            {
+                JournalUI.Instance.AddJournalEntry(NpcID);
+            }
+            // [kr]
+
+            if (quest != null)
+            {
+                quest.completeQuest(selectedParcel.parcelID);
+            }
+    */
+
+
     void Update()
     {
         var inventory = FindFirstObjectByType<Inventory>();
@@ -147,6 +259,7 @@ public class DeliverParcel : MonoBehaviour
                     if (inventoryList.Count == 0 || inventory.selectedSlot < 0)
                     {
                         return;
+
                     }
                     else
                     {
@@ -198,12 +311,6 @@ public class DeliverParcel : MonoBehaviour
 
                             inventory.RemoveParcelFromInventory();
 
-                            // [kr]                        
-                            if (JournalUI.Instance != null)
-                            {
-                                JournalUI.Instance.AddJournalEntry(NpcID);
-                            }
-
                             if (quest != null)
                             {
                                 quest.completeQuest(selectedParcel.parcelID);
@@ -232,3 +339,4 @@ public class DeliverParcel : MonoBehaviour
         }
     }
 }
+
