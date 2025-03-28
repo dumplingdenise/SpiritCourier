@@ -36,6 +36,7 @@ public class PickUpParcel : MonoBehaviour
     private Quest quest;
     public MainNpcs.NPCData assignedNPC;
     public Parcels.ParcelData parcelData; // get the parcel info from Parcels script
+    public string Tag;
     public string parcelHints;
     public string npcHints;
     public Dialog parcelStoryDialog;
