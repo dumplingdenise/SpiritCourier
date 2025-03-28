@@ -20,10 +20,10 @@ public class Parcels : MonoBehaviour
         public MainNpcs.NPCData assignedNpcData;
         public string parcelHints;
         public string npcHints;
-        // test code
         public Dialog parcelStoryDialog;
+        public string tag;
 
-        public ParcelData(/*GameObject parcelObject,*/ Vector2 position, int parcelID, string parcelName, Sprite parcelSprite, MainNpcs.NPCData assignedNpcData, string parcelHints, string npcHints, Dialog parcelStoryDialog)
+        public ParcelData(/*GameObject parcelObject,*/ Vector2 position, int parcelID, string parcelName, Sprite parcelSprite, MainNpcs.NPCData assignedNpcData, string parcelHints, string npcHints, Dialog parcelStoryDialog, string tag) 
         {
             /*this.parcelObject = parcelObject;*/
             this.position = position;
@@ -33,7 +33,8 @@ public class Parcels : MonoBehaviour
             this.assignedNpcData = assignedNpcData;
             this.parcelHints = parcelHints;
             this.npcHints = npcHints;
-            this.parcelStoryDialog = parcelStoryDialog; // test code
+            this.parcelStoryDialog = parcelStoryDialog;
+            this.tag = tag;
         }
     }
 
@@ -43,11 +44,11 @@ public class Parcels : MonoBehaviour
         npcList = FindAnyObjectByType<MainNpcs>().GetNPCList();
         AssignParcels();
 
-        /* // Make the parcel object hidden on start
-         foreach (GameObject parcel in ParcelsObjects)
-         {
-             parcel.SetActive(false);
-         }*/
+       /* // Make the parcel object hidden on start
+        foreach (GameObject parcel in ParcelsObjects)
+        {
+            parcel.SetActive(false);
+        }*/
     }
 
     void AssignParcels()
@@ -65,8 +66,9 @@ public class Parcels : MonoBehaviour
 
             string parcelHints = pickUpParcel.parcelHints;
             string npcHints = pickUpParcel.npcHints;
-            Dialog parcelStorydialog = pickUpParcel.parcelStoryDialog; // test code
-
+            Dialog parcelStorydialog = pickUpParcel.parcelStoryDialog;
+            string tag = pickUpParcel.tag;
+            
             if (pickUpParcel != null)
             {
                 // Ensure that you have an NPC to assign to the parcel
@@ -81,14 +83,15 @@ public class Parcels : MonoBehaviour
                         pickUpParcel.assignedNPC,
                         parcelHints,
                         npcHints,
-                        parcelStorydialog // test code
+                        parcelStorydialog,
+                        tag
                         );
 
                     assignedParcels.Add(parcelData);
 
                     // Pass the assigned NPC data to the PickUpParcel component
                     pickUpParcel.parcelData = parcelData;
-
+                    
                     Quest.questData newQuest = new Quest.questData(parcelID, Quest.questType.findParcel, Quest.questStatus.inActive, parcelData, parcelObj);
                     questManager.addParcelDatatoQuest(newQuest);
 
@@ -114,6 +117,6 @@ public class Parcels : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

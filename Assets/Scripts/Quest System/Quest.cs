@@ -439,6 +439,18 @@ public class Quest : MonoBehaviour
 
             // Use the parcel sprite for all quests
             taskSlots[i].gameObject.SetActive(true);
+
+            // test code to change size
+            RectTransform rt = taskIcons[i].GetComponent<RectTransform>();
+            if (activeQuest[i].ParcelData.tag == "Parcel")
+            {
+                rt.sizeDelta = new Vector2(77.2498f, 74.187f);
+            }
+            else
+            {
+                rt.sizeDelta = new Vector2(85.2327f, 60.3732f);
+            }
+
             taskIcons[i].sprite = activeQuest[i].ParcelData.parcelSprite;
             taskIcons[i].gameObject.SetActive(true);
 

@@ -6941,6 +6941,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   playerAnimator: {fileID: 0}
+  footsepSpeed: 0.5
+  pushForce: 5
 --- !u!70 &381434549
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -37842,9 +37844,8 @@ MonoBehaviour:
   dialogBox: {fileID: 1821943519}
   dialogText: {fileID: 454405715}
   lettersPerSecond: 90
-  nextPuzzleSceneButton: {fileID: 0}
-  easyPuzzleSceneNames: []
-  hardPuzzleSceneNames: []
+  nextPuzzleSceneButton: {fileID: 1731336479}
+  PuzzleObject: []
   noButton: {fileID: 255544527}
   playerController: {fileID: 0}
 --- !u!114 &605254427
