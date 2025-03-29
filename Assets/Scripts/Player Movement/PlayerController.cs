@@ -177,11 +177,40 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    void OnDrawGizmos()
+    {
+        if (!Application.isPlaying) return; // Only show when the game is running
+
+        if (lastMoveDirection != Vector2.zero)
+        {
+            Vector2 rayOrigin = (Vector2)transform.position + lastMoveDirection * 0.5f;
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(rayOrigin, rayOrigin + lastMoveDirection * pushCheckDistance);
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (!Application.isPlaying) return;
+
+        if (lastMoveDirection != Vector2.zero)
+        {
+            Vector2 rayOrigin = (Vector2)transform.position + lastMoveDirection * 0.5f;
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(rayOrigin, rayOrigin + lastMoveDirection * pushCheckDistance);
+        }
+    }
+
     void TryStartPushing()
     {
         if (lastMoveDirection == Vector2.zero) return;  // Player must be facing a direction
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, lastMoveDirection, pushCheckDistance, interactableLayer);
+        // Offset the ray origin slightly forward in the facing direction to prevent immediate collision.
+        Vector2 rayOrigin = (Vector2)transform.position + lastMoveDirection * 0.3f;
+
+        // Raycast only to check for pushable objects
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, lastMoveDirection, pushCheckDistance, interactableLayer);
 
         if (hit.collider != null && hit.collider.CompareTag("Pushable"))
         {
@@ -215,8 +244,11 @@ public class PlayerController : MonoBehaviour
     {
         if (isPushing && pushableRb != null)
         {
-            // Check if the player is still in front of the box
-            RaycastHit2D checkHit = Physics2D.Raycast(transform.position, lastMoveDirection, pushCheckDistance, interactableLayer);
+            // Use the same offset ray origin
+            Vector2 rayOrigin = (Vector2)transform.position + lastMoveDirection * 0.3f;
+
+            // Raycast to check if the player is still near the pushable object
+            RaycastHit2D checkHit = Physics2D.Raycast(rayOrigin, lastMoveDirection, pushCheckDistance, interactableLayer);
 
             if (checkHit.collider == null || checkHit.collider.gameObject != pushableRb.gameObject)
             {
@@ -224,7 +256,7 @@ public class PlayerController : MonoBehaviour
                 return;
             }
 
-           // Apply push only in the last move direction
+            // Apply push only if moving towards the push direction
             if (moveInput == lastMoveDirection)
             {
                 pushableRb.linearVelocity = lastMoveDirection * pushForce;
@@ -235,6 +267,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
     void StartFootsteps()
         {
             if (!playingFootsteps)
