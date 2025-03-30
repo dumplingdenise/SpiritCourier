@@ -7982,12 +7982,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3885692998836085359, guid: 085ab47fc3ae121428a1ce8862669261, type: 3}
       propertyPath: 'parcelStoryDialog.lines.Array.data[0]'
-      value: '"I didn''t get to have it.. not once..""'
+      value: '"I didn''t get to have it.. not once.."'
       objectReference: {fileID: 0}
     - target: {fileID: 3885692998836085359, guid: 085ab47fc3ae121428a1ce8862669261, type: 3}
       propertyPath: 'parcelStoryDialog.lines.Array.data[1]'
       value: '"I was always told no McDonald''s, my favourite.. always just out of
-        my reach because of my illness..""'
+        my reach because of my illness.."'
       objectReference: {fileID: 0}
     - target: {fileID: 3885692998836085359, guid: 085ab47fc3ae121428a1ce8862669261, type: 3}
       propertyPath: 'parcelStoryDialog.lines.Array.data[2]'
@@ -52988,10 +52988,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1215437371}
   - {fileID: 362793345}
   - {fileID: 1444501455}
   - {fileID: 1960988672}
+  - {fileID: 1215437371}
   - {fileID: 1624447400}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

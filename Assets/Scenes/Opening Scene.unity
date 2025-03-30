@@ -458,15 +458,12 @@ MonoBehaviour:
   SkipButton: {fileID: 1475645960}
   GlowingBall: {fileID: 450720434}
   tutorialMessages:
-  - "\"Ah, another lost one has arrived. But you\u2026 you are different. You don\u2019t
-    remember, do you?\""
-  - "\"You are on the path to discovering who you are. In this realm, lost spirits
-    receive remnants of love left behind in the world of the living. It is your duty
-    to deliver these fragments\u2014and with each one, you may uncover pieces of
-    yourself.\u201D"
-  - "\"I see someone waiting just ahead\u2026 a spirit glowing in yellow. They, like
-    you, are searching for something. Go on\u2026 this is where your journey begins.
-    And remember\u2014only those who shine in yellow hold the fragments you seek.\u201D"
+  - "\"Ah, another lost one has arrived. But you\u2026 you are different.\""
+  - "\"It is your duty to deliver these fragments and with each one, you can unlock
+    a memory of each spirits\u201D"
+  - "\"I see someone waiting just ahead\u2026 a spirit... They are all searching
+    for something and it's up to you to help them. Go on\u2026 this is where your
+    journey begins.\u2018 "
 --- !u!1 &450720433
 GameObject:
   m_ObjectHideFlags: 0

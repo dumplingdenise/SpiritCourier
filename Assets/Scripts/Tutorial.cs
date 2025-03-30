@@ -2,29 +2,48 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
 
 public class Tutorial : MonoBehaviour
 {
     public GameObject Panel;
+    public GameObject DialogBox;
+    public GameObject JournalPanel;
+    public GameObject BigMap;
     public Text TutorialText;
     public Button NextButton;
     public Button SkipButton;
+   
 
     public string[] tutorialMessages; //  Editable in Inspector!
     private int currentMessageIndex = 0;
+    private bool isPanelVisible = true; // Track the visibility state of the panel    
 
     void Start()
     {
-        Panel.SetActive(true);  // Hide tutorial at start
+        Panel.SetActive(true);
 
         ShowTutorial();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) // Toggle visibility when F is pressed
+        // Check if DialogueManager is showing a dialog
+        if (DialogBox != null && DialogBox.activeSelf)
         {
-            Panel.SetActive(!Panel.activeSelf);
+            Panel.SetActive(false); // Hide tutorial panel when dialogue is active
+        }
+        else if (JournalPanel != null && JournalPanel.activeSelf)
+        {
+            Panel.SetActive(false);
+        }       
+        else if (BigMap != null && BigMap.activeSelf)
+        {
+            Panel.SetActive(false);
+        }
+        else
+        {
+            Panel.SetActive(true);
         }
     }
 
@@ -37,6 +56,7 @@ public class Tutorial : MonoBehaviour
         SkipButton.gameObject.SetActive(true); // Show skip button
     }
 
+
     public void HideTutorial()
     {
         Panel.SetActive(false); // Hide the entire tutorial UI
@@ -44,6 +64,7 @@ public class Tutorial : MonoBehaviour
 
     public void NextTutorialMessage() // Toggle to the next message
     {
+        Debug.Log("Next button clicked.");
         currentMessageIndex++;
 
         if (currentMessageIndex < tutorialMessages.Length)
@@ -58,6 +79,6 @@ public class Tutorial : MonoBehaviour
 
     public void LoadMainGame()
     {
-        SceneManager.LoadScene("Shumin"); // Change to game scene
+        SceneManager.LoadScene("Denise"); // Change to game scene
     }
 }

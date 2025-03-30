@@ -47,5 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 91b234886b0bcaa48bbc89c97da847c1
+  - enabled: 1
+    path: Assets/Scenes/kairu2.unity
+    guid: 8b98b274d2052ba4bbf1c2a308a39077
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
