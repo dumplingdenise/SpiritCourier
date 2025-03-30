@@ -186,7 +186,8 @@ public class GameController : MonoBehaviour
         {
             if (state == GameState.Dialog)
             {
-                SetGameState(GameState.WaitingForDelivery);
+                SetGameState(GameState.FreeRoam);
+                Debug.LogError($"Game state after dialog: {state}");
             }
         };
     }
