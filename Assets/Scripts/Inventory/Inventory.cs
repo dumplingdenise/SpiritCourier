@@ -175,6 +175,15 @@ public class Inventory : MonoBehaviour
         {
             if (i < collectedParcels.Count && collectedParcels[i] != null)
             {
+                /*RectTransform rt = slotIcons[i].GetComponent<RectTransform>();
+                if (collectedParcels[i].ParcelData.tag == "Parcel")
+                {
+                    rt.sizeDelta = new Vector2(77.2498f, 74.187f);
+                }
+                else
+                {
+                    rt.sizeDelta = new Vector2(85.2327f, 60.3732f);
+                }*/
                 slotIcons[i].sprite = collectedParcels[i].parcelSprite;
                 slotIcons[i].enabled = true;
             }
