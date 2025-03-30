@@ -113,12 +113,19 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isWalking", false);
             rb.linearVelocity = Vector2.zero;  // Stop movement
             StopFootsteps();
+
+            //Ensure idle animation faces the last moved direction
+            animator.SetFloat("LastInputX", lastMoveDirection.x);
+            animator.SetFloat("LastInputY", lastMoveDirection.y);
         }
         else
         {
             animator.SetBool("isWalking", true);
             rb.linearVelocity = moveInput * moveSpeed; // Apply movement
             StartFootsteps();
+
+            // Update last move direction when moving
+            lastMoveDirection = moveInput.normalized;
         }
 
         animator.SetFloat("InputX", moveInput.x);
@@ -201,73 +208,72 @@ public class PlayerController : MonoBehaviour
             Gizmos.DrawLine(rayOrigin, rayOrigin + lastMoveDirection * pushCheckDistance);
         }
     }
+     void TryStartPushing()
+      {
+          if (lastMoveDirection == Vector2.zero) return;  // Player must be facing a direction
 
-    void TryStartPushing()
-    {
-        if (lastMoveDirection == Vector2.zero) return;  // Player must be facing a direction
+          // Offset the ray origin slightly forward in the facing direction to prevent immediate collision.
+          Vector2 rayOrigin = (Vector2)transform.position + lastMoveDirection * 0.3f;
 
-        // Offset the ray origin slightly forward in the facing direction to prevent immediate collision.
-        Vector2 rayOrigin = (Vector2)transform.position + lastMoveDirection * 0.3f;
+          // Raycast only to check for pushable objects
+          RaycastHit2D hit = Physics2D.Raycast(rayOrigin, lastMoveDirection, pushCheckDistance, interactableLayer);
 
-        // Raycast only to check for pushable objects
-        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, lastMoveDirection, pushCheckDistance, interactableLayer);
-
-        if (hit.collider != null && hit.collider.CompareTag("Pushable"))
-        {
-            pushableRb = hit.collider.GetComponent<Rigidbody2D>();
-            if (pushableRb != null)
-            {
-                pushableRb.bodyType = RigidbodyType2D.Dynamic;
-                isPushing = true;
-                Debug.Log("Pushing started.");
-            }
-        }
-        else
-        {
-            Debug.Log("No pushable object in front.");
-        }
-    }
+          if (hit.collider != null && hit.collider.CompareTag("Pushable"))
+          {
+              pushableRb = hit.collider.GetComponent<Rigidbody2D>();
+              if (pushableRb != null)
+              {
+                  pushableRb.bodyType = RigidbodyType2D.Dynamic;
+                  isPushing = true;
+                  Debug.Log("Pushing started.");
+              }
+          }
+          else
+          {
+              Debug.Log("No pushable object in front.");
+          }
+      }
 
     void StopPushing()
-    {
-        if (pushableRb != null)
-        {
-            pushableRb.linearVelocity = Vector2.zero;
-            pushableRb.bodyType = RigidbodyType2D.Kinematic;
-            pushableRb = null;
-        }
-        isPushing = false;
-        Debug.Log("Stopped pushing.");
-    }
+     {
+         if (pushableRb != null)
+         {
+             pushableRb.linearVelocity = Vector2.zero;
+             pushableRb.bodyType = RigidbodyType2D.Kinematic;
+             pushableRb = null;
+         }
+         isPushing = false;
+         Debug.Log("Stopped pushing.");
+     }
 
-    void FixedUpdate()
-    {
-        if (isPushing && pushableRb != null)
-        {
-            // Use the same offset ray origin
-            Vector2 rayOrigin = (Vector2)transform.position + lastMoveDirection * 0.3f;
+     void FixedUpdate()
+      {
+          if (isPushing && pushableRb != null)
+          {
+              // Use the same offset ray origin
+              Vector2 rayOrigin = (Vector2)transform.position + lastMoveDirection * 0.3f;
 
-            // Raycast to check if the player is still near the pushable object
-            RaycastHit2D checkHit = Physics2D.Raycast(rayOrigin, lastMoveDirection, pushCheckDistance, interactableLayer);
+              // Raycast to check if the player is still near the pushable object
+              RaycastHit2D checkHit = Physics2D.Raycast(rayOrigin, lastMoveDirection, pushCheckDistance, interactableLayer);
 
-            if (checkHit.collider == null || checkHit.collider.gameObject != pushableRb.gameObject)
-            {
-                StopPushing(); // Stop pushing if the player is no longer near the box
-                return;
-            }
+              if (checkHit.collider == null || checkHit.collider.gameObject != pushableRb.gameObject)
+              {
+                  StopPushing(); // Stop pushing if the player is no longer near the box
+                  return;
+              }
 
-            // Apply push only if moving towards the push direction
-            if (moveInput == lastMoveDirection)
-            {
-                pushableRb.linearVelocity = lastMoveDirection * pushForce;
-            }
-            else
-            {
-                pushableRb.linearVelocity = Vector2.zero; // Stop box movement if player moves in another direction
-            }
-        }
-    }
-
+              // Apply push only if moving towards the push direction
+              if (moveInput == lastMoveDirection)
+              {
+                  pushableRb.linearVelocity = lastMoveDirection * pushForce;
+              }
+              else
+              {
+                  pushableRb.linearVelocity = Vector2.zero; // Stop box movement if player moves in another direction
+              }
+          }
+      }
+    
     void StartFootsteps()
         {
             if (!playingFootsteps)
