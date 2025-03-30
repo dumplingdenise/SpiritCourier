@@ -12,7 +12,6 @@ public class npcController : MonoBehaviour, Interactable
     public void Interact()
     {
         StartCoroutine(DialogManager.Instance.ShowDialog(dialog, showButtonAfterDialog));
-
     }
 
 
