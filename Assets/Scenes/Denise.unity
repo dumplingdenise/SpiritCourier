@@ -122421,6 +122421,9 @@ MonoBehaviour:
   - name: PickUpParcels
     audioClips:
     - {fileID: 8300000, guid: c5b452134b0c6a347bdbbb3840785136, type: 3}
+  - name: SlotSelect
+    audioClips:
+    - {fileID: 8300000, guid: b8d8f3bf5a445b346ba079d6a325497f, type: 3}
 --- !u!114 &1422181099
 MonoBehaviour:
   m_ObjectHideFlags: 0

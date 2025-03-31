@@ -480,7 +480,7 @@ public class DeliverParcel : MonoBehaviour
             return; // Exit the Update method to avoid further issues.
         }
 
-        if (playerNearby)
+       /* if (playerNearby)
         {
             if (gameController.GetCurrentState() == GameState.WaitingForDelivery)
             {
@@ -503,7 +503,7 @@ public class DeliverParcel : MonoBehaviour
                 promptText.text = "Press F to interact with the sprit!";
                 Invoke(nameof(HidePrompt), 3f);
             }
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.E))
         {

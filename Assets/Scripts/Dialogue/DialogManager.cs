@@ -355,7 +355,7 @@ public class DialogManager : MonoBehaviour
             ++currentLine;
             if (currentLine < currentDialog.Lines.Count)
             {
-                StopAllCoroutines();
+                /*StopAllCoroutines();*/
                 StartCoroutine(TypeDialog(currentDialog.Lines[currentLine]));
             }
             else

@@ -43,11 +43,15 @@ public class PickUpParcel : MonoBehaviour
 
     private bool pickedUp = false;
 
+    // test
+    /*private AudioSource audioSource;*/
+
     private void Start()
     {
 
         inventory = GameObject.FindFirstObjectByType<Inventory>();
         quest = GameObject.FindFirstObjectByType<Quest>();
+        /*audioSource = GetComponent<AudioSource>();*/
 
         var uiDocument = GetComponentInParent<UIDocument>();
         if (uiDocument != null)
@@ -146,11 +150,12 @@ public class PickUpParcel : MonoBehaviour
 
                 //Debug.Log($"Attempting to add parcel: ID={parcelData.parcelID}, Position={parcelData.position}, Sprite={parcelData.parcelSprite}, Assigned NPC: {parcelData.assignedNpcData}");
 
-                bool added = inventory.AddParcelToInventory(parcelData.parcelID, parcelData.parcelName, parcelData.parcelSprite, parcelData.position, parcelData.assignedNpcData, parcelData.parcelStoryDialog); // add to inventory
+                bool added = inventory.AddParcelToInventory(parcelData.parcelID, parcelData.parcelName, parcelData.parcelSprite, parcelData.position, parcelData.assignedNpcData, parcelData.parcelStoryDialog, parcelData.tag); // add to inventory
                 inventory.parcelPickedUp++;
 
                 if (added)
                 {
+                    SoundEffectManager.Play("PickUpParcels");
                     Debug.Log("Parcel picked up!");
 
                     if (pickUpPromptText != null)
