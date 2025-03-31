@@ -31,10 +31,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastMoveDirection = Vector2.down; // Default facing down
     private float pushCheckDistance = 0.6f; //distance to check if still near the box
 
-    // Indication for nearby Obstacles
-    public GameObject pushIndicator; // Assign this in the Inspector
-    private bool nearPushable = false;
-
 
     void Start()
     {
@@ -67,7 +63,7 @@ public class PlayerController : MonoBehaviour
             lastMoveDirection = moveInput.normalized;
         }
 
-        CheckNearbyPushable(); // Constantly check if near a pushable object
+        CheckNearbyPushable(); // Check for pushable objects nearby
 
         // Handle pushing toggle
         if (Keyboard.current.qKey.wasPressedThisFrame)
@@ -101,41 +97,7 @@ public class PlayerController : MonoBehaviour
 
      }*/
 
-    void CheckNearbyPushable()
-    {
-        Vector2 rayOrigin = (Vector2)transform.position + lastMoveDirection * 0.3f;
-        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, lastMoveDirection, 0.7f, interactableLayer);
-
-        Debug.DrawRay(rayOrigin, lastMoveDirection * 0.7f, Color.red); // Debugging
-
-        if (hit.collider != null && hit.collider.CompareTag("Pushable"))
-        {
-            nearPushable = true;
-
-            if (!isPushing)
-            {
-                pushIndicator.SetActive(true);
-
-                // Convert world position to UI local position
-              //  Vector3 boxWorldPos = hit.collider.transform.position;
-              //  Vector2 screenPoint = Camera.main.WorldToScreenPoint(boxWorldPos);
-
-              //  RectTransform canvasRect = pushIndicator.transform.parent.GetComponent<RectTransform>();
-              //  RectTransformUtility.ScreenPointToLocalPointInRectangle(
-               //     canvasRect, screenPoint, Camera.main, out Vector2 localPoint
-               // );
-
-                // Adjust for offset above the box
-               // pushIndicator.GetComponent<RectTransform>().anchoredPosition = new Vector2(localPoint.x + 800f, localPoint.y + 500f);
-            }
-        }
-        else
-        {
-            nearPushable = false;
-            pushIndicator.SetActive(false);
-        }
-    }
-
+   
 
     /* void CheckNearbyPushable()
      {
@@ -227,6 +189,27 @@ public class PlayerController : MonoBehaviour
             }
         }*/
 
+    void CheckNearbyPushable()
+    {
+        Vector2 checkPosition = (Vector2)transform.position + lastMoveDirection * 0.5f;
+
+        Collider2D hit = Physics2D.OverlapCircle(checkPosition, 0.3f, interactableLayer);
+
+        if (hit != null && hit.CompareTag("Pushable"))
+        {
+            Pushable pushable = hit.GetComponent<Pushable>();
+            pushable.ShowIndicator(true);
+        }
+        else
+        {
+            foreach (Pushable pushable in FindObjectsOfType<Pushable>())
+            {
+                pushable.ShowIndicator(false);
+            }
+        }
+    }
+
+
 
     public void HandleUpdate()
     {
@@ -275,28 +258,7 @@ public class PlayerController : MonoBehaviour
             Gizmos.DrawLine(rayOrigin, rayOrigin + lastMoveDirection * pushCheckDistance);
         }
     }
-
     void TryStartPushing()
-    {
-        if (lastMoveDirection == Vector2.zero) return;
-
-        Vector2 rayOrigin = (Vector2)transform.position + lastMoveDirection * 0.3f;
-        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, lastMoveDirection, pushCheckDistance, interactableLayer);
-
-        if (hit.collider != null && hit.collider.CompareTag("Pushable"))
-        {
-            pushableRb = hit.collider.GetComponent<Rigidbody2D>();
-            if (pushableRb != null)
-            {
-                pushableRb.bodyType = RigidbodyType2D.Dynamic;
-                isPushing = true;
-                pushIndicator.SetActive(false); // Hide indicator when pushing
-            }
-        }
-    }
-
-
-    /* void TryStartPushing()
       {
           if (lastMoveDirection == Vector2.zero) return;  // Player must be facing a direction
 
@@ -314,38 +276,45 @@ public class PlayerController : MonoBehaviour
                   pushableRb.bodyType = RigidbodyType2D.Dynamic;
                   isPushing = true;
                   Debug.Log("Pushing started.");
+
+                Pushable pushable = hit.collider.GetComponent<Pushable>();
+                if (pushable != null)
+                {
+                    pushable.DisableIndicator();
+                }
               }
           }
           else
           {
               Debug.Log("No pushable object in front.");
           }
-      }
-    */
 
-    void StopPushing()
-    {
-        if (pushableRb != null)
-        {
-            pushableRb.linearVelocity = Vector2.zero;
-            pushableRb.bodyType = RigidbodyType2D.Kinematic;
-            pushableRb = null;
+        
         }
-        isPushing = false;
-        CheckNearbyPushable(); // Recheck after stopping
-    }
-    /* void StopPushing()
+
+        void StopPushing()
       {
           if (pushableRb != null)
           {
               pushableRb.linearVelocity = Vector2.zero;
               pushableRb.bodyType = RigidbodyType2D.Kinematic;
-              pushableRb = null;
+
+            // Re-enable indicator when stopping push
+            Pushable pushable = pushableRb.GetComponent<Pushable>();
+            if (pushable != null)
+            {
+                pushable.EnableIndicator();
+            }
+
+            pushableRb = null;
           }
           isPushing = false;
           Debug.Log("Stopped pushing.");
-      }
-    */
+
+        // Re-check pushable objects to show indicator if nearby
+        CheckNearbyPushable();
+    }
+  
 
     void FixedUpdate()
     {
