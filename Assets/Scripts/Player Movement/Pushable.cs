@@ -20,7 +20,7 @@ public class Pushable : MonoBehaviour
     {
         if (((1 << collision.gameObject.layer) & groundLayer) != 0)
         {
-            Debug.Log("Obstacle hit a wall!");
+           // Debug.Log("Obstacle hit a wall!");
             transform.position = lastValidPosition; // Prevent movement through walls
         }
     }
