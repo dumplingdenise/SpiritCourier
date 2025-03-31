@@ -270,10 +270,10 @@ public class DialogManager : MonoBehaviour
     [SerializeField] int lettersPerSecond;
 
     [SerializeField] Button nextPuzzleSceneButton; // Add a UI button in the Inspector
-    /* [SerializeField] string[] easyPuzzleSceneNames;
-     [SerializeField] string[] hardPuzzleSceneNames;*/
 
-    [SerializeField] GameObject[] PuzzleObject;
+    /*[SerializeField] GameObject[] PuzzleObject;*/
+    [SerializeField] GameObject[] easyPuzzle;
+    [SerializeField] GameObject[] hardPuzzle;
 
     [SerializeField] Button noButton;
 
@@ -284,9 +284,12 @@ public class DialogManager : MonoBehaviour
 
     public static DialogManager Instance { get; private set; }
 
-    private int npcInteractedCount = 0;
+    public int puzzlePlayedCount = 0;
 
     Dialog currentDialog;
+    // test
+    private int currentSetIndex = 0;
+
     int currentLine = 0;
     bool isTyping;
 
@@ -352,6 +355,7 @@ public class DialogManager : MonoBehaviour
             ++currentLine;
             if (currentLine < currentDialog.Lines.Count)
             {
+                StopAllCoroutines();
                 StartCoroutine(TypeDialog(currentDialog.Lines[currentLine]));
             }
             else
@@ -366,6 +370,8 @@ public class DialogManager : MonoBehaviour
                     autoDialogCompleted = true;
                 }
             }
+
+
         }
 
         // Close the dialog if auto-dialog has completed and player presses F
@@ -409,48 +415,21 @@ public class DialogManager : MonoBehaviour
 
     public void GoToNextScene()
     {
-        /*if (nextPuzzleSceneNames != null && nextPuzzleSceneNames.Length > 0)
-        {
-            string randomScene = nextPuzzleSceneNames[Random.Range(0, nextPuzzleSceneNames.Length)];
-            if (!string.IsNullOrEmpty(randomScene))
-            {
-                SceneManager.LoadScene(randomScene);
-            }
-        }*/
-
-        // test code - doesnt work cause the number of npcInteractedCount will always reset to 0 
-
-        /*Debug.Log(npcInteractedCount);
-        string randomSceneName = "";
-        if (npcInteractedCount < 2)
-        {
-            if (easyPuzzleSceneNames != null && easyPuzzleSceneNames.Length > 0)
-            {
-                randomSceneName = easyPuzzleSceneNames[Random.Range(0, easyPuzzleSceneNames.Length)];
-            }
-        }
-        else
-        {
-            if (hardPuzzleSceneNames != null && hardPuzzleSceneNames.Length > 0)
-            {
-                randomSceneName = hardPuzzleSceneNames[Random.Range(0, hardPuzzleSceneNames.Length)];
-            }
-        }
-
-        if (!string.IsNullOrEmpty(randomSceneName))
-        {
-            npcInteractedCount++;
-            if (Quest.Instance != null)
-            {
-                Quest.Instance.HideQuestUI();
-            }
-            SceneManager.LoadScene(randomSceneName);
-        }*/
-
-        if (PuzzleObject != null)
+        /*if (PuzzleObject != null)
         {
             int puzzleIndex = Random.Range(0, PuzzleObject.Length);
             PuzzleObject[puzzleIndex].SetActive(true);
+        }*/
+
+        if (puzzlePlayedCount < 2)
+        {
+            int puzzleIndex = Random.Range(0, easyPuzzle.Length);
+            easyPuzzle[puzzleIndex].SetActive(true);
+        }
+        else
+        {
+            int puzzleIndex = Random.Range(0, hardPuzzle.Length);
+            hardPuzzle[puzzleIndex].SetActive(true);
         }
 
     }
@@ -464,6 +443,7 @@ public class DialogManager : MonoBehaviour
         nextPuzzleSceneButton.gameObject.SetActive(false);
 
         OnHideDialog?.Invoke();
+
 
         // maybe dont need the below code at all
         /*if (playerController != null)

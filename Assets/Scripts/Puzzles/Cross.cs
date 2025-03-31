@@ -56,8 +56,19 @@ public class Cross : MonoBehaviour
         Inventory inventoryManager = FindAnyObjectByType<Inventory>();
         if (gameController != null)
         {
+            /*// test 
+            if (inventoryManager.GetInventoryList() != null)
+            {
+                gameController.SetGameState(GameState.WaitingForDelivery); // Resume gameplay
+            }
+            else
+            {
+                gameController.SetGameState(GameState.FreeRoam);
+            }*/
+
             gameController.SetGameState(GameState.WaitingForDelivery); // Resume gameplay
             dialogManager.CloseDialog();
+            dialogManager.puzzlePlayedCount++;
             Debug.LogError($"Game state after finish puzzle: {gameController.GetCurrentState()}");
         }
 
