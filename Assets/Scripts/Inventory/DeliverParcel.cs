@@ -388,7 +388,7 @@ public class DeliverParcel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (inventoryList.Count == 0)
+            /*if (inventoryList.Count == 0)
             {
                 Debug.Log("Nothing in inventory");
                 if (promptText != null)
@@ -406,6 +406,43 @@ public class DeliverParcel : MonoBehaviour
                 {
                     promptText.style.display = DisplayStyle.Flex; // display the prompt when player come in contact with the NPC with parcels in the inventory
                     promptText.text = "Choose a parcel to deliver to the spirit.";
+                    promptText.text = "Press 'F' to interact with the spirit.";
+                    Invoke(nameof(HidePromt), 3f);
+                }
+            }*/
+
+            // test code
+            playerNearby = true;
+            if (gameController.GetCurrentState() == GameState.FreeRoam)
+            {
+                promptText.style.display = DisplayStyle.Flex; // display the prompt when player come in contact with the NPC with parcels in the inventory
+                promptText.text = "Press 'F' to interact with the spirit.";
+                Invoke(nameof(HidePrompt), 3f);
+            }
+            if (gameController.GetCurrentState() == GameState.WaitingForDelivery)
+            {
+                playerNearby = true;
+                if (inventoryList.Count == 0)
+                {
+                    Debug.Log("Nothing in inventory");
+                    if (promptText != null)
+                    {
+                        promptText.style.display = DisplayStyle.Flex; // do not display the prompt when player come in contact with the NPC with no parcels in inventory
+                        promptText.text = "You have no parcels to deliver! Go find some!!";
+                        Invoke(nameof(HidePrompt), 3f);
+                    }
+                }
+                else
+                {
+                    /*playerNearby = true;
+                    Debug.Log("Player detected, choose a parcel to deliver");*/
+
+                    if (promptText != null)
+                    {
+                        promptText.style.display = DisplayStyle.Flex; // display the prompt when player come in contact with the NPC with parcels in the inventory
+                        promptText.text = "Choose a parcel to deliver to the spirit.";
+                        Invoke(nameof(HidePrompt), 3f);
+                    }
                 }
             }
         }
@@ -425,87 +462,14 @@ public class DeliverParcel : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    /*void Update()
+    private void HidePrompt()
     {
-        var inventory = FindFirstObjectByType<Inventory>();
-        if (inventory == null)
+        if (promptText != null)
         {
-            Debug.LogError("Inventory not found!");
-            return; // Exit the Update method to avoid further issues.
+            promptText.style.display= DisplayStyle.None;
+            promptText.text = "";
         }
-
-        // Only allow delivery if the player is near an NPC
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (!playerNearby)
-            {
-                return; // Exit to prevent parcel removal
-            }
-
-            // test code
-            // **Check if game state allows delivery**
-            if (gameController.GetCurrentState() != GameState.WaitingForDelivery)
-            {
-                if (promptText != null)
-                {
-                    promptText.style.display = DisplayStyle.Flex;
-                    promptText.text = "Please play the puzzle with the spirits first.";
-                }
-                return;
-            }
-
-            if (inventory.selectedSlot < 0 || inventory.selectedSlot >= inventory.GetInventoryList().Count)
-            {
-                if (promptText != null)
-                {
-                    promptText.style.display = DisplayStyle.Flex;
-                    promptText.text = "Please select a parcel first!";
-                }
-            }
-            else
-            {
-                var selectedParcel = inventory.GetInventoryList()[inventory.selectedSlot];
-
-                if (selectedParcel.npcData.npcID == NpcID)
-                {
-                    Debug.Log($"Parcel {selectedParcel.parcelName} delivered successfully to NPC {npcName}");
-                    if (promptText != null)
-                    {
-                        promptText.text = $"{selectedParcel.parcelName} successfully delivered to {npcName}";
-                        promptText.style.display = DisplayStyle.Flex;
-                    }
-
-                    StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateSuccessDialog()));
-                    StartCoroutine(dialogManager.BackstoryRevealed(selectedParcel.parcelStoryDialog));
-
-                    inventory.RemoveParcelFromInventory();
-
-                    if (quest != null)
-                    {
-                        quest.completeQuest(selectedParcel.parcelID);
-                    }
-
-                    // **Change game state back to FreeRoam after successful delivery**
-                    gameController.SetGameState(GameState.FreeRoam);
-                }
-                else
-                {
-                    Debug.Log("This parcel is for a different spirit!");
-                    if (promptText != null)
-                    {
-                        promptText.text = "This parcel is not for me!";
-                        promptText.style.display = DisplayStyle.Flex;
-                    }
-
-                    StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.Instance.CreateFailureDialog()));
-
-                    inventory.selectedSlot = -1;
-                    inventory.UpdateInventoryUI();
-                }
-            }
-        }
-    }*/
+    }
 
     void Update()
     {
@@ -514,6 +478,31 @@ public class DeliverParcel : MonoBehaviour
         {
             Debug.LogError("Inventory not found!");
             return; // Exit the Update method to avoid further issues.
+        }
+
+        if (playerNearby)
+        {
+            if (gameController.GetCurrentState() == GameState.WaitingForDelivery)
+            {
+                if (inventoryList.Count == 0)
+                {
+                    promptText.style.display = DisplayStyle.Flex;
+                    promptText.text = "You have no parcels to deliver! Go find some!!";
+                    Invoke(nameof(HidePrompt), 3f);
+                }
+                else
+                {
+                    promptText.style.display = DisplayStyle.Flex;
+                    promptText.text = "Choose a parcel to deliver to the spirit.";
+                    Invoke(nameof(HidePrompt), 3f);
+                }
+            }
+            if (gameController.GetCurrentState() == GameState.FreeRoam)
+            {
+                promptText.style.display = DisplayStyle.Flex;
+                promptText.text = "Press F to interact with the sprit!";
+                Invoke(nameof(HidePrompt), 3f);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -537,6 +526,7 @@ public class DeliverParcel : MonoBehaviour
                         {
                             promptText.style.display = DisplayStyle.Flex;
                             promptText.text = "Play the puzzle with the spirit first!";
+                            Invoke(nameof(HidePrompt), 3f);
                         }
                         return;
                     }
@@ -550,6 +540,7 @@ public class DeliverParcel : MonoBehaviour
                         {
                             promptText.style.display = DisplayStyle.Flex;
                             promptText.text = "Collect parcel first!";
+                            Invoke(nameof(HidePrompt), 3f);
                             Debug.LogError("No parcel in inventory");
                         }
                         return;
@@ -560,6 +551,7 @@ public class DeliverParcel : MonoBehaviour
                         {
                             promptText.style.display = DisplayStyle.Flex;
                             promptText.text = "Select a parcel to deliver";
+                            Invoke(nameof(HidePrompt), 3f);
                         }
                         return;
                     }

@@ -100,7 +100,7 @@ public class PickUpParcel : MonoBehaviour
             {
                 pickUpPromptText.style.display = DisplayStyle.Flex; // display the prompt when player come in contact with the parcel
                 pickUpPromptText.text = "Press 'E' to pick up parcel.";
-                Debug.Log("Prompt should appear!");
+                Invoke(nameof(HidePrompt), 1f);
             }
             else
             {
@@ -120,6 +120,15 @@ public class PickUpParcel : MonoBehaviour
             {
                 pickUpPromptText.style.display = DisplayStyle.None; // set display to none again when player walk away from the parcel
             }
+        }
+    }
+
+    private void HidePrompt()
+    {
+        if (pickUpPromptText != null)
+        {
+            pickUpPromptText.style.display = DisplayStyle.None;
+            pickUpPromptText.text = "";
         }
     }
 
@@ -148,6 +157,7 @@ public class PickUpParcel : MonoBehaviour
                     {
                         pickUpPromptText.style.display = DisplayStyle.Flex;  // if added to inventory, text is gone
                         pickUpPromptText.text = $"{parcelData.parcelName} picked up and added to inventory!";
+                        Invoke(nameof(HidePrompt), 3f);
                         Debug.Log($"Parcel {parcelData.parcelName}, ID: {parcelData.parcelID} picked up and added to inventory!");
                     }
                     inventory.UpdateInventoryUI();
@@ -178,6 +188,7 @@ public class PickUpParcel : MonoBehaviour
                         pickUpPromptText.style.display = DisplayStyle.Flex;  // if added to inventory, text is gone
 
                         pickUpPromptText.text = "Inventory full, can't pick up the parcel!";
+                        Invoke(nameof(HidePrompt), 3f);
                     }
                 }
             }
