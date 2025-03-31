@@ -44,7 +44,8 @@ public class PickUpParcel : MonoBehaviour
     private bool pickedUp = false;
 
     // test
-    /*private AudioSource audioSource;*/
+    public GameObject indicator;
+    private GameObject indicatorInstance;
 
     private void Start()
     {
@@ -111,6 +112,17 @@ public class PickUpParcel : MonoBehaviour
                 Debug.LogError("Prompt text is not found!");
             }
 
+
+            /*if (indicatorInstance == null && indicator != null)
+            {
+                indicator.SetActive(true);
+                *//*Debug.LogError("Parcel Position: " + parcelData.position);
+                indicatorInstance = Instantiate(indicator, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
+                indicatorInstance.transform.SetParent(transform, true); // Attach to parcel*//*
+                UpdateIndicatorPosition();
+            }
+            Debug.LogError($"Parcel location: {transform.position}");*/
+
         }
     }
 
@@ -124,6 +136,15 @@ public class PickUpParcel : MonoBehaviour
             {
                 pickUpPromptText.style.display = DisplayStyle.None; // set display to none again when player walk away from the parcel
             }
+
+            if (indicatorInstance == null && indicator != null)
+            {
+                indicator.SetActive(false);
+                /*Debug.LogError("Parcel Position: " + parcelData.position);
+                indicatorInstance = Instantiate(indicator, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
+                indicatorInstance.transform.SetParent(transform, true); // Attach to parcel*/
+                
+            }
         }
     }
 
@@ -136,8 +157,33 @@ public class PickUpParcel : MonoBehaviour
         }
     }
 
+/*    private void UpdateIndicatorPosition()
+    {
+        if (indicator != null)
+        {
+            *//*Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 1.5f, 0));
+            indicator.transform.position = screenPosition;*//*
+
+            // Calculate the position above the parcel
+            Vector3 parcelWorldPosition = transform.position + new Vector3(0, 1f, 0); // 1.5 units above the parcel
+            parcelWorldPosition.z = 0f;
+            Vector3 screenPosition = Camera.main.WorldToScreenPoint(parcelWorldPosition);
+
+            RectTransform rectTransform = indicator.GetComponent<RectTransform>();
+            rectTransform.position = screenPosition;
+
+            *//*indicator.transform.position = screenPosition;
+            Debug.LogError($"Indicator position: {indicator.transform.position}");*//*
+            Debug.LogError($"Indicator position: {rectTransform.position}");
+        }
+    }*/
+
     private void Update()
     {
+        /*if (playerNearby && indicator != null)
+        {
+            UpdateIndicatorPosition(); // Continuously update position above the parcel
+        }*/
         if (playerNearby && Input.GetKeyDown(KeyCode.E) && !pickedUp)
         {
             if (inventory != null)
