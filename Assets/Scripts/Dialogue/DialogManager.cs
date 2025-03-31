@@ -355,6 +355,7 @@ public class DialogManager : MonoBehaviour
             ++currentLine;
             if (currentLine < currentDialog.Lines.Count)
             {
+                StopAllCoroutines();
                 StartCoroutine(TypeDialog(currentDialog.Lines[currentLine]));
             }
             else
@@ -465,7 +466,6 @@ public class DialogManager : MonoBehaviour
         return new Dialog
         {
             Lines = new List<string> { $"Oh no dear, I don't think this parcel is for me!" }
-
         };
     }
 
