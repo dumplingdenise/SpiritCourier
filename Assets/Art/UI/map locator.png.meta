@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ab6958dfac453074b9f236625260fb90
+guid: 882dfdff202c38d42b9a800bcf3fcd54
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3618592806908353621
-    second: Team Logo_0
+      213: -3674638042093776805
+    second: map locator_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Team Logo_0
+      name: map locator_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 523
-        height: 375
+        width: 62
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55c5e8a5cf2d73230800000000000000
-      internalID: 3618592806908353621
+      spriteID: b501dd67b20110dc0800000000000000
+      internalID: -3674638042093776805
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Team Logo_0: 3618592806908353621
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
