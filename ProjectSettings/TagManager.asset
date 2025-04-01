@@ -12,6 +12,7 @@ TagManager:
   - Underpass
   - NPCs
   - Pushable
+  - SFXSlider
   layers:
   - Default
   - TransparentFX
