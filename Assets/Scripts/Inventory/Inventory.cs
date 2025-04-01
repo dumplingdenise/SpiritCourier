@@ -167,7 +167,7 @@ public class Inventory : MonoBehaviour
         {
             if (collectedParcels[i] == null)
             {
-                Debug.LogError($"Parcel at index {i} is null or destroyed, removing from inventory");
+                /*Debug.LogError($"Parcel at index {i} is null or destroyed, removing from inventory");*/
                 collectedParcels.RemoveAt(i);
             }
         }

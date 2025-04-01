@@ -287,8 +287,6 @@ public class DialogManager : MonoBehaviour
     public int puzzlePlayedCount = 0;
 
     Dialog currentDialog;
-    // test
-    private int currentSetIndex = 0;
 
     int currentLine = 0;
     bool isTyping;
@@ -297,6 +295,7 @@ public class DialogManager : MonoBehaviour
 
     bool showButtonAtEnd = false; // Flag to check if button should appear
     bool autoDialogCompleted = false; // Flag to check if auto-dialogue is complete
+
 
     public void Awake()
     {
