@@ -9,25 +9,6 @@ using static Quest;
 
 public class PickUpParcel : MonoBehaviour
 {
-
-    // Code below is to when player walked into the parcel it will automatically pickup
-
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        PlayerMovement player = collision.GetComponent<PlayerMovement>();
-        Debug.Log($"Collision detected with: {collision.name}");
-        if (player != null)
-        {
-            Debug.Log("Parcel collected by player!");
-            Destroy(gameObject);
-            player.parcelCollected++;
-        }
-    }*/
-
-
-
-    // code below here is when player walk into the parcel,  they have to press E to pick up
-
     private bool playerNearby = false;
 
     private Label pickUpPromptText;
@@ -43,23 +24,52 @@ public class PickUpParcel : MonoBehaviour
 
     private bool pickedUp = false;
 
+    public GameObject indicator;
+
     private void Start()
     {
 
         inventory = GameObject.FindFirstObjectByType<Inventory>();
         quest = GameObject.FindFirstObjectByType<Quest>();
+        
+        if (indicator != null)
+        {
+            indicator.SetActive(false);
+        }
+        else
+        {
+            return;
+        }
 
         var uiDocument = GetComponentInParent<UIDocument>();
         if (uiDocument != null)
         {
             var rootVisualElement = uiDocument.rootVisualElement;
             pickUpPromptText = rootVisualElement.Q<Label>("PickUpLabel");
-            if (pickUpPromptText != null)
+            /* if (pickUpPromptText != null)
+             {
+                 pickUpPromptText.style.display = DisplayStyle.None;
+                 Debug.Log("Prompt text is not here!");
+             }*/
+
+            if (pickUpPromptText == null)
             {
+                Debug.LogError("PickUpLabel not found in UIDocument! Check the label name.");
+            }
+            else
+            {
+                Debug.LogError("PickUpLabel found successfully! Current display: " + pickUpPromptText.style.display);
+
+                // Try forcing it again
                 pickUpPromptText.style.display = DisplayStyle.None;
-                Debug.Log("Prompt text is not here!");
+                Debug.LogError("After hiding: " + pickUpPromptText.style.display);
             }
         }
+        else
+        {
+            Debug.LogError("UIDocument is missing or not attached to this object.");
+        }
+
 
         StartCoroutine(WaitForNpcAssignment());
     }
@@ -79,14 +89,6 @@ public class PickUpParcel : MonoBehaviour
         {
             Debug.LogError("No NPC assigned to the parcel.");
         }
-
-        // test
-        // Check if the parcel has already been picked up in a previous session
-        /*if (PlayerPrefs.GetInt($"Parcel_{parcelData.parcelID}_PickedUp", 0) == 1)
-        {
-            pickedUp = true;
-            gameObject.SetActive(false); // Hide the parcel if already picked up
-        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -100,11 +102,35 @@ public class PickUpParcel : MonoBehaviour
             {
                 pickUpPromptText.style.display = DisplayStyle.Flex; // display the prompt when player come in contact with the parcel
                 pickUpPromptText.text = "Press 'E' to pick up parcel.";
-                Debug.Log("Prompt should appear!");
+                Invoke(nameof(HidePrompt), 1f);
             }
             else
             {
                 Debug.LogError("Prompt text is not found!");
+            }
+
+
+            /*if (indicatorInstance == null && indicator != null)
+            {
+                indicator.SetActive(true);
+                *//*Debug.LogError("Parcel Position: " + parcelData.position);
+                indicatorInstance = Instantiate(indicator, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
+                indicatorInstance.transform.SetParent(transform, true); // Attach to parcel*//*
+                UpdateIndicatorPosition();
+            }
+            Debug.LogError($"Parcel location: {transform.position}");*/
+
+            /*if (indicatorInstance == null && indicator != null)
+            {
+                indicatorInstance = Instantiate(indicator, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
+                indicatorInstance.transform.SetParent(transform, true); // Attach to the parcel object
+                UpdateIndicatorPosition();
+                indicator.SetActive(true);
+            }*/
+
+            if (indicator != null && playerNearby)
+            {
+                UpdateIndicatorPosition();
             }
 
         }
@@ -120,6 +146,30 @@ public class PickUpParcel : MonoBehaviour
             {
                 pickUpPromptText.style.display = DisplayStyle.None; // set display to none again when player walk away from the parcel
             }
+
+           if (indicator != null)
+            {
+                indicator.SetActive(false);
+            }
+        }
+    }
+
+    private void HidePrompt()
+    {
+        if (pickUpPromptText != null)
+        {
+            pickUpPromptText.style.display = DisplayStyle.None;
+            pickUpPromptText.text = "";
+        }
+    }
+
+
+    private void UpdateIndicatorPosition()
+    {
+        if (indicator != null)
+        {
+            indicator.transform.position = transform.position + new Vector3(0, 1f, 0); // Slightly above the parcel
+            indicator.SetActive(true);
         }
     }
 
@@ -137,19 +187,21 @@ public class PickUpParcel : MonoBehaviour
 
                 //Debug.Log($"Attempting to add parcel: ID={parcelData.parcelID}, Position={parcelData.position}, Sprite={parcelData.parcelSprite}, Assigned NPC: {parcelData.assignedNpcData}");
 
-                bool added = inventory.AddParcelToInventory(parcelData.parcelID, parcelData.parcelName, parcelData.parcelSprite, parcelData.position, parcelData.assignedNpcData, parcelData.parcelStoryDialog); // add to inventory
+                bool added = inventory.AddParcelToInventory(parcelData.parcelID, parcelData.parcelName, parcelData.parcelSprite, parcelData.position, parcelData.assignedNpcData, parcelData.parcelStoryDialog, parcelData.tag); // add to inventory
                 inventory.parcelPickedUp++;
 
                 if (added)
                 {
+                    SoundEffectManager.Play("PickUpParcels");
                     Debug.Log("Parcel picked up!");
 
-                    if (pickUpPromptText != null)
+                    /*if (pickUpPromptText != null)
                     {
                         pickUpPromptText.style.display = DisplayStyle.Flex;  // if added to inventory, text is gone
                         pickUpPromptText.text = $"{parcelData.parcelName} picked up and added to inventory!";
+                        Invoke(nameof(HidePrompt), 3f);
                         Debug.Log($"Parcel {parcelData.parcelName}, ID: {parcelData.parcelID} picked up and added to inventory!");
-                    }
+                    }*/
                     inventory.UpdateInventoryUI();
 
                     if (quest != null)
@@ -178,6 +230,7 @@ public class PickUpParcel : MonoBehaviour
                         pickUpPromptText.style.display = DisplayStyle.Flex;  // if added to inventory, text is gone
 
                         pickUpPromptText.text = "Inventory full, can't pick up the parcel!";
+                        Invoke(nameof(HidePrompt), 3f);
                     }
                 }
             }

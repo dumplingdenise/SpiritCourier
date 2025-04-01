@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: 0821894d5d3849449bb3476e6ec5fb2f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6131494721195249470
+    second: Child NPC Sprite Sheet_0
+  - first:
+      213: -2354136536307381141
+    second: Child NPC Sprite Sheet_1
+  - first:
+      213: -813705405613015830
+    second: Child NPC Sprite Sheet_2
+  - first:
+      213: 4921412782623576296
+    second: Child NPC Sprite Sheet_3
+  - first:
+      213: 6867557703987121630
+    second: Child NPC Sprite Sheet_4
+  - first:
+      213: 169363492518671713
+    second: Child NPC Sprite Sheet_5
+  - first:
+      213: 1177042180630261775
+    second: Child NPC Sprite Sheet_6
+  - first:
+      213: 6385434737791760993
+    second: Child NPC Sprite Sheet_7
+  - first:
+      213: 794025478125711510
+    second: Child NPC Sprite Sheet_8
+  - first:
+      213: -2488306536413525386
+    second: Child NPC Sprite Sheet_9
+  - first:
+      213: -3064134474351844320
+    second: Child NPC Sprite Sheet_10
+  - first:
+      213: 5979020087633113600
+    second: Child NPC Sprite Sheet_11
+  - first:
+      213: -8070733802629318348
+    second: Child NPC Sprite Sheet_12
+  - first:
+      213: -3927547477740601871
+    second: Child NPC Sprite Sheet_13
+  - first:
+      213: 7735347108981973840
+    second: Child NPC Sprite Sheet_14
+  - first:
+      213: 5003382779150987457
+    second: Child NPC Sprite Sheet_15
+  - first:
+      213: 3674438879247237213
+    second: Child NPC Sprite Sheet_16
+  - first:
+      213: -9024649027368076091
+    second: Child NPC Sprite Sheet_17
+  - first:
+      213: -2955449626298333788
+    second: Child NPC Sprite Sheet_18
+  - first:
+      213: -3275341986589568547
+    second: Child NPC Sprite Sheet_19
+  - first:
+      213: 1389675756905948438
+    second: Child NPC Sprite Sheet_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 333
+        width: 55
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f860f76f1771550800000000000000
+      internalID: 6131494721195249470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 335
+        width: 54
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c41a00b4d645fd0800000000000000
+      internalID: -2354136536307381141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 334
+        width: 51
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e0585dd9de5c4440800000000000000
+      internalID: 4921412782623576296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 224
+        width: 60
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd46ac88577e4f50800000000000000
+      internalID: 6867557703987121630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 224
+        width: 60
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165be79f233b95200800000000000000
+      internalID: 169363492518671713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 221
+        width: 60
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 690fa4627f1f40b00800000000000000
+      internalID: 794025478125711510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2
+        width: 59
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024ea381ee10a75d0800000000000000
+      internalID: -3064134474351844320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 112
+        width: 51
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002fb4c671fb9f250800000000000000
+      internalID: 5979020087633113600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 112
+        width: 52
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 439ba89fd5efeff80800000000000000
+      internalID: -8070733802629318348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 112
+        width: 52
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd3ac6c06c8e79c0800000000000000
+      internalID: -3927547477740601871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 61
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ccb625368102c280800000000000000
+      internalID: -9024649027368076091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child NPC Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 60
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 615e953fcbe194310800000000000000
+      internalID: 1389675756905948438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 869ab3a2c0a45f74b81710a5f2f8d664
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Child NPC Sprite Sheet_0: 6131494721195249470
+      Child NPC Sprite Sheet_1: -2354136536307381141
+      Child NPC Sprite Sheet_10: -3064134474351844320
+      Child NPC Sprite Sheet_11: 5979020087633113600
+      Child NPC Sprite Sheet_12: -8070733802629318348
+      Child NPC Sprite Sheet_13: -3927547477740601871
+      Child NPC Sprite Sheet_14: 7735347108981973840
+      Child NPC Sprite Sheet_15: 5003382779150987457
+      Child NPC Sprite Sheet_16: 3674438879247237213
+      Child NPC Sprite Sheet_17: -9024649027368076091
+      Child NPC Sprite Sheet_18: -2955449626298333788
+      Child NPC Sprite Sheet_19: -3275341986589568547
+      Child NPC Sprite Sheet_2: -813705405613015830
+      Child NPC Sprite Sheet_20: 1389675756905948438
+      Child NPC Sprite Sheet_3: 4921412782623576296
+      Child NPC Sprite Sheet_4: 6867557703987121630
+      Child NPC Sprite Sheet_5: 169363492518671713
+      Child NPC Sprite Sheet_6: 1177042180630261775
+      Child NPC Sprite Sheet_7: 6385434737791760993
+      Child NPC Sprite Sheet_8: 794025478125711510
+      Child NPC Sprite Sheet_9: -2488306536413525386
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -39155,12 +39155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &437901386
 GameObject:
   m_ObjectHideFlags: 0
@@ -40145,12 +40140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &451767825
 GameObject:
   m_ObjectHideFlags: 0
@@ -42530,12 +42520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &547365578
 GameObject:
   m_ObjectHideFlags: 0
@@ -50536,6 +50521,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   playerAnimator: {fileID: 0}
+  footsepSpeed: 0.5
+  pushForce: 5
 --- !u!70 &737185400
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -50824,12 +50811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1001 &745471180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50858,6 +50840,10 @@ PrefabInstance:
       propertyPath: parcelData.assignedNpcData.npcID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1925681372255013772, guid: 179d73d57a207814b8e89d3fa7e3c27b, type: 3}
+      propertyPath: sourceAsset
+      value: 
+      objectReference: {fileID: 9197481963319205126, guid: 06bb701936804a440a6d1e1fc1e7ed45, type: 3}
     - target: {fileID: 5912821393406874080, guid: 179d73d57a207814b8e89d3fa7e3c27b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.03
@@ -51047,6 +51033,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1581669104}
     m_Modifications:
+    - target: {fileID: 1321649763600989287, guid: efbc747c1012def4dbab17ca1e7d076e, type: 3}
+      propertyPath: sourceAsset
+      value: 
+      objectReference: {fileID: 9197481963319205126, guid: 06bb701936804a440a6d1e1fc1e7ed45, type: 3}
     - target: {fileID: 2001078830494637016, guid: efbc747c1012def4dbab17ca1e7d076e, type: 3}
       propertyPath: m_Name
       value: Yellow Parcel
@@ -84970,6 +84960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa27de1ad4b0fe4d9366233050036cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NpcID: 0
 --- !u!114 &998414703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85006,7 +84997,6 @@ MonoBehaviour:
     - Hellooo !
     - Have you seen my parcel?
   showButtonAfterDialog: 0
-  RotatePuzzle: 
 --- !u!1 &1009672811
 GameObject:
   m_ObjectHideFlags: 0
@@ -85635,6 +85625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa27de1ad4b0fe4d9366233050036cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NpcID: 0
 --- !u!114 &1051131955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85652,7 +85643,6 @@ MonoBehaviour:
     - Hello dear,
     - Why not we play a game?
   showButtonAfterDialog: 1
-  RotatePuzzle: 
 --- !u!1 &1064824538
 GameObject:
   m_ObjectHideFlags: 0
@@ -85902,6 +85892,10 @@ MonoBehaviour:
   openJournalButton: {fileID: 752688135}
   closeJournalButton: {fileID: 638613231}
   playerAnimator: {fileID: 0}
+  journalPages: []
+  nextPageButton: {fileID: 0}
+  prevPageButton: {fileID: 0}
+  notificationCircle: {fileID: 0}
 --- !u!114 &1092209454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86329,12 +86323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &1153650375
 GameObject:
   m_ObjectHideFlags: 0
@@ -87749,12 +87738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &1186787468
 GameObject:
   m_ObjectHideFlags: 0
@@ -88030,12 +88014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &1198501602
 GameObject:
   m_ObjectHideFlags: 0
@@ -119909,6 +119888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa27de1ad4b0fe4d9366233050036cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NpcID: 0
 --- !u!114 &1293980995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119925,7 +119905,6 @@ MonoBehaviour:
     lines:
     - Hello my dear, have you seen my parcel?
   showButtonAfterDialog: 0
-  RotatePuzzle: 
 --- !u!1 &1299230882
 GameObject:
   m_ObjectHideFlags: 0
@@ -120489,12 +120468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 0
+  waypoints: []
 --- !u!50 &1321057360
 Rigidbody2D:
   serializedVersion: 5
@@ -120534,6 +120508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Letter
       objectReference: {fileID: 0}
+    - target: {fileID: 4453741747241851282, guid: 80d09d69716b3bf40b2591f95e866f11, type: 3}
+      propertyPath: sourceAsset
+      value: 
+      objectReference: {fileID: 9197481963319205126, guid: 06bb701936804a440a6d1e1fc1e7ed45, type: 3}
     - target: {fileID: 4686052644234966813, guid: 80d09d69716b3bf40b2591f95e866f11, type: 3}
       propertyPath: npcHints
       value: Look for a granny!
@@ -120849,12 +120827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &1353971483
 GameObject:
   m_ObjectHideFlags: 0
@@ -121071,12 +121044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &1366007531
 GameObject:
   m_ObjectHideFlags: 0
@@ -123982,12 +123950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &1478314855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1831884594722259142, guid: 04c7346cc3ec2ba41ab80bf9e9a1fc77, type: 3}
@@ -124033,12 +123996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1001 &1478760951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -124180,12 +124138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &1480590271
 GameObject:
   m_ObjectHideFlags: 0
@@ -187065,12 +187018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &1581669103
 GameObject:
   m_ObjectHideFlags: 0
@@ -188356,12 +188304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &1655380957
 GameObject:
   m_ObjectHideFlags: 0
@@ -188568,12 +188511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &1714220265
 GameObject:
   m_ObjectHideFlags: 0
@@ -192755,12 +192693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!1 &2055806904
 GameObject:
   m_ObjectHideFlags: 0
@@ -193039,14 +192972,12 @@ MonoBehaviour:
   dialogBox: {fileID: 2030507871}
   dialogText: {fileID: 1714220267}
   lettersPerSecond: 40
-  nextSceneButton: {fileID: 1547785448}
-  nextSceneNames:
-  - Find1
-  - Find2
-  - MemoryPuzzle
-  - puzzle
-  - RoatePuzzle2
+  nextPuzzleSceneButton: {fileID: 0}
+  easyPuzzle: []
+  hardPuzzle: []
   noButton: {fileID: 395457874}
+  playerController: {fileID: 0}
+  puzzlePlayedCount: 0
 --- !u!114 &2093632203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193636,12 +193567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!4 &4676665257393219216 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7713535510600956524, guid: be904ea4730c8874db85110b71b1df20, type: 3}
@@ -193687,12 +193613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 3072
+  waypoints: []
 --- !u!4 &4676665257835644892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2245578995909446907, guid: 971d7df52eedff04da6561fa2e842ccd, type: 3}
@@ -193738,12 +193659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isWalking: 0
-  walkTime: 2
-  waitTime: 2
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 1024
+  waypoints: []
 --- !u!1001 &8241605233849880688
 PrefabInstance:
   m_ObjectHideFlags: 0

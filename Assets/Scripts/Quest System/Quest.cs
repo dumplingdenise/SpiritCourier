@@ -463,8 +463,23 @@ public class Quest : MonoBehaviour
     // Show quest details (with auto-update logic)
     private void ShowQuestDetails(questData quest, /*Image slotImage*/ int index)
     {
+        SoundEffectManager.Play("SlotSelect");
         Debug.Log("Showing quest hint");
         Debug.Log($"Quest ID: {quest.questID}, Type: {quest.questType}, Hint: {quest.ParcelData.parcelHints}");
+
+        // test to click on same quest to close the pop up
+        if (hintPopup.activeSelf && currentDisplayedQuest == quest)
+        {
+            hintPopup.SetActive(false);
+            currentDisplayedQuest = null;
+
+            foreach (var taskSlot in taskSlots)
+            {
+                Image selectedImage = taskSlot.transform.Find("Selected").GetComponent<Image>();
+                selectedImage.gameObject.SetActive(false);
+            }
+            return; // Stop execution here
+        }
 
         hintPopup.SetActive(true);
         currentDisplayedQuest = quest; // Track the displayed quest

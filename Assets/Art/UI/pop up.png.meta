@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eab8dd537b0406c44a7f95e800c0125b
+guid: 63250809b6d40084bb4159a41ad8552c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5274559233175831823
-    second: sort-down_0
+      213: -8640998253275688313
+    second: pop up_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sort-down_0
+      name: pop up_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 111
-        width: 512
-        height: 290
-      alignment: 9
-      pivot: {x: 0.50232935, y: 0.008550605}
+        x: 7
+        y: 14
+        width: 253
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f05c3304daff23940800000000000000
-      internalID: 5274559233175831823
+      spriteID: 7825bb0eed1051880800000000000000
+      internalID: -8640998253275688313
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8b90fdb1b5110b34da02bd651c74de2f
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sort-down_0: 5274559233175831823
+      pop up_0: -8640998253275688313
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
