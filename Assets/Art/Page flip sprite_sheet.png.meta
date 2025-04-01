@@ -1,0 +1,463 @@
+fileFormatVersion: 2
+guid: 902d1b6f8a1f52342869ed91c493cc34
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4827960411489916270
+    second: Page flip sprite_sheet_0
+  - first:
+      213: 2806557580690473523
+    second: Page flip sprite_sheet_1
+  - first:
+      213: -8971880080582064433
+    second: Page flip sprite_sheet_2
+  - first:
+      213: 7470957145274313298
+    second: Page flip sprite_sheet_3
+  - first:
+      213: -436353418038464202
+    second: Page flip sprite_sheet_4
+  - first:
+      213: -9122141737850293241
+    second: Page flip sprite_sheet_5
+  - first:
+      213: 8319954429317965836
+    second: Page flip sprite_sheet_6
+  - first:
+      213: -250825756152900174
+    second: Page flip sprite_sheet_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 537
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf56b00c88314f44db24d9d2e0a8cc86
+      internalID: 123463408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 537
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eceb9402a6c1fe4ca8b45a759d2eab2
+      internalID: 95727743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 537
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e675cceb5b2d52408e1a2902fc22c10
+      internalID: -408852779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2526
+        y: 2
+        width: 815
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa0edb0ac7fd9941ac16d830653eaaf
+      internalID: -748787985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 3018
+        y: 537
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd04aa90e678e847a55fe9b1a4c419e
+      internalID: 265058045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3365
+        y: 2
+        width: 816
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0848fcd40f70a74ebbcacb5574c4e95
+      internalID: -639975365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 4201
+        y: 0
+        width: 819
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02d9634c1d1426498a725879d98cded
+      internalID: 337337035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 5041
+        y: 2
+        width: 819
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf271aa49e7fa44b814625be0e17954
+      internalID: 510493653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 5537
+        y: 537
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c97007a29cd72468e5682a01760172
+      internalID: -1049276607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 6373
+        y: 537
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e78fc276adc9c24e83ea77a3a54a473
+      internalID: -1201051154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2
+        width: 815
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4737e6ef2f25c54fa2f8dba551fafcd
+      internalID: -1256587699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 2
+        width: 819
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0545719ad58ca64ca986e666c137508
+      internalID: 855648514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 2
+        width: 815
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f667ce5d8773ac48b5f049077d0e4b5
+      internalID: 1806858335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page flip sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 5881
+        y: 2
+        width: 815
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0c88717c1e27e4ab569f00ec80fdb9
+      internalID: 948733817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 320f503280e5ad14691785111c2ea643
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Page flip sprite_sheet_0: 123463408
+      Page flip sprite_sheet_1: 95727743
+      Page flip sprite_sheet_10: -1256587699
+      Page flip sprite_sheet_11: 855648514
+      Page flip sprite_sheet_12: 1806858335
+      Page flip sprite_sheet_13: 948733817
+      Page flip sprite_sheet_2: -408852779
+      Page flip sprite_sheet_3: -748787985
+      Page flip sprite_sheet_4: 265058045
+      Page flip sprite_sheet_5: -639975365
+      Page flip sprite_sheet_6: 337337035
+      Page flip sprite_sheet_7: 510493653
+      Page flip sprite_sheet_8: -1049276607
+      Page flip sprite_sheet_9: -1201051154
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

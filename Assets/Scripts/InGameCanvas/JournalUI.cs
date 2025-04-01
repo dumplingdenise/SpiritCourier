@@ -132,6 +132,8 @@ public class JournalUI : MonoBehaviour
         if (currentPage < unlockedPages.Count - 1)
         {
             //unlockedPages[currentPage].SetActive(false); 
+            Animator currentAnimator = unlockedPages[currentPage].GetComponent<Animator>();
+            currentAnimator.SetTrigger("FlipIn");
 
             currentPage++;
 
@@ -148,6 +150,9 @@ public class JournalUI : MonoBehaviour
     {
         if (currentPage > 0)
         {
+            Animator currentAnimator = unlockedPages[currentPage].GetComponent<Animator>();
+            currentAnimator.SetTrigger("FlipOut");
+
             //unlockedPages[currentPage].SetActive(false);
 
             currentPage--;
@@ -160,10 +165,7 @@ public class JournalUI : MonoBehaviour
 
 
     public void UpdatePageVisibility()
-    {
-
-
-        
+    {        
         for (int i = 0; i < unlockedPages.Count; i++)
         {
             bool check = i == currentPage; //Checks if i is current page?
@@ -171,11 +173,13 @@ public class JournalUI : MonoBehaviour
             unlockedPages[i].SetActive(check); // If i is current page, set active
                                                // Show only the active page 
         }
-        
 
+        nextPageButton.gameObject.SetActive(currentPage < unlockedPages.Count - 1);
+
+        prevPageButton.gameObject.SetActive(currentPage > 0);
     }
-    
-    /*
+
+
     void Update()
     {   
         if(Input.GetKeyDown(KeyCode.Keypad0) )
@@ -199,7 +203,7 @@ public class JournalUI : MonoBehaviour
             AddJournalEntry(4);
         }        
      }
-    */
+    
 
 
 }
