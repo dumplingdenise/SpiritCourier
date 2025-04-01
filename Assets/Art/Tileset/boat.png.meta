@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 63250809b6d40084bb4159a41ad8552c
+guid: 451b01b76a2e8ae42aa38821df13856c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8640998253275688313
-    second: pop up_0
+      213: -4032481707582436298
+    second: boat_0
+  - first:
+      213: -936671485401084529
+    second: boat_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pop up_0
+      name: boat_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 14
-        width: 253
-        height: 219
+        x: 0
+        y: 0
+        width: 138
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7825bb0eed1051880800000000000000
-      internalID: -8640998253275688313
+      spriteID: 63cc940804fb908c0800000000000000
+      internalID: -4032481707582436298
       vertices: []
       indices: 
       edges: []
@@ -125,7 +128,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: db86b84a55d2188409caaaa0e53f3b32
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +138,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pop up_0: -8640998253275688313
+      boat_0: -4032481707582436298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

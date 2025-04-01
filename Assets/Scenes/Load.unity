@@ -524,6 +524,7 @@ GameObject:
   - component: {fileID: 772392147}
   - component: {fileID: 772392149}
   - component: {fileID: 772392148}
+  - component: {fileID: 772392150}
   m_Layer: 5
   m_Name: PlayerRunning
   m_TagString: Untagged
@@ -588,6 +589,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772392146}
   m_CullTransparentMesh: 1
+--- !u!95 &772392150
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772392146}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62ae4437f4fc0384f980ec7cabd3532f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &888811322
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +874,7 @@ MonoBehaviour:
   parcelOffset: -50
   parcelYOffset: -30
   nextSceneName: Opening Scene
+  playerAnimator: {fileID: 772392150}
 --- !u!114 &1756037831
 MonoBehaviour:
   m_ObjectHideFlags: 0

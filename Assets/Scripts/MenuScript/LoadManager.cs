@@ -16,9 +16,12 @@ public class LoadManager : MonoBehaviour
     private Vector2 startPos;
     private Vector2 endPos;
 
+    public Animator playerAnimator; // Reference to Animator
+
     void OnEnable() // Use OnEnable to ensure it runs every time the scene is loaded
     {
         Time.timeScale = 1f; // Ensure time is not paused
+
         StartCoroutine(AnimateLoadingBar());
     }
 

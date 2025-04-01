@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: cec9c8725633f6d40b18483227c2675d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5073577786469811940
+    second: Man NPC sprite sheet 1_0
+  - first:
+      213: -2680069536863401884
+    second: Man NPC sprite sheet 1_1
+  - first:
+      213: -5444245270841382335
+    second: Man NPC sprite sheet 1_2
+  - first:
+      213: -5798194980442923341
+    second: Man NPC sprite sheet 1_3
+  - first:
+      213: -3809862335729573543
+    second: Man NPC sprite sheet 1_4
+  - first:
+      213: -2074787524525106234
+    second: Man NPC sprite sheet 1_5
+  - first:
+      213: -9033995103037243432
+    second: Man NPC sprite sheet 1_6
+  - first:
+      213: -6319522285066147240
+    second: Man NPC sprite sheet 1_7
+  - first:
+      213: 6335321229355794548
+    second: Man NPC sprite sheet 1_8
+  - first:
+      213: 4837765967078210704
+    second: Man NPC sprite sheet 1_9
+  - first:
+      213: 8959609928502483211
+    second: Man NPC sprite sheet 1_10
+  - first:
+      213: -7081706652152766112
+    second: Man NPC sprite sheet 1_11
+  - first:
+      213: 1711490452840402439
+    second: Man NPC sprite sheet 1_12
+  - first:
+      213: 9031973356059197398
+    second: Man NPC sprite sheet 1_13
+  - first:
+      213: 3229220348519083383
+    second: Man NPC sprite sheet 1_14
+  - first:
+      213: 4308157183010311812
+    second: Man NPC sprite sheet 1_15
+  - first:
+      213: 8462707295563428739
+    second: Man NPC sprite sheet 1_16
+  - first:
+      213: -5500432589578574356
+    second: Man NPC sprite sheet 1_17
+  - first:
+      213: 9134902692356451374
+    second: Man NPC sprite sheet 1_18
+  - first:
+      213: 2072416783912232228
+    second: Man NPC sprite sheet 1_19
+  - first:
+      213: -115638083923959718
+    second: Man NPC sprite sheet 1_20
+  - first:
+      213: -2292673976013467490
+    second: Man NPC sprite sheet 1_21
+  - first:
+      213: 2112531687975417720
+    second: Man NPC sprite sheet 1_22
+  - first:
+      213: -7033862415462835909
+    second: Man NPC sprite sheet 1_23
+  - first:
+      213: 230956264354509560
+    second: Man NPC sprite sheet 1_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 761
+        width: 140
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19772952e70799b0800000000000000
+      internalID: -5073577786469811940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 763
+        width: 178
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46849e1b4fa7ecad0800000000000000
+      internalID: -2680069536863401884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 762
+        width: 140
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 951e2b32466a02bc0800000000000000
+      internalID: -3809862335729573543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 507
+        width: 115
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85aa778c6fb8c48a0800000000000000
+      internalID: -6319522285066147240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 509
+        width: 96
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4704eb597159be750800000000000000
+      internalID: 6335321229355794548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 506
+        width: 114
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061e9e20259b8bd90800000000000000
+      internalID: -7081706652152766112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 253
+        width: 114
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df73b4f9e3085d70800000000000000
+      internalID: 9031973356059197398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_15
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 256
+        width: 96
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e80e1e126a9cb30800000000000000
+      internalID: 4308157183010311812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_17
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 252
+        width: 115
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce5ef2bc3b98aa3b0800000000000000
+      internalID: -5500432589578574356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_19
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 2
+        width: 140
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42565a7b514b2cc10800000000000000
+      internalID: 2072416783912232228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_20
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 4
+        width: 160
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a50a43d76cb256ef0800000000000000
+      internalID: -115638083923959718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man NPC sprite sheet 1_22
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 2
+        width: 140
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877f786a068315d10800000000000000
+      internalID: 2112531687975417720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ef88a71140580c04aa0f3e7fdd95e602
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Man NPC sprite sheet 1_0: -5073577786469811940
+      Man NPC sprite sheet 1_1: -2680069536863401884
+      Man NPC sprite sheet 1_10: 8959609928502483211
+      Man NPC sprite sheet 1_11: -7081706652152766112
+      Man NPC sprite sheet 1_12: 1711490452840402439
+      Man NPC sprite sheet 1_13: 9031973356059197398
+      Man NPC sprite sheet 1_14: 3229220348519083383
+      Man NPC sprite sheet 1_15: 4308157183010311812
+      Man NPC sprite sheet 1_16: 8462707295563428739
+      Man NPC sprite sheet 1_17: -5500432589578574356
+      Man NPC sprite sheet 1_18: 9134902692356451374
+      Man NPC sprite sheet 1_19: 2072416783912232228
+      Man NPC sprite sheet 1_2: -5444245270841382335
+      Man NPC sprite sheet 1_20: -115638083923959718
+      Man NPC sprite sheet 1_21: -2292673976013467490
+      Man NPC sprite sheet 1_22: 2112531687975417720
+      Man NPC sprite sheet 1_23: -7033862415462835909
+      Man NPC sprite sheet 1_24: 230956264354509560
+      Man NPC sprite sheet 1_3: -5798194980442923341
+      Man NPC sprite sheet 1_4: -3809862335729573543
+      Man NPC sprite sheet 1_5: -2074787524525106234
+      Man NPC sprite sheet 1_6: -9033995103037243432
+      Man NPC sprite sheet 1_7: -6319522285066147240
+      Man NPC sprite sheet 1_8: 6335321229355794548
+      Man NPC sprite sheet 1_9: 4837765967078210704
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
