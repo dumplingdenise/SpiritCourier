@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 611d024eda8b9d041b29593c8f9878e6
+guid: e5633f1b295ed1149937c43e84e01e30
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2713951139496297509
-    second: FIND4Hard_0
+      213: 3369151469290074614
+    second: Find6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FIND4Hard_0
+      name: Find6_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5248177ae24e9a520800000000000000
-      internalID: 2713951139496297509
+      spriteID: 6f135892961a1ce20800000000000000
+      internalID: 3369151469290074614
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      FIND4Hard_0: 2713951139496297509
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
