@@ -8035,7 +8035,7 @@ GameObject:
   - component: {fileID: 181873668}
   m_Layer: 5
   m_Name: Slider
-  m_TagString: Untagged
+  m_TagString: SFXSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15227,7 +15227,6 @@ GameObject:
   - component: {fileID: 406715190}
   - component: {fileID: 406715189}
   - component: {fileID: 406715188}
-  - component: {fileID: 406715187}
   m_Layer: 5
   m_Name: NpcClick
   m_TagString: Untagged
@@ -15256,18 +15255,6 @@ RectTransform:
   m_AnchoredPosition: {x: 702, y: 305}
   m_SizeDelta: {x: 104.7608, y: 161.3399}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &406715187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406715185}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &406715188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16492,7 +16479,6 @@ GameObject:
   - component: {fileID: 460284123}
   - component: {fileID: 460284122}
   - component: {fileID: 460284121}
-  - component: {fileID: 460284120}
   m_Layer: 5
   m_Name: KidClick3
   m_TagString: Untagged
@@ -16521,18 +16507,6 @@ RectTransform:
   m_AnchoredPosition: {x: 613.4, y: 93}
   m_SizeDelta: {x: 27.6892, y: 40.4652}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &460284120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460284118}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &460284121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24362,7 +24336,6 @@ GameObject:
   - component: {fileID: 626340226}
   - component: {fileID: 626340225}
   - component: {fileID: 626340224}
-  - component: {fileID: 626340223}
   m_Layer: 5
   m_Name: GrannyClick1
   m_TagString: Untagged
@@ -24391,18 +24364,6 @@ RectTransform:
   m_AnchoredPosition: {x: -20.3, y: 70.396835}
   m_SizeDelta: {x: 49.8606, y: 70.0767}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &626340223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626340221}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &626340224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26674,7 +26635,6 @@ GameObject:
   - component: {fileID: 694440541}
   - component: {fileID: 694440540}
   - component: {fileID: 694440539}
-  - component: {fileID: 694440538}
   m_Layer: 5
   m_Name: NpcClick (2)
   m_TagString: Untagged
@@ -26703,18 +26663,6 @@ RectTransform:
   m_AnchoredPosition: {x: -127.1, y: -177.6}
   m_SizeDelta: {x: 49.8606, y: 74.9318}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &694440538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694440536}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &694440539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34888,7 +34836,6 @@ GameObject:
   - component: {fileID: 874512156}
   - component: {fileID: 874512155}
   - component: {fileID: 874512154}
-  - component: {fileID: 874512153}
   m_Layer: 5
   m_Name: KidClick
   m_TagString: Untagged
@@ -34917,18 +34864,6 @@ RectTransform:
   m_AnchoredPosition: {x: -113.237915, y: -265.47263}
   m_SizeDelta: {x: 28.0388, y: 37.7921}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &874512153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874512151}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &874512154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36287,7 +36222,6 @@ GameObject:
   - component: {fileID: 934560722}
   - component: {fileID: 934560721}
   - component: {fileID: 934560720}
-  - component: {fileID: 934560719}
   m_Layer: 5
   m_Name: NpcClick
   m_TagString: Untagged
@@ -36316,18 +36250,6 @@ RectTransform:
   m_AnchoredPosition: {x: -447.4, y: 279}
   m_SizeDelta: {x: 60.2265, y: 74.9318}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &934560719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934560717}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &934560720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42762,7 +42684,6 @@ GameObject:
   - component: {fileID: 1129100978}
   - component: {fileID: 1129100977}
   - component: {fileID: 1129100976}
-  - component: {fileID: 1129100975}
   m_Layer: 5
   m_Name: NpcClick (3)
   m_TagString: Untagged
@@ -42791,18 +42712,6 @@ RectTransform:
   m_AnchoredPosition: {x: 684, y: 235}
   m_SizeDelta: {x: 49.8606, y: 74.9318}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1129100975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129100973}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1129100976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46121,7 +46030,6 @@ GameObject:
   - component: {fileID: 1224058028}
   - component: {fileID: 1224058027}
   - component: {fileID: 1224058026}
-  - component: {fileID: 1224058025}
   - component: {fileID: 1224058024}
   - component: {fileID: 1224058023}
   m_Layer: 10
@@ -46163,18 +46071,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8179f79a45d3864990de78fe0174ffd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1224058025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224058022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d4be9c241d4d704eaab3fdd20b2ba36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1224058026
@@ -48303,7 +48199,6 @@ GameObject:
   - component: {fileID: 1286257149}
   - component: {fileID: 1286257148}
   - component: {fileID: 1286257147}
-  - component: {fileID: 1286257146}
   m_Layer: 5
   m_Name: GrannyClick1
   m_TagString: Untagged
@@ -48332,18 +48227,6 @@ RectTransform:
   m_AnchoredPosition: {x: 362, y: -162.48726}
   m_SizeDelta: {x: 49.8606, y: 53.683}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1286257146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1286257144}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1286257147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49019,7 +48902,6 @@ GameObject:
   - component: {fileID: 1319294131}
   - component: {fileID: 1319294130}
   - component: {fileID: 1319294129}
-  - component: {fileID: 1319294128}
   m_Layer: 5
   m_Name: KidClick
   m_TagString: Untagged
@@ -49048,18 +48930,6 @@ RectTransform:
   m_AnchoredPosition: {x: -448.8, y: -310.9}
   m_SizeDelta: {x: 28.0388, y: 37.7921}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1319294128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319294126}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1319294129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49854,7 +49724,6 @@ GameObject:
   - component: {fileID: 1356250743}
   - component: {fileID: 1356250742}
   - component: {fileID: 1356250741}
-  - component: {fileID: 1356250740}
   m_Layer: 5
   m_Name: PlayerClick
   m_TagString: Untagged
@@ -49882,18 +49751,6 @@ RectTransform:
   m_AnchoredPosition: {x: 626.68335, y: -147.00847}
   m_SizeDelta: {x: 48.4053, y: 73.3353}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1356250740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356250738}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1356250741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54268,7 +54125,6 @@ GameObject:
   - component: {fileID: 1534172092}
   - component: {fileID: 1534172091}
   - component: {fileID: 1534172090}
-  - component: {fileID: 1534172089}
   m_Layer: 5
   m_Name: NpcClick
   m_TagString: Untagged
@@ -54297,18 +54153,6 @@ RectTransform:
   m_AnchoredPosition: {x: -338.7, y: 86.7}
   m_SizeDelta: {x: 60.2265, y: 74.9318}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1534172089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534172087}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1534172090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61916,7 +61760,6 @@ GameObject:
   - component: {fileID: 1727175879}
   - component: {fileID: 1727175878}
   - component: {fileID: 1727175877}
-  - component: {fileID: 1727175876}
   m_Layer: 5
   m_Name: KidClick3
   m_TagString: Untagged
@@ -61945,18 +61788,6 @@ RectTransform:
   m_AnchoredPosition: {x: 672.91406, y: 175.6117}
   m_SizeDelta: {x: 27.6892, y: 40.4652}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1727175876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727175874}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1727175877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102091,7 +101922,6 @@ GameObject:
   - component: {fileID: 1856917477}
   - component: {fileID: 1856917476}
   - component: {fileID: 1856917475}
-  - component: {fileID: 1856917474}
   m_Layer: 5
   m_Name: GrannyClick2
   m_TagString: Untagged
@@ -102120,18 +101950,6 @@ RectTransform:
   m_AnchoredPosition: {x: -365.1, y: 376.31}
   m_SizeDelta: {x: 49.8606, y: 53.683}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1856917474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856917472}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1856917475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143067,7 +142885,6 @@ GameObject:
   - component: {fileID: 2081466770}
   - component: {fileID: 2081466769}
   - component: {fileID: 2081466768}
-  - component: {fileID: 2081466767}
   m_Layer: 5
   m_Name: NpcClick (1)
   m_TagString: Untagged
@@ -143096,18 +142913,6 @@ RectTransform:
   m_AnchoredPosition: {x: -718.88293, y: -261.2}
   m_SizeDelta: {x: 49.8606, y: 74.9318}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2081466767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081466765}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c297b9855be14c498d1cec2e29ee53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2081466768
 MonoBehaviour:
   m_ObjectHideFlags: 0
