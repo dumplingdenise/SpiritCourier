@@ -68,6 +68,7 @@ public class SettingUI : MonoBehaviour
         SettingPanel.SetActive(true);
         PausePanel.SetActive(true);
         AudioPanel.SetActive(false);
+        ControlPanel.SetActive(false);
         SetButtonActive(PauseButton);
         Time.timeScale = 0f; // Pause Game
 

@@ -29588,6 +29588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NpcID: 0
+  indicator: {fileID: 0}
 --- !u!4 &909173675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7889151285068695253, guid: cded85279ab004a41931aa08496ab887, type: 3}
