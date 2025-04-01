@@ -23,12 +23,14 @@ public class DeliverParcel : MonoBehaviour
     private DialogManager dialogManager;
     private GameController gameController;
 
-    // test
+    public GameObject indicator;
+
     private bool isPromptActive = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        indicator.SetActive(false);
         // Check for DialogManager
         dialogManager = FindFirstObjectByType<DialogManager>();
         if (dialogManager == null)
@@ -79,31 +81,14 @@ public class DeliverParcel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            /*if (inventoryList.Count == 0)
-            {
-                Debug.Log("Nothing in inventory");
-                if (promptText != null)
-                {
-                    promptText.style.display = DisplayStyle.Flex; // do not display the prompt when player come in contact with the NPC with no parcels in inventory
-                    promptText.text = "You have no parcels to deliver! Go find some!!";
-                }
-            }
-            else
-            {
-                playerNearby = true;
-                Debug.Log("Player detected, choose a parcel to deliver");
 
-                if (promptText != null)
-                {
-                    promptText.style.display = DisplayStyle.Flex; // display the prompt when player come in contact with the NPC with parcels in the inventory
-                    promptText.text = "Choose a parcel to deliver to the spirit.";
-                    promptText.text = "Press 'F' to interact with the spirit.";
-                    Invoke(nameof(HidePromt), 3f);
-                }
-            }*/
-
-            // test code
             playerNearby = true;
+
+            if (indicator != null && playerNearby)
+            {
+                UpdateIndicatorPosition();
+            }
+
             if (gameController.GetCurrentState() == GameState.FreeRoam)
             {
                 /*promptText.style.display = DisplayStyle.Flex; // display the prompt when player come in contact with the NPC with parcels in the inventory
@@ -154,6 +139,11 @@ public class DeliverParcel : MonoBehaviour
                 promptText.style.display = DisplayStyle.None; // set display to none again when player walk away from the NPC
                 promptText.text = "";
             }
+
+            if (indicator != null)
+            {
+                indicator.SetActive(false);
+            }
         }
     }
 
@@ -179,6 +169,15 @@ public class DeliverParcel : MonoBehaviour
         isPromptActive= false;
     }
 
+    private void UpdateIndicatorPosition()
+    {
+        if (indicator != null)
+        {
+            indicator.transform.position = transform.position + new Vector3(0, 1.5f, 0); // Slightly above the parcel
+            indicator.SetActive(true);
+        }
+    }
+
     void Update()
     {
         var inventory = FindFirstObjectByType<Inventory>();
@@ -187,31 +186,6 @@ public class DeliverParcel : MonoBehaviour
             Debug.LogError("Inventory not found!");
             return; // Exit the Update method to avoid further issues.
         }
-
-        /*if (playerNearby)
-        {
-            if (gameController.GetCurrentState() == GameState.WaitingForDelivery)
-            {
-                if (inventoryList.Count == 0)
-                {
-                    promptText.style.display = DisplayStyle.Flex;
-                    promptText.text = "You have no parcels to deliver! Go find some!!";
-                    Invoke(nameof(HidePrompt), 3f);
-                }
-                else
-                {
-                    promptText.style.display = DisplayStyle.Flex;
-                    promptText.text = "Choose a parcel to deliver to the spirit.";
-                    Invoke(nameof(HidePrompt), 3f);
-                }
-            }
-            *//*if (gameController.GetCurrentState() == GameState.FreeRoam)
-            {
-                promptText.style.display = DisplayStyle.Flex;
-                promptText.text = "Press F to interact with the sprit!";
-                Invoke(nameof(HidePrompt), 3f);
-            }*//*
-        }*/
 
         if (!Input.GetKeyDown(KeyCode.E) && playerNearby)
         {

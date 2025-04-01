@@ -9,25 +9,6 @@ using static Quest;
 
 public class PickUpParcel : MonoBehaviour
 {
-
-    // Code below is to when player walked into the parcel it will automatically pickup
-
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        PlayerMovement player = collision.GetComponent<PlayerMovement>();
-        Debug.Log($"Collision detected with: {collision.name}");
-        if (player != null)
-        {
-            Debug.Log("Parcel collected by player!");
-            Destroy(gameObject);
-            player.parcelCollected++;
-        }
-    }*/
-
-
-
-    // code below here is when player walk into the parcel,  they have to press E to pick up
-
     private bool playerNearby = false;
 
     private Label pickUpPromptText;
@@ -43,15 +24,22 @@ public class PickUpParcel : MonoBehaviour
 
     private bool pickedUp = false;
 
-    // test
-    /*public GameObject indicator;
-    private GameObject indicatorInstance;*/
+    public GameObject indicator;
 
     private void Start()
     {
 
         inventory = GameObject.FindFirstObjectByType<Inventory>();
         quest = GameObject.FindFirstObjectByType<Quest>();
+        
+        if (indicator != null)
+        {
+            indicator.SetActive(false);
+        }
+        else
+        {
+            return;
+        }
 
         var uiDocument = GetComponentInParent<UIDocument>();
         if (uiDocument != null)
@@ -101,14 +89,6 @@ public class PickUpParcel : MonoBehaviour
         {
             Debug.LogError("No NPC assigned to the parcel.");
         }
-
-        // test
-        // Check if the parcel has already been picked up in a previous session
-        /*if (PlayerPrefs.GetInt($"Parcel_{parcelData.parcelID}_PickedUp", 0) == 1)
-        {
-            pickedUp = true;
-            gameObject.SetActive(false); // Hide the parcel if already picked up
-        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -148,6 +128,11 @@ public class PickUpParcel : MonoBehaviour
                 indicator.SetActive(true);
             }*/
 
+            if (indicator != null && playerNearby)
+            {
+                UpdateIndicatorPosition();
+            }
+
         }
     }
 
@@ -162,14 +147,10 @@ public class PickUpParcel : MonoBehaviour
                 pickUpPromptText.style.display = DisplayStyle.None; // set display to none again when player walk away from the parcel
             }
 
-           /* if (indicatorInstance == null && indicator != null)
+           if (indicator != null)
             {
                 indicator.SetActive(false);
-                *//*Debug.LogError("Parcel Position: " + parcelData.position);
-                indicatorInstance = Instantiate(indicator, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
-                indicatorInstance.transform.SetParent(transform, true); // Attach to parcel*//*
-                
-            }*/
+            }
         }
     }
 
@@ -182,39 +163,14 @@ public class PickUpParcel : MonoBehaviour
         }
     }
 
-    /*    private void UpdateIndicatorPosition()
-        {
-            if (indicator != null)
-            {
-                *//*Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 1.5f, 0));
-                indicator.transform.position = screenPosition;*//*
-
-                // Calculate the position above the parcel
-                Vector3 parcelWorldPosition = transform.position + new Vector3(0, 1f, 0); // 1.5 units above the parcel
-                parcelWorldPosition.z = 0f;
-                Vector3 screenPosition = Camera.main.WorldToScreenPoint(parcelWorldPosition);
-
-                RectTransform rectTransform = indicator.GetComponent<RectTransform>();
-                rectTransform.position = screenPosition;
-
-                *//*indicator.transform.position = screenPosition;
-                Debug.LogError($"Indicator position: {indicator.transform.position}");*//*
-                Debug.LogError($"Indicator position: {rectTransform.position}");
-            }
-        }*/
 
     private void UpdateIndicatorPosition()
     {
-        /*if (indicatorInstance != null)
+        if (indicator != null)
         {
-            Vector3 parcelWorldPosition = transform.position + new Vector3(0, 1f, 0); // 1 unit above the parcel
-            parcelWorldPosition.z = 0f;  // Ensure the Z position remains constant
-            Vector3 screenPosition = Camera.main.WorldToScreenPoint(parcelWorldPosition); // Convert to screen position
-
-            RectTransform rectTransform = indicatorInstance.GetComponent<RectTransform>();
-            rectTransform.position = screenPosition;
-            Debug.LogError($"Indicator position: {rectTransform.position}");
-        }*/
+            indicator.transform.position = transform.position + new Vector3(0, 1f, 0); // Slightly above the parcel
+            indicator.SetActive(true);
+        }
     }
 
     private void Update()
