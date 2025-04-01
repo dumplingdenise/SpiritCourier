@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: 3384e205b79c3c142808e4517e8957ca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6238010943686048204
+    second: DigiPen_Singapore_WEB_BLACK_0
+  - first:
+      213: 8271530336213790047
+    second: DigiPen_Singapore_WEB_BLACK_1
+  - first:
+      213: 783462123413069327
+    second: DigiPen_Singapore_WEB_BLACK_2
+  - first:
+      213: 3140661624311842959
+    second: DigiPen_Singapore_WEB_BLACK_3
+  - first:
+      213: 5394989971509551774
+    second: DigiPen_Singapore_WEB_BLACK_4
+  - first:
+      213: -3501710930571313926
+    second: DigiPen_Singapore_WEB_BLACK_5
+  - first:
+      213: 5977829625361133188
+    second: DigiPen_Singapore_WEB_BLACK_6
+  - first:
+      213: -5202944885655378714
+    second: DigiPen_Singapore_WEB_BLACK_7
+  - first:
+      213: 2816128860395743258
+    second: DigiPen_Singapore_WEB_BLACK_8
+  - first:
+      213: 5716859870696630560
+    second: DigiPen_Singapore_WEB_BLACK_9
+  - first:
+      213: -4553826979923844616
+    second: DigiPen_Singapore_WEB_BLACK_10
+  - first:
+      213: -329988447053178240
+    second: DigiPen_Singapore_WEB_BLACK_11
+  - first:
+      213: 4236475256801230585
+    second: DigiPen_Singapore_WEB_BLACK_12
+  - first:
+      213: 8293588599285347574
+    second: DigiPen_Singapore_WEB_BLACK_13
+  - first:
+      213: 6516023673919915844
+    second: DigiPen_Singapore_WEB_BLACK_14
+  - first:
+      213: 5369708601316480479
+    second: DigiPen_Singapore_WEB_BLACK_15
+  - first:
+      213: 8040872414470484569
+    second: DigiPen_Singapore_WEB_BLACK_16
+  - first:
+      213: 3167426216945158191
+    second: DigiPen_Singapore_WEB_BLACK_17
+  - first:
+      213: -2959308750067209035
+    second: DigiPen_Singapore_WEB_BLACK_18
+  - first:
+      213: -1231460153906839356
+    second: DigiPen_Singapore_WEB_BLACK_19
+  - first:
+      213: 8944672359567007242
+    second: DigiPen_Singapore_WEB_BLACK_20
+  - first:
+      213: 2901312639460349515
+    second: DigiPen_Singapore_WEB_BLACK_21
+  - first:
+      213: -328764890829390330
+    second: DigiPen_Singapore_WEB_BLACK_22
+  - first:
+      213: 1207772032452609857
+    second: DigiPen_Singapore_WEB_BLACK_23
+  - first:
+      213: 6406521952896820241
+    second: DigiPen_Singapore_WEB_BLACK_24
+  - first:
+      213: -7046658373499045002
+    second: DigiPen_Singapore_WEB_BLACK_25
+  - first:
+      213: -3390255886391629438
+    second: DigiPen_Singapore_WEB_BLACK_26
+  - first:
+      213: -6695330372115756985
+    second: DigiPen_Singapore_WEB_BLACK_27
+  - first:
+      213: 1109800478359075725
+    second: DigiPen_Singapore_WEB_BLACK_28
+  - first:
+      213: -3069807851874031035
+    second: DigiPen_Singapore_WEB_BLACK_29
+  - first:
+      213: 3371485805780509367
+    second: DigiPen_Singapore_WEB_BLACK_30
+  - first:
+      213: -4056244219700351264
+    second: DigiPen_Singapore_WEB_BLACK_31
+  - first:
+      213: -7724098369749938912
+    second: DigiPen_Singapore_WEB_BLACK_32
+  - first:
+      213: 5310607680653777198
+    second: DigiPen_Singapore_WEB_BLACK_33
+  - first:
+      213: 791100674145265288
+    second: DigiPen_Singapore_WEB_BLACK_34
+  - first:
+      213: 5382609431638680164
+    second: DigiPen_Singapore_WEB_BLACK_35
+  - first:
+      213: 646209539216661314
+    second: DigiPen_Singapore_WEB_BLACK_36
+  - first:
+      213: 3014233147498055424
+    second: DigiPen_Singapore_WEB_BLACK_37
+  - first:
+      213: 8585159503728407085
+    second: DigiPen_Singapore_WEB_BLACK_38
+  - first:
+      213: 291128313380965374
+    second: DigiPen_Singapore_WEB_BLACK_39
+  - first:
+      213: -5408659169603034933
+    second: DigiPen_Singapore_WEB_BLACK_40
+  - first:
+      213: -3084882208027507397
+    second: DigiPen_Singapore_WEB_BLACK_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1525
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436089cd8122e69a0800000000000000
+      internalID: -6238010943686048204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 691592e89323abf4195d7500d5be50d8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DigiPen_Singapore_WEB_BLACK_0: -6238010943686048204
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
