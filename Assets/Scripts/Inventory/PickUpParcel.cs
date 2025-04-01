@@ -44,27 +44,44 @@ public class PickUpParcel : MonoBehaviour
     private bool pickedUp = false;
 
     // test
-    public GameObject indicator;
-    private GameObject indicatorInstance;
+    /*public GameObject indicator;
+    private GameObject indicatorInstance;*/
 
     private void Start()
     {
 
         inventory = GameObject.FindFirstObjectByType<Inventory>();
         quest = GameObject.FindFirstObjectByType<Quest>();
-        /*audioSource = GetComponent<AudioSource>();*/
 
         var uiDocument = GetComponentInParent<UIDocument>();
         if (uiDocument != null)
         {
             var rootVisualElement = uiDocument.rootVisualElement;
             pickUpPromptText = rootVisualElement.Q<Label>("PickUpLabel");
-            if (pickUpPromptText != null)
+            /* if (pickUpPromptText != null)
+             {
+                 pickUpPromptText.style.display = DisplayStyle.None;
+                 Debug.Log("Prompt text is not here!");
+             }*/
+
+            if (pickUpPromptText == null)
             {
+                Debug.LogError("PickUpLabel not found in UIDocument! Check the label name.");
+            }
+            else
+            {
+                Debug.LogError("PickUpLabel found successfully! Current display: " + pickUpPromptText.style.display);
+
+                // Try forcing it again
                 pickUpPromptText.style.display = DisplayStyle.None;
-                Debug.Log("Prompt text is not here!");
+                Debug.LogError("After hiding: " + pickUpPromptText.style.display);
             }
         }
+        else
+        {
+            Debug.LogError("UIDocument is missing or not attached to this object.");
+        }
+
 
         StartCoroutine(WaitForNpcAssignment());
     }
@@ -123,6 +140,14 @@ public class PickUpParcel : MonoBehaviour
             }
             Debug.LogError($"Parcel location: {transform.position}");*/
 
+            /*if (indicatorInstance == null && indicator != null)
+            {
+                indicatorInstance = Instantiate(indicator, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
+                indicatorInstance.transform.SetParent(transform, true); // Attach to the parcel object
+                UpdateIndicatorPosition();
+                indicator.SetActive(true);
+            }*/
+
         }
     }
 
@@ -137,14 +162,14 @@ public class PickUpParcel : MonoBehaviour
                 pickUpPromptText.style.display = DisplayStyle.None; // set display to none again when player walk away from the parcel
             }
 
-            if (indicatorInstance == null && indicator != null)
+           /* if (indicatorInstance == null && indicator != null)
             {
                 indicator.SetActive(false);
-                /*Debug.LogError("Parcel Position: " + parcelData.position);
+                *//*Debug.LogError("Parcel Position: " + parcelData.position);
                 indicatorInstance = Instantiate(indicator, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
-                indicatorInstance.transform.SetParent(transform, true); // Attach to parcel*/
+                indicatorInstance.transform.SetParent(transform, true); // Attach to parcel*//*
                 
-            }
+            }*/
         }
     }
 
@@ -157,33 +182,43 @@ public class PickUpParcel : MonoBehaviour
         }
     }
 
-/*    private void UpdateIndicatorPosition()
-    {
-        if (indicator != null)
+    /*    private void UpdateIndicatorPosition()
         {
-            *//*Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 1.5f, 0));
-            indicator.transform.position = screenPosition;*//*
+            if (indicator != null)
+            {
+                *//*Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 1.5f, 0));
+                indicator.transform.position = screenPosition;*//*
 
-            // Calculate the position above the parcel
-            Vector3 parcelWorldPosition = transform.position + new Vector3(0, 1f, 0); // 1.5 units above the parcel
-            parcelWorldPosition.z = 0f;
-            Vector3 screenPosition = Camera.main.WorldToScreenPoint(parcelWorldPosition);
+                // Calculate the position above the parcel
+                Vector3 parcelWorldPosition = transform.position + new Vector3(0, 1f, 0); // 1.5 units above the parcel
+                parcelWorldPosition.z = 0f;
+                Vector3 screenPosition = Camera.main.WorldToScreenPoint(parcelWorldPosition);
 
-            RectTransform rectTransform = indicator.GetComponent<RectTransform>();
+                RectTransform rectTransform = indicator.GetComponent<RectTransform>();
+                rectTransform.position = screenPosition;
+
+                *//*indicator.transform.position = screenPosition;
+                Debug.LogError($"Indicator position: {indicator.transform.position}");*//*
+                Debug.LogError($"Indicator position: {rectTransform.position}");
+            }
+        }*/
+
+    private void UpdateIndicatorPosition()
+    {
+        /*if (indicatorInstance != null)
+        {
+            Vector3 parcelWorldPosition = transform.position + new Vector3(0, 1f, 0); // 1 unit above the parcel
+            parcelWorldPosition.z = 0f;  // Ensure the Z position remains constant
+            Vector3 screenPosition = Camera.main.WorldToScreenPoint(parcelWorldPosition); // Convert to screen position
+
+            RectTransform rectTransform = indicatorInstance.GetComponent<RectTransform>();
             rectTransform.position = screenPosition;
-
-            *//*indicator.transform.position = screenPosition;
-            Debug.LogError($"Indicator position: {indicator.transform.position}");*//*
             Debug.LogError($"Indicator position: {rectTransform.position}");
-        }
-    }*/
+        }*/
+    }
 
     private void Update()
     {
-        /*if (playerNearby && indicator != null)
-        {
-            UpdateIndicatorPosition(); // Continuously update position above the parcel
-        }*/
         if (playerNearby && Input.GetKeyDown(KeyCode.E) && !pickedUp)
         {
             if (inventory != null)
@@ -204,13 +239,13 @@ public class PickUpParcel : MonoBehaviour
                     SoundEffectManager.Play("PickUpParcels");
                     Debug.Log("Parcel picked up!");
 
-                    if (pickUpPromptText != null)
+                    /*if (pickUpPromptText != null)
                     {
                         pickUpPromptText.style.display = DisplayStyle.Flex;  // if added to inventory, text is gone
                         pickUpPromptText.text = $"{parcelData.parcelName} picked up and added to inventory!";
                         Invoke(nameof(HidePrompt), 3f);
                         Debug.Log($"Parcel {parcelData.parcelName}, ID: {parcelData.parcelID} picked up and added to inventory!");
-                    }
+                    }*/
                     inventory.UpdateInventoryUI();
 
                     if (quest != null)
