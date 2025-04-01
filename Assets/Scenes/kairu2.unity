@@ -6199,14 +6199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1875314742}
-  - {fileID: 1398466104}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &159073350
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7044,14 +7036,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1666035937}
-  - {fileID: 154864019}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &213411934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9462,17 +9446,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361150744}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 386755171}
-  m_Father: {fileID: 1629705004}
+  m_Father: {fileID: 1969256947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -689.1394, y: 343.64557}
+  m_AnchoredPosition: {x: -789.1394, y: 353.64557}
   m_SizeDelta: {x: 360.1277, y: 356.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &361150746
@@ -9683,14 +9667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1748805868}
-  - {fileID: 1514493746}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &361528286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13015,14 +12991,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 205497546}
-  - {fileID: 1777321813}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &553393005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13441,14 +13409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1982491893}
-  - {fileID: 1063244421}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &575010161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14004,14 +13964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1540683852}
-  - {fileID: 1457939127}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &648239535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20010,14 +19962,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 2013777353}
-  - {fileID: 20424771}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &796054403
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53789,14 +53733,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1417735506}
-  - {fileID: 1044827177}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &1023786997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54274,6 +54210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NpcID: 0
+  indicator: {fileID: 0}
 --- !u!114 &1051131955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92517,14 +92454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1657021740}
-  - {fileID: 765347675}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &1440598236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93600,14 +93529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1448890757}
-  - {fileID: 436955296}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &1484009863
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -94908,14 +94829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1278839837}
-  - {fileID: 1176982789}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &1548395353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132571,7 +132484,6 @@ RectTransform:
   m_Children:
   - {fileID: 966538918}
   - {fileID: 1917275465}
-  - {fileID: 361150745}
   - {fileID: 1969256947}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -133950,14 +133862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 453172869}
-  - {fileID: 1502901273}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &1841229574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135634,14 +135538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1007923977}
-  - {fileID: 233239409}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &1869763416
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136638,7 +136534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1969256947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -136655,6 +136551,7 @@ RectTransform:
   - {fileID: 1294227757}
   - {fileID: 36059487}
   - {fileID: 1547259824}
+  - {fileID: 361150745}
   m_Father: {fileID: 1629705004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -137154,14 +137051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1720310067}
-  - {fileID: 1761004845}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &2006878326
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -137483,14 +137372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1729654657}
-  - {fileID: 1537328225}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &2016173689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -137855,14 +137736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 1299341841}
-  - {fileID: 1986099732}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &2026969312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138517,14 +138390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9084b852faec49b72b52400495d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  waypoints:
-  - {fileID: 2101299961}
-  - {fileID: 1225285811}
-  npcDialog:
-    lines:
-    - Hello
-    - What a great day today.
 --- !u!61 &2064213097
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138895,9 +138760,11 @@ MonoBehaviour:
   dialogText: {fileID: 1714220267}
   lettersPerSecond: 90
   nextPuzzleSceneButton: {fileID: 0}
-  PuzzleObject: []
+  easyPuzzle: []
+  hardPuzzle: []
   noButton: {fileID: 395457874}
   playerController: {fileID: 1224058028}
+  puzzlePlayedCount: 0
 --- !u!114 &2093632203
 MonoBehaviour:
   m_ObjectHideFlags: 0

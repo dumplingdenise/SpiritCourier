@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Child NPC story dead_0: -7854384281234158030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

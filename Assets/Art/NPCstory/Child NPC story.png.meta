@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Child NPC story_0: 7448679071046526460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

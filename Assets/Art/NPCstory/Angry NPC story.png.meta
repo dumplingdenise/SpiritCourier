@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Angry NPC story_0: 2694544126129302059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

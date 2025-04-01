@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Grandma NPC story_0: 1560418359189903838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

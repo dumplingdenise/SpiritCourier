@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Depressed NPC story dead_0: 1358685538199949846
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
