@@ -58,11 +58,11 @@ public class PickUpParcel : MonoBehaviour
             }
             else
             {
-                Debug.LogError("PickUpLabel found successfully! Current display: " + pickUpPromptText.style.display);
+                /*Debug.LogError("PickUpLabel found successfully! Current display: " + pickUpPromptText.style.display);*/
 
                 // Try forcing it again
                 pickUpPromptText.style.display = DisplayStyle.None;
-                Debug.LogError("After hiding: " + pickUpPromptText.style.display);
+                /*Debug.LogError("After hiding: " + pickUpPromptText.style.display);*/
             }
         }
         else
