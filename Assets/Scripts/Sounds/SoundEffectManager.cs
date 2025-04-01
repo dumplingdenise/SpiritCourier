@@ -22,7 +22,7 @@ public class SoundEffectManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+           // Destroy(gameObject);
         }
     }
 
