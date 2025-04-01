@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 190087043341810399}
   - component: {fileID: 3643781922215367565}
   - component: {fileID: 3850816263642368210}
-  - component: {fileID: 3885692998836085359}
   - component: {fileID: 5279036025520876059}
+  - component: {fileID: 3885692998836085359}
   m_Layer: 0
   m_Name: Letter_Prefab
   m_TagString: Untagged
@@ -136,6 +136,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.96, y: 0.68}
   m_EdgeRadius: 0
+--- !u!114 &5279036025520876059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595789917768666504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 7e733978da3653c45bdc3041a8401e9d, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 06bb701936804a440a6d1e1fc1e7ed45, type: 3}
+  m_SortingOrder: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
 --- !u!114 &3885692998836085359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,26 +184,10 @@ MonoBehaviour:
     npcHints: 
     parcelStoryDialog:
       lines: []
+    tag: 
+  Tag: 
   parcelHints: 
   npcHints: 
   parcelStoryDialog:
     lines: []
---- !u!114 &5279036025520876059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2595789917768666504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PanelSettings: {fileID: 11400000, guid: 7e733978da3653c45bdc3041a8401e9d, type: 2}
-  m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: fa2272def20d44b49918b177db378374, type: 3}
-  m_SortingOrder: 0
-  m_WorldSpaceSizeMode: 1
-  m_WorldSpaceWidth: 1920
-  m_WorldSpaceHeight: 1080
+  indicator: {fileID: 0}

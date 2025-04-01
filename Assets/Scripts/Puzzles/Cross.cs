@@ -69,7 +69,7 @@ public class Cross : MonoBehaviour
             gameController.SetGameState(GameState.WaitingForDelivery); // Resume gameplay
             dialogManager.CloseDialog();
             dialogManager.puzzlePlayedCount++;
-            Debug.LogError($"Game state after finish puzzle: {gameController.GetCurrentState()}");
+            /*Debug.LogError($"Game state after finish puzzle: {gameController.GetCurrentState()}");*/
         }
 
 

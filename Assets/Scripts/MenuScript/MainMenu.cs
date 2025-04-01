@@ -18,6 +18,12 @@ public class MainMenu : MonoBehaviour
     public GameObject pausePanel;    // Pause Panel
     public Button pauseButton;       // Pause Button
 
+    public GameObject creditPanel;
+    public Button creditButton;
+    public Button creditCloseBtn;
+
+    public Credits credit;
+
     private Button activeButton; //track currently pressed button
     private void Awake()
     {
@@ -31,6 +37,7 @@ public class MainMenu : MonoBehaviour
         controlPanel.SetActive(false);
         audioPanel.SetActive(false);
         pausePanel.SetActive(false);
+        creditPanel.SetActive(false);
     }
 
     private void Start()
@@ -42,6 +49,11 @@ public class MainMenu : MonoBehaviour
         controlButton.onClick.AddListener(OpenControl);
         audioButton.onClick.AddListener(OpenAudio);
         pauseButton.onClick.AddListener(OpenPause);
+
+        creditButton.onClick.AddListener(OpenCredit);
+        creditCloseBtn.onClick.AddListener(CloseCredit);
+
+        credit = FindFirstObjectByType<Credits>();
     }
 
     public void StartGame()
@@ -55,12 +67,23 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Game Closed");
     }
 
-    private void OpenSettings()
+    public void OpenSettings()
     {
         settingPanel.SetActive(true);
         OpenPause();
         //audioPanel.SetActive(false);
        // controlPanel.SetActive(false);
+    }
+
+    public void OpenCredit()
+    {
+        creditPanel.SetActive(true);
+    }
+
+    public void CloseCredit()
+    {
+        creditPanel.SetActive(false);
+        credit.resetCredit();
     }
 
     private void CloseSettings()

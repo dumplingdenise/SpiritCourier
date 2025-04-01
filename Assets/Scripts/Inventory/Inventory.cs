@@ -39,9 +39,10 @@ public class Inventory : MonoBehaviour
         public Vector2 parcelPosition;
         public MainNpcs.NPCData npcData;
         public Dialog parcelStoryDialog;
+        public string tag;
 
 
-        public inventoryParcelData(int parcelID, string parcelName, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData, Dialog parcelStoryDialog)
+        public inventoryParcelData(int parcelID, string parcelName, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData, Dialog parcelStoryDialog, string tag)
         {
             this.parcelID = parcelID;
             this.parcelName = parcelName;
@@ -49,6 +50,7 @@ public class Inventory : MonoBehaviour
             this.parcelPosition = parcelPosition;
             this.npcData = npcData;
             this.parcelStoryDialog = parcelStoryDialog;
+            this.tag = tag;
         }
     }
 
@@ -70,7 +72,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public bool AddParcelToInventory(int parcelID, string parcelName, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData, Dialog parcelStoryDialog)
+    public bool AddParcelToInventory(int parcelID, string parcelName, Sprite parcelSprite, Vector2 parcelPosition, MainNpcs.NPCData npcData, Dialog parcelStoryDialog, string tag)
     {
         if (collectedParcels.Count >= maxInventorySize)
         {
@@ -78,7 +80,7 @@ public class Inventory : MonoBehaviour
             return false;
         }
 
-        inventoryParcelData newParcel = new inventoryParcelData(parcelID, parcelName, parcelSprite, parcelPosition, npcData, parcelStoryDialog);
+        inventoryParcelData newParcel = new inventoryParcelData(parcelID, parcelName, parcelSprite, parcelPosition, npcData, parcelStoryDialog, tag);
         collectedParcels.Add(newParcel);
 
 
@@ -99,10 +101,10 @@ public class Inventory : MonoBehaviour
         // Set the selected slot to the clicked index
         if (index < collectedParcels.Count)
         {
+            SoundEffectManager.Play("SlotSelect");
             selectedSlot = index;
             Debug.Log($"Selected slot: {selectedSlot}");
 
-            // test code for selected item in inventory -> but if the player deliver a wrong parcel, the blue bg is still there
             for (int i = 0; i < slotButtons.Length; i++)
             {
                 Image selectedImage = slotButtons[i].transform.Find("Selected").GetComponent<Image>();
@@ -165,7 +167,7 @@ public class Inventory : MonoBehaviour
         {
             if (collectedParcels[i] == null)
             {
-                Debug.LogError($"Parcel at index {i} is null or destroyed, removing from inventory");
+                /*Debug.LogError($"Parcel at index {i} is null or destroyed, removing from inventory");*/
                 collectedParcels.RemoveAt(i);
             }
         }
@@ -175,15 +177,15 @@ public class Inventory : MonoBehaviour
         {
             if (i < collectedParcels.Count && collectedParcels[i] != null)
             {
-                /*RectTransform rt = slotIcons[i].GetComponent<RectTransform>();
-                if (collectedParcels[i].ParcelData.tag == "Parcel")
+                RectTransform rt = slotIcons[i].GetComponent<RectTransform>();
+                if (collectedParcels[i].tag == "Parcel")
                 {
                     rt.sizeDelta = new Vector2(77.2498f, 74.187f);
                 }
                 else
                 {
                     rt.sizeDelta = new Vector2(85.2327f, 60.3732f);
-                }*/
+                }
                 slotIcons[i].sprite = collectedParcels[i].parcelSprite;
                 slotIcons[i].enabled = true;
             }
