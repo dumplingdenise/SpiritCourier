@@ -10,6 +10,17 @@ public class CutScene : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (Inventory.Instance != null)
+        {
+            Destroy(Inventory.Instance.gameObject);
+            Debug.Log("Inventory destroyed in Cutscene scene.");
+        }
+
+        if (Quest.Instance != null)
+        {
+            Destroy(Quest.Instance.gameObject);
+            Debug.Log("Quest destroyed in Cutscene scene.");
+        }
         videoPlayer.loopPointReached += EndCutscene; // Detect when video ends
     }
 

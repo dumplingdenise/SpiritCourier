@@ -60,6 +60,15 @@ public class LoadManager : MonoBehaviour
         parcelImage.position = new Vector2(endPos.x - parcelOffset, endPos.y + parcelYOffset);
 
         // **Load the next scene**
-        SceneManager.LoadScene("Cut Scene"); // Uses variable instead of hardcoded name
+
+        if (MainMenu.isLoadGame == false)
+        {
+            SceneManager.LoadScene("Cut Scene"); // Uses variable instead of hardcoded name
+        }
+        else
+        {
+            SceneManager.LoadScene("Denise"); // Uses variable instead of hardcoded name
+        }
+        
     }
 }

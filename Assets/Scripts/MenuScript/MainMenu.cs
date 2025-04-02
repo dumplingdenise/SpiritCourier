@@ -25,6 +25,8 @@ public class MainMenu : MonoBehaviour
     public Credits credit;
 
     private Button activeButton; //track currently pressed button
+
+    public static bool isLoadGame = false;
     private void Awake()
     {
         int screenW = 1920;
@@ -56,8 +58,15 @@ public class MainMenu : MonoBehaviour
         credit = FindFirstObjectByType<Credits>();
     }
 
-    public void StartGame()
+    public void LoadGame()
     {
+        isLoadGame = true;
+        SceneManager.LoadScene("Load");
+    }
+
+    public void NewGame()
+    {
+        isLoadGame = false;
         SceneManager.LoadScene("Load");
     }
 

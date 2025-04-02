@@ -1714,7 +1714,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &42983706
 RectTransform:
@@ -11502,6 +11502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 364412951}
   - component: {fileID: 364412950}
+  - component: {fileID: 364412952}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -11537,6 +11538,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &364412952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364412949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8d762add1e68d449de7615c16e9009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapCanvas: {fileID: 42983705}
+  BigMap: {fileID: 713425132}
+  journalCanvas: {fileID: 1864010654}
+  journal: {fileID: 5715673}
+  settingCanvas: {fileID: 1606047497}
+  setting: {fileID: 604690469}
 --- !u!1 &370400317
 GameObject:
   m_ObjectHideFlags: 0
@@ -14134,7 +14153,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &452661394
 GameObject:
@@ -30523,7 +30542,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713425132}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -126663,7 +126682,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &1609665423
 GameObject:
@@ -144111,7 +144130,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &2765720147618917459
 GameObject:
