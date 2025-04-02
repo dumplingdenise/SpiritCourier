@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class FindHard2 : MonoBehaviour
 {
@@ -35,6 +37,11 @@ public class FindHard2 : MonoBehaviour
     public GameObject[] BlueKidHintIndicators; // Hint visual effects
     private int hintCount = 0;
     private int lastHintIndex = -1; // Keep track of last hinted BlueKid
+
+    private void OnEnable()
+    {
+        ResetPuzzle(); // Reset puzzle each time it is activated
+    }
 
     void Start()
     {
@@ -78,6 +85,10 @@ public class FindHard2 : MonoBehaviour
 
     void ResetPuzzle()
     {
+        puzzleCompletePanel.SetActive(false);
+        CrossUI.SetActive(false);
+
+        //Reset Value
         foundParcels = 0;
         foundBlueKids = 0;
         foundBlueGrannys = 0;
@@ -85,19 +96,61 @@ public class FindHard2 : MonoBehaviour
         lastHintIndex = -1; // Reset hint tracking
 
         foreach (GameObject npc in BlueKidIndicators)
+        {
             npc.SetActive(false);
+        }
 
         foreach (GameObject npc in BlueGrannyIndicators)
+        {
             npc.SetActive(false);
+        }
 
         foreach (GameObject parcel in parcelIndicators)
+        {
             parcel.SetActive(false);
+        }
 
         foreach (GameObject hint in BlueKidHintIndicators)
+        {
             hint.SetActive(false); // Hide all hint indicators
+        }
 
-        puzzleCompletePanel.SetActive(false);
-        CrossUI.SetActive(false);
+        // Unassign and reassign listeners
+        foreach (Button button in parcelButtons)
+        {
+            button.onClick.RemoveAllListeners();
+        }
+
+        for (int i = 0; i < parcelButtons.Length; i++)
+        {
+            int index = i;
+            parcelButtons[i].onClick.AddListener(() => FindParcel(index));
+        }
+
+          // Unassign and reassign listeners
+        foreach (Button button in BlueKidButtons)
+        {
+            button.onClick.RemoveAllListeners();
+        }
+
+        for (int i = 0; i < BlueKidButtons.Length; i++)
+        {
+            int index = i;
+            BlueKidButtons[i].onClick.AddListener(() => FindParcel(index));
+        }  
+        
+        // Unassign and reassign listeners
+        foreach (Button button in BlueGrannyButtons)
+        {
+            button.onClick.RemoveAllListeners();
+        }
+
+        for (int i = 0; i < BlueGrannyButtons.Length; i++)
+        {
+            int index = i;
+            BlueGrannyButtons[i].onClick.AddListener(() => FindParcel(index));
+        }
+
         UpdateProgress();
 
         hintButton.interactable = true; // Reactivate hint button
@@ -208,6 +261,14 @@ public class FindHard2 : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(delay);
         BlueKidHintIndicators[hintIndex].SetActive(false);
+    }
+
+    public void ClosePuzzle()
+    {
+        CrossUI.SetActive(false);
+        Time.timeScale = 1f;
+        ResetPuzzle(); // Ensure reset when closing
+        this.gameObject.SetActive(false);
     }
 }
 

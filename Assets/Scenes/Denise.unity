@@ -62796,12 +62796,8 @@ MonoBehaviour:
   lettersPerSecond: 90
   nextPuzzleSceneButton: {fileID: 1046751577}
   easyPuzzle:
-  - {fileID: 856879167}
-  - {fileID: 1845926488}
-  hardPuzzle:
   - {fileID: 790733125}
-  - {fileID: 1046241921}
-  - {fileID: 762057821}
+  hardPuzzle: []
   noButton: {fileID: 905249350}
   playerController: {fileID: 0}
   puzzlePlayedCount: 0
