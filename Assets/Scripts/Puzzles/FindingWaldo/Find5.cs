@@ -40,6 +40,11 @@ public class Find5 : MonoBehaviour
     private int hintCount = 0;
     private int lastHintIndex = -1; // Keep track of last hinted BlueKid
 
+    private void OnEnable()
+    {
+        ResetPuzzle(); // Reset puzzle each time it is activated
+    }
+
     void Start()
     {
         ResetPuzzle();
@@ -80,32 +85,80 @@ public class Find5 : MonoBehaviour
         }
     }
 
-    void ResetPuzzle()
-    {
-        foundParcels = 0;
-        foundBlueKids = 0;
-        foundBlueGrannys = 0;
-        hintCount = 0;
-        lastHintIndex = -1; // Reset hint tracking
+    /* void ResetPuzzle()
+     {
+         puzzleCompletePanel.SetActive(false);
+         CrossUI.SetActive(false);
 
-        foreach (GameObject npc in BlueKidIndicators)
-            npc.SetActive(false);
+         foundParcels = 0;
+         foundBlueKids = 0;
+         foundBlueGrannys = 0;
+         PlayerFound = false;
+         PlayerIndicator.SetActive(false);
+         hintCount = 0;
+         lastHintIndex = -1; // Reset hint tracking
 
-        foreach (GameObject npc in BlueGrannyIndicators)
-            npc.SetActive(false);
+         foreach (GameObject npc in BlueKidIndicators)
+         {
+             npc.SetActive(false);
+         }
 
-        foreach (GameObject parcel in parcelIndicators)
-            parcel.SetActive(false);
+         foreach (GameObject npc in BlueGrannyIndicators)
+         {
+             npc.SetActive(false);
+         }
 
-        foreach (GameObject hint in BlueKidHintIndicators)
-            hint.SetActive(false); // Hide all hint indicators
+         foreach (GameObject parcel in parcelIndicators)
+         {
+             parcel.SetActive(false);
+         }
 
-        puzzleCompletePanel.SetActive(false);
-        CrossUI.SetActive(false);
-        UpdateProgress();
+         foreach (GameObject hint in BlueKidHintIndicators)
+         {
+             hint.SetActive(false); // Hide all hint indicators
+         }
 
-        hintButton.interactable = true; // Reactivate hint button
-    }
+         // Unassign and reassign listeners
+         foreach (Button button in parcelButtons)
+         {
+             button.onClick.RemoveAllListeners();
+         }
+
+         for (int i = 0; i < parcelButtons.Length; i++)
+         {
+             int index = i;
+             parcelButtons[i].onClick.AddListener(() => FindParcel(index));
+         }
+
+         // Unassign and reassign listeners
+         foreach (Button button in BlueKidButtons)
+         {
+             button.onClick.RemoveAllListeners();
+         }
+
+         for (int i = 0; i < BlueKidButtons.Length; i++)
+         {
+             int index = i;
+             BlueKidButtons[i].onClick.AddListener(() => FindParcel(index));
+         }
+
+         // Unassign and reassign listeners
+         foreach (Button button in BlueGrannyButtons)
+         {
+ button.onCl
+ ick.RemoveAllListeners();
+         }
+
+         for (int i = 0; i < BlueGrannyButtons.Length; i++)
+         {
+             int index = i;
+             BlueGrannyButtons[i].onClick.AddListener(() => FindParcel(index));
+         }
+
+         UpdateProgress();
+
+         hintButton.interactable = true; // Reactivate hint button
+     }*/
 
     public void FindKid(int KidIndex)
     {
@@ -148,7 +201,6 @@ public class Find5 : MonoBehaviour
         }
     }
 
-
     void UpdateProgress()
     {
         BlueKidText.text = $"{foundBlueKids}/{totalBlueKids}";
@@ -174,9 +226,10 @@ public class Find5 : MonoBehaviour
         }
     }
 
-    // HINT FUNCTION: Show one hint at a time, up to 2 hints total
+    // HINT FUNCTION: Allows multiple hints until all BlueKids are found
     public void ShowHint()
     {
+        // Limit hint usage
         if (hintCount >= 2)
         {
             hintButton.interactable = false; // Disable hint button after 2 uses
@@ -207,21 +260,126 @@ public class Find5 : MonoBehaviour
 
             // Show only one hint
             BlueKidHintIndicators[nextHintIndex].SetActive(true);
-            hintCount++;
+            hintCount++; // Increment hint count
 
-            StartCoroutine(HideHintAfterDelay(2f, nextHintIndex)); // Hide after 3 sec
+            StartCoroutine(HideHintAfterDelay(2f, nextHintIndex)); // Hide after delay
         }
 
-        // Disable the hint button after 2 uses
+        // Disable the hint button after 2 hints
         if (hintCount >= 2)
         {
             hintButton.interactable = false;
         }
     }
 
+// CORRECTED ResetPuzzle METHOD
+void ResetPuzzle()
+    {
+        Debug.Log("ResetPuzzle called");
+
+        puzzleCompletePanel.SetActive(false);
+        CrossUI.SetActive(false);
+
+        foundParcels = 0;
+        foundBlueKids = 0;
+        foundBlueGrannys = 0;
+        PlayerFound = false;
+        PlayerIndicator.SetActive(false);
+
+        // Reset hint tracking
+        hintCount = 0;
+        lastHintIndex = -1;
+        hintButton.interactable = true;
+
+        // Hide indicators
+        foreach (GameObject npc in BlueKidIndicators) npc.SetActive(false);
+        foreach (GameObject npc in BlueGrannyIndicators) npc.SetActive(false);
+        foreach (GameObject parcel in parcelIndicators) parcel.SetActive(false);
+        foreach (GameObject hint in BlueKidHintIndicators) hint.SetActive(false);
+
+        // Clear existing listeners
+        foreach (Button button in parcelButtons) button.onClick.RemoveAllListeners();
+        foreach (Button button in BlueKidButtons) button.onClick.RemoveAllListeners();
+        foreach (Button button in BlueGrannyButtons) button.onClick.RemoveAllListeners();
+
+        // Re-add listeners
+        for (int i = 0; i < parcelButtons.Length; i++)
+        {
+            int index = i;
+            parcelButtons[i].onClick.AddListener(() => FindParcel(index));
+        }
+
+        for (int i = 0; i < BlueKidButtons.Length; i++)
+        {
+            int index = i;
+            BlueKidButtons[i].onClick.AddListener(() => FindKid(index));
+        }
+
+        for (int i = 0; i < BlueGrannyButtons.Length; i++)
+        {
+            int index = i;
+            BlueGrannyButtons[i].onClick.AddListener(() => FindGranny(index));
+        }
+
+        UpdateProgress();
+    }
+
+    /*  // HINT FUNCTION: Show one hint at a time, up to 2 hints total
+      public void ShowHint()
+      {
+          if (hintCount >= 2)
+          {
+              hintButton.interactable = false; // Disable hint button after 2 uses
+              return;
+          }
+
+          int nextHintIndex = -1;
+
+          // Find the next unfound BlueKid that was not hinted before
+          for (int i = 0; i < totalBlueKids; i++)
+          {
+              if (!BlueKidIndicators[i].activeSelf && i != lastHintIndex)
+              {
+                  nextHintIndex = i;
+                  break;
+              }
+          }
+
+          if (nextHintIndex != -1)
+          {
+              lastHintIndex = nextHintIndex; // Update last hinted BlueKid
+
+              // Hide all hints first
+              foreach (GameObject hint in BlueKidHintIndicators)
+              {
+                  hint.SetActive(false);
+              }
+
+              // Show only one hint
+              BlueKidHintIndicators[nextHintIndex].SetActive(true);
+              hintCount++;
+
+              StartCoroutine(HideHintAfterDelay(2f, nextHintIndex)); // Hide after 3 sec
+          }
+
+          // Disable the hint button after 2 uses
+          if (hintCount >= 2)
+          {
+              hintButton.interactable = false;
+          }
+      }*/
+
     IEnumerator HideHintAfterDelay(float delay, int hintIndex)
     {
         yield return new WaitForSecondsRealtime(delay);
         BlueKidHintIndicators[hintIndex].SetActive(false);
+    }
+
+    public void ClosePuzzle()
+    {
+        CrossUI.SetActive(false);
+        Time.timeScale = 1f;
+        ResetPuzzle(); // Ensure reset when closing
+        this.gameObject.SetActive(false);
     }
 }

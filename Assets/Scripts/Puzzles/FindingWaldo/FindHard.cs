@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 
@@ -26,6 +27,10 @@ public class FindHard : MonoBehaviour
 
     public Animator playerAnimator; // Player animation
 
+    private void OnEnable()
+    {
+        ResetPuzzle(); // Reset puzzle each time it is activated
+    }
     void Start()
     {
         ResetPuzzle(); // Reset everything at the start
@@ -57,20 +62,37 @@ public class FindHard : MonoBehaviour
 
     void ResetPuzzle()
     {
+        Debug.Log("ResetPuzzle called");
+        CrossUI.SetActive(false);
+        puzzleCompletePanel.SetActive(false);
+
         // Reset values
         foundParcels = 0;
         foundNPCs = 0;
 
         // Hide indicators
         foreach (GameObject npc in npcIndicators)
+        {
             npc.SetActive(false);
+        }
 
         foreach (GameObject parcel in parcelIndicators)
+        {
             parcel.SetActive(false);
+        }
 
-        // Reset UI
-        puzzleCompletePanel.SetActive(false);
-        CrossUI.SetActive(false);
+        // Unassign and reassign listeners
+        foreach (Button button in parcelButtons)
+        {
+            button.onClick.RemoveAllListeners();
+        }
+
+        for (int i = 0; i < parcelButtons.Length; i++)
+        {
+            int index = i;
+            parcelButtons[i].onClick.AddListener(() => FindParcel(index));
+        }
+
         UpdateProgress();
     }
 
@@ -118,5 +140,13 @@ public class FindHard : MonoBehaviour
         {
             playerAnimator.enabled = true;
         }
+    }
+
+    public void ClosePuzzle()
+    {
+        CrossUI.SetActive(false);
+        Time.timeScale = 1f;
+        ResetPuzzle(); // Ensure reset when closing
+        this.gameObject.SetActive(false);
     }
 }
