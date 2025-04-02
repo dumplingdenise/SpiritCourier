@@ -56,6 +56,10 @@ public class MainMenu : MonoBehaviour
         creditCloseBtn.onClick.AddListener(CloseCredit);
 
         credit = FindFirstObjectByType<Credits>();
+        if (credit != null)
+        {
+            Debug.LogError("credit found");
+        }
     }
 
     public void LoadGame()

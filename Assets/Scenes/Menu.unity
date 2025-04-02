@@ -5432,7 +5432,6 @@ MonoBehaviour:
   creditButton: {fileID: 175453054}
   creditCloseBtn: {fileID: 794089476}
   credit: {fileID: 312474056}
-  isLoadGame: 0
 --- !u!1 &1404533432
 GameObject:
   m_ObjectHideFlags: 0
