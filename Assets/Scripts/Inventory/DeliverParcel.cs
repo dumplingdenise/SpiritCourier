@@ -188,6 +188,7 @@ public class DeliverParcel : MonoBehaviour
 
         if (!Input.GetKeyDown(KeyCode.E) && playerNearby)
         {
+            
             if (gameController.GetCurrentState() == GameState.FreeRoam)
             {
                 /*promptText.style.display = DisplayStyle.Flex; // display the prompt when player come in contact with the NPC with parcels in the inventory
@@ -235,6 +236,7 @@ public class DeliverParcel : MonoBehaviour
             }
             else
             {
+                Debug.LogError("Pressing E");
                 if (gameController.GetCurrentState() == GameState.FreeRoam)
                 {
                     if (inventoryList.Count == 0 || inventory.selectedSlot < 0)
