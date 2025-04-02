@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class FindHard2 : MonoBehaviour
 {
@@ -35,6 +37,11 @@ public class FindHard2 : MonoBehaviour
     public GameObject[] BlueKidHintIndicators; // Hint visual effects
     private int hintCount = 0;
     private int lastHintIndex = -1; // Keep track of last hinted BlueKid
+
+    private void OnEnable()
+    {
+        ResetPuzzle(); // Reset puzzle each time it is activated
+    }
 
     void Start()
     {
@@ -78,30 +85,73 @@ public class FindHard2 : MonoBehaviour
 
     void ResetPuzzle()
     {
+        puzzleCompletePanel.SetActive(false);
+        CrossUI.SetActive(false);
+
         foundParcels = 0;
         foundBlueKids = 0;
         foundBlueGrannys = 0;
-        hintCount = 0;
+        hintCount = 0; // Reset hint count
         lastHintIndex = -1; // Reset hint tracking
 
         foreach (GameObject npc in BlueKidIndicators)
+        {
             npc.SetActive(false);
+        }
 
         foreach (GameObject npc in BlueGrannyIndicators)
+        {
             npc.SetActive(false);
+        }
 
         foreach (GameObject parcel in parcelIndicators)
+        {
             parcel.SetActive(false);
+        }
 
         foreach (GameObject hint in BlueKidHintIndicators)
+        {
             hint.SetActive(false); // Hide all hint indicators
+        }
 
-        puzzleCompletePanel.SetActive(false);
-        CrossUI.SetActive(false);
+        foreach (Button button in parcelButtons)
+        {
+            button.onClick.RemoveAllListeners();
+        }
+
+        for (int i = 0; i < parcelButtons.Length; i++)
+        {
+            int index = i;
+            parcelButtons[i].onClick.AddListener(() => FindParcel(index));
+        }
+
+        foreach (Button button in BlueKidButtons)
+        {
+            button.onClick.RemoveAllListeners();
+        }
+
+        for (int i = 0; i < BlueKidButtons.Length; i++)
+        {
+            int index = i;
+            BlueKidButtons[i].onClick.AddListener(() => FindKid(index));
+        }
+
+        foreach (Button button in BlueGrannyButtons)
+        {
+            button.onClick.RemoveAllListeners();
+        }
+
+        for (int i = 0; i < BlueGrannyButtons.Length; i++)
+        {
+            int index = i;
+            BlueGrannyButtons[i].onClick.AddListener(() => FindGranny(index));
+        }
+
         UpdateProgress();
 
-        hintButton.interactable = true; // Reactivate hint button
+        hintButton.interactable = true; // Ensure button reactivates
     }
+
 
     public void FindKid(int KidIndex)
     {
@@ -158,19 +208,17 @@ public class FindHard2 : MonoBehaviour
         }
     }
 
-    // HINT FUNCTION: Show one hint at a time, up to 2 hints total
     public void ShowHint()
     {
         if (hintCount >= 2)
         {
-            hintButton.interactable = false; // Disable hint button after 2 uses
+            hintButton.interactable = false;
             return;
         }
 
         int nextHintIndex = -1;
 
-        // Find the next unfound BlueKid that was not hinted before
-
+        // Loop to find the next hint
         for (int i = 0; i < totalBlueKids; i++)
         {
             if (!BlueKidIndicators[i].activeSelf && i != lastHintIndex)
@@ -180,34 +228,102 @@ public class FindHard2 : MonoBehaviour
             }
         }
 
+        // If no valid hint found, reset lastHintIndex to allow new hints
+        if (nextHintIndex == -1)
+        {
+            lastHintIndex = -1;
+            for (int i = 0; i < totalBlueKids; i++)
+            {
+                if (!BlueKidIndicators[i].activeSelf)
+                {
+                    nextHintIndex = i;
+                    break;
+                }
+            }
+        }
+
+        // Show hint if a valid index is found
         if (nextHintIndex != -1)
         {
-            lastHintIndex = nextHintIndex; // Update last hinted BlueKid
+            lastHintIndex = nextHintIndex;
 
-            // Hide all hints first
             foreach (GameObject hint in BlueKidHintIndicators)
             {
                 hint.SetActive(false);
             }
 
-            // Show only one hint
             BlueKidHintIndicators[nextHintIndex].SetActive(true);
             hintCount++;
-
-            StartCoroutine(HideHintAfterDelay(2f, nextHintIndex)); // Hide after 3 sec
+            StartCoroutine(HideHintAfterDelay(2f, nextHintIndex));
         }
 
-        // Disable the hint button after 2 uses
+        // Disable hint button if max hints used
         if (hintCount >= 2)
         {
             hintButton.interactable = false;
         }
     }
 
+
+    /*
+        // HINT FUNCTION: Show one hint at a time, up to 2 hints total
+        public void ShowHint()
+        {
+            if (hintCount >= 2)
+            {
+                hintButton.interactable = false; // Disable hint button after 2 uses
+                return;
+            }
+
+            int nextHintIndex = -1;
+
+            // Find the next unfound BlueKid that was not hinted before
+
+            for (int i = 0; i < totalBlueKids; i++)
+            {
+                if (!BlueKidIndicators[i].activeSelf && i != lastHintIndex)
+                {
+                    nextHintIndex = i;
+                    break;
+                }
+            }
+
+            if (nextHintIndex != -1)
+            {
+                lastHintIndex = nextHintIndex; // Update last hinted BlueKid
+
+                // Hide all hints first
+                foreach (GameObject hint in BlueKidHintIndicators)
+                {
+                    hint.SetActive(false);
+                }
+
+                // Show only one hint
+                BlueKidHintIndicators[nextHintIndex].SetActive(true);
+                hintCount++;
+
+                StartCoroutine(HideHintAfterDelay(2f, nextHintIndex)); // Hide after 3 sec
+            }
+
+            // Disable the hint button after 2 uses
+            if (hintCount >= 2)
+            {
+                hintButton.interactable = false;
+            }
+        }*/
+
     IEnumerator HideHintAfterDelay(float delay, int hintIndex)
     {
         yield return new WaitForSecondsRealtime(delay);
         BlueKidHintIndicators[hintIndex].SetActive(false);
+    }
+
+    public void ClosePuzzle()
+    {
+        CrossUI.SetActive(false);
+        Time.timeScale = 1f;
+        ResetPuzzle(); // Ensure reset when closing
+        this.gameObject.SetActive(false);
     }
 }
 

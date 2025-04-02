@@ -76,8 +76,6 @@ public class SoundEffectManager : MonoBehaviour
     }
 }
 
-
-
 /*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -85,7 +83,7 @@ using UnityEngine.UI;
 
 public class SoundEffectManager : MonoBehaviour
 {
-    private static SoundEffectManager instance;
+    public static SoundEffectManager instance;
     private static AudioSource audioSource;
     private static SoundEffectLibrary soundEffectLibrary;
     [SerializeField] private Slider sfxSlider;

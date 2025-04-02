@@ -101,6 +101,7 @@ public class Find2Counter : MonoBehaviour
     public void ResetPuzzle()
     {
         Debug.Log("ResetPuzzle called");
+        CrossUI.SetActive(false);
         puzzleCompletePanel.SetActive(false);
         // Reset state variables
         foundParcels = 0;
