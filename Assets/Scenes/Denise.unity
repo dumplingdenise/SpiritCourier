@@ -30327,7 +30327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &762057822
 RectTransform:
   m_ObjectHideFlags: 0
@@ -65975,9 +65975,12 @@ MonoBehaviour:
   lettersPerSecond: 90
   nextPuzzleSceneButton: {fileID: 1046751577}
   easyPuzzle:
+  - {fileID: 769554726}
+  - {fileID: 856879167}
+  - {fileID: 1845926488}
+  hardPuzzle:
   - {fileID: 790733125}
   - {fileID: 1046241921}
-  hardPuzzle:
   - {fileID: 762057821}
   noButton: {fileID: 905249350}
   playerController: {fileID: 0}

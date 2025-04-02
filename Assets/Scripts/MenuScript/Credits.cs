@@ -5,21 +5,21 @@ public class Credits : MonoBehaviour
 
     public float scrollSpeed = 120f;
 
-    private RectTransform rectTrasnform;
+    private RectTransform rectTransform;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rectTrasnform = GetComponent<RectTransform>();
+        rectTransform = GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rectTrasnform.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
+        rectTransform.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
     }
 
     public void resetCredit()
     {
-        rectTrasnform.anchoredPosition = Vector2.zero;
+        rectTransform.anchoredPosition = Vector2.zero;
     }
 }
