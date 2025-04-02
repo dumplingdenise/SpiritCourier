@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 using System.Collections.Generic;
-using static Parcels_Test;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
 using System.Collections;
